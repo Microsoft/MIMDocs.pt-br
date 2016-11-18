@@ -1,25 +1,25 @@
 ---
-title: Entenda os componentes do PAM | Microsoft Identity Manager
+title: Entender os componentes do PAM | Microsoft Docs
 description: "O Privileged Access Management compartilha alguns componentes com o MIM e tem alguns próprios. Saiba como eles funcionam juntos."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: d17feb5d78b864bef8f0b96bfbf92a18c3c91694
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
 
 
 ---
 
-# Noções básicas dos componentes do PAM
+# <a name="understand-the-components-of-pam"></a>Noções básicas dos componentes do PAM
 
 O Privileged Access Management mantém acesso administrativo separado das contas de usuário diárias. Essa solução se baseia em florestas paralelas:
 
@@ -43,6 +43,6 @@ Além disso, essas associações são por tempo limitado, assim, depois de um in
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

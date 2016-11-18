@@ -1,25 +1,25 @@
 ---
-title: "Etapa 6 para implantar o PAM – Mover grupo | Microsoft Identity Manager"
+title: "Etapa 6 para implantar o PAM – mover grupo | Microsoft Docs"
 description: Migre um grupo para a floresta PRIV para que ele possa ser gerenciado com o Privilege Access Management.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 603e5e28f0eee0f648ef7e00ef137f5a08b2ba34
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 9e70bdd3c586a16a9a55c91bd0e099a500950a64
 
 
 ---
 
-# Etapa 6 – Faz a transição de um grupo para Gerenciamento de acesso privilegiado
+# <a name="step-6-transition-a-group-to-privileged-access-management"></a>Etapa 6 – Faz a transição de um grupo para Gerenciamento de acesso privilegiado
 
 >[!div class="step-by-step"]
 [« Etapa 5 ](step-5-establish-trust-between-priv-corp-forests.md)
@@ -45,7 +45,7 @@ Os cmdlets precisam ser executados uma vez para cada grupo e uma vez para cada m
 
 3.  Crie uma conta de usuário em PRIV correspondente a uma conta de usuário em uma floresta existente, para fins de demonstração.
 
-    Digite os comandos a seguir no PowerShell.  Se você não usou o nome *Julia* para criar o usuário em contoso.local anteriormente, altere os parâmetros do comando, conforme apropriado. A senha “Pass@word1” é apenas um exemplo e deve ser alterada para um valor de senha exclusivo.
+    Digite os comandos a seguir no PowerShell.  Se você não usou o nome *Julia* para criar o usuário em contoso.local anteriormente, altere os parâmetros do comando, conforme apropriado. A senha 'Pass@word1' é apenas um exemplo e deve ser alterada para um valor de senha exclusivo.
 
     ```
     $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
@@ -90,6 +90,6 @@ Se você desejar demonstrar que os direitos de acesso entre florestas são efeti
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

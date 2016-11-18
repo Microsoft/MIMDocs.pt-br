@@ -1,28 +1,28 @@
 ---
-title: "Renovação do cartão de inteligente de autoatendimento | Microsoft Identity Manager"
+title: "Autoatendimento para renovação do cartão inteligente | Microsoft Docs"
 description: "Saiba como registrar cartões inteligentes para usuários sem acesso de administrador aos respectivos computadores para que eles possam usar o Gerenciador de Certificados."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 2fddede481b5ba677d0d463be4b14cda4b463865
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 76d72211e1dbddb2647729c796ac19eb82a3b2c6
 
 
 ---
 
-# Registrar cartões inteligentes para não administradores
+# <a name="enroll-smart-cards-for-nonadministrators"></a>Registrar cartões inteligentes para não administradores
 Se um usuário não for um administrador local no seu computador, ele não poderá registrar um cartão inteligente em seu próprio computador por padrão. O procedimento a seguir permite que você contorne essa limitação.
 
-## Habilitando a renovação do cartão inteligente para não administradores no Gerenciador de Certificados do MIM 2016
+## <a name="enabling-smart-card-renewal-for-nonadmins-in-mim-2016-certificate-manager"></a>Habilitando a renovação do cartão inteligente para não administradores no Gerenciador de Certificados do MIM 2016
 
 1.  **Descompactar o arquivo appx**
 
@@ -64,7 +64,7 @@ Se um usuário não for um administrador local no seu computador, ele não poder
 
     `makeappx pack /l /d .\appx /p <app package name>.appx`
 
-    p`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
+    s`igntool sign /f <path\>mysign.pfx /p <pfx password> /fd "sha256" <app package name>.appx`
 
 4.  Duplique o modelo de perfil e adicione a chave de administrador inicial para configurar o servidor MIM:
 
@@ -80,7 +80,7 @@ Se um usuário não for um administrador local no seu computador, ele não poder
 
     6.  Role para baixo e clique em **OK**.
 
-5.  **Crie uma conta não administrativa no computador cliente**
+5.  **Criar uma conta não administrativa no computador cliente**
 
     Os usuários não administradores não podem criar o cartão inteligente virtual do TPM, você precisará criá-lo para eles.
 
@@ -96,6 +96,6 @@ Se um usuário não for um administrador local no seu computador, ele não poder
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

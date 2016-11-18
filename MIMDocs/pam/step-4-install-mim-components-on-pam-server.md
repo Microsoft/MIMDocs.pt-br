@@ -1,12 +1,12 @@
 ---
-title: "Etapa 4 para implantar o PAM – Instalar o MIM | Microsoft Identity Manager"
+title: "Etapa 4 para implantar o PAM – instalar o MIM | Microsoft Docs"
 description: "Instale e configure o Serviço e Portal do MIM nas estações de trabalho e o servidor do Privileged Access Management."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
@@ -14,13 +14,13 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae4c40c73dd9d5860f42e00765a7e34e8ca397a9
-ms.openlocfilehash: 92939d32da25896d07bec61e4633f58230a78181
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5b9653cb8de9e9fc788685ba027f84a795467cf6
 
 
 ---
 
-# Etapa 4 – Instalar componentes MIM no servidor PAM e estação de trabalho
+# <a name="step-4-install-mim-components-on-pam-server-and-workstation"></a>Etapa 4 – Instalar componentes MIM no servidor PAM e estação de trabalho
 
 >[!div class="step-by-step"]
 [« Etapa 3](step-3-prepare-pam-server.md)
@@ -34,7 +34,7 @@ Em PAMSRV, entre como PRIV\Administrator para poder instalar o Portal e o Servi�
 
 Se você tiver baixado o MIM, descompacte o arquivo de instalação do MIM para uma nova pasta.
 
-##  Execute o programa de instalação de Serviço e Portal.  
+##  <a name="run-the-service-and-portal-install-program"></a>Execute o programa de instalação de Serviço e Portal.  
 
 Siga as diretrizes do instalador e conclua a instalação.
 
@@ -98,7 +98,7 @@ Siga as diretrizes do instalador e conclua a instalação.
 
 Após a conclusão da instalação, o servidor vai reinicializar, então verifique se o Portal do MIM está ativo e permite aos usuários ver o próprio recurso de objeto no MIM.
 
-## Configurar regras de política de gerenciamento do Portal do MIM
+## <a name="set-up-mim-portal-management-policy-rules"></a>Configurar regras de política de gerenciamento do Portal do MIM
 
 1. Após a reinicialização de PAMSRV, entre como PRIV\Administrator.
 
@@ -114,7 +114,7 @@ Após a conclusão da instalação, o servidor vai reinicializar, então verifiq
 
 7. Selecione essa regra de política de gerenciamento, desmarque a opção **A política está desabilitada**, clique em **OK** e em **Enviar**.
 
-## Verificar as conexões de firewall
+## <a name="verify-the-firewall-connections"></a>Verificar as conexões de firewall
 
 O firewall deve permitir conexões de entrada para as portas TCP 5725, 5726, 8086 e 8090.
 
@@ -131,7 +131,7 @@ O firewall deve permitir conexões de entrada para as portas TCP 5725, 5726, 808
 8.  Verifique se há uma Rede ativa listada como priv.contoso.local e uma rede de Domínio.  
 9. Feche o **Painel de controle**.
 
-## Configurar o aplicativo Web de exemplo
+## <a name="set-up-the-sample-web-application"></a>Configurar o aplicativo Web de exemplo
 
 Nesta seção, você vai instalar e configurar o aplicativo Web de exemplo para a API REST do PAM no MIM.
 
@@ -167,7 +167,7 @@ Nesta seção, você vai instalar e configurar o aplicativo Web de exemplo para 
 
 7.  (Opcional) Verifique se o usuário pode se autenticar na API REST. Abra um navegador da Web como o administrador em PAMSRV.  Navegue até a URL do site http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, autentique (se necessário) e verifique se o download ocorre.
 
-## Instalar os cmdlets do solicitante do PAM no MIM
+## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalar os cmdlets do solicitante do PAM no MIM
 
 Instale os cmdlets do solicitante do PAM no MIM na estação de trabalho configurada na Etapa 1.
 
@@ -193,6 +193,6 @@ Na próxima etapa, você vai estabelecer a relação de confiança entre as flor
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

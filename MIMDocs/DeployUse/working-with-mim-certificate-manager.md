@@ -1,25 +1,25 @@
 ---
-title: Gerenciador de certificados do MIM | Microsoft Identity Manager
+title: Gerenciador de certificados do MIM | Microsoft Docs
 description: "Saiba como implantar o aplicativo Gerenciador de certificados para permitir que os usuários gerenciem seus próprios direitos de acesso."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 1aea9543af4dd7f3eab4f01eab52d8c11b36191d
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: a2be6b5640dde5e2908dce36ea13d920a6643874
 
 
 ---
 
-# Trabalhando com o MIM Certificate Manager
+# <a name="working-with-the-mim-certificate-manager"></a>Trabalhando com o MIM Certificate Manager
 Depois que o MIM 2016 e o Certificate Manager estiverem ativos e em execução, você pode implantar o aplicativo MIM Certificate Manager da Windows Store para que os usuários possam gerenciar facilmente seus cartões inteligentes físicos, cartões inteligentes virtuais e certificados de software. As etapas para implantar o aplicativo de MIM CM são as seguintes:
 
 1.  Criar um modelo de certificado.
@@ -30,7 +30,7 @@ Depois que o MIM 2016 e o Certificate Manager estiverem ativos e em execução, 
 
 4.  Implante o aplicativo por meio do SCCM ou do Intune.
 
-## Criar um modelo de certificado
+## <a name="create-a-certificate-template"></a>Criar um modelo de certificado
 Você cria um modelo de certificado para o aplicativo CM da mesma maneira que faria normalmente, exceto que você precisa certificar-se de que o modelo de certificado é a versão 3 e superiores.
 
 1.  Faça logon no servidor que executa o AD CS (o servidor de certificado).
@@ -69,7 +69,7 @@ Você cria um modelo de certificado para o aplicativo CM da mesma maneira que fa
 
 16. Na lista, selecione o novo modelo criado e clique em **OK**.
 
-## Criar um modelo de perfil
+## <a name="create-a-profile-template"></a>Criar um modelo de perfil
 Certifique-se de quando criar um modelo de perfil para defini-lo para criar/destruir o vSC e remover a coleta de dados. O aplicativo CM não pode manipular os dados coletados, portanto, é importante para desabilitá-lo da seguinte maneira.
 
 1.  Faça logon no portal do CM como um usuário com privilégios administrativos.
@@ -94,7 +94,7 @@ Certifique-se de quando criar um modelo de perfil para defini-lo para criar/dest
 
 11. Você precisa desabilitar itens de coleta de dados para cada política clicando na política no painel esquerdo e, em seguida, marcando a caixa ao lado de **Item de dados de exemplo** e, em seguida, em **Excluir itens de coleta de dados**. Em seguida, clique em **OK**.
 
-## Preparar o aplicativo CM para implantação
+## <a name="prepare-the-cm-app-for-deployment"></a>Preparar o aplicativo CM para implantação
 
 1.  No prompt de comando, execute o seguinte comando para descompactar o aplicativo e extrair o conteúdo para uma nova subpasta chamada appx e criar uma cópia para que você não modifique o arquivo original.
 
@@ -148,7 +148,7 @@ Certifique-se de quando criar um modelo de perfil para defini-lo para criar/dest
 
     -   Abra o aplicativo do Cartão Inteligente Virtual. Isso facilita a localização dos valores necessários para a próxima etapa.
 
-    -   Para adicionar o aplicativo como um cliente no servidor do AD FS e configurar o CM no servidor, no servidor do AD FS, abra o Windows PowerShell e execute o comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`
+    -   No servidor do AD FS, abra o Windows PowerShell e execute o comando `ConfigureMimCMClientAndRelyingParty.ps1 –redirectUri <redirectUriString> -serverFQDN <MimCmServerFQDN>`, para adicionar o aplicativo como um cliente no servidor do AD FS e configurar o CM no servidor
 
         O script ConfigureMimCMClientAndRelyingParty.ps1 é exibido a seguir:
 
@@ -249,13 +249,13 @@ Certifique-se de quando criar um modelo de perfil para defini-lo para criar/dest
 
     -   O serverFQDN é o nome do computador completo do servidor MIMCM somente.
 
-    -   Para obter ajuda com o script **ConfigureMIimCMClientAndRelyingParty.ps1**, execute `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
+    -   Para obter ajuda com o script **ConfigureMIimCMClientAndRelyingParty.ps1** , execute `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
-## Implantar o aplicativo
+## <a name="deploy-the-app"></a>Implantar o aplicativo
 Depois de configurar o aplicativo CM, no Centro de Download, baixe o arquivo MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip e extraia todo o conteúdo. O arquivo .appx é o instalador. Você pode implantá-lo da maneira que normalmente implanta aplicativos da Windows Store usando o [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)ou o [Intune](https://technet.microsoft.com/library/dn613839.aspx) para carregar o aplicativo para que os usuários tenham acesso a ele por meio do portal da empresa ou para que seja enviado diretamente às suas máquinas.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

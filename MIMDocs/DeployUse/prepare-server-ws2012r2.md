@@ -1,25 +1,25 @@
 ---
-title: Configurar o Windows Server | Microsoft Identity Manager
+title: Configurar o Windows Server | Microsoft Docs
 description: "Obtenha as etapas e os requisitos mínimos para preparar o Windows Server 2012 RS para trabalhar com o MIM 2016."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 739797502e09c2b92e35767e2c943308cd1de5c9
-ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 06d2365808858dc09d04ab37eafa9d6e3212cbcf
 
 
 ---
 
-# Configure um servidor de gerenciamento de identidade: Windows Server 2012 R2
+# <a name="set-up-an-identity-management-server-windows-server-2012-r2"></a>Configure um servidor de gerenciamento de identidade: Windows Server 2012 R2
 
 >[!div class="step-by-step"]
 [« Preparando um domínio](preparing-domain.md)
@@ -29,9 +29,9 @@ ms.openlocfilehash: bdf1f4b7c5762095f4986506f9e17369dadea011
 > Este passo a passo usa nomes e valores de exemplo de uma empresa chamada Contoso. Substitua-os pelos seus próprios valores. Por exemplo:
 > - Nome do controlador de domínio - **mimservername**
 > - Nome do domínio - **contoso**
-> - Senha - **Pass@word1**
+> - Senha – **Pass@word1**
 
-## Adicione o Windows Server 2012 R2 ao domínio
+## <a name="join-windows-server-2012-r2-to-your-domain"></a>Adicione o Windows Server 2012 R2 ao domínio
 
 Comece com um computador Windows Server 2012 R2 com um mínimo de 8 GB de RAM. Ao instalar, especifique a edição "Windows Server 2012 R2 Standard (servidor com GUI) x64".
 
@@ -62,7 +62,7 @@ Comece com um computador Windows Server 2012 R2 com um mínimo de 8 GB de RAM. A
     Install-WindowsFeature Web-WebServer, Net-Framework-Features,rsat-ad-powershell,Web-Mgmt-Tools,Application-Server,Windows-Identity-Foundation,Server-Media-Foundation,Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-## Configurar a política de segurança do servidor
+## <a name="configure-the-server-security-policy"></a>Configurar a política de segurança do servidor
 
 Configure a política de segurança do servidor para permitir que as contas criadas recentemente sejam executadas como serviço.
 
@@ -93,7 +93,7 @@ Configure a política de segurança do servidor para permitir que as contas cria
 12. Feche a janela de Política de Segurança Local.
 
 
-## Altere o Modo de autenticação do Windows do IIS
+## <a name="change-the-iis-windows-authentication-mode"></a>Altere o Modo de autenticação do Windows do IIS
 
 1.  Abra uma janela do PowerShell.
 
@@ -111,6 +111,6 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

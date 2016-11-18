@@ -1,27 +1,27 @@
 ---
-title: "Notificações de alteração de senha | Microsoft Identity Manager"
+title: "Notificações de alteração de senha | Microsoft Docs"
 description: "Obter as etapas para instalar e configurar o Serviço de notificação de alteração de senha do MIM em seu controlador de domínio."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: e25f4b3a60f2c432cd33c8f84c750110cbe605ee
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
 
 
 ---
 
-# Implante o Serviço de notificação de alteração de senha do MIM em um controlador de domínio
+# <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Implante o Serviço de notificação de alteração de senha do MIM em um controlador de domínio
 
-## Instale o Serviço de notificação de alteração de senha
+## <a name="install-the-password-change-notification-service"></a>Instale o Serviço de notificação de alteração de senha
 O PCNS (Serviço de notificação de alteração de senha) é um serviço que você instala nos controladores de domínio que permite a sincronização de senhas pelo MIM com outros sistemas, como o servidor de diretório de outro fornecedor. Para a sincronização de senha, instale o PCNS em cada servidor do controlador de domínio.
 
 1.  Faça logon como administrador de domínio para um servidor em execução no Windows Server com a função dos Serviços de Domínio do Active Directory.
@@ -56,11 +56,11 @@ O PCNS (Serviço de notificação de alteração de senha) é um serviço que vo
 
 14. Reinicie o computador para que as alterações feitas ao Serviço de Notificação de Alteração de Senha do MIM entrem em vigor. Você pode fazer isso clicando em **Sim** na janela pop-up que aparece ou pode reiniciar mais tarde.
 
-## Configuração do Serviço de notificação de alteração de senha
+## <a name="configuring-the-password-change-notification-service"></a>Configuração do Serviço de notificação de alteração de senha
 Uma vez reconectado ao servidor de DC como um administrador de domínio, vá para *C:\Program Files\Microsoft Password Change Notification.* Execute *pcnscfg.exe*.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

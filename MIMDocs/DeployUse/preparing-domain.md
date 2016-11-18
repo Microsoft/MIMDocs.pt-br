@@ -1,25 +1,25 @@
 ---
-title: "Configuração de um domínio | Microsoft Identity Manager"
+title: "Configurar um domínio | Microsoft Docs"
 description: "Crie um controlador de domínio do Active Directory antes de instalar o MIM 2016"
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: get-started-article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 80fde32862a322a7a067982d0b02c99a8b43063e
-ms.openlocfilehash: 4ee1742e388da1ccb973b64316629debe570add0
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: aa110cc31896ac08aa3f84fa48858d978efe0c63
 
 
 ---
 
-# Configure um nome de domínio
+# <a name="set-up-a-domain"></a>Configure um nome de domínio
 
 >[!div class="step-by-step"]
 [Windows Server 2012 R2 »](prepare-server-ws2012r2.md)
@@ -28,15 +28,15 @@ O MIM (Microsoft Identity Manager) trabalha com o domínio do AD (Active Directo
 
 Este artigo explica as etapas para preparar seu domínio para trabalhar com o MIM.
 
-## Crie contas de usuários e grupos
+## <a name="create-user-accounts-and-groups"></a>Crie contas de usuários e grupos
 
-Todos os componentes da implantação do MIM precisam de suas próprias identidades no domínio. Isso inclui os componentes do MIM como Serviço e Sincronização, bem como SharePoint e o SQL.
+Todos os componentes da implantação do MIM precisam de suas próprias identidades no domínio. Isso inclui os componentes do MIM, como Serviço e Sincronização, bem como o SharePoint e o SQL.
 
 > [!NOTE]
 > Este passo a passo usa nomes e valores de exemplo de uma empresa chamada Contoso. Substitua-os pelos seus próprios valores. Por exemplo:
 > - Nome do controlador de domínio - **mimservername**
 > - Nome do domínio - **contoso**
-> - Senha - **Pass@word1**
+> - Senha – **Pass@word1**
 
 1. Entre no controlador de domínio como o Administrator do domínio com a senha (*e. g. Contoso\Administrador*).
 
@@ -71,11 +71,11 @@ Todos os componentes da implantação do MIM precisam de suas próprias identida
 3.  Crie grupos de segurança para todos os grupos.
 
     ```
-    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncAdmins
-    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global       –SamAccountName MIMSyncOperators
-    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global         –SamAccountName MIMSyncJoiners
-    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global      –SamAccountName MIMSyncBrowse
-    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global          –SamAccountName MIMSyncPasswordReset
+    New-ADGroup –name MIMSyncAdmins –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncAdmins
+    New-ADGroup –name MIMSyncOperators –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncOperators
+    New-ADGroup –name MIMSyncJoiners –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncJoiners
+    New-ADGroup –name MIMSyncBrowse –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncBrowse
+    New-ADGroup –name MIMSyncPasswordReset –GroupCategory Security –GroupScope Global –SamAccountName MIMSyncPasswordReset
     Add-ADGroupMember -identity MIMSyncAdmins -Members Administrator
     Add-ADGroupmember -identity MIMSyncAdmins -Members MIMService
     ```
@@ -94,6 +94,6 @@ Todos os componentes da implantação do MIM precisam de suas próprias identida
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

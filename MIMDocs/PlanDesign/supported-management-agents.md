@@ -1,25 +1,25 @@
 ---
-title: Conectores com suporte | Microsoft Identity Manager
+title: Conectores com suporte | Microsoft Docs
 description: "Use conectores para gerenciar a transferência de dados entre o MIM e os diretórios."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 08/11/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 309011c81959971e696d70aa4ec5e1610cc8a2f0
-ms.openlocfilehash: f0842781e3730dae5548ce02a3cb247376d12dc8
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 5841f549cc7f9369943cc5b31c27005f89afcccb
 
 
 ---
 
-# Conectar aos seus diretórios
+# <a name="connect-to-your-directories"></a>Conectar aos seus diretórios
 
 Conectores vinculam fontes de dados conectadas específicas ao MIM (Microsoft Identity Manager). Um conector move dados de uma fonte de dados conectada para o MIM. Quando os dados no MIM são modificados, o conector também pode exportar os dados para a fonte de dados conectada para mantê-los sincronizados com o MIM. Geralmente, há pelo menos um conector para cada diretório conectado.
 
@@ -27,7 +27,7 @@ No Forefront Identity Manager, conectores eram conhecidos como agentes de gerenc
 
 Este artigo aborda os conectores que estão incluídos no MIM, mas o conector para Conectividade Extensível 2.0 possibilita conectar-se com ainda mais fontes de dados. Alguns parceiros criaram seus próprios conectores dessa forma e uma lista completa está disponível na wiki do [FIM 2010: agentes de gerenciamento de parceiros](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## Conectores com suporte no MIM 2016
+## <a name="supported-connectors-in-mim-2016"></a>Conectores com suporte no MIM 2016
 
 | Nome | Versões com suporte da fonte de dados conectada |
 | ---- | ----------------------------------------------- |
@@ -35,7 +35,7 @@ Este artigo aborda os conectores que estão incluídos no MIM, mas o conector pa
 | ADLDS (Active Directory Lightweight Directory Services) | ADLDS (Active Directory Lightweight Directory Services) |
 | GAL (Lista de Endereços Global) do Active Directory | GAL (Lista de endereços Global) do Active Directory – Exchange 2000, 2003, 2007, 2010, 2013 |
 | Extensible Connectivity 2.0 | Qualquer fonte de dados baseada em chamada ou arquivo |
-| Serviço MIM | Microsoft Identity Manager 2016 |
+| Serviço MIM | Microsoft Docs 2016 |
 | Banco de dados Universal do IBM DB2 | Versão 9.1, 9.5 ou 9.7 do IBM DB2; versão 9.5 FP5 ou v 9.7 FP1 do IBM DB2 OLEDB |
 | Servidor de diretório IBM | IBM Tivoli Directory Server 6. x |
 | Novell eDirectory | Novell eDirectory versão 8.7.3, 8.8.5 e 8.8.6 |
@@ -54,12 +54,12 @@ Este artigo aborda os conectores que estão incluídos no MIM, mas o conector pa
 | Arquivo de texto de largura fixa | Arquivos de texto de largura fixa |
 | LDIF (Formato de Troca de Dados LDAP) | LDIF (Formato de Troca de Dados LDAP) |
 
-## Tópicos relacionados
+## <a name="related-topics"></a>Tópicos relacionados
 
 [Agentes de gerenciamento no FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

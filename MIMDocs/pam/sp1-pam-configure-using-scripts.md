@@ -3,23 +3,23 @@ title: Configurar o PAM usando scripts
 description: "Prepare o domínio CORP com identidades novas ou existentes para serem gerenciadas pelo Privileged Identity Manager usando scripts"
 keywords: 
 author: barclayn
+ms.author: barclayn
 manager: MBaldwin
-ms.date: 09/26/2016
+ms.date: 10/04/2016
 ms.topic: article
-ms.prod: microsoft-identity-manager
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 96c734ade75f5c206858387cf45106761bc0a881
-ms.openlocfilehash: a1e4e5561bf8d38c56c3d27249d94f4bf7103b8c
+ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
+ms.openlocfilehash: 3aca2fb513280f118e760bdbc2ba471151c41b17
 
 
 ---
 
-# Configurar o PAM usando scripts
+# <a name="configure-pam-using-scripts"></a>Configurar o PAM usando scripts
 
 Se você optar por instalar o SQL e o SharePoint em servidores separados, eles deverão ser configurados usando as instruções a seguir. Se os componentes de PAM, SharePoint e SQL estiverem instalados no mesmo computador, as etapas a seguir deverão ser executadas no computador.
 
@@ -39,11 +39,11 @@ etapas:
 5. Copie o mesmo PAMDeploymentConfig.xml para a pasta %SYSTEMDRIVE%\PAM em todas as máquinas, CORPDC, PRIVDC, PAM Server, SQL Server e os servidores do SharePoint.
 
 
-## Planilha de implantação
+## <a name="deployment-worksheet"></a>Planilha de implantação
 
 Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atualizada em todos os computadores.
 
-### Setup
+### <a name="setup"></a>Setup
 
 |Virtual   | Para executar como   |Comandos   |
 |---|---|---|
@@ -55,7 +55,7 @@ Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atuali
 | PAMServer  | Administrador Local (Admin MIM após o ingresso no domínio)  | .\PAMDeployment.ps1 Selecione a opção de menu 5 (Configuração do PAM do MIM)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Selecione a opção de menu 6 (Configuração de confiança do PAM) .\PAMDeployment.ps1 Selecione a opção de menu 6 (Configuração de confiança do PAM) |
 
-### Validação
+### <a name="validation"></a>Validação
 
 |  Virtual | Para executar como   | Comandos   |
 |---|---|---|
@@ -63,10 +63,14 @@ Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atuali
 | CORPDC  | Administrador de Domínio CORP   | Import-module .\PAMValidation.psm1; Create-PAMValidationCORPDCConfig   |
 | PAMServer   | MIMAdmin  | Import-module .\PAMValidation.psm1; Move-PAMValidationUsersToPAM  |
 | CORPClient  | Usuário CORP (administrador local)   |   Import-module .\PAMValidation.psm1; Enable-PAMUsersCORPClientRemote |
-|  CORPClient | <PRIV>\PRIV.pamRequestor usuário e, no caso de PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1; Test-PAMValidationScenarioNoApprovalRequest  |
+|  CORPClient | <PRIV>Usuário \PRIV.pamRequestor e, no caso de PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1; Test-PAMValidationScenarioNoApprovalRequest  |
+
+
+>[!div class="step-by-step"]
+[Iniciar »](sp1-step1-configuring-priv-domain.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
