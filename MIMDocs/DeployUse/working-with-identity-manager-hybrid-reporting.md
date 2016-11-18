@@ -1,27 +1,27 @@
 ---
-title: "Relatório híbrido no Azure | Microsoft Identity Manager"
+title: "Relatório híbrido no Azure | Microsoft Docs"
 description: "Saiba como combinar dados locais e na nuvem em relatórios de híbridos no Azure e como gerenciar e exibir esses relatórios."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: 0a104a5f79dd48cb2dfc3d739e3ce8dcbd236c0f
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ff0469da204a9bfa861273d66b04f5da51557c99
 
 
 ---
 
-# Trabalhando com o Relatório híbrido do Identity Manager
+# <a name="working-with-identity-manager-hybrid-reporting"></a>Trabalhando com o Relatório híbrido do Identity Manager
 
-## Relatórios híbridos disponíveis
+## <a name="available-hybrid-reports"></a>Relatórios híbridos disponíveis
 Os três primeiros relatórios do MIM (Microsoft Identity Manager) disponíveis no Azure AD são **Atividade de redefinição de senha**, **Registro de redefinição de senha** e **Atividade de grupos de autoatendimento**.
 
 -   A atividade de redefinição de senha é exibida em todas as instâncias em que um usuário realizou redefinição de senha usando o SSPR e fornece as portas ou os **Métodos** usados para autenticação.
@@ -38,7 +38,7 @@ Os três primeiros relatórios do MIM (Microsoft Identity Manager) disponíveis 
 >
 > Se desejar desinstalar relatórios híbridos, desinstale o agente MIMreportingAgent.msi.
 
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 1.  Instale o Microsoft Identity Manager 2016 incluindo o serviço MIM.
 
@@ -46,7 +46,7 @@ Os três primeiros relatórios do MIM (Microsoft Identity Manager) disponíveis 
 
 3.  Verifique se que você tem conectividade de Internet de saída do servidor do Microsoft Identity Manager para o Azure.
 
-## Instale o Relatório do Microsoft Identity Manager no Azure AD
+## <a name="install-microsoft-identity-manager-reporting-in-azure-ad"></a>Instale o Relatório do Microsoft Identity Manager no Azure AD
 Depois que o agente de relatório é instalado, os dados de atividade do Microsoft Identity Manager são exportados do MIM para o log de eventos do Windows. O agente de relatório do MIM processa os eventos e os carrega no Azure. No Azure, os eventos são analisados, descriptografados e filtrados para os relatórios necessários.
 
 1.  Install Microsoft Identity Manager 2016.
@@ -75,7 +75,7 @@ Depois que o agente de relatório é instalado, os dados de atividade do Microso
 
     Você pode criar dados de relatório usando o portal de redefinição de senha de autoatendimento do Microsoft Identity Manager para redefinir a senha do usuário. Certifique-se de que a redefinição de senha seja concluída com sucesso e, em seguida, verifique se os dados são exibidos no portal de gerenciamento do AD do Azure.
 
-## Exibição dos relatórios híbridos no portal clássico do Azure
+## <a name="view-hybrid-reports-in-the-azure-classic-portal"></a>Exibição dos relatórios híbridos no portal clássico do Azure
 
 1.  Faça logon no [portal clássico do Azure](https://manage.windowsazure.com/) com sua conta de administrador global para o locatário.
 
@@ -90,19 +90,19 @@ Depois que o agente de relatório é instalado, os dados de atividade do Microso
 > [!WARNING]
 > Pode levar algum tempo para que os dados do Microsoft Identity Manager sejam exibidos no AD do Azure.
 
-## Parar de criar relatórios híbridos
+## <a name="stop-creating-hybrid-reports"></a>Parar de criar relatórios híbridos
 Se você quiser parar de carregar dados de relatório do Microsoft Identity Manager no Azure Active Directory, desinstale o agente de relatórios híbridos. Use a ferramenta **Adicionar ou Remover Programas** do Windows para desinstalar o relatório híbrido do Microsoft Identity Manager.
 
-## Eventos do Windows usados pelo relatório híbrido
+## <a name="windows-events-used-for-hybrid-reporting"></a>Eventos do Windows usados pelo relatório híbrido
 Eventos gerados pelo Microsoft Identity Manager são registrados no Log de Eventos do Windows e ficam visíveis no Visualizador de Eventos em: logs de Aplicativos e Serviços-&gt; **Log de Solicitação do Identity Manager**. Cada solicitação do MIM é exportada como um evento no log de eventos do Windows na estrutura JSON. Isso pode ser exportado para o SIEM.
 
 |Tipo de evento|ID|Detalhes do evento|
 |--------------|------|-----------------|
 |Informações do|4121|Dados de evento do MIM que incluem todos os dados da solicitação.|
-|Informações do|4137|Extensão 4121 de evento do MIM, no caso de haver dados demais para um único evento. O cabeçalho deste evento está no seguinte formato: `"Request: <GUID> , message <xxx> out of <xxx>`|
+|Informações do|4137|Extensão 4121 de evento do MIM, no caso de haver dados demais para um único evento. O cabeçalho neste evento está na seguinte forma: `"Request: <GUID> , message <xxx> out of <xxx>`|
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

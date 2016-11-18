@@ -1,28 +1,28 @@
 ---
-title: "Criação de certificados de software | Microsoft Identity Manager"
+title: Criar certificados de software | Microsoft Docs
 description: Saiba como usar o Gerenciador de certificados para criar e renovar certificados de software com os modelos de perfil.
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: d5c8fc4f9a3eaab95441f7a915f7e02d55042ae9
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: 31385a18c0b93e5ceaf78a2b6b8d5bed5aac224a
 
 
 ---
 
-# Criar certificados de software com o Gerenciador de certificados
+# <a name="create-software-certificates-with-certificate-manager"></a>Criar certificados de software com o Gerenciador de certificados
 Para registrar e renovar certificados de software, você não precisa ser um administrador e não precisa de cartão inteligente virtual. Vale a pena observar que, em algum momento, você será solicitado a permitir uma operação de certificado, e isso é normal.
 
-## Criação de modelo de perfil de certificado de software no Gerenciador de certificados do MIM 2016
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Criação de modelo de perfil de certificado de software no Gerenciador de certificados do MIM 2016
 
 1.  Crie um modelo para o certificado que você vai solicitar para o cartão inteligente virtual. Abra o mmc.
 
@@ -72,7 +72,7 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
     10. Na lista, selecione o novo modelo que você acabou de criar (**Modelo de Certificado Arquivado**) e, em seguida, clique em **OK**.
 
-## Criar o modelo de perfil
+## <a name="create-the-profile-template"></a>Criar o modelo de perfil
 
 1.  Faça logon no portal do CM como um usuário com privilégios administrativos.
 
@@ -98,6 +98,6 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

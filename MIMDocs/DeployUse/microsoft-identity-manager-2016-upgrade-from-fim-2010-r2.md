@@ -1,25 +1,25 @@
 ---
-title: "Atualização do FIM 2010 R2 | Microsoft Identity Manager"
+title: "Atualização do FIM 2010 R2 | Microsoft Docs"
 description: "Saiba como atualizar os componentes do FIM 2010 R2 e, em seguida, instale os componentes que são novos no MIM 2016."
 keywords: 
 author: kgremban
+ms.author: kgremban
 manager: femila
 ms.date: 07/21/2016
 ms.topic: article
-ms.prod: identity-manager-2015
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3ab1b9376c9b613739d87c812f4b16a4e17e6de
-ms.openlocfilehash: c77a41b47baa81f003e52f79d338a7810fa817b5
+ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
+ms.openlocfilehash: ef272ffe665aa5753fa2bf02d26f2ce73efa025b
 
 
 ---
 
-# Atualização do Forefront Identity Manager 2010 R2
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Atualização do Forefront Identity Manager 2010 R2
 
 Se você tiver um ambiente do FIM (Forefront Identity Manager) 2010 R2 e quiser testar o MIM (Microsoft Identity Manager) 2016, use este artigo como seu guia. Há três fases nessa atualização:
 
@@ -36,7 +36,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 - Pré-requisitos locais e de ambiente (SQL Server, Exchange Server, SharePoint Services etc.) configurados para o FIM 2010 R2.
 
 
-## Preparação
+## <a name="preparation"></a>Preparação
 
 1.  Faça backup do banco de dados de serviço do FIM, do banco de dados de sincronização do FIM e do software e configuração do serviço de sincronização do FIM.
 
@@ -44,7 +44,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 3.  Baixe ou desempacote o software MIM.
 
-## Atualize o Serviço de Sincronização
+## <a name="upgrade-the-synchronization-service"></a>Atualize o Serviço de Sincronização
 
 1.  Faça logon como administrador para um servidor em que o Serviço de Sincronização do FIM 2010 R2 ("sincronização") esteja implantado.
 
@@ -82,7 +82,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 13. Observe que o **Serviço de Sincronização** reiniciou.
 
-## Atualização do Serviço e do Portal
+## <a name="upgrade-the-service-and-portal"></a>Atualização do Serviço e do Portal
 
 1.  Faça logon como um administrador em um servidor em que o Serviço e o Portal do FIM 2010 R2 e estejam implantados.
 
@@ -138,7 +138,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 14. Ao instalar o Portal do MIM, forneça a URL do conjunto de sites do SharePoint no qual o Portal do FIM está hospedado no momento. Clique em **Avançar**.
 
-## Instalação do Portal de Registro e Redefinição de Senha do MIM
+## <a name="install-the-mim-password-registration-portal"></a>Instalação do Portal de Registro e Redefinição de Senha do MIM
 
 1. Se você estiver instalando o Portal de Registro de Senha do MIM, forneça a URL solicitada para o Portal de Registro de Senha. Clique em **Avançar**.
 
@@ -168,7 +168,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
     2.  Determine se este portal pode ser acessado por usuários de extranet e intranet ou apenas por usuários da intranet, como foi configurado anteriormente para redefinição da senha do FIM.
 
-## Instalação do Portal de Redefinição de Senha do MIM
+## <a name="install-the-mim-password-reset-portal"></a>Instalação do Portal de Redefinição de Senha do MIM
 
 1. Se você estiver instalando o Portal de redefinição de senha do MIM, forneça detalhes de acesso e credenciais para a redefinição de senha do MIM.
 
@@ -188,7 +188,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
     2.  Especifique se este portal pode ser acessado por usuários da extranet e da intranet, ou apenas por usuários da intranet.
 
-## Conclusão da instalação e da atualização
+## <a name="finish-installation-and-upgrade"></a>Conclusão da instalação e da atualização
 
 1. Depois que todas as definições de configuração forem concluídas com sucesso, a página de instalação será exibida. Clique em **Instalar** para iniciar a instalação e atualização do Serviço e do Portal do MIM.
 
@@ -202,6 +202,6 @@ Observação: Se os complementos e extensões do FIM estão implantadas no momen
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
