@@ -1,6 +1,6 @@
-# [Compreensão e Exploração](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
-# [Plano e design](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
-# [Implantação e Uso](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
+# [Compreender e explorar](/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016)
+# [Planejar e projetar](/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms)
+# [Implantação e usar](/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy)
 # [Usar o Privileged Access Management](privileged-identity-management-for-active-directory-domain-services.md)
 ## [Saiba mais sobre o PAM](privileged-identity-management-for-active-directory-domain-services.md)
 ### [Noções básicas sobre os componentes](principles-of-operation.md)
@@ -18,7 +18,7 @@
 ### [Etapa 4 – Instalar o MIM no servidor PAM](step-4-install-mim-components-on-pam-server.md)
 ### [Etapa 5 – Estabelecer a relação de confiança entre PRIV e CORP](step-5-establish-trust-between-priv-corp-forests.md)
 ### [Etapa 6 – Criar contas privilegiadas](step-6-transition-group-to-pam.md)
-### [Etapa 7 – Elevar o acesso de um usuário](step-7-elevate-user-access.md)
+### [Etapa 7 – elevar o acesso do usuário](step-7-elevate-user-access.md)
 ### [Configurar o Azure MFA](use-azure-mfa-for-activation.md)
 ## [Configurar o PAM usando scripts](sp1-pam-configure-using-scripts.md)
 ### [Etapa 1 Configurando o domínio Priv](sp1-step1-configuring-priv-domain.md)
@@ -33,6 +33,6 @@
 # [Referência do desenvolvedor](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
