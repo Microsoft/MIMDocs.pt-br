@@ -1,11 +1,11 @@
 ---
 title: Etapa 5 Instalar/configurar o PAM
-description: "Prepare o domínio CORP com identidades novas ou existentes para serem gerenciadas pelo Privileged Identity Manager usando scripts"
+description: "Esta é a etapa 5 de configuração do Privileged Identity Manager com scripts e aborda as etapas de implantação do Servidor PAM."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
-ms.date: 10/25/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,8 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 365989693f844f117f76ee2b69db85df82f06f35
-ms.openlocfilehash: c641865548f753a609ccee8dbf12c329bb6a1c9f
+ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
+ms.openlocfilehash: 862f62ab9bac87bcee31c35e249db34740e9fb14
 
 
 ---
@@ -49,6 +49,6 @@ Após a reinicialização do PAMServer, faça logon novamente no computador com 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

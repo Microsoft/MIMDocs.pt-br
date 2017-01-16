@@ -1,11 +1,11 @@
 ---
-title: Microsoft Identity Manager 2016 | Microsoft Docs
+title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
 description: "Compreenda o funcionamento do MIM 2016 para criar uma experiência de gerenciamento de identidade mais segura e mais conveniente na nuvem e local."
 keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 01/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ed477de53abbf646f47efb90e617b04184bc29a9
+ms.sourcegitcommit: f0947f186b5206d06a67140706ada33a5bc0e016
+ms.openlocfilehash: 4f293a349916ae1a55d8551ef949758cab851b74
 
 
 ---
@@ -24,7 +24,7 @@ Como parte do ciclo de lançamento regular de manutenção e atualização do Mi
 
 Se você encontrar problemas durante uma implantação de produção do MIM SP1, entre em contato com o Atendimento Microsoft.
 
-Também queremos ouvir sua opinião! Envie seus comentários, opiniões ou preocupações para a equipe de produto em [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
+Também queremos ouvir sua opinião! Envie um email com seus comentários, opiniões ou preocupações para a equipe de produto em [mim2016@microsoft.com.](mailto:mim2016@microsoft.com)
 
 
 
@@ -38,7 +38,7 @@ Também queremos ouvir sua opinião! Envie seus comentários, opiniões ou preoc
 
 - **Validação do formato de arquivo de imagem no carregamento:** o MIM agora é capaz de validar o formato de arquivo de imagens quando forem carregados no portal.
 
-### <a name="privileged-access-managementpam"></a>Gerenciamento de Acesso Privilegiado (PAM)
+### <a name="privileged-access-managementpam"></a>Privileged Access Management (PAM)
 
 - **Suporte a floresta "PRIV" (bastião) PAM para o nível funcional do Windows Server 2016:** o Serviço MIM PAM podem ser configurado em um ambiente com controladores de domínio em execução no nível funcional de floresta dos Active Directory Domain Services do Windows Server 2016. Quando configurado, o tíquete do Kerberos do usuário terá uma limitação tempo para o tempo restante da ativação de sua função.
 
@@ -85,6 +85,6 @@ Você precisa fazer backup dos bancos de dados MIMService e MIM Sync.
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 
