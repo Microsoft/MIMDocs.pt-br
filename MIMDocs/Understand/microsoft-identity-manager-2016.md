@@ -5,7 +5,7 @@ keywords:
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 08/11/2016
+ms.date: 01/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
-ms.openlocfilehash: d38a3613b92c0bce0b27a4bd147177a1cccf47d8
+ms.sourcegitcommit: 4f7af7cfc258f95bf1fff77e732e5cf11d0ae239
+ms.openlocfilehash: 9db813d870de433757ff3dac69c82771bb7fbd7b
 
 
 ---
@@ -30,13 +30,13 @@ O Microsoft Identity Manager 2016 funciona com o Azure para fornecer a você con
 ## <a name="privileged-identity-management"></a>Privileged Identity Management
 O Privileged Identity Management controla e gerencia o acesso administrativo fornecendo acesso temporário baseado em tarefas a recursos confidenciais. Isso significa que você pode fornecer aos usuários apenas a permissão necessária, o que reduz as chances de um invasor cibernético conseguir acesso administrativo completo. Além disso, o Privileged Identity Management extrai e isola as contas administrativas de florestas do Active Directory existentes.
 
-O MIM dá suporte a uma solução local do Privileged Identity Management para gerenciar Active Directories. Para começar, [Use o Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
+O MIM dá suporte a uma solução local do Privileged Identity Management para gerenciar Active Directory. Para começar, [Use o Privileged Access Management](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 O Microsoft Identity Manager ainda está muito relacionado ao seu predecessor, o Forefront Identity Manager. Se você ainda usa o FIM ou deseja consultar a documentação adicional, veja o [Roteiro da documentação do FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO3-->
 
 
