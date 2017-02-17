@@ -1,11 +1,11 @@
 ---
-title: Configurar o servidor Exchange | Microsoft Docs
+title: Configurar o Exchange para o MIM para email e criar caixas de correio | Microsoft Docs
 description: Como uma etapa opcional, implante o Exchange Server para habilitar o MIM 2016 para enviar emails e criar caixas de correio.
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: db3e93de5e6ac907271e379b24b4b6b58641ca32
+ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
+ms.openlocfilehash: 01ccb55d200bfd1615ae62ccd30298117c0d6275
 
 
 ---
@@ -44,6 +44,6 @@ Se você quiser configurar o MIM para enviar e receber email ou provisionar caix
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

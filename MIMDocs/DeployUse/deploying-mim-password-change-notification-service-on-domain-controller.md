@@ -1,11 +1,11 @@
 ---
-title: "Notificações de alteração de senha | Microsoft Docs"
+title: "Implantar o serviço de notificação de alteração de senha | Microsoft Docs"
 description: "Obter as etapas para instalar e configurar o Serviço de notificação de alteração de senha do MIM em seu controlador de domínio."
 keywords: 
 author: kgremban
 ms.author: kgremban
 manager: femila
-ms.date: 07/21/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: c608fabc662c74e560878773842e0236c9824daa
+ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
+ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
 
 
 ---
@@ -61,6 +61,6 @@ Uma vez reconectado ao servidor de DC como um administrador de domínio, vá par
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
