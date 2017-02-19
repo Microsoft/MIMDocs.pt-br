@@ -1,152 +1,132 @@
 ---
-asset_id: 90d66a75-a7ec-4fa1-911c-cce683908838
-layout: HubPage
-title: "Documentação do Identity Manager | Microsoft Docs"
-description: "Documentação técnica da documentação do Microsoft Identity Manager: gerenciamento de acesso e identidade local"
-keywords: "documentação do identity manager, microsoft identity manager, MIM"
-author: kgremban
-manager: femila
-ms.date: 10/25/2016
-ms.topic: hubpage
-ms.prod: microsoft-identity-manager
-ms.service: microsoft-identity-manager
-ms.technology: security
-ms.suite: ems
-ms.assetid: 90d66a75-a7ec-4fa1-911c-cce683908838
+layout: LandingPage
+title: "Documentação do Microsoft Identity Manager | Microsoft Docs"
+description: Saiba como usar o Microsoft Identity Manager.
 translationtype: Human Translation
-ms.sourcegitcommit: 584efc6cc60eebe69fb32e7a0bdff25f568eee7f
-ms.openlocfilehash: b857664f1065f975e6d7e95508928b679548b52c
-
+ms.sourcegitcommit: d6b2c0db8fa071d3cec9ea680667b9e9b7f75267
+ms.openlocfilehash: 921e34c6625d798909e6ded0ea611c731141a052
 
 ---
-# Documentação do Identity Management
-<article id="main">
-    <section id="hero-content">
-      <h1>Documentação do Identity Manager</h1>
-      <h2>Saiba como configurar o gerenciamento de identidade local com o Microsoft Identity Manager. Os tutoriais mostram como configurar a sincronização de identidades, a prevenção contra roubo de identidade e muito mais.</h2>
-      <h3>Ainda não conhece o MIM? <a href="http://go.microsoft.com/fwlink/?LinkId=816853" target="\_blank">Visite a página do produto &rarr;</a></h3>     
-    </section>
-    <aside class="alert section-border">
-      <p>Pronto para pôr a mão na massa?</p>
-      <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-identity-manager-2016" target="\_blank" class="button-bordered button-translucent">Comece uma avaliação gratuita</a></li>
-      </ol>
-    </aside>
-    <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Conteúdo em destaque</h2>
-      <div class="features row">
-        <ul class="column column-half">
-          <li><mark><b>NOVO</b></mark><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">Microsoft Identity Manager 2016 Service Pack 1</a></li>
-          <li><a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">Implantar o software MIM em um servidor novo</a></li>
-        </ul>
-        <ul class="column column-half">
-          <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Referência da API REST do Privileged Identity Management</a></li>
-          <li><a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">Visão geral do MIM 2016</a></li>
-        </ul>
-      </div>
-    </section>
-    <div id="journeys">
-      <section class="container">
-        <ul class="journeys-list">
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
-                <div class="title column-third">
-                  <span class="step-number">1</span>
-                  <p>Entender &amp; explorar</p>
+# <a name="microsoft-identity-manager-documentation"></a>Documentação do Microsoft Identity Manager
+
+O Microsoft Identity Manager 2016 une as soluções de gerenciamento de identidades e acessos da Microsoft apresentando perfeitamente vários repositórios locais de autenticação como o Active Directory, o LDAP, o Oracle e outros aplicativos com o Azure Active Directory. Isso fornece experiências consistentes para soluções SaaS e aplicativos LOB locais.
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016-sp1-release-notes">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Novidades do Microsoft Identity Manager 2016 Service Pack 1</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Aprenda sobre os conceitos, recursos e capacidades de alto nível do Microsoft Identity Manager.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
-                    <h3>O que é o MIM 2016?</h3>
-                    <p>Saiba como o MIM 2016 fornece funcionalidades locais e híbridas de gerenciamento de identidades e acessos.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/understand-explore/identity-manager-hybrid-reporting-azure">
-                    <h3>Relatório híbrido no Azure</h3>
-                    <p>Crie um único relatório de eventos que ocorrem no local e na nuvem.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/plan-design/microsoft-identity-manager-2016-supported-platforms">
-                    <h3>Plataformas com suporte</h3>
-                    <p>A lista de plataformas, servidores e aplicativos com suporte do MIM.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
-                <div class="title column-third">
-                  <span class="step-number">2</span>
-                  <p>Implantar &amp; Usar</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Saiba mais sobre o Microsoft Identity Manager</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Implante e use o MIM.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy">
-                    <h3>Implantação inicial</h3>
-                    <p>Implante o MIM em um servidor novo que não tenha tido o FIM ou o MIM anteriormente.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-2016-upgrade-from-fim-2010-R2">
-                    <h3>Atualizando do FIM 2010 R2</h3>
-                    <p>Atualize um sistema de teste FIM 2010 R2 existente para o MIM 2016.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/microsoft-identity-manager/deploy-use/deploying-mim-password-change-notification-service-on-domain-controller">
-                    <h3>Serviço de notificação de alteração de senha</h3>
-                    <p>Instale PCNS em cada servidor de controlador de domínio para habilitar a sincronização de senha.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <div class="section-border">
-      <section class="resources container">
-        <h2 class="section-heading"><span class="icon icon-options"></span> Referência do desenvolvedor</h2>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">Referência da API REST do PAM (Gerenciamento de Acesso Privilegiado)</a></li>
-          </ul>
-          <ul class="column-half">
-            <li><a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">Referência da API REST do Certificate Manager</a></li>
-          </ul>
+            </div>
         </div>
-        <div class="resource-list row">
-          <ul class="column-half">
-            <li><a href="https://technet.microsoft.com/library/mt604080.aspx">Cmdlets de gerenciamento de acesso privilegiado</a></li>
-          </ul>
+        </a>
+    </li>
+    <li>
+        <a href="/microsoft-identity-manager/deploy-use/microsoft-identity-manager-deploy"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/deploy.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Implantar o Microsoft Identity Manager 2016</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-    </div>
-    <aside class="alert alert-social">
-      <p>Fique por dentro das novidades de suporte do MIM</p>
-      <ol class="action-list">
-        <li><a href="https://blogs.technet.microsoft.com/iamsupport/" target="\_blank" class="button-bordered button-translucent">blog oficial de suporte</a></li>
-      </ol>
-    </aside>
-</article>
+        </a>
+    </li>
+</ul>
+
+---
+
+<h2>Referência</h2>
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_reference.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Referência da API REST do PAM (Gerenciamento de Acesso Privilegiado)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://blogs.technet.microsoft.com/iamsupport/">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_blog.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Blog da equipe de suporte do Gerenciamento de Identidades e Acessos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+
+<h2>Soluções</h2>
+<ul class="panelContent cardsW">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <p><a href="/enterprise-mobility-security/solutions/manage-access-at-scale">Gerenciar acesso em escala</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
