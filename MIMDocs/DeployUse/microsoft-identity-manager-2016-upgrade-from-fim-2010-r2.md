@@ -2,10 +2,10 @@
 title: Atualizar do FIM 2010 R2 para o Microsoft Identity Manager 2016 | Microsoft Docs
 description: "Saiba como atualizar os componentes do FIM 2010 R2 e, em seguida, instale os componentes que são novos no MIM 2016."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: fimguy
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -13,8 +13,8 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 16966d970365c13a3530020234208e72c0e8823f
+ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
+ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
 
 
 ---
@@ -200,8 +200,10 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 Observação: Se os complementos e extensões do FIM estão implantadas no momento nos computadores dos usuários para SSPR, não configure a nova porta de telefone MFA para redefinição de senha até que todos os complementos e extensões do FIM tenham sido atualizados para o MIM 2016.  Como os complementos e extensões do FIM 2010 e FIM 2010 R2 não reconhecem as novas portas, eles fornecerão um erro e o usuário não poderá concluir a redefinição de senha.
 
+Para obter orientação sobre atualização do Microsoft Identity Manager 2016 SP1, consulte o seguinte [pacote de atualização do Microsoft Identity Manager 2016 Service Pack 1](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)
 
 
-<!--HONumber=Jan17_HO4-->
+
+<!--HONumber=Feb17_HO2-->
 
 
