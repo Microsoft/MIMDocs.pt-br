@@ -7,7 +7,6 @@
       "docset_name": "MIMDocs",
       "build_output_subfolder": "MIMDocs",
       "locale": "pt-br",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -17,7 +16,6 @@
       "docset_name": "MIMUnderstand",
       "build_output_subfolder": "MIMDocs/Understand",
       "locale": "pt-br",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -27,7 +25,6 @@
       "docset_name": "MIMPlanDesign",
       "build_output_subfolder": "MIMDocs/PlanDesign",
       "locale": "pt-br",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -37,7 +34,6 @@
       "docset_name": "MIMGetStarted",
       "build_output_subfolder": "MIMDocs/GetStarted",
       "locale": "pt-br",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -47,7 +43,6 @@
       "docset_name": "MIMDeployUse",
       "build_output_subfolder": "MIMDocs/DeployUse",
       "locale": "pt-br",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -57,7 +52,6 @@
       "docset_name": "MIMTroubleshoot",
       "build_output_subfolder": "MIMDocs/Troubleshoot",
       "locale": "pt-br",
-      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -73,6 +67,7 @@
   "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/MIMDocs.pt-br",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
+  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -82,7 +77,11 @@
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/Microsoft/MIMDocs-pr",
-      "branch": "live"
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "master": "master"
+      }
     }
   ],
   "need_generate_pdf_url_template": false
