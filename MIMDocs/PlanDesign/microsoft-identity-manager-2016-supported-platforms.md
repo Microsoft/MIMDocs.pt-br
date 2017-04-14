@@ -13,9 +13,9 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e8783220723ba9e0e84b4824c79793be6516ab4a
-ms.openlocfilehash: 11f10cefa08b2bb13164ddfd7df39b914c87189a
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: f1faed3a09023e288a68a8950dae43725f19eb3e
+ms.openlocfilehash: 33c84afa4d6fd2ed7bde33de39dd151f83f07fd4
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -30,18 +30,18 @@ Esta tabela descreve as plataformas com suporte, e a versão de cada componente 
 | **Sincronização do MIM** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2<br/>Windows Server 2016 * |
 | | Banco de dados da Sincronização do MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | Active Directory para provisionamento de usuário, PCNS e Sincronização GAL (opcional)|Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
-| | Exchange para provisionamento de caixa de correio e Sincronização GAL (opcional)|Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
+| | Exchange para provisionamento de caixa de correio e Sincronização GAL (opcional)|Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1<br/>Exchange Server 2016* |
 | | Ambiente de desenvolvimento (opcional) | Visual Studio 2012<br/>Visual Studio 2013 <br/> Visual Studio 2015 <br/> Visual Studio 2017* |
 | | Sistema conectado adicional (opcional) | Active Directory Domain Services<br/>Active Directory<br/>Lightweight Directory Services<br/>SQL Server 2000 ou posterior<br/>SharePoint Server 2013<br/> SharePoint Server 2016 * <br/> Outros produtos de terceiros |
 | **Serviço do MIM** (exceto cenário de PAM) | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Banco de dados do Serviço do MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
-| | Exchange para aprovação do Serviço do MIM e emails de gerenciamento de grupo (opcional) | Exchange Server 2007 SP3 (com o console de gerenciamento do Exchange instalado)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Somente Notificação) |
+| | Exchange para aprovação do Serviço do MIM e emails de gerenciamento de grupo (opcional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Somente Notificação) |
 | **Serviço do MIM e Portal** (somente cenário de PAM)| Windows Server | Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory para a floresta do PAM no ambiente de bastiões | Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Active Directory para florestas existentes | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
 | | Banco de dados do Serviço do MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 * |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Servidor de email para aprovação do Serviço do MIM e emails de gerenciamento de grupo (opcional) | Exchange Server 2007 SP3 (com o console de gerenciamento do Exchange instalado)<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Somente Notificação) |
+| | Servidor de email para aprovação do Serviço do MIM e emails de gerenciamento de grupo (opcional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (Somente Notificação) |
 | | Navegador | Todos os principais navegadores |
 | **Relatórios do Serviço do MIM** | Windows Server | Windows Server 2012 <br/> Windows Server 2016 * |
 | | Data Warehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (Com 4.4.1459)<br/> [Compatibilidade de Versão do SQL Server para o System Center 2016](https://technet.microsoft.com/en-us/system-center-docs/system-requirements/sql-server-version-compatibility)
@@ -58,6 +58,6 @@ Esta tabela descreve as plataformas com suporte, e a versão de cada componente 
 | **Gerenciamento de certificados do MIM** (Cliente e cliente em massa) | Windows | Windows 7 |
 | **Suite MIM BHOLD** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Banco de dados BHOLD | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2 <br/> SQL Server 2014 * <br/> SQL Server 2016 * |
-| | Servidor de email (opcional) | Exchange Server 2007 SP3<br/>Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
+| | Servidor de email (opcional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * |
 | | Navegador da Web | Internet Explorer 7, 8, 9, 10 ou 11 com Silverlight |
 
