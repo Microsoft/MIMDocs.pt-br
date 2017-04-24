@@ -3,9 +3,9 @@ layout: LandingPage
 title: "Documentação do Microsoft Identity Manager | Microsoft Docs"
 description: Saiba como usar o Microsoft Identity Manager.
 translationtype: Human Translation
-ms.sourcegitcommit: 1ff73d0bdfcbcb4ab79d0d81feca9abdc33f9213
-ms.openlocfilehash: 244b4e1ba3c51edfcbc78e2dfe9472792184b472
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: 89c49c8d979247b3b888570eabfb57398038934c
+ms.openlocfilehash: 090dd1377ba5afe5162d327569f4af6163e72a18
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentação do Microsoft Identity Manager
@@ -32,7 +32,7 @@ O Microsoft Identity Manager 2016 une as soluções de gerenciamento de identida
         </a>
     </li>
     <li>
-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
+-        <a href="/microsoft-identity-manager/understand-explore/microsoft-identity-manager-2016">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -42,8 +42,7 @@ O Microsoft Identity Manager 2016 une as soluções de gerenciamento de identida
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Saiba mais sobre o Microsoft Identity Manager</h3>
-                    </div>
+                        <h3>Saiba mais sobre o Microsoft Identity Manager</h3>                    </div>
                 </div>
             </div>
         </div>
@@ -88,6 +87,24 @@ O suporte base do Forefront Identity Manager (FIM) termina em 10/10/2017. [Atual
                     </div>
                     <div class="cardText">
                         <h3>Referência da API REST do PAM (Gerenciamento de Acesso Privilegiado)</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+        <li>
+        <a href="/microsoft-identity-manager/reference/certificate-management-rest-api-reference">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_reference.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Referência da API REST do Certificate Manager</h3>
                     </div>
                 </div>
             </div>
