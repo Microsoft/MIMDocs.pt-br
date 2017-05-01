@@ -52,7 +52,7 @@ Adicione o servidor Web (IIS) e funções de servidor de aplicativos, os recurso
 
 1.  Entre como administrador de domínio PRIV (PRIV\Administrator) e inicie o PowerShell.
 
-2.  Digite os seguintes comandos. Observe que talvez seja necessário especificar um local diferente para os arquivos de origem para os recursos do .NET Framework 3.5. Normalmente, esses recursos não estão presentes no momento da instalação do Windows Server, mas estão disponíveis na pasta SxS (lado a lado) na pasta de origens do disco de instalação do sistema operacional, por exemplo, “*d:\Sources\SxS”.
+2.  Digite os seguintes comandos. Observe que talvez seja necessário especificar um local diferente para os arquivos de origem para os recursos do .NET Framework 3.5. Normalmente, esses recursos não estão presentes no momento da instalação do Windows Server, mas estão disponíveis na pasta SxS (lado a lado) na pasta de origens do disco de instalação do sistema operacional, por exemplo, “d:\Sources\SxS\”.
 
     ```
     import-module ServerManager
