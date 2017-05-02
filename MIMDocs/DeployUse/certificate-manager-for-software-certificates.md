@@ -2,10 +2,10 @@
 title: Solicitar certificados no Gerenciador de Certificados usando modelos | Microsoft Docs
 description: Saiba como usar o Gerenciador de certificados para criar e renovar certificados de software com os modelos de perfil.
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -38,7 +39,7 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
     1.  Na guia **Geral** , no campo de nome de exibição, digite **Modelo de Certificado Arquivado**.
 
-    2.  b.  Na guia **Tratamento de Solicitação**
+    2.  b.    Na guia **Tratamento de Solicitação**
 
         1.  Defina a **Finalidade** da assinatura e criptografia.
 
@@ -95,9 +96,4 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 10. Se quiser emitir novamente os certificados arquivados, marque as caixas à esquerda de **Reemitir certificados arquivados** e clique em **OK**.
 
 11. Se você estiver usando o CM Do Cartão Inteligente Virtual, precisará desabilitar itens de coleta de dados porque eles não funcionam com a coleta de dados ativada. Desabilite a coleta de dados para cada política clicando na política no painel esquerdo e, em seguida, desmarcando a caixa ao lado de **Item de dados de exemplo** e, em seguida, em **Excluir itens de coleta de dados**. Em seguida, clique em **OK**.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

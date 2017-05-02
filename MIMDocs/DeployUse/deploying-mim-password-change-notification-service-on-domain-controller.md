@@ -2,10 +2,10 @@
 title: "Implantar o serviço de notificação de alteração de senha | Microsoft Docs"
 description: "Obter as etapas para instalar e configurar o Serviço de notificação de alteração de senha do MIM em seu controlador de domínio."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 1929703baffad4177ea7ea058cb07f44a9c71667
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -58,9 +59,4 @@ O PCNS (Serviço de notificação de alteração de senha) é um serviço que vo
 
 ## <a name="configuring-the-password-change-notification-service"></a>Configuração do Serviço de notificação de alteração de senha
 Uma vez reconectado ao servidor de DC como um administrador de domínio, vá para *C:\Program Files\Microsoft Password Change Notification.* Execute *pcnscfg.exe*.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

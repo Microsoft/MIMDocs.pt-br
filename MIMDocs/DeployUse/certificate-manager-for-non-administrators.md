@@ -2,10 +2,10 @@
 title: "Renovação do cartão inteligente de autoatendimento do Microsoft Identity Manager sem acesso de Administrador | Microsoft Docs"
 description: "Saiba como registrar cartões inteligentes para usuários sem acesso de administrador aos respectivos computadores para que eles possam usar o Gerenciador de Certificados."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: 89e095cff66984140cdcef3617dd0ccc3d3714d8
+ms.lasthandoff: 02/07/2017
 
 
 ---
@@ -93,9 +94,4 @@ Se um usuário não for um administrador local no seu computador, ele não poder
 7.  **Instalar o aplicativo CM na conta de não administrativa**
 
 8.  **Iniciar o aplicativo CM e registrar para um cartão inteligente virtual**
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

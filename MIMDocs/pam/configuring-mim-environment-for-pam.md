@@ -2,10 +2,10 @@
 title: Configurar o MIM 2016 para o Privileged Access Management | Microsoft Docs
 description: "O roteiro para instalação do MIM e configuração dele para o Privileged Access Management."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 32815c4ddc51fb9c9187c9fc9a1710239faf7935
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -40,9 +41,4 @@ Essas etapas são delineadas para que você possa começar do zero e criar um am
 
 >[!div class="step-by-step"]
 [Iniciar »](step-1-prepare-corp-domain.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -2,10 +2,10 @@
 title: "Instalar o Serviço de Sincronização do Microsoft Identity Manager | Microsoft Docs"
 description: "Comece a usar os componentes do MIM 2016 instalando e configurando o Serviço de Sincronização."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
 ms.openlocfilehash: c6cf0c93679319716c34904ea6239902010e0860
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -104,9 +105,4 @@ Para instalar os componentes do Microsoft Identity Manager 2016, primeiramente c
 >[!div class="step-by-step"]  
 [« Exchange Server](prepare-server-exchange.md)
 [Serviço MIM e Portal »](install-mim-service-portal.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

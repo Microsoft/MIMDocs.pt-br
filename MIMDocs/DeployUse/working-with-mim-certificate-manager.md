@@ -2,10 +2,10 @@
 title: Implantar o aplicativo Windows do Gerenciador de Certificados do MIM | Microsoft Docs
 description: "Saiba como implantar o aplicativo Gerenciador de certificados para permitir que os usuários gerenciem seus próprios direitos de acesso."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: d714a58796d3a86fc82ed1eb6dc29bdc45920933
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -253,9 +254,4 @@ Certifique-se de quando criar um modelo de perfil para defini-lo para criar/dest
 
 ## <a name="deploy-the-app"></a>Implantar o aplicativo
 Depois de configurar o aplicativo CM, no Centro de Download, baixe o arquivo MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip e extraia todo o conteúdo. O arquivo .appx é o instalador. Você pode implantá-lo da maneira que normalmente implanta aplicativos da Windows Store usando o [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)ou o [Intune](https://technet.microsoft.com/library/dn613839.aspx) para carregar o aplicativo para que os usuários tenham acesso a ele por meio do portal da empresa ou para que seja enviado diretamente às suas máquinas.
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

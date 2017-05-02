@@ -2,10 +2,10 @@
 title: "Como trabalhar com o portal de Redefinição de Senha de Autoatendimento | Microsoft Docs"
 description: "Veja as novidades de redefinição de senha de autoatendimento no MIM 2016, incluindo como a SSPR funciona com autenticação multifator."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 01/23/2017
+ms.date: 03/23/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
@@ -15,6 +15,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 72c773601cd722290b6e7a9d5d13458f0409cfdc
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -203,9 +204,4 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 6.  Se o usuário optar por redefinir a senha, será necessário digitar uma nova senha duas vezes e clicar em **Avançar** para alterá-la.
 
     ![Imagem de redefinição de senha do assistente de logon do MIM](media/MIM-SSPR-PR1.JPG)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

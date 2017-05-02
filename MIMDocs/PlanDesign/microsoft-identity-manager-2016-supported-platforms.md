@@ -2,8 +2,8 @@
 title: Plataformas de software com suporte | Microsoft Docs
 description: "Localize os produtos e versões compatíveis com cada um dos componentes do MIM 2016"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
 ms.date: 03/28/2017
 ms.topic: article
