@@ -2,10 +2,10 @@
 title: "Visão geral do ambiente do PAM | Microsoft Docs"
 description: "Localize o número necessário e a configuração de máquinas virtuais para implantar o Privileged Access Management com êxito"
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 750ba152813b4c03c913453c42e0e503e90b883b
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -31,9 +32,4 @@ As unidades em que serão armazenadas as imagens de disco de máquina virtual pr
 
 > [!NOTE]
 > O atual CTP (Customer Technical Preview) do MIM não é compatível com o conteúdo do banco de dados ou diretório do CTP anterior. Se você tiver avaliado anteriormente o MIM para PAM ou outros cenários, faça backup e arquive as máquinas virtuais usadas para esse teste, e inicie a implantação com novas imagens de máquinas virtuais que não tenham sido usadas anteriormente para cenários do MIM.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

@@ -2,10 +2,10 @@
 title: "Definir funções com privilégios para o PAM | Microsoft Docs"
 description: "Decida quais funções com privilégios devem ser gerenciadas e defina a política de gerenciamento para cada uma delas."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: ae582e6aff2449aeee8b68ebe90b22b18e5a67d2
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -144,7 +145,7 @@ A escolha das definições de função dependerá da camada de servidores que es
 
 As seções a seguir fornecem exemplos para cenários corporativos típicos.
 
-### <a name="tier-0-administrative-forest"></a>Camada 0 - Floresta administrativa
+### <a name="tier-0---administrative-forest"></a>Camada 0 - Floresta administrativa
 
 Funções adequadas para as contas no ambiente de bastiões podem incluir:
 
@@ -153,7 +154,7 @@ Funções adequadas para as contas no ambiente de bastiões podem incluir:
 - Usuários que são administradores da floresta de produção
 - Usuários que receberam direitos administrativos limitados aos aplicativos na floresta de produção
 
-### <a name="tier-0-enterprise-production-forest"></a>Camada 0 - Floresta de produção corporativa
+### <a name="tier-0---enterprise-production-forest"></a>Camada 0 - Floresta de produção corporativa
 
 Funções adequadas para gerenciar as contas e os recursos da floresta de produção da camada 0 podem incluir:
 
@@ -200,9 +201,4 @@ As funções de gerenciamento de computador e usuário não administrativo podem
 - Suporte técnico
 - Administradores do grupo de segurança
 - Suporte à estação de trabalho em mesa
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 

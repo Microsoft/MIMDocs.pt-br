@@ -2,10 +2,10 @@
 title: Entender os componentes do PAM | Microsoft Docs
 description: "O Privileged Access Management compartilha alguns componentes com o MIM e tem alguns próprios. Saiba como eles funcionam juntos."
 keywords: 
-author: kgremban
-ms.author: kgremban
+author: billmath
+ms.author: billmath
 manager: femila
-ms.date: 07/15/2016
+ms.date: 03/15/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
@@ -13,8 +13,9 @@ ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f545bfb2da0f65c335e37fb9de9c9522bf57f25
-ms.openlocfilehash: 043d617bcd2addf7c6dc7ecd210790fc55f12c28
+ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
+ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -40,9 +41,4 @@ Depois de instalado e configurado, cada grupo criado pelo procedimento de migra�
 Como resultado, quando um usuário solicita elevação usando os cmdlets do PowerShell e a solicitação é aprovada, o serviço do MIM adiciona sua conta na floresta PRIV a um grupo na floresta PRIV. Quando o usuário se conectar com suas contas privilegiadas, seu token Kerberos conterá um identificador SID (segurança) idêntico ao SID do grupo na floresta CORP. Como a floresta CORP é configurada para confiar na floresta PRIV, a conta elevada que está sendo usada para acessar um recurso na floresta CORP é exibida para um recurso de verificação de associações de grupo do Kerberos ser um membro dos grupos de segurança daquele recurso. Isso é fornecido através da autenticação entre florestas do Kerberos.
 
 Além disso, essas associações são por tempo limitado, assim, depois de um intervalo pré-configurado, a conta do usuário administrativo não será mais parte do grupo na floresta PRIV. Como resultado, essa conta não poderá ser usada para acessar recursos adicionais.
-
-
-
-<!--HONumber=Nov16_HO2-->
-
 
