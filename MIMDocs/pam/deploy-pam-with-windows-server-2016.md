@@ -5,15 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
-ms.sourcegitcommit: 77ecdb91ccfdb1afec830e9662163ab9a7ef250c
-ms.openlocfilehash: dc68c4dcf2ae2d347e10930613bd32ca02031f8b
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
+ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/09/2017
 
 
 ---
@@ -40,9 +41,9 @@ No mínimo duas VMs são necessárias para o ambiente de laboratório:
 Se você ainda não tiver um domínio "CORP" no seu ambiente de laboratório, um controlador de domínio adicional para esse domínio será necessário. O controlador de domínio "CORP" pode executar o Windows Server 2016 ou o Windows Server 2012 R2.
 
 
-Execute a instalação, conforme descrito no [Guia de Introdução](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md), **exceto conforme indicado a seguir**:
+Execute a instalação, conforme descrito no [Guia de Introdução](privileged-identity-management-for-active-directory-domain-services.md), **exceto conforme indicado a seguir**:
 
--   Se você estiver criando um novo domínio CORP, ao seguir as instruções em [Etapa 1 – Preparar o controlador de domínio CORP](/microsoft-identity-manager/pam/step-1-prepare-corp-domain.md), poderá optar por configurar opcionalmente o domínio CORP para estar no nível funcional do Windows Server 2016. **Se você escolher essa opção, faça os seguintes ajustes**:
+-   Se você estiver criando um novo domínio CORP, ao seguir as instruções em [Etapa 1 – Preparar o controlador de domínio CORP](step-1-prepare-corp-domain.md), poderá optar por configurar opcionalmente o domínio CORP para estar no nível funcional do Windows Server 2016. **Se você escolher essa opção, faça os seguintes ajustes**:
 
     -   Se você estiver usando a mídia do Windows Server 2016, a opção de instalação será chamada de Windows Server 2016 (Servidor com a Experiência Desktop).
 
@@ -56,7 +57,7 @@ Execute a instalação, conforme descrito no [Guia de Introdução](/microsoft-i
 
 -   Se você optar por usar o Windows Server 2012 R2 como o sistema operacional para CORPDC, deverá instalar hotfixes 2919442, 2919355 [e atualizar 3155495](http://support.microsoft.com/kb/3156418) no CORPDC.
 
--   Siga as instruções em [Etapa 2 – Preparar o controlador de domínio PRIV](/microsoft-identity-manager/pam/step-2-prepare-priv-domain-controller.md), exceto para esses ajustes:
+-   Siga as instruções em [Etapa 2 – Preparar o controlador de domínio PRIV](step-2-prepare-priv-domain-controller.md), exceto para esses ajustes:
 
     -   Instale usando a mídia do Windows Server 2016. A opção de instalação será chamada de Windows Server 2016 (Servidor com a Experiência Desktop).
 
@@ -115,19 +116,19 @@ Execute a instalação, conforme descrito no [Guia de Introdução](/microsoft-i
     ```
 
 
--   Siga as instruções em [Etapa 3 – Preparar um servidor PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server.md), com esses ajustes.
+-   Siga as instruções em [Etapa 3 – Preparar um servidor PAM](step-3-prepare-pam-server.md), com esses ajustes.
 
     -   Se estiver instalando o Windows Server 2016, observe que a função "ApplicationServer" não está disponível.
 
     -   Se estiver instalando o MIM no Windows Server 2016, **não será possível instalar o SharePoint 2013**.
 
--   Siga as instruções em [Etapa 4 – Instalar componentes MIM no servidor e estação de trabalho PAM](/microsoft-identity-manager/pam/step-4-install-mim-components-on-pam-server.md), com esses ajustes.
+-   Siga as instruções em [Etapa 4 – Instalar componentes MIM no servidor e estação de trabalho PAM](step-4-install-mim-components-on-pam-server.md), com esses ajustes.
 
     -   O usuário que está instalando os componentes de serviço e PAM do MIM **deve ter acesso de gravação ao domínio PRIV no AD**, porque a instalação de MIM cria uma nova UO "Objetos do PAM" do AD.
 
     -   Se o SharePoint não estiver instalado, não instale o Portal do MIM.
 
--   Siga as instruções em [Etapa 5 – Estabelecer confiança](/microsoft-identity-manager/pam/step-5-establish-trust-between-priv-corp-forests.md) com estes ajustes:
+-   Siga as instruções em [Etapa 5 – Estabelecer confiança](step-5-establish-trust-between-priv-corp-forests.md) com estes ajustes:
 
     -   Ao estabelecer relação de confiança unidirecional, basta executar os dois primeiros comandos do PowerShell (get-credential e New-PAMTrust), **não execute o comando New-PAMDomainConfiguration**.
 
@@ -147,7 +148,7 @@ Execute a instalação, conforme descrito no [Guia de Introdução](/microsoft-i
 
 ## <a name="more-information"></a>Mais informações
 
-- [Privileged Access Management para Active Directory Domain Services](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services.md)
-- [Configure o ambiente do MIM para o Privileged Access Management](/microsoft-identity-manager/pam/configuring-mim-environment-for-pam.md)
-- [Configurar o PAM usando scripts](/microsoft-identity-manager/pam/sp1-pam-configure-using-scripts.md)
+- [Privileged Access Management para Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md)
+- [Configure o ambiente do MIM para o Privileged Access Management](configuring-mim-environment-for-pam.md)
+- [Configurar o PAM usando scripts](sp1-pam-configure-using-scripts.md)
 
