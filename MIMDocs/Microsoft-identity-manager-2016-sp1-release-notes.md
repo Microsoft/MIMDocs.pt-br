@@ -34,7 +34,7 @@ Também queremos ouvir sua opinião! Envie um email com seus comentários, opini
 
 ### <a name="mim"></a>MIM
 
-- **Compatibilidade de navegadores no Portal do MIM de autoatendimento de usuário final:** neste Service Pack, introduzimos o suporte para a maioria dos principais navegadores. Agora, os usuários podem acessar e interagir com o Portal do MIM para gerenciamento de autoatendimento de perfil e de grupo no Edge, Chrome e Safari.
+- **Compatibilidade de navegadores no Portal do MIM de autoatendimento de usuário final:** neste Service Pack, introduzimos o suporte para a maioria dos principais navegadores. Agora, os usuários podem acessar e interagir com o Portal do MIM para gerenciamento de autoatendimento de perfil e de grupo no Microsoft Edge, Chrome e Safari.
 
 - **Suporte ao Serviço do MIM para Exchange Online:** há tempos o Serviço do MIM oferece suporte ao envio e recebimento de emails para aprovações e notificações. Antes do SP1, o MIM só fornecia suporte ao Exchange Server ou SMTP. Com o service pack 1, o Serviço do MIM pode enviar e receber solicitações, bem como notificações por email, usando uma conta online do Exchange do Office365.
 
