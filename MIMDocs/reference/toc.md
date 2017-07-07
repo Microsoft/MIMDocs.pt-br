@@ -40,8 +40,3 @@
 #### [Obter solicitações do PAM pendentes](privileged-access-management-get-pending-requests.md)
 #### [Aprovar ou rejeitar uma solicitação pendente do PAM](privileged-access-management-approve-reject-pending-request.md)
 #### [Obter informações de sessão do PAM](privileged-access-management-get-session-info.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-

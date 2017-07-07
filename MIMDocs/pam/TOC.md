@@ -32,8 +32,3 @@
 ### [Etapa 8 Verificação de implantação do PAM](sp1-step8-pam-deployment-verification.md)
 ### [Adendo](sp1-pam-deployment-addendum.md)
 # [Referência do desenvolvedor](/microsoft-identity-manager/reference/microsoft-identity-manager-2016-developer-reference)
-
-
-<!--HONumber=Feb17_HO3-->
-
-
