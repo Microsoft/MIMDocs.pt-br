@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
 ms.openlocfilehash: 32815c4ddc51fb9c9187c9fc9a1710239faf7935
+ms.contentlocale: pt-br
 ms.lasthandoff: 01/24/2017
 
 
 ---
 
-# <a name="configure-the-mim-environment-for-privileged-access-management"></a>Configure o ambiente do MIM para o Privileged Access Management
+<a id="configure-the-mim-environment-for-privileged-access-management" class="xliff"></a>
+# Configure o ambiente do MIM para o Privileged Access Management
 Há sete etapas a concluir ao configurar o ambiente para o acesso entre florestas, instalar e configurar o Active Directory e o Microsoft Identity Manager e demonstrar uma solicitação de acesso just-in-time.
 
 Essas etapas são delineadas para que você possa começar do zero e criar um ambiente de teste. Se você estiver aplicando o PAM em um ambiente existente, poderá usar seus próprios controladores de domínio ou contas de usuário em vez de criar novos para serem correspondentes aos exemplos.

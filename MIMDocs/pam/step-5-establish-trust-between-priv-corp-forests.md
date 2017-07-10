@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1239ca2c0c6d376420723da01d7aa42821f5980f
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Etapa 5 – Estabelecer relação de confiança entre florestas PVI e CORP
+<a id="step-5--establish-trust-between-priv-and-corp-forests" class="xliff"></a>
+# Etapa 5 – Estabelecer relação de confiança entre florestas PVI e CORP
 
 >[!div class="step-by-step"]
 [« Etapa 4](step-4-install-mim-components-on-pam-server.md)
@@ -29,7 +31,8 @@ ms.lasthandoff: 05/02/2017
 
 Para cada domínio CORP, como contoso.local, os controladores de domínio PRIV e CONTOSO precisam estar associados por uma relação de confiança. Isso permite que os usuários no domínio PRIV acessem os recursos no domínio CORP.
 
-## <a name="connect-each-domain-controller-to-its-counterpart"></a>Conectar cada controlador de domínio a seu equivalente
+<a id="connect-each-domain-controller-to-its-counterpart" class="xliff"></a>
+## Conectar cada controlador de domínio a seu equivalente
 
 Antes de estabelecer a relação de confiança, cada controlador de domínio deve ter a resolução de nome DNS configurada para seu equivalente, com base no endereço IP do outro servidor DNS/controlador de domínio.
 
@@ -47,7 +50,8 @@ Antes de estabelecer a relação de confiança, cada controlador de domínio dev
 
     ![estrutura de arquivos de chave privada – captura de tela](./media/PAM_GS_DNS_Manager.png)
 
-## <a name="establish-trust-on-pamsrv"></a>Estabelecer relação de confiança em PAMSRV
+<a id="establish-trust-on-pamsrv" class="xliff"></a>
+## Estabelecer relação de confiança em PAMSRV
 
 Em PAMSRV, estabeleça uma relação de confiança unidirecional com CORPDC, para que o controlador de domínio CORP confie na floresta PRIV.
 
@@ -69,7 +73,8 @@ Em PAMSRV, estabeleça uma relação de confiança unidirecional com CORPDC, par
     New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials $ca
     ```
 
-## <a name="give-forests-read-access-to-active-directory"></a>Conceder acesso de leitura de florestas ao Active Directory
+<a id="give-forests-read-access-to-active-directory" class="xliff"></a>
+## Conceder acesso de leitura de florestas ao Active Directory
 
 Para cada floresta existente, habilite o acesso de leitura ao AD por administradores PRIV e o serviço de monitoramento.
 
@@ -92,7 +97,8 @@ Para cada floresta existente, habilite o acesso de leitura ao AD por administrad
 
     A saída também deve indicar que **A filtragem de SID não está habilitada para essa relação de confiança**. Veja [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (Desabilitar quarentena de filtro de SID) para obter mais informações.
 
-## <a name="start-the-monitoring-and-component-services"></a>Iniciar os serviços de Monitoramento e Componente
+<a id="start-the-monitoring-and-component-services" class="xliff"></a>
+## Iniciar os serviços de Monitoramento e Componente
 
 1.  Entre em PAMSRV como administrador de domínio PRIV (PRIV\Administrator).
 

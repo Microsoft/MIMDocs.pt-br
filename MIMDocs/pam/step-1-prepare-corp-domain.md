@@ -12,15 +12,17 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 1164e7efb70d911497b08248b68f8d929bc6d3fb
-ms.lasthandoff: 05/02/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/10/2017
 
 
 ---
 
-# <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Etapa 1 – Preparar o host e o domínio CORP
+<a id="step-1---prepare-the-host-and-the-corp-domain" class="xliff"></a>
+# Etapa 1 – Preparar o host e o domínio CORP
 
 >[!div class="step-by-step"]
 [Etapa 2 »](step-2-prepare-priv-domain-controller.md)
@@ -30,11 +32,13 @@ Nesta etapa, você vai se preparar para hospedar o ambiente de bastiões. Se nec
 
 Se você já tiver um domínio existente do AD (Active Directory) com um controlador de domínio que executa o Windows Server 2012 R2 ou posterior, no qual você é um administrador de domínio, será possível usar esse domínio.  
 
-## <a name="prepare-the-corp-domain-controller"></a>Preparar o controlador de domínio CORP
+<a id="prepare-the-corp-domain-controller" class="xliff"></a>
+## Preparar o controlador de domínio CORP
 
 Esta seção descreve como configurar um controlador de domínio para um domínio CORP. No domínio CORP, os usuários administrativos são gerenciados pelo ambiente de bastiões. O nome DNS (Sistema de Nomes de Domínio) do domínio CORP usado neste exemplo é *contoso.local*.
 
-### <a name="install-windows-server"></a>Instalar o Windows Server
+<a id="install-windows-server" class="xliff"></a>
+### Instalar o Windows Server
 
 Instale o Windows Server 2012 R2 ou Windows Server 2016 Technical Preview 4 ou posterior em uma máquina virtual para criar um computador chamado *CORPDC*.
 
@@ -48,7 +52,8 @@ Instale o Windows Server 2012 R2 ou Windows Server 2016 Technical Preview 4 ou p
 
 5. Após a reinicialização do servidor, entre como um administrador. Navegue até o Painel de Controle. Configure o computador para verificar se há atualizações e instale todas as atualizações necessárias. Reinicie o servidor.
 
-### <a name="add-roles-to-establish-a-domain-controller"></a>Adicionar funções para estabelecer um controlador de domínio
+<a id="add-roles-to-establish-a-domain-controller" class="xliff"></a>
+### Adicionar funções para estabelecer um controlador de domínio
 
 Nesta seção, você vai adicionar as funções AD DS (Serviços de Domínio do Active Directory), Servidor DNS e Servidor de Arquivos (parte da seção Serviços de Arquivo e Armazenamento) e promover este servidor a um controlador de domínio de uma nova floresta chamada contoso.local.
 
@@ -73,7 +78,8 @@ Nesta seção, você vai adicionar as funções AD DS (Serviços de Domínio do 
 
 4. Após a reinicialização do servidor, entre em CORPDC como administrador de domínio. Normalmente, esse é o usuário CONTOSO\\Administrator, que terá a senha que foi criada quando você instalou o Windows em CORPDC.
 
-### <a name="create-a-group"></a>Criar um grupo
+<a id="create-a-group" class="xliff"></a>
+### Criar um grupo
 
 Crie um grupo para fins de auditoria pelo Active Directory, se o grupo não existir. O nome do grupo deve ser o nome de domínio NetBIOS seguido de três cifrões, por exemplo, *CONTOSO$$$*.
 
@@ -91,7 +97,8 @@ Para cada domínio, entre em um controlador de domínio como administrador de do
 
 Em alguns casos, o grupo já pode existir – isso é normal se o domínio também foi usado em cenários de migração do AD.
 
-### <a name="create-additional-users-and-groups-for-demonstration-purposes"></a>Criar usuários e grupos adicionais para fins de demonstração
+<a id="create-additional-users-and-groups-for-demonstration-purposes" class="xliff"></a>
+### Criar usuários e grupos adicionais para fins de demonstração
 
 Se você criou um novo domínio CORP, será necessário criar usuários e grupos adicionais para demonstrar o cenário de PAM. O usuário e o grupo para fins de demonstração não devem ser administradores de domínio nem controlados pelas configurações de adminSDHolder no AD.
 
@@ -120,7 +127,8 @@ Vamos criar um grupo de segurança chamado *CorpAdmins* e um usuário chamado *J
   Set-ADUser –identity Jen –Enabled 1 -DisplayName "Jen"
   ```
 
-### <a name="configure-auditing"></a>Configurar a auditoria
+<a id="configure-auditing" class="xliff"></a>
+### Configurar a auditoria
 
 Você precisa habilitar a auditoria nas florestas existentes para estabelecer a configuração do PAM nessas florestas.  
 
@@ -148,7 +156,8 @@ Para cada domínio, entre em um controlador de domínio como administrador de do
 
 A mensagem **A atualização da Política de Computador foi concluída com êxito** deverá aparecer após alguns minutos.
 
-### <a name="configure-registry-settings"></a>Definir as configurações do Registro
+<a id="configure-registry-settings" class="xliff"></a>
+### Definir as configurações do Registro
 
 Nesta seção, você definirá as configurações do Registro necessárias para a migração do Histórico do SID, que serão usadas para a criação do grupo Privileged Access Management.
 
@@ -164,14 +173,16 @@ Nesta seção, você definirá as configurações do Registro necessárias para 
 
 Isso reiniciará o controlador de domínio, CORPDC. Para obter mais informações sobre esta configuração do Registro, veja [Como solucionar problemas de migração de sIDHistory entre florestas ADMTv2](http://support.microsoft.com/kb/322970).
 
-## <a name="prepare-a-corp-workstation-and-resource"></a>Preparar uma estação de trabalho e um recurso CORP
+<a id="prepare-a-corp-workstation-and-resource" class="xliff"></a>
+## Preparar uma estação de trabalho e um recurso CORP
 
 Se você ainda não tiver um computador de estação de trabalho ingressado no domínio, siga estas instruções para preparar um.  
 
 > [!NOTE]
 > Se você já tiver uma estação de trabalho ingressada no domínio, vá para [Criar um recurso para fins de demonstração](#create-a-resource-for-demonstration-purposes).
 
-### <a name="install-windows-81-or-windows-10-enterprise-as-a-vm"></a>Instalar o Windows 8.1 ou Windows 10 Enterprise como uma VM
+<a id="install-windows-81-or-windows-10-enterprise-as-a-vm" class="xliff"></a>
+### Instalar o Windows 8.1 ou Windows 10 Enterprise como uma VM
 
 Em outra máquina virtual nova sem software instalado, instale o Windows 8.1 Enterprise ou Windows 10 Enterprise para tornar um computador *CORPWKSTN*.
 
@@ -183,7 +194,8 @@ Em outra máquina virtual nova sem software instalado, instale o Windows 8.1 Ent
 
 4. Usando o Painel de Controle, ingresse no domínio o computador de CORPWKSTN ao domínio contoso.local. Você precisará fornecer credenciais de administrador do domínio Contoso. Quando terminar, reinicie o computador de CORPWKSTN.
 
-### <a name="create-a-resource-for-demonstration-purposes"></a>Criar um recurso para fins de demonstração
+<a id="create-a-resource-for-demonstration-purposes" class="xliff"></a>
+### Criar um recurso para fins de demonstração
 
 Você precisará de um recurso para demonstrar o controle de acesso baseado em grupo de segurança com o PAM.  Se você ainda não tiver um recurso, poderá usar uma pasta de arquivos para fins de demonstração.  Isso fará o uso de objetos do AD “Julia” e “CorpAdmins” criados no domínio contoso.local.
 
