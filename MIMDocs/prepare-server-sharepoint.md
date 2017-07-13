@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 3623bffb099a83d0eba47ba25e9777c3d590e529
-ms.openlocfilehash: 2af432036033f8914d00228cd3d2d1af84f13054
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 1114be2ce13ca012582676803eb1dc29cadae596
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="set-up-an-identity-management-server-sharepoint"></a>Configure um servidor de gerenciamento de identidade: SharePoint
+# Configure um servidor de gerenciamento de identidade: SharePoint
+<a id="set-up-an-identity-management-server-sharepoint" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« SQL Server 2014](prepare-server-sql2014.md)
@@ -33,7 +32,8 @@ ms.lasthandoff: 01/24/2017
 > - Senha – **Pass@word1**
 
 
-## <a name="install-sharepoint-foundation-2013-with-sp1"></a>Instale o **SharePoint Foundation 2013 com SP1**
+## Instale o **SharePoint Foundation 2013 com SP1**
+<a id="install-sharepoint-foundation-2013-with-sp1" class="xliff"></a>
 
 > [!NOTE]
 > O instalador exige uma conexão com a Internet para baixar seus pré-requisitos. Se o computador estiver em uma rede virtual que não forneça conectividade com a Internet, adicione uma interface de rede extra para o computador que forneça uma conexão com a Internet. Isso pode ser desabilitado depois que a instalação estiver concluída.
@@ -60,7 +60,8 @@ Siga estas etapas para instalar o SharePoint Foundation 2013 SP1. Após concluir
 
 4.  Depois que a instalação for concluída, execute o assistente.
 
-## <a name="run-the-wizard-to-configure-sharepoint"></a>Execute o Assistente para configurar o SharePoint
+## Execute o Assistente para configurar o SharePoint
+<a id="run-the-wizard-to-configure-sharepoint" class="xliff"></a>
 
 Siga as etapas alinhadas no **Assistente de Configuração de Produtos do SharePoint** para configurar o SharePoint para trabalhar com o MIM.
 
@@ -80,7 +81,8 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
 
 8. Na janela **Criar um Conjunto de Sites** , clique em **Ignorar**.  Em seguida, clique em **Concluir**.
 
-## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Preparação do SharePoint para hospedar o Portal do MIM
+## Preparação do SharePoint para hospedar o Portal do MIM
+<a id="prepare-sharepoint-to-host-the-mim-portal" class="xliff"></a>
 
 > [!NOTE]
 > Inicialmente, SSL não será configurada. Certifique-se de configurar SSL ou equivalente antes de habilitar o acesso a este portal.
@@ -134,4 +136,3 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
 >[!div class="step-by-step"]  
 [« SQL Server 2014](prepare-server-sql2014.md)
 [Exchange Server »](prepare-server-exchange.md)
-

@@ -12,14 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: bd73f43a096d58e1f7250e28b59e33f4411e88a3
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="configure-pam-using-scripts"></a>Configurar o PAM usando scripts
+# Configurar o PAM usando scripts
+<a id="configure-pam-using-scripts" class="xliff"></a>
 
 Se optar por instalar o SQL e o SharePoint em servidores separados, você deve configurá-los usando as instruções a seguir. Se os componentes de PAM, SharePoint e SQL estiverem instalados no mesmo computador, as etapas a seguir deverão ser executadas no computador.
 
@@ -39,11 +39,13 @@ etapas:
 5. Copie o mesmo PAMDeploymentConfig.xml para a pasta %SYSTEMDRIVE%\PAM em todas as máquinas, CORPDC, PRIVDC, PAM Server, SQL Server e os servidores do SharePoint.
 
 
-## <a name="deployment-worksheet"></a>Planilha de implantação
+## Planilha de implantação
+<a id="deployment-worksheet" class="xliff"></a>
 
 Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atualizada em todos os computadores.
 
-### <a name="setup"></a>Setup
+### Setup
+<a id="setup" class="xliff"></a>
 
 |Virtual   | Para executar como   |Comandos   |
 |---|---|---|
@@ -55,7 +57,8 @@ Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atuali
 | PAMServer  | Administrador Local (Admin MIM após o ingresso no domínio)  | .\PAMDeployment.ps1 Selecione a opção de menu 5 (Configuração do PAM do MIM)   |
 |  PAMServer |MIMAdmin   | .\PAMDeployment.ps1 Selecione a opção de menu 6 (Configuração de confiança do PAM) .\PAMDeployment.ps1 Selecione a opção de menu 6 (Configuração de confiança do PAM) |
 
-### <a name="validation"></a>Validação
+### Validação
+<a id="validation" class="xliff"></a>
 
 |  Virtual | Para executar como   | Comandos   |
 |---|---|---|
@@ -68,9 +71,3 @@ Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atuali
 
 >[!div class="step-by-step"]
 [Iniciar »](sp1-step1-configuring-priv-domain.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

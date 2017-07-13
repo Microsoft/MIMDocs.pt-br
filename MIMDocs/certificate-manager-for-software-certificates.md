@@ -12,18 +12,18 @@ ms.technology: security
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 54d03fbd03f6c44298139324ea2dc7d945f008bc
-ms.openlocfilehash: 23cfb1134d1cbf2cf838354cb7d915084803cd41
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 274039a6866c5c0fda807e4326220ecf785ca3bb
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="create-software-certificates-with-certificate-manager"></a>Criar certificados de software com o Gerenciador de certificados
+# Criar certificados de software com o Gerenciador de certificados
+<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
 Para registrar e renovar certificados de software, você não precisa ser um administrador e não precisa de cartão inteligente virtual. Vale a pena observar que, em algum momento, você será solicitado a permitir uma operação de certificado, e isso é normal.
 
-## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Criação de modelo de perfil de certificado de software no Gerenciador de certificados do MIM 2016
+## Criação de modelo de perfil de certificado de software no Gerenciador de certificados do MIM 2016
+<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
 
 1.  Crie um modelo para o certificado que você vai solicitar para o cartão inteligente virtual. Abra o mmc.
 
@@ -39,7 +39,7 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
     1.  Na guia **Geral** , no campo de nome de exibição, digite **Modelo de Certificado Arquivado**.
 
-    2.  b.    Na guia **Tratamento de Solicitação**
+    2.  b.  Na guia **Tratamento de Solicitação**
 
         1.  Defina a **Finalidade** da assinatura e criptografia.
 
@@ -73,7 +73,8 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
     10. Na lista, selecione o novo modelo que você acabou de criar (**Modelo de Certificado Arquivado**) e, em seguida, clique em **OK**.
 
-## <a name="create-the-profile-template"></a>Criar o modelo de perfil
+## Criar o modelo de perfil
+<a id="create-the-profile-template" class="xliff"></a>
 
 1.  Faça logon no portal do CM como um usuário com privilégios administrativos.
 
@@ -96,4 +97,3 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 10. Se quiser emitir novamente os certificados arquivados, marque as caixas à esquerda de **Reemitir certificados arquivados** e clique em **OK**.
 
 11. Se você estiver usando o CM Do Cartão Inteligente Virtual, precisará desabilitar itens de coleta de dados porque eles não funcionam com a coleta de dados ativada. Desabilite a coleta de dados para cada política clicando na política no painel esquerdo e, em seguida, desmarcando a caixa ao lado de **Item de dados de exemplo** e, em seguida, em **Excluir itens de coleta de dados**. Em seguida, clique em **OK**.
-

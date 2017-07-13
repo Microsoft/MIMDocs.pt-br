@@ -12,29 +12,26 @@ ms.technology: active-directory-domain-services
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 4c3b43e50403890572e77773191a821cf247269c
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
 # Modelo de camada para o particionamento de privilégios administrativos
+<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
 
 No atual ambiente de ameaças, a grande questão não é se um invasor terá acesso a seus sistemas, mas quando. Isso significa que a segurança interna é tão importante quanto uma forte defesa do perímetro. Este artigo descreve um modelo de segurança que se destina a proteger contra a elevação de privilégio, segregando atividades de privilégio elevado provenientes de regiões de alto risco. Esse modelo fornece uma boa experiência do usuário, ao mesmo tempo que segue as melhores práticas e os princípios de segurança.
 
-<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
 ## Elevação de privilégio em florestas do Active Directory
+<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
 
 As contas de usuário, de serviços ou de aplicativos que receberam privilégios administrativos permanentes em florestas do AD (Active Directory) do Windows Server apresentam uma quantidade significativa de risco à missão e aos negócios da organização. Em geral, essas contas são alvo de invasores, pois, se forem comprometidas, o invasor terá privilégio de se conectar a outros servidores ou aplicativos no domínio.
 
 O modelo de camada cria divisões entre os administradores com base nos recursos que eles gerenciam. Os administradores com controle das estações de trabalho do usuário são separados daqueles que controlam aplicativos ou que gerenciam identidades corporativas. Saiba mais sobre esse modelo em [Securing privileged access reference material](http://aka.ms/tiermodel) (Protegendo materiais de referência de acesso privilegiado).
 
-<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
 ## Restringindo a exposição de credencial com restrições de logon
+<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
 
 Normalmente, a redução do risco de roubo de credenciais de contas administrativas exige a reformulação das práticas administrativas para limitar a exposição aos invasores. Como uma primeira etapa, as organizações são aconselhadas a:
 
@@ -64,4 +61,3 @@ Restrições de logon podem ser aplicadas com:
 - Autenticação seletiva, se a conta estiver em uma floresta de administrador dedicada
 
 O próximo artigo, [Planning a bastion environment](planning-bastion-environment.md) (Planejando um ambiente de bastiões), descreve como adicionar uma floresta administrativa dedicada para que o Microsoft Identity Manager estabeleça as contas administrativas.
-

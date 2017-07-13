@@ -12,14 +12,14 @@ ms.technology: security
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2d3092d7d41090e4e03b971fb62ca896cc8db282
 ms.openlocfilehash: 20e733f17d6ed590844c526888b649eb6bf5f322
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Atualização do Forefront Identity Manager 2010 R2
+# Atualização do Forefront Identity Manager 2010 R2
+<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
 
 Se você tiver um ambiente do FIM (Forefront Identity Manager) 2010 R2 e quiser testar o MIM (Microsoft Identity Manager) 2016, use este artigo como seu guia. Há três fases nessa atualização:
 
@@ -36,7 +36,8 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 - Pré-requisitos locais e de ambiente (SQL Server, Exchange Server, SharePoint Services etc.) configurados para o FIM 2010 R2.
 
 
-## <a name="preparation"></a>Preparação
+## Preparação
+<a id="preparation" class="xliff"></a>
 
 1.  Faça backup do banco de dados de serviço do FIM, do banco de dados de sincronização do FIM e do software e configuração do serviço de sincronização do FIM.
 
@@ -44,7 +45,8 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 3.  Baixe ou desempacote o software MIM.
 
-## <a name="upgrade-the-synchronization-service"></a>Atualize o Serviço de Sincronização
+## Atualize o Serviço de Sincronização
+<a id="upgrade-the-synchronization-service" class="xliff"></a>
 
 1.  Faça logon como administrador para um servidor em que o Serviço de Sincronização do FIM 2010 R2 ("sincronização") esteja implantado.
 
@@ -82,7 +84,8 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 13. Observe que o **Serviço de Sincronização** reiniciou.
 
-## <a name="upgrade-the-service-and-portal"></a>Atualização do Serviço e do Portal
+## Atualização do Serviço e do Portal
+<a id="upgrade-the-service-and-portal" class="xliff"></a>
 
 1.  Faça logon como um administrador em um servidor em que o Serviço e o Portal do FIM 2010 R2 e estejam implantados.
 
@@ -138,7 +141,8 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 14. Ao instalar o Portal do MIM, forneça a URL do conjunto de sites do SharePoint no qual o Portal do FIM está hospedado no momento. Clique em **Avançar**.
 
-## <a name="install-the-mim-password-registration-portal"></a>Instalação do Portal de Registro e Redefinição de Senha do MIM
+## Instalação do Portal de Registro e Redefinição de Senha do MIM
+<a id="install-the-mim-password-registration-portal" class="xliff"></a>
 
 1. Se você estiver instalando o Portal de Registro de Senha do MIM, forneça a URL solicitada para o Portal de Registro de Senha. Clique em **Avançar**.
 
@@ -168,7 +172,8 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
     2.  Determine se este portal pode ser acessado por usuários de extranet e intranet ou apenas por usuários da intranet, como foi configurado anteriormente para redefinição da senha do FIM.
 
-## <a name="install-the-mim-password-reset-portal"></a>Instalação do Portal de Redefinição de Senha do MIM
+## Instalação do Portal de Redefinição de Senha do MIM
+<a id="install-the-mim-password-reset-portal" class="xliff"></a>
 
 1. Se você estiver instalando o Portal de redefinição de senha do MIM, forneça detalhes de acesso e credenciais para a redefinição de senha do MIM.
 
@@ -188,7 +193,8 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
     2.  Especifique se este portal pode ser acessado por usuários da extranet e da intranet, ou apenas por usuários da intranet.
 
-## <a name="finish-installation-and-upgrade"></a>Conclusão da instalação e da atualização
+## Conclusão da instalação e da atualização
+<a id="finish-installation-and-upgrade" class="xliff"></a>
 
 1. Depois que todas as definições de configuração forem concluídas com sucesso, a página de instalação será exibida. Clique em **Instalar** para iniciar a instalação e atualização do Serviço e do Portal do MIM.
 
@@ -201,9 +207,3 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 Observação: Se os complementos e extensões do FIM estão implantadas no momento nos computadores dos usuários para SSPR, não configure a nova porta de telefone MFA para redefinição de senha até que todos os complementos e extensões do FIM tenham sido atualizados para o MIM 2016.  Como os complementos e extensões do FIM 2010 e FIM 2010 R2 não reconhecem as novas portas, eles fornecerão um erro e o usuário não poderá concluir a redefinição de senha.
 
 Para obter orientação sobre atualização do Microsoft Identity Manager 2016 SP1, consulte o seguinte [pacote de atualização do Microsoft Identity Manager 2016 Service Pack 1](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

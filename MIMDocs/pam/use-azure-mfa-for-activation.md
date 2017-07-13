@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b937b30da2dff9bbfeabf7dceb43fcaca99a1b63
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="using-azure-mfa-for-activation" class="xliff"></a>
 # Usando o Azure MFA para ativação
+<a id="using-azure-mfa-for-activation" class="xliff"></a>
 Ao configurar uma função do PAM, você pode escolher como autorizar os usuários que solicitam a ativação da função. As opções que a atividade de autorização de PAM implementa são:
 
 - Aprovação do proprietário da função
@@ -32,8 +29,8 @@ Se nenhuma das verificações estiver habilitada, os usuários de candidatos ser
 
 O MFA (Microsoft Azure Multi-Factor Authentication) é um serviço de autenticação que exige que os usuários verifiquem suas tentativas de entrada usando aplicativo móvel, chamada telefônica ou mensagem de texto. Ele está disponível para uso com o Active Directory do Microsoft Azure e como um serviço para aplicativos corporativos de nuvem e locais. Para o cenário de PAM, o Azure MFA fornece um mecanismo de autenticação adicional que pode ser usado em autorização, independentemente de como um usuário candidato anteriormente autenticado no domínio “PRIV” do Windows.
 
-<a id="prerequisites" class="xliff"></a>
 ## Pré-requisitos
+<a id="prerequisites" class="xliff"></a>
 
 Para usar o Azure MFA com MIM, será necessário:
 
@@ -42,8 +39,8 @@ Para usar o Azure MFA com MIM, será necessário:
 - Licenças do Azure Active Directory Premium para usuários candidatos, ou um meio alternativo de licenciar o Azure MFA
 - Números de telefone para todos os usuários candidatos
 
-<a id="creating-an-azure-mfa-provider" class="xliff"></a>
 ## Criando um Provedor de Azure MFA
+<a id="creating-an-azure-mfa-provider" class="xliff"></a>
 
 Nesta seção, você configurará o provedor de Azure MFA no Active Directory do Microsoft Azure.  Se você já estiver usando o Azure MFA, de modo autônomo ou configurado com o Azure Active Directory Premium, pule para a próxima seção.
 
@@ -55,8 +52,8 @@ Nesta seção, você configurará o provedor de Azure MFA no Active Directory do
 
 4.  No campo **Nome** , insira **PAM**e no campo Modelo de Uso, selecione Por Usuário Habilitado. Se você já tem um diretório do AD do Azure, selecione esse diretório. Por fim, clique em **Criar**.
 
-<a id="downloading-the-azure-mfa-service-credentials" class="xliff"></a>
 ## Baixando as Credenciais do Serviço Azure MFA
+<a id="downloading-the-azure-mfa-service-credentials" class="xliff"></a>
 
 Em seguida, você gerará um arquivo que inclui o material de autenticação que o PAM usa para entrar em contato com o Azure MFA.
 
@@ -79,8 +76,8 @@ Em seguida, você gerará um arquivo que inclui o material de autenticação que
 >[!NOTE]
 > O arquivo ZIP contém o material para chave usado para autenticar o serviço Azure MFA.
 
-<a id="configuring-the-mim-service-for-azure-mfa" class="xliff"></a>
 ## Configurando o Serviço MIM para o Azure MFA
+<a id="configuring-the-mim-service-for-azure-mfa" class="xliff"></a>
 
 1.  No computador em que o Serviço MIM está instalado, entre como administrador ou como o usuário que instalou o MIM.
 
@@ -109,8 +106,8 @@ Em seguida, você gerará um arquivo que inclui o material de autenticação que
 > [!NOTE]
 > Ao final do processo, verifique se o arquivo **MfaSettings.xml** ou quaisquer cópias dele ou se o arquivo ZIP não podem ser lidos publicamente.
 
-<a id="configure-pam-users-for-azure-mfa" class="xliff"></a>
 ## Configurar os usuários do PAM para o Azure MFA
+<a id="configure-pam-users-for-azure-mfa" class="xliff"></a>
 
 Para um usuário ativar uma função que requer o Azure MFA, o número de telefone do usuário deve ser armazenado em MIM. Há duas maneiras de definir esse atributo.
 
@@ -123,8 +120,8 @@ Set-PAMUser (Get-PAMUser -SourceDisplayName Jen) -SourcePhoneNumber 12135551212
 ```
 
 
-<a id="configure-pam-roles-for-azure-mfa" class="xliff"></a>
 ## Configurar as funções do PAM para o Azure MFA
+<a id="configure-pam-roles-for-azure-mfa" class="xliff"></a>
 
 Depois que todos os usuários candidatos a uma função do PAM tiverem seus números de telefone armazenados no banco de dados do Serviço MIM, a função pode ser configurada para exigir o Azure MFA. Faça isso usando os comandos `New-PAMRole` ou `Set-PAMRole`. Por exemplo,
 
@@ -134,8 +131,8 @@ Set-PAMRole (Get-PAMRole -DisplayName "R") -MFAEnabled 1
 
 Especificando o parâmetro “-MFAEnabled 0” no comando `Set-PAMRole`, é possível desabilitar o Azure MFA para uma função.
 
-<a id="troubleshooting" class="xliff"></a>
 ## Solução de problemas
+<a id="troubleshooting" class="xliff"></a>
 
 Os eventos a seguir podem ser encontrados no log de eventos de Privileged Access Management:
 
@@ -158,4 +155,3 @@ Para obter mais informações sobre falhas de chamadas telefônicas (evento 101)
 5.  Selecione o intervalo de tempo e marque a caixa ao lado do **Nome** na coluna adicional do relatório. Clique em **Exportar para CSV**.
 
 6.  Assim que o relatório tiver sido gerado, você poderá exibi-lo no portal ou, se o relatório de MFA for extenso, baixe-o em um arquivo CSV. Os valores **SDK** na coluna **AUTH TYPE** indicam linhas que são relevantes como as solicitações de ativação de PAM: essas solicitações são eventos originados do MIM ou de outro software local. O campo **USERNAME** é o GUID do objeto de usuário no banco de dados do serviço do MIM. Se uma chamada não foi bem-sucedida, o valor da coluna **AUTHD** será **No** e o valor da coluna **CALL RESULT** conterá os detalhes do motivo da falha.
-

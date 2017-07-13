@@ -12,24 +12,21 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 2985215821db843d2f90d8a34250a8ca6a84b592
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="hardware-and-software-requirements" class="xliff"></a>
 # Requisitos de hardware e software
+<a id="hardware-and-software-requirements" class="xliff"></a>
 
 O Privileged Access Management não tem nenhum requisito de hardware além daqueles das plataformas de software subjacentes. Apenas certifique-se de ter memória ou espaço em disco suficiente e conectividade de rede.
 
 Este artigo fornece os requisitos mínimos para uma implantação básica. Não se destina a demonstrar o desempenho, a escalabilidade ou a alta disponibilidade e não representa uma topologia de implantação recomendada para empresas de grande porte ou ambientes de produção.
 
-<a id="installing-from-software-packages" class="xliff"></a>
 ## Instalando por meio de pacotes de software
+<a id="installing-from-software-packages" class="xliff"></a>
 
 O software a seguir pode ser baixado do Centro de Avaliação TechNet ou MSDN:  
 - Microsoft Identity Manager 2016
@@ -39,33 +36,33 @@ O software a seguir pode ser baixado do Centro de Avaliação TechNet ou MSDN:
 O software a seguir pode ser baixado do GitHub:  
 - PAMSamplePortal: contém o aplicativo Web de exemplo para a API REST
 
-<a id="required-software" class="xliff"></a>
 ## Software exigido
+<a id="required-software" class="xliff"></a>
 
 - Windows Server 2012 R2  
 - Windows 8.1 Enterprise ou Windows 10 Enterprise  
 - SQL Server 2012 Service Pack 1 ou SQL Server 2014  
 
-<a id="evaluation-software" class="xliff"></a>
 ## Software de avaliação
+<a id="evaluation-software" class="xliff"></a>
 
 Se você não tiver licenças do Windows, SQL Server ou Windows Server, baixe versões de avaliação.
 
-<a id="technet-evaluation-center" class="xliff"></a>
 ### Centro de Avaliação TechNet
+<a id="technet-evaluation-center" class="xliff"></a>
 
 - [Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2)  
 - [Windows 8.1 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-8-1-enterprise)  
 - [Windows 10 Enterprise](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)  
 
-<a id="microsoft-download-center" class="xliff"></a>
 ### Centro de Download da Microsoft
+<a id="microsoft-download-center" class="xliff"></a>
 
 - [SQL Server](https://www.microsoft.com/download/details.aspx?id=29066)  
 - [SharePoint Foundation 2013 SP1 e seus pré-requisitos](https://www.microsoft.com/download/details.aspx?id=42039)
 
-<a id="hardware-requirements" class="xliff"></a>
 ## Requisitos de hardware
+<a id="hardware-requirements" class="xliff"></a>
 
 Para cada componente do PAM, consulte os requisitos do sistema referentes aos produtos de software.
 
@@ -81,4 +78,3 @@ Para PRIVDC:
 Para PAMSRV:
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)  
 - [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) ou [SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms143506(v=sql.120).aspx)
-

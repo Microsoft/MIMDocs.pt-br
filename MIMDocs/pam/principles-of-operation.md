@@ -12,17 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="understand-the-components-of-pam" class="xliff"></a>
 # Noções básicas dos componentes do PAM
+<a id="understand-the-components-of-pam" class="xliff"></a>
 
 O Privileged Access Management mantém acesso administrativo separado das contas de usuário diárias. Essa solução se baseia em florestas paralelas:
 
@@ -43,4 +40,3 @@ Depois de instalado e configurado, cada grupo criado pelo procedimento de migra�
 Como resultado, quando um usuário solicita elevação usando os cmdlets do PowerShell e a solicitação é aprovada, o serviço do MIM adiciona sua conta na floresta PRIV a um grupo na floresta PRIV. Quando o usuário se conectar com suas contas privilegiadas, seu token Kerberos conterá um identificador SID (segurança) idêntico ao SID do grupo na floresta CORP. Como a floresta CORP é configurada para confiar na floresta PRIV, a conta elevada que está sendo usada para acessar um recurso na floresta CORP é exibida para um recurso de verificação de associações de grupo do Kerberos ser um membro dos grupos de segurança daquele recurso. Isso é fornecido através da autenticação entre florestas do Kerberos.
 
 Além disso, essas associações são por tempo limitado, assim, depois de um intervalo pré-configurado, a conta do usuário administrativo não será mais parte do grupo na floresta PRIV. Como resultado, essa conta não poderá ser usada para acessar recursos adicionais.
-

@@ -10,22 +10,21 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-translationtype: Human Translation
-ms.sourcegitcommit: 90a0f144b7674bbfaf13138dfd926dbfc3c74f28
-ms.openlocfilehash: ddd707210d5cd6b618709a477d40e7771d73cfa1
-ms.lasthandoff: 03/27/2017
-
-
-
+ms.openlocfilehash: 1e2fb9a9ae508ab601ebad1dec7acc21dc44d13e
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Registro de log dinâmico do serviço do SP1 MIM (4.4.1436.0)
+# Registro de log dinâmico do serviço do SP1 MIM (4.4.1436.0)
+<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
 Em 4.4.1436.0 Apresentamos uma nova capacidade de registro de log. Isso permite aos engenheiros de suporte e de administrador ativarem o registro de log sem a necessidade de reiniciar o serviço de gerenciamento.
 
 Depois de instalado, você verá a seguinte nova linha no Microsoft.ResourceManagement.Service.exe.config chamado
 
-*    Linha 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
-*    Linha 8:  ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
-*    Linha 266 ``</system.diagnostics> ``
+*   Linha 6: ``<section name="dynamicLogging" type="Microsoft.ResourceManagement.Utilities.DynamicLoggingSection, Microsoft.ResourceManagement.Service" />``
+*   Linha 8:  ``<dynamicLogging mode="true" loggingLevel="Verbose" />``
+*   Linha 266 ``</system.diagnostics> ``
 
 ![Seções realçadas mostrando as novas entradas de registro de log dinâmico](media/mim-service-dynamic-logging/screen01.png)
 
@@ -51,4 +50,3 @@ Por padrão o local de registro de log estará em **C:\Program Files\Microsoft F
 Para exibir o rastreamento, você pode usar a [ferramenta Visualizador de rastreamento de serviço](https://msdn.microsoft.com//library/aa751795(v=vs.110).aspx)
 
  ![Captura de tela do visualizador de rastreamento de serviço](media/mim-service-dynamic-logging/screen04.png)
-

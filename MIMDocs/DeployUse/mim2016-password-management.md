@@ -11,18 +11,14 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ef7b9816d265d17ef68fc54e010e655535dcdc8
 ms.openlocfilehash: 0a5a3f28af58dd59ab805f2836ffeb88f3508ae0
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-
-<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 # Gerenciamento de Senha do Microsoft Identity Manager 2016
+<a id="microsoft-identity-manager-2016-password-management" class="xliff"></a>
 
 O gerenciamento de senhas para várias contas de usuário é uma das dificuldades de gerenciar um ambiente corporativo com diversas fontes de dados. O Microsoft Identity Manager 2016 (MIM) fornece duas soluções de gerenciamento de senha:
 
@@ -44,8 +40,8 @@ Usando a sincronização de senha e o gerenciamento de alterações de senha bas
 
 -   Realizar operações de gerenciamento de senha em tempo real, independentes de operações do MIM.
 
-<a id="password-extensions" class="xliff"></a>
 ## Extensões de senha
+<a id="password-extensions" class="xliff"></a>
 
 Os agentes de gerenciamento de servidores de diretório oferecem suporte para a alteração de senha e operações de definição por padrão. Para agentes de gerenciamento baseados em arquivo, banco de dados e de conectividade extensível, que não oferecem suporte à alteração de senhas e operações de definição por padrão, é possível criar uma biblioteca de vínculo dinâmico (DLL) de extensões de senha do .NET.
 A DDL de extensões de senha do .NET será chamada sempre que uma alteração ou definição de senha for invocada para qualquer um desses agentes de gerenciamento. As configurações de extensão de senha são configuradas para esses agentes de gerenciamento no Synchronization Service Manager. Para obter mais informações sobre como configurar extensões de senha, consulte a Referência do Desenvolvedor do FIM.
@@ -62,8 +58,8 @@ A DDL de extensões de senha do .NET será chamada sempre que uma alteração ou
 |                                                                           | Microsoft SQL Server                                                                               |
 |                                                                           | Banco de dados Oracle                                                                                    |
 
-<a id="password-synchronization" class="xliff"></a>
 ## Sincronização de senha
+<a id="password-synchronization" class="xliff"></a>
 
 
 A sincronização de senha funciona com o serviço de notificação de alteração de senha (PCNS) em um domínio do Active Directory e permite que as alterações de senha que se originam do Active Directory sejam propagadas automaticamente para outras fontes de dados conectadas. O MIM faz isso executando como um servidor de Chamada de Procedimento Remoto (RPC) que detecta uma notificação de alteração de senha de um controlador de domínio do Active Directory. Quando a solicitação de alteração de senha for recebida e autenticada, será processada pelo MIM e propagada para os agentes de gerenciamento apropriados.
@@ -89,8 +85,8 @@ Os componentes envolvidos no processo de sincronização de senha são:
 -   **DLL de extensão de senha** – A DLL de extensão de senha fornece uma maneira de implementar operações de definição ou alteração de senhas por meio de uma extensão de regras para qualquer banco de dados, conectividade extensível ou agente de gerenciamento baseado em arquivo.
     Isso é feito criando um atributo criptografado somente para exportação denominado "export_password" que, na verdade, não existe no diretório conectado, mas pode ser acessado e definido em extensões de regras de provisionamento ou ser usado durante o fluxo de atributo de exportação. Para obter mais informações sobre como configurar extensões de senha, consulte a [Referência do Desenvolvedor do FIM](https://msdn.microsoft.com/library/windows/desktop/ee652263(v=vs.100).aspx).
 
-<a id="preparing-for-password-synchronization" class="xliff"></a>
 ## Preparação para a sincronização de senha
+<a id="preparing-for-password-synchronization" class="xliff"></a>
 
 Antes de configurar a sincronização de senha para o ambiente do MIM e do Active Directory, verifique o seguinte:
 
@@ -114,8 +110,8 @@ Configurar a sincronização de senha:
 
 Para obter mais informações sobre como configurar a sincronização de senha, consulte Usando a Sincronização de Senha.
 
-<a id="password-synchronization-process" class="xliff"></a>
 ## Processo de sincronização de senha
+<a id="password-synchronization-process" class="xliff"></a>
 
 O processo de sincronização de uma solicitação de alteração de senha de um controlador de domínio do Active Directory para outras fontes de dados conectadas é mostrado no diagrama a seguir:
 
@@ -131,8 +127,8 @@ O processo de sincronização de uma solicitação de alteração de senha de um
 
 6.  Usando as informações da tabela de associação, o MIM determina os agentes de gerenciamento que recebem a alteração de senha e envia a alteração de senha para eles.
 
-<a id="password-synchronization-security" class="xliff"></a>
 ## Segurança de sincronização de senha
+<a id="password-synchronization-security" class="xliff"></a>
 
 As seguintes preocupações de segurança de sincronização de senha foram abordadas:
 
@@ -146,8 +142,8 @@ As seguintes preocupações de segurança de sincronização de senha foram abor
 
 -   Filas de senha seguras – As senhas armazenadas nas filas de senha do PCNS são criptografadas até que sejam entregues.
 
-<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
 ## Cenários de recuperação de erro de sincronização de senha
+<a id="password-synchronization-error-recovery-scenarios" class="xliff"></a>
 
 Idealmente, sempre que um usuário alterar uma senha, a alteração será sincronizada sem erros. Os cenários a seguir descrevem como o MIM se recupera de erros comuns de sincronização:
 
@@ -169,8 +165,8 @@ Algumas falhas são tão graves que nenhuma quantidade de tentativas é suficien
 | 6927  | Erro       | A operação de definição de sincronização de senha falhou porque a senha não está de acordo com a política de senha do sistema de destino.                                      |
 | 6928  | Erro       | A operação de definição de sincronização de senha falhou porque a extensão de senha do agente de gerenciamento de destino não está configurada para oferecer suporte a operações de definição de senha. |
 
-<a id="user-based-password-change-management" class="xliff"></a>
 ## Gerenciamento de alterações de senha baseado no usuário
+<a id="user-based-password-change-management" class="xliff"></a>
 
 O MIM fornece dois aplicativos Web que usam o Instrumentação de Gerenciamento do Windows (WMI) para redefinir senhas. Assim como na sincronização de senha, o gerenciamento de senhas será ativado quando o agente de gerenciamento for configurado no Designer de Agente de Gerenciamento. Para obter informações sobre gerenciamento de senhas e o WMI, consulte a Referência do Desenvolvedor do MIM.
 
@@ -179,4 +175,3 @@ O MIM cria dois grupos de segurança durante a instalação, que oferecem suport
 -   FIMSyncBrowse — Os membros desse grupo têm permissão para coletar informações sobre contas do usuário ao realizar operações de pesquisa com consultas WMI.
 
 -   FIMSyncPasswordSet — Os membros desse grupo têm permissão para executar operações de pesquisa na conta, definição e alteração de senhas usando as interfaces de gerenciamento de senha com o WMI.
-

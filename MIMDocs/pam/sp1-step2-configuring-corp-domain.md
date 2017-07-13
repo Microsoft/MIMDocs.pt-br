@@ -12,14 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 8480350f85b3543a32d4db3dbc6a388afcb16352
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="step-2-configuring-the-corp-domain"></a>Etapa 2 Configurando o domínio CORP
+# Etapa 2 Configurando o domínio CORP
+<a id="step-2-configuring-the-corp-domain" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Etapa 1](sp1-step1-configuring-priv-domain.md)
@@ -36,9 +36,3 @@ Após o SIDs.txt ser copiado para CORPDC **não é necessário para implantaçõ
 >[!div class="step-by-step"]
 [« Etapa 1](sp1-step1-configuring-priv-domain.md)
 [Etapa 3 »](sp1-step3-installing-configuring-sql.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-

@@ -10,19 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3797f5789bb4e48836eb21776dafd5a2e0e11613
 ms.openlocfilehash: fbdebd59249667a0e60d3a248f183bcb6a75085a
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-
-
-<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
 # Implantar o PAM do MIM com o Windows Server 2016
+<a id="deploy-mim-pam-with-windows-server-2016" class="xliff"></a>
 
 
 Esse cenário permite que o MIM 2016 SP1 aproveite os recursos do Windows Server 2016 como o controlador de domínio para a floresta "PRIV".  Quando esse cenário está configurado, o tíquete do Kerberos do usuário terá uma limitação de tempo para o tempo restante da ativação de sua função. 
@@ -30,8 +25,8 @@ Esse cenário permite que o MIM 2016 SP1 aproveite os recursos do Windows Server
 >[!Note]
 Visualizações técnicas do Windows Server 2016 anteriores à Visualização Técnica 5 não podem ser usadas com esta versão do MIM.
 
-<a id="preparation" class="xliff"></a>
 ## Preparação
+<a id="preparation" class="xliff"></a>
 
 No mínimo duas VMs são necessárias para o ambiente de laboratório:
 
@@ -148,10 +143,9 @@ Execute a instalação, conforme descrito no [Guia de Introdução](privileged-i
 
 -   Item 5 (verificação de confiança) **não é necessário quando os domínios CORP e PRIV estão no nível funcional de domínio do Windows Server 2016**.
 
-<a id="more-information" class="xliff"></a>
 ## Mais informações
+<a id="more-information" class="xliff"></a>
 
 - [Privileged Access Management para Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md)
 - [Configure o ambiente do MIM para o Privileged Access Management](configuring-mim-environment-for-pam.md)
 - [Configurar o PAM usando scripts](sp1-pam-configure-using-scripts.md)
-

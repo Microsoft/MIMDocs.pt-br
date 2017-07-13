@@ -12,15 +12,14 @@ ms.technology: security
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: mwahl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: b26fe7bc56ab8229054afb1409c3652e81464a3d
-ms.lasthandoff: 05/02/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="connect-to-your-directories"></a>Conectar aos seus diretórios
+# Conectar aos seus diretórios
+<a id="connect-to-your-directories" class="xliff"></a>
 
 Conectores vinculam fontes de dados conectadas específicas ao MIM (Microsoft Identity Manager). Um conector move dados de uma fonte de dados conectada para o MIM. Quando os dados no MIM são modificados, o conector também pode exportar os dados para a fonte de dados conectada para mantê-los sincronizados com o MIM. Geralmente, há pelo menos um conector para cada diretório conectado.
 
@@ -28,7 +27,8 @@ No Forefront Identity Manager, conectores eram conhecidos como agentes de gerenc
 
 Este artigo aborda os conectores que estão incluídos no MIM, mas o conector para Conectividade Extensível 2.0 possibilita conectar-se com ainda mais fontes de dados. Alguns parceiros criaram seus próprios conectores dessa forma e uma lista completa está disponível na wiki do [FIM 2010: agentes de gerenciamento de parceiros](http://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## <a name="supported-connectors-in-mim-2016"></a>Conectores com suporte no MIM 2016
+## Conectores com suporte no MIM 2016
+<a id="supported-connectors-in-mim-2016" class="xliff"></a>
 
 | Nome | Versões com suporte da fonte de dados conectada |
 | ---- | ----------------------------------------------- |
@@ -55,7 +55,7 @@ Este artigo aborda os conectores que estão incluídos no MIM, mas o conector pa
 | Arquivo de texto de largura fixa | Arquivos de texto de largura fixa |
 | LDIF (Formato de Troca de Dados LDAP) | LDIF (Formato de Troca de Dados LDAP) |
 
-## <a name="related-topics"></a>Tópicos relacionados
+## Tópicos relacionados
+<a id="related-topics" class="xliff"></a>
 
 [Agentes de gerenciamento no FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx)
-

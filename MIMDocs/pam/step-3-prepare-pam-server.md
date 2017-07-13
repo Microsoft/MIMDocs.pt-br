@@ -13,24 +13,21 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bfc73723bdd3a49529522f78ac056939bb8025a3
 ms.openlocfilehash: 9a262a256062688542040827653a7df8d82e1044
-ms.contentlocale: pt-br
-ms.lasthandoff: 07/10/2017
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-<a id="step-3--prepare-a-pam-server" class="xliff"></a>
 # Etapa 3 – Preparar um servidor PAM
+<a id="step-3--prepare-a-pam-server" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [« Etapa 2](step-2-prepare-priv-domain-controller.md)
 [Etapa 4 »](step-4-install-mim-components-on-pam-server.md)
 
-<a id="install-windows-server-2012-r2" class="xliff"></a>
 ## Instalar o Windows Server 2012 R2
+<a id="install-windows-server-2012-r2" class="xliff"></a>
 Em uma terceira máquina virtual, instale o Windows Server 2012 R2, especificamente, o Windows Server 2012 R2 Standard (Servidor com GUI) x64, para criar *PAMSRV*. Como o SQL Server e o SharePoint 2013 serão instalados neste computador, é necessário, pelo menos, 8 GB de RAM.
 
 1. Selecione **Windows Server 2012 R2 Standard (Servidor com GUI) x64**.
@@ -50,8 +47,8 @@ Em uma terceira máquina virtual, instale o Windows Server 2012 R2, especificame
 7.  Após a reinicialização do servidor, entre como Administrador, abra o Painel de Controle e ingresse PAMSRV no domínio PRIV (priv.contoso.local).  Será necessário fornecer o nome de usuário e as credenciais de um administrador de domínio PRIV (PRIV\Administrator). Depois que a mensagem de boas-vindas for exibida, feche a caixa de diálogo e reinicie o servidor.
 
 
-<a id="add-the-web-server-iis-and-application-server-roles" class="xliff"></a>
 ### Adicione as funções servidor Web (IIS) e servidor de aplicativos
+<a id="add-the-web-server-iis-and-application-server-roles" class="xliff"></a>
 Adicione o servidor Web (IIS) e funções de servidor de aplicativos, os recursos do .NET Framework 3.5, o módulo do Active Directory para o Windows PowerShell e outros recursos exigidos pelo SharePoint
 
 1.  Entre como administrador de domínio PRIV (PRIV\Administrator) e inicie o PowerShell.
@@ -66,8 +63,8 @@ Adicione o servidor Web (IIS) e funções de servidor de aplicativos, os recurso
     Xps-Viewer –includeallsubfeature -restart -source d:\sources\SxS
     ```
 
-<a id="configure-the-server-security-policy" class="xliff"></a>
 ### Configurar a política de segurança do servidor
+<a id="configure-the-server-security-policy" class="xliff"></a>
 Configure a política de segurança do servidor para permitir que as contas criadas recentemente sejam executadas como serviço.
 
 1.  Inicie o programa de **Política de Segurança Local** .   
@@ -91,8 +88,8 @@ Configure a política de segurança do servidor para permitir que as contas cria
 16. Clique em **Adicionar**, insira o usuário *SharePoint* no domínio *PRIV* e, na próxima tela do assistente, clique em **Adicionar este usuário como Administrador**.  
 17. Feche o Painel de Controle.  
 
-<a id="change-the-iis-configuration" class="xliff"></a>
 ### Alterar a configuração do IIS
+<a id="change-the-iis-configuration" class="xliff"></a>
 Há duas maneiras de alterar a configuração do IIS para permitir que os aplicativos usem o modo de Autenticação do Windows. Verifique se você está conectado como MIMAdmin e siga uma destas opções.
 
 Se você quiser usar o PowerShell:
@@ -110,8 +107,8 @@ Se você quiser usar um editor de texto como o Bloco de Notas:
 3. Altere o valor de **overrideModeDefault** para *Permitir*  
 4. Salve o arquivo e reinicie o IIS com o comando do PowerShell `iisreset /START`
 
-<a id="install-sql-server" class="xliff"></a>
 ## Instalar o SQL Server
+<a id="install-sql-server" class="xliff"></a>
 Se o SQL Server não estiver no ambiente de bastiões, instale o SQL Server 2012 (Service Pack 1 ou posterior) ou o SQL Server 2014. As etapas a seguir pressupõem SQL 2014.
 
 1. Verifique se você está conectado como MIMAdmin.
@@ -122,8 +119,8 @@ Se o SQL Server não estiver no ambiente de bastiões, instale o SQL Server 2012
     .\setup.exe /Q /IACCEPTSQLSERVERLICENSETERMS /ACTION=install /FEATURES=SQL,SSMS /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="PRIV\SqlServer" /SQLSVCPASSWORD="Pass@word1" /AGTSVCSTARTUPTYPE=Automatic /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /SQLSYSADMINACCOUNTS="PRIV\MIMAdmin"
     ```
 
-<a id="install-sharepoint-foundation-2013" class="xliff"></a>
 ## Instalar o SharePoint Foundation 2013
+<a id="install-sharepoint-foundation-2013" class="xliff"></a>
 
 Usando o instalador do SharePoint Foundation 2013 com SP1, instale os pré-requisitos de software do SharePoint no PAMSRV.
 
@@ -142,8 +139,8 @@ Depois que os pré-requisitos do SharePoint forem instalados, instale o SharePoi
 4.  Selecione o tipo de **servidor completo** .  
 5.  Depois que a instalação for concluída, selecione para executar o assistente.  
 
-<a id="configure-sharepoint" class="xliff"></a>
 ### Configurar o SharePoint
+<a id="configure-sharepoint" class="xliff"></a>
 Execute o Assistente de Configuração de Produtos do SharePoint para configurar o SharePoint.
 
 1.  Na guia Conectar-se a um Farm de Servidores, altere para **Criar um novo farm de servidores**.  
@@ -156,8 +153,8 @@ Execute o Assistente de Configuração de Produtos do SharePoint para configurar
 8.  Selecione para usar a conta gerenciada existente (PRIV\SharePoint), desmarque para desabilitar todos os serviços opcionais e clique em **Avançar**.  
 9. Depois que a Janela de Criação de Conjunto de Sites for exibida, clique em **Ignorar** e **Concluir**.  
 
-<a id="create-a-sharepoint-foundation-2013-web-application" class="xliff"></a>
 ## Criar um aplicativo Web do SharePoint Foundation 2013
+<a id="create-a-sharepoint-foundation-2013-web-application" class="xliff"></a>
 Depois de concluir os assistentes, use o PowerShell para criar um Aplicativo Web do SharePoint Foundation 2013 para hospedar o Portal do MIM. Como este passo a passo se destina a fins de demonstração, o SSL não será habilitado.
 
 1.  Clique com o botão direito do mouse em Shell de Gerenciamento do SharePoint 2013, selecione **Executar como administrador** e execute o seguinte script do PowerShell:
@@ -172,8 +169,8 @@ Depois de concluir os assistentes, use o PowerShell para criar um Aplicativo Web
 > [!NOTE]
 > Mantenha a janela do Shell de Gerenciamento do SharePoint 2013 aberta para usá-la na próxima etapa.
 
-<a id="create-a-sharepoint-site-collection" class="xliff"></a>
 ## Criar uma coleção de sites do SharePoint
+<a id="create-a-sharepoint-site-collection" class="xliff"></a>
 Em seguida, crie uma Coleção de Sites do SharePoint associado a esse aplicativo Web para hospedar o Portal do MIM.
 
 1.  Inicie o **Shell de Gerenciamento do SharePoint 2013** se ainda não estiver aberto e execute o seguinte script do PowerShell
@@ -198,15 +195,15 @@ Em seguida, crie uma Coleção de Sites do SharePoint associado a esse aplicativ
     Get-SPTimerJob hourly-all-sptimerservice-health-analysis-job | disable-SPTimerJob
     ```
 
-<a id="change-update-settings" class="xliff"></a>
 ## Alterar as configurações de atualização
+<a id="change-update-settings" class="xliff"></a>
 
 1. Abra o Painel de Controle, navegue até **Windows Update** e clique para **alterar as configurações**.  
 2. Altere as configurações para receber atualizações do Windows Update e de outros produtos do Microsoft Update.  
 3. Verifique se há novas atualizações e garanta que todas as atualizações importantes pendentes serão instaladas antes de continuar.
 
-<a id="set-the-website-as-the-local-intranet" class="xliff"></a>
 ## Definir o site como a intranet local
+<a id="set-the-website-as-the-local-intranet" class="xliff"></a>
 
 1. Inicie o Internet Explorer e abra uma nova guia do navegador da Web
 2. Navegue até http://pamsrv.priv.contoso.local:82/ e entre como PRIV\MIMAdmin.  Um site do SharePoint vazio chamado “Portal do MIM” será mostrado.  
@@ -214,8 +211,8 @@ Em seguida, crie uma Coleção de Sites do SharePoint associado a esse aplicativ
 
 Se a entrada falhar, os SPNs do Kerberos criados anteriormente na [Etapa 2](step-2-prepare-priv-domain-controller.md) talvez precisem ser atualizados.
 
-<a id="start-the-sharepoint-administration-service" class="xliff"></a>
 ## Iniciar o serviço de administração do SharePoint
+<a id="start-the-sharepoint-administration-service" class="xliff"></a>
 
 Usando **Serviços** (localizado em Ferramentas Administrativas), inicie o serviço **Administração do SharePoint**, se ainda não estiver em execução.
 
@@ -224,4 +221,3 @@ Na Etapa 4, você começará a instalação dos componentes do MIM no servidor P
 >[!div class="step-by-step"]
 [« Etapa 2](step-2-prepare-priv-domain-controller.md)
 [Etapa 4 »](step-4-install-mim-components-on-pam-server.md)
-

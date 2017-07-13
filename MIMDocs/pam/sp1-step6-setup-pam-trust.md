@@ -12,14 +12,14 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: 
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f08b0197341351bd5f33552f26b96132b1356239
 ms.openlocfilehash: 3b232dfa515b42fd42a5606d1beff9d3fe50389c
-
-
+ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 07/13/2017
 ---
-
-# <a name="step-6-set-up-the-pam-trust"></a>Etapa 6 Configurar a relação de confiança do PAM
+# Etapa 6 Configurar a relação de confiança do PAM
+<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
 
 >[!div class="step-by-step"]
 [«Etapa 5](sp1-step5-configuring-pam.md)
@@ -38,9 +38,3 @@ ms.openlocfilehash: 3b232dfa515b42fd42a5606d1beff9d3fe50389c
 >[!div class="step-by-step"]
 [«Etapa 5](sp1-step5-configuring-pam.md)
 [Etapa 7»](sp1-step7-setup-sidhistory-sidfiltering.md)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
