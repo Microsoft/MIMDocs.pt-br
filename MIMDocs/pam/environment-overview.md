@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Visão geral do ambiente
-<a id="environment-overview" class="xliff"></a>
+# <a name="environment-overview"></a>Visão geral do ambiente
 
 O Privileged Access Management trabalha com VMs (máquinas virtuais) com unidades separadas conectadas entre si em uma rede compartilhada. Essas máquinas virtuais podem ser hospedadas pelo Windows 8.1, Windows Server 2012 R2 ou outras plataformas de sistema operacional.
 

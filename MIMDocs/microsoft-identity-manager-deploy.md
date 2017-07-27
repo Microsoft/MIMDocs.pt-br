@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Implantação do MIM 2016
-<a id="deploy-mim-2016" class="xliff"></a>
+# <a name="deploy-mim-2016"></a>Implantação do MIM 2016
 Os artigos nesta seção fornecem instruções passo a passo para implantar o MIM (Microsoft Identity Manager) 2016 para cenários de autoatendimento de usuário final em um servidor novo que não tenha o FIM ou o MIM implantado anteriormente.
 
 > [!NOTE]
@@ -29,21 +28,18 @@ O cenário de gerenciamento de acesso privilegiado é implantado de maneira dife
 
 O processo de implantação do MIM 2016 é muito semelhante ao processo de seu antecessor, o FIM 2010 R2. Se você quiser consultar a documentação do FIM, consulte o [Guia de implantação do Forefront Identity Manager 2010 R2](https://technet.microsoft.com/library/jj134310).
 
-## Primeiro: Preparação de um domínio
-<a id="first-prepare-a-domain" class="xliff"></a>
+## <a name="first-prepare-a-domain"></a>Primeiro: Preparação de um domínio
 O MIM funciona com o AD (Active Directory), portanto, siga estas etapas para configurar seu controlador de domínio do AD.
 - [Configuração de domínio](preparing-domain.md)
 
-## Próximo: Configuração de um servidor de gerenciamento de identidade
-<a id="next-prepare-an-identity-management-server" class="xliff"></a>
+## <a name="next-prepare-an-identity-management-server"></a>Próximo: Configuração de um servidor de gerenciamento de identidade
 Depois que o domínio está em vigor e configurado, prepare seu servidor de gerenciamento de identidade corporativa. Isso inclui configurar:
 - [Windows Server 2012 R2](prepare-server-ws2012r2.md)
 - [SQL Server 2014](prepare-server-sql2014.md)
 - [SharePoint](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (opcional)
 
-## Por último: Instalação do Microsoft Identity Manager 2016
-<a id="finally-install-microsoft-identity-manager-2016-components" class="xliff"></a>
+## <a name="finally-install-microsoft-identity-manager-2016-components"></a>Por último: Instalação do Microsoft Identity Manager 2016
 Depois que você configurar o domínio e o servidor, estará pronto para instalar os componentes do MIM e configurá-los para sincronizar com o AD.
 - [Serviço de Sincronização do MIM](install-mim-sync.md)
 - [Serviço e Portal do MIM](install-mim-service-portal.md)

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Atualização do Forefront Identity Manager 2010 R2
-<a id="upgrade-from-forefront-identity-manager-2010-r2" class="xliff"></a>
+# <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Atualização do Forefront Identity Manager 2010 R2
 
 Se você tiver um ambiente do FIM (Forefront Identity Manager) 2010 R2 e quiser testar o MIM (Microsoft Identity Manager) 2016, use este artigo como seu guia. Há três fases nessa atualização:
 
@@ -36,8 +35,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 - Pré-requisitos locais e de ambiente (SQL Server, Exchange Server, SharePoint Services etc.) configurados para o FIM 2010 R2.
 
 
-## Preparação
-<a id="preparation" class="xliff"></a>
+## <a name="preparation"></a>Preparação
 
 1.  Faça backup do banco de dados de serviço do FIM, do banco de dados de sincronização do FIM e do software e configuração do serviço de sincronização do FIM.
 
@@ -45,8 +43,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 3.  Baixe ou desempacote o software MIM.
 
-## Atualize o Serviço de Sincronização
-<a id="upgrade-the-synchronization-service" class="xliff"></a>
+## <a name="upgrade-the-synchronization-service"></a>Atualize o Serviço de Sincronização
 
 1.  Faça logon como administrador para um servidor em que o Serviço de Sincronização do FIM 2010 R2 ("sincronização") esteja implantado.
 
@@ -84,8 +81,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 13. Observe que o **Serviço de Sincronização** reiniciou.
 
-## Atualização do Serviço e do Portal
-<a id="upgrade-the-service-and-portal" class="xliff"></a>
+## <a name="upgrade-the-service-and-portal"></a>Atualização do Serviço e do Portal
 
 1.  Faça logon como um administrador em um servidor em que o Serviço e o Portal do FIM 2010 R2 e estejam implantados.
 
@@ -141,8 +137,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 14. Ao instalar o Portal do MIM, forneça a URL do conjunto de sites do SharePoint no qual o Portal do FIM está hospedado no momento. Clique em **Avançar**.
 
-## Instalação do Portal de Registro e Redefinição de Senha do MIM
-<a id="install-the-mim-password-registration-portal" class="xliff"></a>
+## <a name="install-the-mim-password-registration-portal"></a>Instalação do Portal de Registro e Redefinição de Senha do MIM
 
 1. Se você estiver instalando o Portal de Registro de Senha do MIM, forneça a URL solicitada para o Portal de Registro de Senha. Clique em **Avançar**.
 
@@ -172,8 +167,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
     2.  Determine se este portal pode ser acessado por usuários de extranet e intranet ou apenas por usuários da intranet, como foi configurado anteriormente para redefinição da senha do FIM.
 
-## Instalação do Portal de Redefinição de Senha do MIM
-<a id="install-the-mim-password-reset-portal" class="xliff"></a>
+## <a name="install-the-mim-password-reset-portal"></a>Instalação do Portal de Redefinição de Senha do MIM
 
 1. Se você estiver instalando o Portal de redefinição de senha do MIM, forneça detalhes de acesso e credenciais para a redefinição de senha do MIM.
 
@@ -193,8 +187,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
     2.  Especifique se este portal pode ser acessado por usuários da extranet e da intranet, ou apenas por usuários da intranet.
 
-## Conclusão da instalação e da atualização
-<a id="finish-installation-and-upgrade" class="xliff"></a>
+## <a name="finish-installation-and-upgrade"></a>Conclusão da instalação e da atualização
 
 1. Depois que todas as definições de configuração forem concluídas com sucesso, a página de instalação será exibida. Clique em **Instalar** para iniciar a instalação e atualização do Serviço e do Portal do MIM.
 

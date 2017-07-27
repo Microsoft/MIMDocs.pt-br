@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Registrar cartões inteligentes para não administradores
-<a id="enroll-smart-cards-for-non-administrators" class="xliff"></a>
+# <a name="enroll-smart-cards-for-non-administrators"></a>Registrar cartões inteligentes para não administradores
 Se um usuário não for um administrador local no seu computador, ele não poderá registrar um cartão inteligente em seu próprio computador por padrão. O procedimento a seguir permite que você contorne essa limitação.
 
-## Habilitando a renovação do cartão inteligente para não administradores no Gerenciador de Certificados do MIM 2016
-<a id="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="enabling-smart-card-renewal-for-non-admins-in-mim-2016-certificate-manager"></a>Habilitando a renovação do cartão inteligente para não administradores no Gerenciador de Certificados do MIM 2016
 
 1.  **Descompactar o arquivo appx**
 

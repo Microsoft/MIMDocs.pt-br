@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Etapa 1 Configurando o domínio Priv
-<a id="step-1-configuring-the-priv-domain" class="xliff"></a>
+# <a name="step-1-configuring-the-priv-domain"></a>Etapa 1 Configurando o domínio Priv
 
 >[!div class="step-by-step"]
 [Etapa 2 »](sp1-step2-configuring-corp-domain.md)

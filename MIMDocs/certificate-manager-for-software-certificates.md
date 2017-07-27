@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Criar certificados de software com o Gerenciador de certificados
-<a id="create-software-certificates-with-certificate-manager" class="xliff"></a>
+# <a name="create-software-certificates-with-certificate-manager"></a>Criar certificados de software com o Gerenciador de certificados
 Para registrar e renovar certificados de software, você não precisa ser um administrador e não precisa de cartão inteligente virtual. Vale a pena observar que, em algum momento, você será solicitado a permitir uma operação de certificado, e isso é normal.
 
-## Criação de modelo de perfil de certificado de software no Gerenciador de certificados do MIM 2016
-<a id="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager" class="xliff"></a>
+## <a name="create-a-software-certificate-profile-template-in-mim-2016-certificate-manager"></a>Criação de modelo de perfil de certificado de software no Gerenciador de certificados do MIM 2016
 
 1.  Crie um modelo para o certificado que você vai solicitar para o cartão inteligente virtual. Abra o mmc.
 
@@ -73,8 +71,7 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
     10. Na lista, selecione o novo modelo que você acabou de criar (**Modelo de Certificado Arquivado**) e, em seguida, clique em **OK**.
 
-## Criar o modelo de perfil
-<a id="create-the-profile-template" class="xliff"></a>
+## <a name="create-the-profile-template"></a>Criar o modelo de perfil
 
 1.  Faça logon no portal do CM como um usuário com privilégios administrativos.
 

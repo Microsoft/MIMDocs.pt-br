@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Etapa 4 Configurar o SharePoint
-<a id="step-4-configuring-sharepoint" class="xliff"></a>
+# <a name="step-4-configuring-sharepoint"></a>Etapa 4 Configurar o SharePoint
 
 >[!div class="step-by-step"]
 [« Etapa 3](sp1-step3-installing-configuring-sql.md)

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Etapa 7 – elevar o acesso do usuário
-<a id="step-7--elevate-a-users-access" class="xliff"></a>
+# <a name="step-7--elevate-a-users-access"></a>Etapa 7 – elevar o acesso do usuário
 
 >[!div class="step-by-step"]
 [« Etapa 6 ](step-6-transition-group-to-pam.md)
@@ -27,8 +26,7 @@ ms.lasthandoff: 07/13/2017
 
 Esta etapa demonstra que um usuário pode solicitar acesso a uma função pelo MIM.
 
-## Verifique se Julia não pode acessar o recurso com privilégios
-<a id="verify-that-jen-cannot-access-the-privileged-resource" class="xliff"></a>
+## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Verifique se Julia não pode acessar o recurso com privilégios
 Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na floresta CORP.
 
 1. Saia de CORPWKSTN para remover todas as conexões abertas em cache.
@@ -37,8 +35,7 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
 4. Digite o comando `dir \\corpwkstn\corpfs`. A mensagem de erro **Acesso negado** deverá ser exibida.
 5. Deixe a janela do prompt de comando aberta.
 
-## Solicite acesso privilegiado do MIM.
-<a id="request-privileged-access-from-mim" class="xliff"></a>
+## <a name="request-privileged-access-from-mim"></a>Solicite acesso privilegiado do MIM.
 1. Em CORPWKSTN, ainda como CONTOSO\Julia, digite o comando a seguir.
 
     ```
@@ -67,8 +64,7 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
 
 6. Digite a senha da conta PRIV.Julia. Uma nova janela de prompt de comando será exibida.
 
-## Valide o acesso com privilégios elevados.
-<a id="validate-the-elevated-access" class="xliff"></a>
+## <a name="validate-the-elevated-access"></a>Valide o acesso com privilégios elevados.
 Na janela recém-aberta, digite os comandos a seguir.
 
 ```
@@ -78,8 +74,7 @@ dir \\corpwkstn\corpfs
 
 Se o comando dir falhar com a mensagem de erro **Acesso negado**, verifique novamente a relação de confiança.
 
-## Ativar a função com privilégios
-<a id="activate-the-privileged-role" class="xliff"></a>
+## <a name="activate-the-privileged-role"></a>Ativar a função com privilégios
 Ative com a solicitação de acesso privilegiado por meio do portal de exemplo do PAM.
 
 1. Em CORPWKSTN, verifique se você está conectado como CORP\Julia.
@@ -99,8 +94,7 @@ Ative com a solicitação de acesso privilegiado por meio do portal de exemplo d
 > [!Note]
 > Neste ambiente, você também pode aprender a desenvolver aplicativos que usam a API REST do PAM, descrita na [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) (Referência da API REST do Privileged Access Management).
 
-## Resumo
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>Resumo
 Depois de concluir as etapas neste passo a passo, você terá demonstrado um cenário do Privileged Access Management, no qual os privilégios do usuário são elevados por uma quantidade limitada de tempo, permitindo ao usuário acessar recursos protegidos com uma conta privilegiada separada. Assim que a sessão de elevação expirar, a conta privilegiada não pode mais acessar o recurso protegido. A decisão de quais grupos de segurança representam funções privilegiadas é coordenada pelo administrador do PAM. Depois que os direitos de acesso são migrados para o sistema do Privileged Access Management, o acesso antes possibilitado com a conta de usuário original é agora possibilitado apenas ao entrar com uma conta privilegiada especial e disponibilizado mediante solicitação. Como resultado, associações de grupo para grupos altamente privilegiados são efetivas por uma quantidade limitada de tempo.
 
 >[!div class="step-by-step"]

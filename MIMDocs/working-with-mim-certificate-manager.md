@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Trabalhando com o MIM Certificate Manager
-<a id="working-with-the-mim-certificate-manager" class="xliff"></a>
+# <a name="working-with-the-mim-certificate-manager"></a>Trabalhando com o MIM Certificate Manager
 Depois que o MIM 2016 e o Certificate Manager estiverem ativos e em execução, você pode implantar o aplicativo MIM Certificate Manager da Windows Store para que os usuários possam gerenciar facilmente seus cartões inteligentes físicos, cartões inteligentes virtuais e certificados de software. As etapas para implantar o aplicativo de MIM CM são as seguintes:
 
 1.  Criar um modelo de certificado.
@@ -30,8 +29,7 @@ Depois que o MIM 2016 e o Certificate Manager estiverem ativos e em execução, 
 
 4.  Implante o aplicativo por meio do SCCM ou do Intune.
 
-## Criar um modelo de certificado
-<a id="create-a-certificate-template" class="xliff"></a>
+## <a name="create-a-certificate-template"></a>Criar um modelo de certificado
 Você cria um modelo de certificado para o aplicativo CM da mesma maneira que faria normalmente, exceto que você precisa certificar-se de que o modelo de certificado é a versão 3 e superiores.
 
 1.  Faça logon no servidor que executa o AD CS (o servidor de certificado).
@@ -70,8 +68,7 @@ Você cria um modelo de certificado para o aplicativo CM da mesma maneira que fa
 
 16. Na lista, selecione o novo modelo criado e clique em **OK**.
 
-## Criar um modelo de perfil
-<a id="create-a-profile-template" class="xliff"></a>
+## <a name="create-a-profile-template"></a>Criar um modelo de perfil
 Certifique-se de quando criar um modelo de perfil para defini-lo para criar/destruir o vSC e remover a coleta de dados. O aplicativo CM não pode manipular os dados coletados, portanto, é importante para desabilitá-lo da seguinte maneira.
 
 1.  Faça logon no portal do CM como um usuário com privilégios administrativos.
@@ -96,8 +93,7 @@ Certifique-se de quando criar um modelo de perfil para defini-lo para criar/dest
 
 11. Você precisa desabilitar itens de coleta de dados para cada política clicando na política no painel esquerdo e, em seguida, marcando a caixa ao lado de **Item de dados de exemplo** e, em seguida, em **Excluir itens de coleta de dados**. Em seguida, clique em **OK**.
 
-## Preparar o aplicativo CM para implantação
-<a id="prepare-the-cm-app-for-deployment" class="xliff"></a>
+## <a name="prepare-the-cm-app-for-deployment"></a>Preparar o aplicativo CM para implantação
 
 1.  No prompt de comando, execute o seguinte comando para descompactar o aplicativo e extrair o conteúdo para uma nova subpasta chamada appx e criar uma cópia para que você não modifique o arquivo original.
 
@@ -254,6 +250,5 @@ Certifique-se de quando criar um modelo de perfil para defini-lo para criar/dest
 
     -   Para obter ajuda com o script **ConfigureMIimCMClientAndRelyingParty.ps1** , execute `get-help  -detailed ConfigureMimCMClientAndRelyingParty.ps1`
 
-## Implantar o aplicativo
-<a id="deploy-the-app" class="xliff"></a>
+## <a name="deploy-the-app"></a>Implantar o aplicativo
 Depois de configurar o aplicativo CM, no Centro de Download, baixe o arquivo MIMDMModernApp_&lt;version&gt;_AnyCPU_Test.zip e extraia todo o conteúdo. O arquivo .appx é o instalador. Você pode implantá-lo da maneira que normalmente implanta aplicativos da Windows Store usando o [System Center Configuration Manager](https://technet.microsoft.com/library/dn613840.aspx)ou o [Intune](https://technet.microsoft.com/library/dn613839.aspx) para carregar o aplicativo para que os usuários tenham acesso a ele por meio do portal da empresa ou para que seja enviado diretamente às suas máquinas.

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Etapa 6 – Faz a transição de um grupo para Gerenciamento de acesso privilegiado
-<a id="step-6--transition-a-group-to-privileged-access-management" class="xliff"></a>
+# <a name="step-6--transition-a-group-to-privileged-access-management"></a>Etapa 6 – Faz a transição de um grupo para Gerenciamento de acesso privilegiado
 
 >[!div class="step-by-step"]
 [« Etapa 5 ](step-5-establish-trust-between-priv-corp-forests.md)

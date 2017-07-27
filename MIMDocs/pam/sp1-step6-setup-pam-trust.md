@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Etapa 6 Configurar a relação de confiança do PAM
-<a id="step-6-set-up-the-pam-trust" class="xliff"></a>
+# <a name="step-6-set-up-the-pam-trust"></a>Etapa 6 Configurar a relação de confiança do PAM
 
 >[!div class="step-by-step"]
 [«Etapa 5](sp1-step5-configuring-pam.md)

@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Noções básicas dos componentes do PAM
-<a id="understand-the-components-of-pam" class="xliff"></a>
+# <a name="understand-the-components-of-pam"></a>Noções básicas dos componentes do PAM
 
 O Privileged Access Management mantém acesso administrativo separado das contas de usuário diárias. Essa solução se baseia em florestas paralelas:
 

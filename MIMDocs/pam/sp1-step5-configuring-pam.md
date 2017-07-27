@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Etapa 5 Instalar/configurar o PAM
-<a id="step-5-installingconfiguring-pam" class="xliff"></a>
+# <a name="step-5-installingconfiguring-pam"></a>Etapa 5 Instalar/configurar o PAM
 
 >[!div class="step-by-step"]
 [« Etapa 4](sp1-step4-configuring-sharepoint.md)

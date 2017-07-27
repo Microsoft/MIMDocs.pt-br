@@ -18,11 +18,9 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Adendo dos scripts de implantação do PAM:
-<a id="pam-deployment-scripts-addendum" class="xliff"></a>
+# <a name="pam-deployment-scripts-addendum"></a>Adendo dos scripts de implantação do PAM:
 
-## Adendo 1 Configuração do domínio PRIV
-<a id="addendum-1-setting-up-the-priv-domain" class="xliff"></a>
+## <a name="addendum-1-setting-up-the-priv-domain"></a>Adendo 1 Configuração do domínio PRIV
 
 Depois de descompactar o arquivo compactado na pasta $env:SYSTEMDRIVE\PAM, edite PAMDeploymentConfig.xml para fornecer detalhes da floresta PRIV. Atualize o DNSName, o NetbiosName, o nome do controlador de domínio, o Caminho do Banco de Dados/Log e o Caminho Sysvol. Atualize também o domínio e o ForestMode. Se você estiver testando o Windows Server Technical Preview 5, defina o DomainMode & ForestMode como WinThreshold.
 
@@ -40,8 +38,7 @@ O controlador de domínio será reinicializado automaticamente após a conclusã
   * A senha contém pelo menos um caractere MAIÚSCULO
   * A senha contém pelo menos um digito ou caractere especial
 
-## Adendo 2 Configuração do domínio CORP
-<a id="addendum-2-setting-up-the-corp-domain" class="xliff"></a>
+## <a name="addendum-2-setting-up-the-corp-domain"></a>Adendo 2 Configuração do domínio CORP
 
 Se você estiver apenas começando a usar o PAM e quiser configurar um ambiente de teste, o script também permitirá a configuração de um Domínio CORP. Depois de descompactar o arquivo compactado na pasta $env:SYSTEMDRIVE\PAM, edite PAMDeploymentConfig.xml adicionando detalhes da floresta CORP. Atualize DNSName, NetbiosName, nome do controlador de domínio, Caminho do banco de dados/Log e Caminho Sysvol. O nível funcional deve ser pelo menos Windows Server 2012 R2.
 
@@ -53,8 +50,7 @@ Se você estiver apenas começando a usar o PAM e quiser configurar um ambiente 
 
 O controlador de domínio reiniciará automaticamente após a conclusão
 
-## Adendo 3 Configurar um cliente CORP para fazer a validação
-<a id="addendum-3-setting-up-a-corp-client-to-do-the-validation" class="xliff"></a>
+## <a name="addendum-3-setting-up-a-corp-client-to-do-the-validation"></a>Adendo 3 Configurar um cliente CORP para fazer a validação
 
 O ClientBinaryLocation no arquivo de configuração deve apontar para o local onde setup.exe está localizado.
 Faça logon no cliente como administrador local e execute os seguintes comandos em uma janela elevada do PowerShell:
@@ -72,7 +68,6 @@ Se o computador não estiver ingressado no domínio, ele solicitará credenciais
 
 Vá para a Etapa 8 fornecida acima.
 
-## Adendo 4 Se algo der errado
-<a id="addendum-4-if-something-goes-wrong" class="xliff"></a>
+## <a name="addendum-4-if-something-goes-wrong"></a>Adendo 4 Se algo der errado
 
 Todos os logs de script foram salvos em % AppData%\MIMPAMInstall. Compacte a pasta em um arquivo Zip e a envie por email para [mim2016@microsoft.com](mailto:mim2016@microsoft.com), juntamente com detalhes da operação e do erro.

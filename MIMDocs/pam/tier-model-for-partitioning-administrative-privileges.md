@@ -18,20 +18,17 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Modelo de camada para o particionamento de privilégios administrativos
-<a id="tier-model-for-partitioning-administrative-privileges" class="xliff"></a>
+# <a name="tier-model-for-partitioning-administrative-privileges"></a>Modelo de camada para o particionamento de privilégios administrativos
 
 No atual ambiente de ameaças, a grande questão não é se um invasor terá acesso a seus sistemas, mas quando. Isso significa que a segurança interna é tão importante quanto uma forte defesa do perímetro. Este artigo descreve um modelo de segurança que se destina a proteger contra a elevação de privilégio, segregando atividades de privilégio elevado provenientes de regiões de alto risco. Esse modelo fornece uma boa experiência do usuário, ao mesmo tempo que segue as melhores práticas e os princípios de segurança.
 
-## Elevação de privilégio em florestas do Active Directory
-<a id="elevation-of-privilege-in-active-directory-forests" class="xliff"></a>
+## <a name="elevation-of-privilege-in-active-directory-forests"></a>Elevação de privilégio em florestas do Active Directory
 
 As contas de usuário, de serviços ou de aplicativos que receberam privilégios administrativos permanentes em florestas do AD (Active Directory) do Windows Server apresentam uma quantidade significativa de risco à missão e aos negócios da organização. Em geral, essas contas são alvo de invasores, pois, se forem comprometidas, o invasor terá privilégio de se conectar a outros servidores ou aplicativos no domínio.
 
 O modelo de camada cria divisões entre os administradores com base nos recursos que eles gerenciam. Os administradores com controle das estações de trabalho do usuário são separados daqueles que controlam aplicativos ou que gerenciam identidades corporativas. Saiba mais sobre esse modelo em [Securing privileged access reference material](http://aka.ms/tiermodel) (Protegendo materiais de referência de acesso privilegiado).
 
-## Restringindo a exposição de credencial com restrições de logon
-<a id="restricting-credential-exposure-with-logon-restrictions" class="xliff"></a>
+## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Restringindo a exposição de credencial com restrições de logon
 
 Normalmente, a redução do risco de roubo de credenciais de contas administrativas exige a reformulação das práticas administrativas para limitar a exposição aos invasores. Como uma primeira etapa, as organizações são aconselhadas a:
 

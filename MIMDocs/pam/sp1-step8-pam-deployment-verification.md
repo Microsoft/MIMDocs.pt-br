@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Etapa 8 Verificação de implantação do Pam
-<a id="step-8-pam-deployment-verification" class="xliff"></a>
+# <a name="step-8-pam-deployment-verification"></a>Etapa 8 Verificação de implantação do Pam
 
 >[!div class="step-by-step"]
 [«Etapa 7](sp1-step7-setup-sidhistory-sidfiltering.md)

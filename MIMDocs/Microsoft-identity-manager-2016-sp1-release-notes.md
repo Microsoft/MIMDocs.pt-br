@@ -18,8 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Novidades no Microsoft Identity Manager 2016 Service Pack 1
-<a id="whats-new-for-microsoft-identity-manager-2016-service-pack-1" class="xliff"></a> #
+# <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Novidades no Microsoft Identity Manager 2016 Service Pack 1 #
 
 Como parte do ciclo de lançamento regular de manutenção e atualização do Microsoft Identity Manager, temos o prazer de anunciar o [Microsoft Identity Manager (MIM) 2016 Service Pack 1 (SP1)](https://msdn.microsoft.com/subscriptions/downloads/?fileid=70212#searchTerm=&Languages=en&PageSize=10&PageIndex=0&FileId=70212). Este documento descreve as atualizações, aprimoramentos, recursos e alterações incluídas nesta versão.
 
@@ -29,11 +28,9 @@ Também queremos ouvir sua opinião! Envie um email com seus comentários, opini
 
 
 
-## Atualizações neste service pack
-<a id="updates-in-this-service-pack" class="xliff"></a> #
+## <a name="updates-in-this-service-pack"></a>Atualizações neste service pack #
 
-### MIM
-<a id="mim" class="xliff"></a>
+### <a name="mim"></a>MIM
 
 - **Compatibilidade de navegadores no Portal do MIM de autoatendimento de usuário final:** neste Service Pack, introduzimos o suporte para a maioria dos principais navegadores. Agora, os usuários podem acessar e interagir com o Portal do MIM para gerenciamento de autoatendimento de perfil e de grupo no Microsoft Edge, Chrome e Safari.
 
@@ -41,8 +38,7 @@ Também queremos ouvir sua opinião! Envie um email com seus comentários, opini
 
 - **Validação do formato de arquivo de imagem no carregamento:** o MIM agora é capaz de validar o formato de arquivo de imagens quando forem carregados no portal.
 
-### Privileged Access Management (PAM)
-<a id="privileged-access-managementpam" class="xliff"></a>
+### <a name="privileged-access-managementpam"></a>Privileged Access Management (PAM)
 
 - **Suporte a floresta "PRIV" (bastião) PAM para o nível funcional do Windows Server 2016:** o Serviço MIM PAM podem ser configurado em um ambiente com controladores de domínio em execução no nível funcional de floresta dos Active Directory Domain Services do Windows Server 2016. Quando configurado, o tíquete do Kerberos do usuário terá uma limitação tempo para o tempo restante da ativação de sua função.
 
@@ -59,21 +55,17 @@ Também queremos ouvir sua opinião! Envie um email com seus comentários, opini
     Esses Cmdlets são executados automaticamente como parte dos scripts de implantações.
 
 
-## Suporte de plataforma
-<a id="platform-support" class="xliff"></a>
+## <a name="platform-support"></a>Suporte de plataforma
 Encontre informações atualizadas de suporte de plataforma no documento chamado [Plataformas com suporte para MIM 2016](microsoft-identity-manager-2016-supported-platforms.md).  Novas plataformas com suporte neste service pack incluem o SQL Server 2016, SharePoint 2016
 
-## Problemas corrigidos nesta versão de disponibilidade geral do MIM 2016
-<a id="issues-fixed-in-this-release-from-mim-2016-general-availability" class="xliff"></a>
+## <a name="issues-fixed-in-this-release-from-mim-2016-general-availability"></a>Problemas corrigidos nesta versão de disponibilidade geral do MIM 2016
 
-### PAM
-<a id="pam" class="xliff"></a>
+### <a name="pam"></a>PAM
 - New-PAMGroup não criou objetos MIM para grupos locais de domínio na floresta PRIV
 - New-PAMDomainConfiguration falharia com uma mensagem de erro "netdom"
 - Serviço de Monitoramento do PAM registrou avisos para grupos na floresta PRIV
 
-## Como atualizar para o Service Pack 1
-<a id="how-to-upgrade-to-service-pack-1" class="xliff"></a>
+## <a name="how-to-upgrade-to-service-pack-1"></a>Como atualizar para o Service Pack 1
 
 Os clientes que estão atualizando para o Microsoft Identity Manager 2016 Service Pack 1 devem seguir as orientações abaixo sobre todos os serviços aplicáveis à implantação.
 

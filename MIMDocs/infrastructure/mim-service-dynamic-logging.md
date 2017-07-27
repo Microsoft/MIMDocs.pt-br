@@ -16,8 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/13/2017
 ---
-# Registro de log dinâmico do serviço do SP1 MIM (4.4.1436.0)
-<a id="mim-sp1-4414360--service-dynamic-logging" class="xliff"></a>
+# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Registro de log dinâmico do serviço do SP1 MIM (4.4.1436.0)
 Em 4.4.1436.0 Apresentamos uma nova capacidade de registro de log. Isso permite aos engenheiros de suporte e de administrador ativarem o registro de log sem a necessidade de reiniciar o serviço de gerenciamento.
 
 Depois de instalado, você verá a seguinte nova linha no Microsoft.ResourceManagement.Service.exe.config chamado
