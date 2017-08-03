@@ -5,18 +5,18 @@ keywords:
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/23/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d7f054d8d82dcc0ac71a94f6e44407b0c41a75af
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: e0179d21752f31e55b132268e9429009e68ba89d
+ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Implante o Serviço de notificação de alteração de senha do MIM em um controlador de domínio
 
