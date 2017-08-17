@@ -5,18 +5,18 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ca5dafb78899e286aff6d2e767ad1509a6439e65
-ms.sourcegitcommit: 0cb8269f07a5f419d2d1cd760d9cc78b8a1c8aa9
+ms.openlocfilehash: b3cdc1a71b6e9eb14a132429ea66bb4ab33fe3c4
+ms.sourcegitcommit: 0a78e39976cd03225a8e24a508e9ee23585e67cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 O MIM (Microsoft Identity Manager) 2016 foi desenvolvido com base nos recursos de gerenciamento de identidades e acessos do [FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx). Como seu antecessor, o MIM ajuda você a gerenciar usuários, credenciais, políticas e acessos na sua organização.  Além disso, o MIM 2016 adiciona uma experiência híbrida, recursos de gerenciamento com acesso privilegiado e suporte para novas plataformas.
@@ -32,4 +32,7 @@ O Privileged Identity Management controla e gerencia o acesso administrativo for
 O MIM dá suporte a uma solução local do Privileged Identity Management para gerenciar Active Directory. Para começar, [Use o Privileged Access Management](./pam/privileged-identity-management-for-active-directory-domain-services.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
-O Microsoft Identity Manager ainda está muito relacionado ao seu predecessor, o Forefront Identity Manager. Se você ainda usa o FIM ou deseja consultar a documentação adicional, veja o [Roteiro da documentação do FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
+
+- O Microsoft Identity Manager ainda está muito relacionado ao seu predecessor, o Forefront Identity Manager. Se você ainda usa o FIM ou deseja consultar a documentação adicional, veja o [Roteiro da documentação do FIM 2010 R2](https://technet.microsoft.com/library/jj133885.aspx).
+- [Considerações de topologia para implantação do MIM](topology-considerations.md)
+- [Guia de planejamento de capacidade](capacity-planning-guide.md)
