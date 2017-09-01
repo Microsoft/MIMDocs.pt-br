@@ -2,30 +2,31 @@
 title: Configurar o MIM 2016 para o Privileged Access Management | Microsoft Docs
 description: "O roteiro para instalação do MIM e configuração dele para o Privileged Access Management."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: c4ca5b58-ad0c-48af-a9eb-b71b22d0c67c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ce1ce0c67dfd39433ff01dabd542e862c557c787
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 79de8ef08b49a41638a09e829efbd8c17301004b
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="configure-the-mim-environment-for-privileged-access-management"></a>Configure o ambiente do MIM para o Privileged Access Management
+
 Há sete etapas a concluir ao configurar o ambiente para o acesso entre florestas, instalar e configurar o Active Directory e o Microsoft Identity Manager e demonstrar uma solicitação de acesso just-in-time.
 
 Essas etapas são delineadas para que você possa começar do zero e criar um ambiente de teste. Se você estiver aplicando o PAM em um ambiente existente, poderá usar seus próprios controladores de domínio ou contas de usuário em vez de criar novos para serem correspondentes aos exemplos.
 
-1.  Prepare o servidor *CORPDC* como um controlador de domínio e *CORPWKSTN* como uma estação de trabalho do membro.
+1. Prepare o servidor *CORPDC* como um controlador de domínio e *CORPWKSTN* como uma estação de trabalho do membro.
 
-2.  Prepare o servidor *PRIVDC* como um controlador de domínio.
+2. Prepare o servidor *PRIVDC* como um controlador de domínio.
 
 3.  Prepare o servidor *PAMSRV* na floresta *PRIV* .
 
