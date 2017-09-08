@@ -12,11 +12,11 @@ ms.technology: active-directory-domain-services
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: b459906f0c8d2c631e9b63813e208c9098ea5a4e
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 402c690b514dce62024f13014c1491433fbd8816
+ms.sourcegitcommit: a0e206fd67245f02d94d5f6c9d606970117dd8ed
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/02/2017
 ---
 # <a name="planning-a-bastion-environment"></a>Planejando um ambiente de bastiões
 
@@ -195,7 +195,7 @@ As configurações de política de grupo no controlador de domínio para a audit
 7. Feche a janela do Editor de Gerenciamento de Política de Grupo e a janela Gerenciamento de Política de Grupo. Então aplique as configurações de auditoria abrindo uma janela do PowerShell e digitando:
 
     ```
-    gpupdate /force /target:computere
+    gpupdate /force /target:computer
     ```
 
 A mensagem “A atualização da Política de Computador foi concluída com sucesso." deve aparecer após alguns minutos.
