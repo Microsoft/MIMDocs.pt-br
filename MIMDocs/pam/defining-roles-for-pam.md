@@ -2,21 +2,21 @@
 title: "Definir funções com privilégios para o PAM | Microsoft Docs"
 description: "Decida quais funções com privilégios devem ser gerenciadas e defina a política de gerenciamento para cada uma delas."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 807ee44c23f367c33b820251012008324bb2c005
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: cfd7c5bee0038740db0ad526072ec248ed9f221d
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definir funções do Privileged Access Management
 
@@ -24,7 +24,11 @@ Com o Privileged Access Management, é possível atribuir usuários a funções 
 
 Uma abordagem simples para a definição de funções para o gerenciamento de acesso privilegiado é compilar todas as informações em uma planilha. Liste as funções nas funções e use as colunas para identificar as permissões e os requisitos de governança.
 
-Os requisitos de governança variam dependendo das políticas de identidade e acesso existentes ou dos requisitos de conformidade. Os parâmetros a serem identificados para cada função podem incluir o proprietário da função, os usuários candidatos que podem estar nessa função e quais controles de autenticação, aprovação ou notificação devem ser associados ao uso da função.
+Os requisitos de governança variam dependendo das políticas de identidade e acesso existentes ou dos requisitos de conformidade. Os parâmetros a serem identificados para cada função podem incluir:
+
+- O proprietário da função.
+- Os usuários candidatos que podem estar nessa função
+- Os controles de autenticação, aprovação ou notificação devem estar associados com o uso da função.
 
 As permissões de função dependerão dos aplicativos que estão sendo gerenciados. Este artigo usa o Active Directory como o aplicativo de exemplo, dividindo as permissões em duas categorias:
 
@@ -38,9 +42,9 @@ Comece identificando todas as funções que você deseja gerenciar com o PAM. Na
 
 Para encontrar as funções apropriadas, considere cada aplicativo no escopo de gerenciamento:
 
-- O aplicativo está na camada 0, 1 ou 2?  
-- Quais são os privilégios que afetam a confidencialidade, integridade ou disponibilidade do aplicativo?  
-- O aplicativo tem dependências em relação a outros componentes do sistema, como bancos de dados, rede ou infraestrutura de segurança, ou à virtualização ou plataforma de hospedagem?
+- O aplicativo está na [camada 0, 1 ou 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- Quais são os privilégios que afetam a confidencialidade, integridade ou disponibilidade do aplicativo?
+- O aplicativo tem dependências em outros componentes do sistema? Por exemplo, ele tem dependências em bancos de dados, rede, infraestrutura de segurança, virtualização ou plataforma de hospedagem?
 
 Determine como agrupar essas considerações sobre o aplicativo. Você deseja ter funções que têm limites claros e conceder apenas as permissões suficientes para concluir tarefas administrativas comuns no aplicativo.
 
@@ -80,15 +84,15 @@ Conforme você identificar as funções de candidato, comece a preencher a plani
 
 ## <a name="select-an-access-method"></a>Selecionar um método de acesso
 
-Pode haver várias funções em um sistema de gerenciamento de acesso privilegiado com as mesmas permissões atribuídas a elas, se diferentes comunidades de usuários tiverem requisitos de controle de acesso distintos. Por exemplo, uma organização pode aplicar políticas diferentes para seus funcionários em tempo integral quando comparado aos funcionários de TI terceirizados de outra organização.
+Pode haver várias funções em um sistema de gerenciamento de acesso privilegiado com as mesmas permissões atribuídas a elas. Isso poderá acontecer se diferentes comunidades de usuários tiverem requisitos de controle de acesso distintos. Por exemplo, uma organização pode aplicar políticas diferentes para seus funcionários em tempo integral quando comparado aos funcionários de TI terceirizados de outra organização.
 
-Em alguns casos, um usuário pode ser atribuído permanentemente a uma função e, portanto, não precisa solicitar ou ativar uma atribuição de função. Entre os exemplos de cenários de atribuição permanente estão:
+Em alguns casos, um usuário pode ser atribuído permanentemente a uma função. Nesse caso, ele não precisa solicitar ou ativar uma atribuição de função. Entre os exemplos de cenários de atribuição permanente estão:
 
 - Uma conta de serviço gerenciado na floresta existente
 
-- Uma conta de usuário na floresta existente, com uma credencial gerenciada fora do PAM (por exemplo, uma conta de vigilância, em que uma função como “Domínio/manutenção de DC” necessária para corrigir problemas de confiança e integridade de DC é permanentemente atribuída à conta, com uma senha fisicamente protegida)
+- Uma conta de usuário na floresta existente, com uma credencial gerenciada fora do PAM. Pode ser uma conta de vigilância. A conta de vigilância pode precisar de uma função como "domínio/manutenção de CD" para corrigir problemas de confiança e integridade do controlador de domínio. Como uma conta de vigilância, ela teria a função permanentemente atribuída com uma senha fisicamente protegida)
 
-- Uma conta de usuário na floresta administrativa que é autenticada com uma senha (por exemplo, um usuário que precisa de permissões administrativas 24x7 permanentes e que faz logon de um dispositivo que não dá suporte à autenticação forte)
+- Uma conta de usuário na floresta administrativa que se autentica com uma senha. Isso pode ser um usuário que precisa de permissões de administrativas 24 horas por dia, sete dias por semana permanentes e faz logon de um dispositivo que não oferece suporte à autenticação forte.
 
 - Uma conta de usuário na floresta administrativa, com um cartão inteligente ou um cartão inteligente virtual (por exemplo, uma conta com um cartão inteligente offline, necessária para tarefas de manutenção raras)
 
@@ -96,14 +100,15 @@ Para as organizações preocupadas com a possibilidade de roubo ou uso indevido 
 
 ## <a name="delegate-active-directory-permissions"></a>Delegar permissões do Active Directory
 
-O Windows Server cria automaticamente grupos padrão, como “Administradores de Domínio”, quando novos domínios são criados. Esses grupos simplificam a introdução e podem ser adequados para organizações menores. No entanto, organizações maiores, ou aquelas que exigem mais isolamento de privilégios administrativos, devem deixar em branco grupos como Administradores de Domínio e substituí-los por grupos que fornecem permissões refinadas.
+O Windows Server cria automaticamente grupos padrão, como “Administradores de Domínio”, quando novos domínios são criados. Esses grupos simplificam a introdução e podem ser adequados para organizações menores. As organizações maiores, ou aquelas que exigem mais isolamento de privilégios administrativos, devem deixar em branco esses grupos e substituí-los por grupos que fornecem permissões refinadas.
 
-Uma limitação do grupo Administradores de Domínio é que ele não pode ter membros de um domínio externo. Outra limitação é que ele concede permissões para três funções separadas:  
-- Gerenciando o próprio serviço do Active Directory  
-- Gerenciando os dados mantidos no Active Directory  
+Uma limitação do grupo Administradores de Domínio é que ele não pode ter membros de um domínio externo. Outra limitação é que ele concede permissões para três funções separadas:
+
+- Gerenciando o próprio serviço do Active Directory
+- Gerenciando os dados mantidos no Active Directory
 - Habilitando o logon remoto em computadores ingressados em domínio.
 
-Em vez de grupos como Administradores de Domínio, crie novos grupos de segurança que fornecem apenas as permissões necessárias e use o MIM para fornecer dinamicamente contas de administrador com essas associações a um grupo.
+Em vez de grupos como administradores de domínio, crie novos grupos de segurança que fornecem apenas as permissões necessárias. Em seguida, você deverá usar o MIM para fornecer dinamicamente contas de administrador com essas associações do grupo.
 
 ### <a name="service-management-permissions"></a>Permissões de gerenciamento de serviços
 
@@ -111,7 +116,7 @@ A tabela a seguir fornece exemplos de permissões que seriam relevantes para inc
 
 | Função | Descrição |
 | ---- | ---- |
-| Manutenção de domínio/DC | A associação no grupo de Domínio\Administradores que permite a solução de problemas e alteração do sistema operacional do controlador de domínio, promovendo um novo controlador de domínio em um domínio existente na floresta e a delegação de função do AD.
+| Manutenção de domínio/DC | A participação no grupo Domínio\Administradores permite solucionar problemas e alterar o sistema operacional do controlador de domínio. As operações como promover um novo controlador de domínio em um domínio existente na floresta e a delegação de função do AD.
 |Gerenciar DCs virtuais | Gerencie as VMs (máquinas virtuais) do DC (controlador de domínio) usando o software de gerenciamento de virtualização. Este privilégio pode ser concedido por meio do controle total de todas as máquinas virtuais na ferramenta de gerenciamento ou do uso da funcionalidade RBAC (controle de acesso baseado em função). |
 | Estender o esquema | Gerenciar o esquema incluindo adicionar novas definições de objeto, alterar permissões a objetos de esquema e alterar permissões do padrão de esquema para tipos de objeto |
 | Banco de dados de backup do Active Directory | Faça uma cópia backup do Banco de Dados do Active Directory em sua totalidade, incluindo todos os segredos confiados ao DC e ao Domínio. |
@@ -139,7 +144,7 @@ A tabela a seguir fornece exemplos de permissões que seriam relevantes para inc
 
 ## <a name="example-role-definitions"></a>Exemplo de definições de função
 
-A escolha das definições de função dependerá da camada de servidores que estão sendo gerenciados pelas contas com privilégios. Ela também depende da escolha dos aplicativos gerenciados, já que os aplicativos, como o Exchange, ou produtos corporativos de terceiros, como SAP, em geral, trarão suas próprias definições de função para a administração delegada.
+A escolha das definições de função dependem da camada de servidores que está sendo gerenciada. Ela também depende da escolha dos aplicativos gerenciados. Os aplicativos como o Exchange ou os produtos corporativos de terceiros, como SAP, em geral trarão suas próprias definições de função para a administração delegada.
 
 As seções a seguir fornecem exemplos para cenários corporativos típicos.
 
@@ -199,3 +204,8 @@ As funções de gerenciamento de computador e usuário não administrativo podem
 - Suporte técnico
 - Administradores do grupo de segurança
 - Suporte à estação de trabalho em mesa
+
+## <a name="next-steps"></a>Próximas etapas
+
+- [Material de referência de proteção de acesso privilegiado](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
+- [Usando o MFA do Azure para ativação](use-azure-mfa-for-activation.md)

@@ -2,21 +2,21 @@
 title: "Visão geral do ambiente do PAM | Microsoft Docs"
 description: "Localize o número necessário e a configuração de máquinas virtuais para implantar o Privileged Access Management com êxito"
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 08/31/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3e6c5a70c6b9ed140a56135676bbd14a84504317
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
+ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="environment-overview"></a>Visão geral do ambiente
 
@@ -24,9 +24,14 @@ O Privileged Access Management trabalha com VMs (máquinas virtuais) com unidade
 
 ![Servidores PAM: relações e plataformas com suporte – diagrama](media/pam-test-lab-architecture.png)
 
-Será necessário um mínimo de três máquinas virtuais.  Se você ainda não tiver um domínio do AD para o PAM gerenciar, precisará de uma VM adicional para atuar como um controlador de domínio CORP.  Se você quiser configurar o software PRIV para alta disponibilidade, também precisará de duas VMs adicionais.
+Será necessário um mínimo de três máquinas virtuais.  Se você ainda não tiver um domínio do AD para o PAM gerenciar, precisará de uma VM adicional para atuar como um controlador de domínio CORP.  Se você quiser configurar o software PRIV para alta disponibilidade, precisará de duas VMs adicionais.
 
-As unidades em que serão armazenadas as imagens de disco de máquina virtual precisam de, pelo menos, 120 GB de espaço livre em disco para manter todas as VMs.  Se você planeja implantar para obter alta disponibilidade, verifique se o subsistema do disco atende aos requisitos de armazenamento compartilhado do SQL.  O armazenamento compartilhado pode estar na forma de discos de cluster do Clustering de Failover do Windows Server, discos em uma rede SAN (Rede de Área de Armazenamento) ou em compartilhamentos de arquivos em um servidor SMB. Observe que eles devem ser dedicados ao ambiente de bastiões; o compartilhamento de armazenamento com outras cargas de trabalho fora do ambiente de bastiões não é recomendada, pois pode prejudicar a integridade do ambiente de bastiões.
+As unidades em que serão armazenadas as imagens de disco de VM precisam de, pelo menos, 120 GB de espaço livre em disco.  Se você planeja implantar para obter alta disponibilidade, verifique se o subsistema do disco atende aos requisitos de armazenamento compartilhado do SQL.  O armazenamento compartilhado pode estar na forma de discos de cluster do Clustering de Failover do Windows Server, discos em uma rede SAN (Rede de Área de Armazenamento) ou em compartilhamentos de arquivos em um servidor SMB.
 
-> [!NOTE]
-> O atual CTP (Customer Technical Preview) do MIM não é compatível com o conteúdo do banco de dados ou diretório do CTP anterior. Se você tiver avaliado anteriormente o MIM para PAM ou outros cenários, faça backup e arquive as máquinas virtuais usadas para esse teste, e inicie a implantação com novas imagens de máquinas virtuais que não tenham sido usadas anteriormente para cenários do MIM.
+>[!IMPORTANT]
+O armazenamento deve ser dedicado ao ambiente de bastiões. O compartilhamento de armazenamento com outras cargas de trabalho fora do ambiente de bastiões não é recomendada, pois pode prejudicar a integridade do ambiente de bastiões.
+
+## <a name="next-steps"></a>Próximas etapas
+
+- [Privileged Access Management para Active Directory Domain Services](privileged-identity-management-for-active-directory-domain-services.md) é uma visão geral do PAM e como ele funciona.
+- [Noções básicas dos componentes do PAM](principles-of-operation.md) é uma visão geral dos vários componentes do PAM.
