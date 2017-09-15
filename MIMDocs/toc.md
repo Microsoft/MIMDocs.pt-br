@@ -21,6 +21,15 @@
 ### [Instalação do MIM: serviço e portal](install-mim-service-portal.md)
 ### [Instalação do MIM: sincronizar bancos de dados](install-mim-sync-ad-service.md)
 ## [Atualizar do Forefront Identity Manager 2010 R2](microsoft-identity-manager-2016-upgrade-from-fim-2010-R2.md)
+## [Instalar o MIM Certificate Management](./deploy-use/mim-cm-deploy.md)
+## [Tópicos sobre a instalação do BHOLD](./deploy-use/bhold-installation-guide.md)
+### [Instalação do módulo BHOLD Core](./deploy-use/bhold-core-installation.md)
+### [Instalação do módulo Integração do BHOLD](./deploy-use/bhold-integration-installation.md)
+### [Instalação do módulo Atestado do BHOLD](./deploy-use/bhold-attestation-installation.md)
+### [Instalação do módulo Gerador de modelos do BHOLD](./deploy-use/bhold-model-generator-installation.md)
+### [Instalação do módulo Relatórios do BHOLD](./deploy-use/bhold-reporting-installation.md)
+### [Instalação do módulo Análise do BHOLD](./deploy-use/bhold-analytics-installation.md)
+### [Instalação do módulo Conector de gerenciamento de acesso do BHOLD](./deploy-use/bhold-access-management-connector-install.md)
 ## [Serviço de Notificação de Alteração de Senha](deploying-mim-password-change-notification-service-on-domain-controller.md)
 ## [Relatório Híbrido do Identity Manager](working-with-identity-manager-hybrid-reporting.md)
 ## [Autoatendimento de Redefinição de Senha](working-with-self-service-password-reset.md)
@@ -75,7 +84,10 @@
 ### [Relatando Relatórios Personalizados e Extensibilidade](https://technet.microsoft.com/library/jj133861)
 ## [Software do Microsoft Identity: versões de build de lançamento público](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)
 # [Referência](./reference/microsoft-identity-manager-2016-developer-reference.md)
-## [Referência do Microsoft Identity Manager 2016 para desenvolvedores](./reference/microsoft-identity-manager-2016-developer-reference.md)
+## Referência do desenvolvedor
+### [Referência do MIM 2016 para desenvolvedores](./reference/microsoft-identity-manager-2016-developer-reference.md)
+### BHOLD
+#### [Referência do BHOLD para desenvolvedores](./reference/mim2016-bhold-developer-reference.md) 
 ### [Referência da API REST do Certificate Manager](./reference/certificate-management-rest-api-reference.md)
 #### [Detalhes do serviço da API REST do CM](./reference/certificate-management-rest-api-service-details.md)
 #### [Instruções passo a passo de registro de exemplo](./reference/sample-enrollment-walkthrough.md)
@@ -117,4 +129,8 @@
 ### [Códigos de erro de Execução do Agente de Gerenciamento](./reference/maerrorcodes.md)
 ### [Referência de função para Microsoft Identity Manager 2016](./reference/mim2016-functions-reference.md)
 ### [Referência do Gerenciamento de Senhas para Microsoft Identity Manager 2016](./infrastructure/mim2016-password-management.md)
-## [Histórico de versão](./reference/version-history.md)
+### BHOLD
+#### [Guia de conceitos do BHOLD](./understand-explore/bhold-concepts-guide.md)
+## Histórico de versão
+### [Histórico de versão do MIM](./reference/version-history.md)
+### [Histórico de versão do BHOLD](./reference/version-bhold-history.md)
