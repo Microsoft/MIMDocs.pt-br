@@ -2,21 +2,21 @@
 title: "Etapa 7 para implantar o PAM – acesso do usuário | Microsoft Docs"
 description: "Como etapa final, conceda um acesso de usuário privilegiado temporário para demonstrar que a implantação Privileged Access Management foi realizada com êxito."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 89d9b38177b91f64e746fea583684abcecc9d7ff
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-7--elevate-a-users-access"></a>Etapa 7 – elevar o acesso do usuário
 
@@ -27,6 +27,7 @@ ms.lasthandoff: 07/13/2017
 Esta etapa demonstra que um usuário pode solicitar acesso a uma função pelo MIM.
 
 ## <a name="verify-that-jen-cannot-access-the-privileged-resource"></a>Verifique se Julia não pode acessar o recurso com privilégios
+
 Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na floresta CORP.
 
 1. Saia de CORPWKSTN para remover todas as conexões abertas em cache.
@@ -36,9 +37,10 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
 5. Deixe a janela do prompt de comando aberta.
 
 ## <a name="request-privileged-access-from-mim"></a>Solicite acesso privilegiado do MIM.
+
 1. Em CORPWKSTN, ainda como CONTOSO\Julia, digite o comando a seguir.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -48,7 +50,7 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
     > [!NOTE]
     > Depois de executar esses comandos, todas as etapas a seguir serão sensíveis ao tempo.
 
-    ```
+    ```PowerShell
     Import-module MIMPAM
     $r = Get-PAMRoleForRequest | ? { $_.DisplayName –eq "CorpAdmins" }
     New-PAMRequest –role $r
@@ -58,7 +60,7 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
 4. Depois de concluir, feche a janela do PowerShell.
 5. Na janela de comando do DOS, digite o seguinte comando
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
     ```
 
@@ -67,7 +69,7 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
 ## <a name="validate-the-elevated-access"></a>Valide o acesso com privilégios elevados.
 Na janela recém-aberta, digite os comandos a seguir.
 
-```
+```cmd
 whoami /groups
 dir \\corpwkstn\corpfs
 ```
@@ -75,12 +77,13 @@ dir \\corpwkstn\corpfs
 Se o comando dir falhar com a mensagem de erro **Acesso negado**, verifique novamente a relação de confiança.
 
 ## <a name="activate-the-privileged-role"></a>Ativar a função com privilégios
+
 Ative com a solicitação de acesso privilegiado por meio do portal de exemplo do PAM.
 
 1. Em CORPWKSTN, verifique se você está conectado como CORP\Julia.
 2. Digite o seguinte comando na janela de comando do DOS.
 
-    ```
+    ```cmd
     runas /user:Priv.Jen@priv.contoso.local "c:\program files\Internet Explorer\iexplore.exe"
     ```
 
@@ -95,6 +98,7 @@ Ative com a solicitação de acesso privilegiado por meio do portal de exemplo d
 > Neste ambiente, você também pode aprender a desenvolver aplicativos que usam a API REST do PAM, descrita na [Privileged Access Management REST API Reference](/microsoft-identity-manager/reference/privileged-access-management-rest-api-reference) (Referência da API REST do Privileged Access Management).
 
 ## <a name="summary"></a>Resumo
+
 Depois de concluir as etapas neste passo a passo, você terá demonstrado um cenário do Privileged Access Management, no qual os privilégios do usuário são elevados por uma quantidade limitada de tempo, permitindo ao usuário acessar recursos protegidos com uma conta privilegiada separada. Assim que a sessão de elevação expirar, a conta privilegiada não pode mais acessar o recurso protegido. A decisão de quais grupos de segurança representam funções privilegiadas é coordenada pelo administrador do PAM. Depois que os direitos de acesso são migrados para o sistema do Privileged Access Management, o acesso antes possibilitado com a conta de usuário original é agora possibilitado apenas ao entrar com uma conta privilegiada especial e disponibilizado mediante solicitação. Como resultado, associações de grupo para grupos altamente privilegiados são efetivas por uma quantidade limitada de tempo.
 
 >[!div class="step-by-step"]

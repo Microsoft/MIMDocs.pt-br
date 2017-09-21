@@ -5,16 +5,16 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/16/2017
+ms.date: 09/19/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 61987d5b259830be0cf0bc12832a853e24e9c282
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: 2473ef1c3d6fc5350d60d81bd508296a33343f01
+ms.sourcegitcommit: 58d6c628d3bb770669348b987cf8f52ec0576132
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implantando o MIM CM (Microsoft Identity Manager Certificate Manager) 2016
 
@@ -54,8 +54,7 @@ Para obter mais detalhes sobre as plataformas com suporte para o MIM 2016 examin
 
 ## <a name="pre-deployment-steps"></a>Etapas de pré-implantação
 
-O assistente de configuração do MIM CM requer que sejam fornecidas informações ao longo do processo para que ele seja concluído com êxito. As etapas de pré-implantação serão (INCOMPLETO ATÉ AQUI)
-
+O assistente de configuração do MIM CM requer que sejam fornecidas informações ao longo do processo para que ele seja concluído com êxito. 
 ![](media/mim-cm-deploy/image003.png)
 
 ### <a name="extending-the-schema"></a>Estender o esquema

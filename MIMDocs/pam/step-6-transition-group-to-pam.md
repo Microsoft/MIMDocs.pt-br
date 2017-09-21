@@ -2,21 +2,21 @@
 title: "Etapa 6 para implantar o PAM – mover grupo | Microsoft Docs"
 description: Migre um grupo para a floresta PRIV para que ele possa ser gerenciado com o Privilege Access Management.
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 7b689eff-3a10-4f51-97b2-cb1b4827b63c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: aeffca2c4e5467ec039c2077a88f36a652493e90
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: 550ad1e68ed8464dc7361e7a35ef35ee97753a9a
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="step-6--transition-a-group-to-privileged-access-management"></a>Etapa 6 – Faz a transição de um grupo para Gerenciamento de acesso privilegiado
 
@@ -37,38 +37,38 @@ Os cmdlets precisam ser executados uma vez para cada grupo e uma vez para cada m
 
 2.  Inicie o PowerShell e digite os comandos a seguir.
 
-    ```
-    Import-Module MIMPAM
-    Import-Module ActiveDirectory
-    ```
+```PowerShell
+   Import-Module MIMPAM
+   Import-Module ActiveDirectory
+```
 
 3.  Crie uma conta de usuário em PRIV correspondente a uma conta de usuário em uma floresta existente, para fins de demonstração.
 
     Digite os comandos a seguir no PowerShell.  Se você não usou o nome *Julia* para criar o usuário em contoso.local anteriormente, altere os parâmetros do comando, conforme apropriado. A senha 'Pass@word1' é apenas um exemplo e deve ser alterada para um valor de senha exclusivo.
 
-    ```
-    $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
-    $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
-    Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
-    Set-ADUser –identity priv.Jen –Enabled 1
-    ```
+ ```PowerShell
+        $sj = New-PAMUser –SourceDomain CONTOSO.local –SourceAccountName Jen
+        $jp = ConvertTo-SecureString "Pass@word1" –asplaintext –force
+        Set-ADAccountPassword –identity priv.Jen –NewPassword $jp
+        Set-ADUser –identity priv.Jen –Enabled 1
+  ```
 
 4. Copie um grupo e seus membros, Julia, de CONTOSO para o domínio PRIV, para fins de demonstração.
 
     Execute os seguintes comandos, especificando a senha do administrador do domínio CORP (CONTOSO\Administrator), quando solicitado:
 
-        ```
+ ```PowerShell
         $ca = get-credential –UserName CONTOSO\Administrator –Message "CORP forest domain admin credentials"
         $pg = New-PAMGroup –SourceGroupName "CorpAdmins" –SourceDomain CONTOSO.local                 –SourceDC CORPDC.contoso.local –Credentials $ca
         $pr = New-PAMRole –DisplayName "CorpAdmins" –Privileges $pg –Candidates $sj
-        ```
+ ```
 
     Na referência, o comando **New-PAMGroup** usa os seguintes parâmetros:
 
-        -   The CORP forest domain name in NetBIOS form  
-        -   The name of the group to copy from that domain  
-        -   The CORP forest Domain Controller NetBIOS name  
-        -   The credentials of an domain admin user in the CORP forest  
+     -   O nome de domínio da floresta CORP na forma NetBIOS  
+     -   O nome do grupo para copiar desse domínio  
+     -   O nome NetBIOS do controlador de domínio da floresta CORP  
+     -   As credenciais de um usuário administrador de domínio na floresta CORP  
 
 5.  (Opcional) Em CORPDC, remova a conta de Julia do grupo **CONTOSO CorpAdmins**, se ainda estiver presente.  Isso é necessário apenas para fins de demonstração, a fim de ilustrar como as permissões podem ser associadas às contas criadas na floresta PRIV.
 
@@ -76,7 +76,7 @@ Os cmdlets precisam ser executados uma vez para cada grupo e uma vez para cada m
 
     2.  Inicie o PowerShell, execute o seguinte comando e confirme a alteração.
 
-        ```
+        ```PowerShell
         Remove-ADGroupMember -identity "CorpAdmins" -Members "Jen"
         ```
 

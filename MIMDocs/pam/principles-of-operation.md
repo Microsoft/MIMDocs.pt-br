@@ -2,21 +2,21 @@
 title: Entender os componentes do PAM | Microsoft Docs
 description: "O Privileged Access Management compartilha alguns componentes com o MIM e tem alguns próprios. Saiba como eles funcionam juntos."
 keywords: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 03/15/2017
+author: barclayn
+ms.author: barclayn
+manager: mbaldwin
+ms.date: 09/13/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 6498f68f-36d3-448c-8fe6-649ad5a7f97d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 53fe79f251c3b18426f16b4007cda49e67d7b028
-ms.sourcegitcommit: 02fb1274ae0dc11288f8bd9cd4799af144b8feae
+ms.openlocfilehash: a129088989bb977c191e9dc372fed07044314403
+ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="understand-the-components-of-pam"></a>Noções básicas dos componentes do PAM
 
@@ -27,7 +27,7 @@ O Privileged Access Management mantém acesso administrativo separado das contas
 
 A solução MIM conforme configurada para o PAM inclui os seguintes componentes:  
 
-- **Serviço MIM**: implementa a lógica de negócios para realizar operações de gerenciamento de identidade e acesso, incluindo gerenciamento de conta privilegiada e tratamento de solicitações de elevação.   
+- **Serviço MIM**: implementa a lógica de negócios para realizar operações de gerenciamento de identidade e acesso, incluindo gerenciamento de conta privilegiada e tratamento de solicitações de elevação.
 - **Portal do MIM**: um portal baseado no SharePoint, hospedado pelo SharePoint 2013, que fornece ao administrador uma interface do usuário de gerenciamento e configuração.
 - **Banco de Dados do Serviço MIM**: armazenado no SQL Server 2012 ou 2014, mantém os dados e os metadados de identidade necessários para o Serviço MIM.
 - **Serviço de Monitoramento do PAM** e **Serviço de Componente do PAM**: dois serviços que gerenciam o ciclo de vida de contas privilegiadas e que auxiliam o AD PRIV no ciclo de vida da associação a um grupo.
