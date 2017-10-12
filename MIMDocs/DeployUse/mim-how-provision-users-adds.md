@@ -10,11 +10,11 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: 21a2fb4459f46fe0dea89ff016aa77358f940c24
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 0e039c0b05cc9088a6934c07ead09fb5250f8a81
+ms.sourcegitcommit: 81ad3ede52c3a4308b806c0c8a3fd42b5f5965b0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Como Provisionar Usuários no AD DS
 
@@ -294,7 +294,7 @@ As tabelas a seguir mostram a configuração da regra de sincronização de prov
 
 
  >[!NOTE]
- Importante Verifique se Somente Fluxo Inicial foi selecionado para o fluxo de atributo que tem o DN como destino.                                                                          
+Verifique se Somente Fluxo Inicial foi selecionado para o fluxo de atributo que tem o DN como destino.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Etapa 7: Criar o fluxo de trabalho
 
