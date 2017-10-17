@@ -63,7 +63,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
 
     -   Nome de usuário: mimma
 
-    -   Senha: Pass@word
+    -   Senha: Pass@word 
 
     -   Domínio: contoso
 
