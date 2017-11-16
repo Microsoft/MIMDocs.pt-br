@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 33fbe63528d5d7c543ae286f934654538782b4d5
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-core-installation"></a>Instalação do BHOLD Core
 

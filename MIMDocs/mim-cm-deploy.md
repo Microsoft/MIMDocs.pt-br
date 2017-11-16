@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: 2473ef1c3d6fc5350d60d81bd508296a33343f01
-ms.sourcegitcommit: 58d6c628d3bb770669348b987cf8f52ec0576132
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implantando o MIM CM (Microsoft Identity Manager Certificate Manager) 2016
 

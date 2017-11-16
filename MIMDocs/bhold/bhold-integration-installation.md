@@ -11,10 +11,10 @@ ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
 ms.openlocfilehash: ef68de19bd0eabd6d9203469ecc991d496f05846
-ms.sourcegitcommit: ed8dd5563e77ef4a3345b2a52a1426859c95576a
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Instalação de Integração de FIM/MIM com o BHOLD
 
@@ -129,7 +129,7 @@ Em que:
 
 -   *\<MIM_Server\>* especifica o nome do servidor do FIM conforme encontrado na versão original do arquivo
 
--   *\<BHOLD_Server_FQDN\> * Especifica o FQDN (nome de domínio totalmente qualificado) do servidor do BHOLD
+-   *\<BHOLD_Server_FQDN\>*  Especifica o FQDN (nome de domínio totalmente qualificado) do servidor do BHOLD
 
 -   *\<MIM_Port\>* especifica o número da porta do servidor do FIM conforme encontrado na versão original do arquivo
 
@@ -189,7 +189,7 @@ Se um aprovador para uma solicitação de função de autoatendimento não é es
 
 18. Na página **Unidade organizacional/raiz**, clique em **Modificar**.
 
-19. Na página **Modificar atributos da unidade organizacional/raiz**, em **Aprovador**, digite o nome de usuário e de domínio do usuário que aprovará solicitações de atribuição de função, no formato *\<domínio\>*\\*\<usuário\>*, em que * \<domínio\>* é o nome de domínio NetBIOS (curto) e *\<usuário\>* é o nome de logon do usuário.
+19. Na página **Modificar atributos da unidade organizacional/raiz**, em **Aprovador**, digite o nome de usuário e de domínio do usuário que aprovará solicitações de atribuição de função, no formato *\<domínio\>*\\*\<usuário\>*, em que  *\<domínio\>* é o nome de domínio NetBIOS (curto) e *\<usuário\>* é o nome de logon do usuário.
 20. Clique em **OK**.
 
 >[!IMPORTANT]
