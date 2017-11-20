@@ -12,12 +12,15 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c6786ea653f178b25ea3da4fbd3b01d21b79c622
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
+ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
+>[!IMPORTANT]
+Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de desativação em 1 de outubro de 2018. Os clientes novos ou atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando no planejamento de alterações para a MFA por meio da integração com o SDK do Servidor de Autenticação Multifator do Microsoft Azure. Esse recurso será incluído em um hotfix futuro, no início de 2018.
+
 # <a name="working-with-self-service-password-reset"></a>Como trabalhar com a redefinição de senha de autoatendimento
 O Microsoft Identity Manager 2016 fornece funcionalidade adicional para o recurso de redefinição de senha do serviço de autoatendimento. Essa funcionalidade foi aprimorada com vários recursos importantes:
 
@@ -68,7 +71,7 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 3.  Clique em **Serviços de Aplicativos &gt; Active Directory &gt; Provedor de Multi-Factor Auth &gt; Criação Rápida**.
 
-![Imagem de MFA de criação rápida no portal do Azure](media/MIM-SSPR-Azureportal.png)
+![Imagem da criação rápida da MFA no Portal do Azure](media/MIM-SSPR-Azureportal.png)
 
 4.  No campo **Nome** insira **SSPRMFA**, em seguida, clique em **Criar**.
 
@@ -82,7 +85,7 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 7.  Na nova janela, no painel esquerdo, em **Configurar**, clique em **Configurações**.
 
-8.  Em **Alerta de Fraude**, desmarque **Bloquear usuário quando a fraude for reportada** . Isso é feito para evitar o bloqueio de todo o serviço.
+8.  Em **Alertas de Fraude**, desmarque **Bloquear usuário quando fraude for relatada. Isso é feito para evitar o bloqueio de todo o serviço.
 
 9. Na janela **Azure Multi-Factor Authentication** que se abre, clique em **SDK** sob **Downloads** no menu à esquerda.
 
@@ -136,7 +139,7 @@ Agora, os usuários em sua organização podem se registrar para redefinição d
 
 #### <a name="register-users-for-password-reset"></a>Registrar usuários para redefinição de senha
 
-1.  Um usuário inicia um navegador da Web e navega até o Portal de Registro de Redefinição de Senha do MIM.  (Normalmente, este portal estará configurado com a autenticação do Windows).  No portal, eles fornecerão o nome de usuário e a senha novamente para confirmar sua identidade.
+1.  Um usuário inicia um navegador da Web e navega até o Portal de registro de redefinição de senha do MIM.  (Normalmente, este portal estará configurado com a autenticação do Windows).  No portal, eles fornecerão o nome de usuário e a senha novamente para confirmar sua identidade.
 
     Eles precisam entrar no Portal de Registro de Senha e autenticar-se usando o nome de usuário e a senha.
 
@@ -165,7 +168,7 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 
 2.  O usuário será direcionado para autenticar. Se MFA tiver sido configurado, o usuário receberá uma chamada telefônica.
 
-3.  No segundo plano, o que está acontecendo é que o Azure MFA então faz um telefonema para o número que o usuário forneceu ao se inscrever para o serviço.
+3.  Em segundo plano, o que acontece é que a Autenticação Multifator do Microsoft Azure faz uma chamada telefônica para o número que o usuário forneceu ao se inscrever para o serviço.
 
 4.  Quando um usuário atender o telefone, ele será solicitado a pressionar a tecla de cerquilha (#) no telefone. Então o usuário clica em **Avançar** no portal.
 
@@ -182,7 +185,7 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 
 1.  Os usuários podem abrir um navegador da Web, navegar até o **Portal de Redefinição de Senha** , digitar o nome de usuário e clicar em **Avançar**.
 
-    Se MFA tiver sido configurado, o usuário receberá uma chamada telefônica. No segundo plano, o que está acontecendo é que o Azure MFA então faz um telefonema para o número que o usuário forneceu ao se inscrever para o serviço.
+    Se MFA tiver sido configurado, o usuário receberá uma chamada telefônica. Em segundo plano, o que acontece é que a Autenticação Multifator do Microsoft Azure faz uma chamada telefônica para o número que o usuário forneceu ao se inscrever para o serviço.
 
     Quando um usuário atender o telefone, ele será solicitado a pressionar a tecla sustenido # no telefone. Então o usuário clica em **Avançar** no portal.
 
