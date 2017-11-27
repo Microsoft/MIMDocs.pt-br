@@ -12,15 +12,15 @@ ms.technology: active-directory-domain-services
 ms.assetid: 5134a112-f73f-41d0-a5a5-a89f285e1f73
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4accb4c1db90f11c18917012b9a3ab4966ea6496
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 1fb012034685257d35ba4f8a79468145187ae5b6
+ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-azure-mfa-for-activation"></a>Usando o Azure MFA para ativação
 >[!IMPORTANT]
-Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de desativação em 1 de outubro de 2018. Os clientes novos e atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando no planejamento de alterações para a MFA por meio da integração com o SDK do Servidor de Autenticação Multifator do Microsoft Azure. Esse recurso será incluído em um hotfix futuro, no início de 2018.
+Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de baixa, em 14 de novembro de 2018. Os clientes novos e atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando no planejamento de alterações para a MFA por meio da integração com o SDK do Servidor de Autenticação Multifator do Microsoft Azure. Esse recurso será incluído em um hotfix futuro, no início de 2018.
 
 
 

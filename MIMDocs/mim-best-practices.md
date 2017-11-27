@@ -5,17 +5,17 @@ keywords:
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 08/18/2017
+ms.date: 11/15/2017
 ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 
-ms.openlocfilehash: fe361c3f6dd85a478d655a910f0f3ec9802128b0
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 7f56882bf005de6c888997c1bf6a9e2feaea410c
+ms.sourcegitcommit: 42253562ac2f9ed689e9db9d0c470213b7926883
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Práticas recomendadas do Microsoft Identity Manager 2016 | Microsoft Docs
 
@@ -90,7 +90,7 @@ Dependendo da quantidade de memória do SQL Server e se ele é compartilhado com
   WITH OVERRIDE
   ```
 
-  Este exemplo reconfigura o SQL Server para não usar mais do que 12 gigabytes (GB) de memória.
+  Este exemplo reconfigura o servidor SQL para usar no máximo 12 gigabytes (GB) de memória.
 
 4.  Verifique a configuração usando a seguinte consulta:
 
@@ -108,13 +108,16 @@ Dependendo da quantidade de memória do SQL Server e se ele é compartilhado com
 
 ### <a name="backup-and-recovery-configuration"></a>Configuração de backup e recuperação
 
-No geral, os backups de banco de dados devem ser executados de acordo com a política de backup da empresa. Caso os backups de log incremental não sejam planejados, o banco de dados deverá ser configurado no modo de recuperação simples. Assegure-se de que você compreendeu os efeitos dos diferentes modelos de recuperação antes de implementar uma estratégia de backup, bem como os requisitos de espaço em disco desses modelos. O modo de recuperação completa exige backups de log frequentes para evitar o uso excessivo do espaço em disco. Para obter mais informações, consulte [Visão Geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370) e [Guia de Backup e Restauração do FIM 2010](http://go.microsoft.com/fwlink/?LinkID=165864).
+Em geral, você deve trabalhar com o administrador do banco de dados para criar uma estratégia de backup e recuperação. As recomendações incluem:
+- Realize backups do banco de dados de acordo com a política de backup da organização. 
+- Caso os backups de log incremental não sejam planejados, o banco de dados deverá ser configurado no modo de recuperação simples. 
+- Entenda os efeitos dos diferentes modelos de recuperação, antes de implementar uma estratégia de backup. Conheça os Requisitos de Espaço em Disco para esses modelos. O modo de recuperação completa exige backups de log frequentes para evitar o uso excessivo do espaço em disco. 
 
-## <a name="create-a-backup-administrator-account-for-the-fimservice-after-installation"></a>Criar uma conta de Administrador de Backup para o FIMService após a instalação
+Para obter mais informações, consulte [Visão Geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370) e [Guia de Backup e Restauração do FIM 2010](http://go.microsoft.com/fwlink/?LinkID=165864).
 
+## <a name="create-a-backup-administrator-account-for-the-fim-service-after-installation"></a>Criar uma conta Administrador de Backup para o Serviço do FIM após a instalação
 
->[!IMPORTANT]
-Os membros do conjunto de Administradores do FIMService têm permissões exclusivas essenciais para a operação de implantação do FIM. Se não for possível fazer logon como parte do conjunto de Administradores, a única solução será reverter para um backup anterior do sistema. Para atenuar essa situação, é recomendável adicionar outros usuários para ao conjunto Administrativo do FIM, como parte da configuração pós-instalação.
+Os membros do conjunto de administradores do Serviço do FIM têm permissões exclusivas essenciais para a operação de implantação do MIM. Se não for possível fazer logon como parte do conjunto de administradores, a única solução será reverter para um backup anterior do sistema. Para atenuar essa situação, é recomendável adicionar outros usuários para ao conjunto Administrativo do FIM, como parte da configuração pós-instalação.
 
 ## <a name="fim-service"></a>Serviço FIM
 
@@ -144,7 +147,7 @@ Para obter mais informações, consulte [Configurar Restrições de Entrega de M
 
 ### <a name="disable-sharepoint-indexing"></a>Desabilitar a indexação do SharePoint
 
-É recomendável desabilitar a indexação do Microsoft Office SharePoint®. Nenhum documento precisa ser indexado, a indexação gera muitas entradas de log de erro e possíveis problemas de desempenho com o FIM 2010. Desabilitar a indexação do SharePoint
+É recomendável desabilitar a indexação do Microsoft Office SharePoint®. Não é necessário indexar nenhum documento. A indexação gera muitas entradas de log de erros e possíveis problemas de desempenho no MIM. Para desabilitar a indexação do SharePoint, faça os procedimentos abaixo:
 
 1.  No servidor que hospeda o Portal do MIM 2016, clique em Iniciar.
 
@@ -164,16 +167,16 @@ Para obter mais informações, consulte [Configurar Restrições de Entrega de M
 
 ## <a name="mim-2016-initial-data-load"></a>Carregamento de Dados Inicial do MIM 2016
 
-Esta seção lista uma série de etapas para aumentar o desempenho do carregamento de dados inicial do sistema externo para o FIM 2010. É importante entender que várias dessas etapas são temporárias durante o preenchimento inicial do sistema e devem ser redefinidas após serem concluídas. Essa operação é realizada uma única vez e não é uma sincronização contínua.
+Esta seção descreve uma série de etapas para aumentar o desempenho do carregamento de dados inicial do sistema externo para o MIM. É importante entender que várias dessas etapas são realizadas apenas durante o preenchimento inicial do sistema. Elas devem ser redefinidas após a conclusão do carregamento. Essa operação é realizada uma única vez e não é uma sincronização contínua.
 
 >[!NOTE]
-Para obter mais informações sobre a sincronização de usuários entre o FIM 2010 e os Active Directory Domain Services (AD DS), consulte [Como Sincronizar Usuários do Active Directory para o FIM](http://go.microsoft.com/fwlink/?LinkID=188277) na documentação do FIM.
+Para saber mais sobre a sincronização de usuários entre o MIM e o AD DS (Active Directory Domain Services), confira o artigo [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Como sincronizar usuários do Active Directory Domain Services para o FIM), na documentação do FIM.
 
 >[!IMPORTANT]
-Verifique se as práticas recomendadas abordadas na seção de configuração do SQL deste guia foram aplicadas.                                                                                                                                                      |
+Verifique se as práticas recomendadas abordadas na seção de configuração do SQL deste guia foram aplicadas. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Etapa 1: configurar o SQL Server para o carregamento de dados inicial
-Ao planejar o carregamento inicial de uma grande quantidade de dados, é possível reduzir o tempo necessário para preencher o banco de dados desativando temporariamente a pesquisa de texto completo e ativando novamente após a conclusão da exportação no agente de gerenciamento do MIM 2016 (FIM MA).
+O carregamento inicial de dados pode ser um processo longo. Quando planejar o carregamento inicial de uma grande quantidade de dados, é possível reduzir o tempo necessário para preencher o banco de dados. Para fazer isso, desative temporariamente a pesquisa de texto completo e ative-a novamente, após concluir a exportação no agente de gerenciamento do MIM 2016.
 
 Desligar temporariamente a pesquisa de texto completo:
 
@@ -184,12 +187,9 @@ Desligar temporariamente a pesquisa de texto completo:
 3.  Execute as seguintes instruções SQL:
 
 ```SQL
-ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING =
-MANUAL
+ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
-
-É importante compreender os requisitos de disco do modelo de recuperação do SQL Server. De acordo com o cronograma de backup, considere utilizar o modo de recuperação simples durante o carregamento inicial do sistema para limitar o uso do espaço em disco, mas é necessário entender as consequências em uma perspectiva de perda de dados. Ao utilizar o modo de recuperação completa, é necessário gerenciar o uso do disco por meio de backups, o que inclui backups frequentes do log de transações para evitar o uso excessivo do espaço em disco.
 
 >[!IMPORTANT]
 Não implementar esses procedimentos pode gerar um uso excessivo do espaço em disco, o que pode fazer com que ele acabe. É possível encontrar mais detalhes sobre este tópico em [Visão Geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370). O [Guia de Backup e Restauração do FIM](http://go.microsoft.com/fwlink/?LinkID=165864) contém mais informações.
@@ -200,16 +200,11 @@ Durante o processo de carregamento inicial, apenas a configuração mínima nece
 
 ### <a name="step-3-configure-and-populate-the-fim-service-with-external-identity-data"></a>Etapa 3: configurar e preencher o Serviço FIM com os dados de identidade externa
 
-Neste ponto, é necessário seguir os procedimentos descritos em Como Sincronizar Usuários do Active Directory
-
-Guia dos Serviços de Domínio para o FIM para configurar e sincronizar seu sistema com usuários do Active Directory. Se for necessário sincronizar informações de Grupo, os procedimentos desse processo serão descritos em Como Sincronizar Grupos, no Guia dos Active Directory Domain Services para o FIM.
+Nessa ocasião, faça os procedimentos descritos no guia "Como sincronizar usuários do Active Directory Domain Services para o FIM" para configurar e sincronizar o sistema com os usuários do Active Directory. Caso seja necessário sincronizar as Informações do Grupo, os procedimentos desse processo estão descritos no guia [How Do I Synchronize Groups from Active Directory Domain Services to FIM](https://technet.microsoft.com/library/ff686936(v=ws.10).aspx) (Como sincronizar grupos do Active Directory Domain Services para o FIM).
 
 #### <a name="synchronization-and-export-sequences"></a>Sequências de sincronização e exportação
 
-Para otimizar o desempenho, execute uma exportação após uma execução de sincronização que resulta em um grande número de operações de exportação pendentes em um espaço conector.
-
-Em seguida, execute uma confirmação de importação no agente de gerenciamento associado ao espaço conector afetado. Por exemplo, quando for necessário executar perfis de execução de sincronização em diversos agentes de gerenciamento como parte de um carregamento de dados inicial, execute uma exportação seguida de uma importação delta após cada sincronização individual executada.
-
+Para otimizar o desempenho, execute uma exportação após uma execução de sincronização que resulta em um grande número de operações de exportação pendentes em um espaço conector. Em seguida, execute uma confirmação de importação no agente de gerenciamento associado ao espaço conector afetado. Por exemplo, quando for necessário executar perfis de execução de sincronização em diversos agentes de gerenciamento como parte de um carregamento de dados inicial, execute uma exportação seguida de uma importação delta após cada sincronização individual executada.
 Para cada agente de gerenciamento de origem que faz parte do ciclo de inicialização, execute as seguintes etapas:
 
 1.  Importação completa em um agente de gerenciamento de origem.
@@ -320,7 +315,7 @@ Para implementar o SSL:
 
 7.  Salve o arquivo em qualquer local. Será necessário acessar esse local nas próximas etapas.
 
-8.  No Internet Explorer®, acesse https://servername/certsrv. Substitua servername pelo nome do servidor que emite certificados.
+8.  Vá para https://nomedoservidor/certsrv. Substitua servername pelo nome do servidor que emite certificados.
 
 9.  Clique em Solicitar um Novo Certificado.
 
@@ -374,7 +369,7 @@ Para uma configuração de desempenho otimizada:
 
 -   Aplique as práticas recomendadas de configuração do SQL, conforme descrito na seção de configuração do SQL deste documento.
 
--   Desligue a indexação do SharePoint no site do Portal do FIM 2010 R2. Para obter mais informações, consulte a seção Desabilitar a Indexação do SharePoint neste documento.
+-   Desative a indexação do SharePoint no site do Portal do MIM. Para obter mais informações, consulte a seção Desabilitar a Indexação do SharePoint neste documento.
 
 ## <a name="feature-specific-best-practices--i-want-to-remove-this-and-collapse-this-section-and-just-have-the-specific-features-at-header-2-level-versus-3"></a>Práticas Recomendadas para Recursos Específicos (Quero remover e recolher esta seção e ver apenas os recursos específicos nos níveis de cabeçalho 2 e 3)
 
@@ -392,7 +387,7 @@ O MIM oferece dois tipos de MPRs, Solicitação e Definir Transição:
 -  MPR de Solicitação (RMPR)
 
   - É utilizada para definir a política de controle de acesso (autenticação, autorização e ação) para as operações de Criar, Ler, Atualizar ou Excluir (CRUD) em recursos.
-  - É aplicada quando uma operação CRUD é feita em um recurso de destino no FIM.
+  - É aplicada quando uma operação CRUD é emitida em um recurso de destino no MIM.
   - É projetada pelos critérios de correspondência definidos na regra, ou seja, a quais solicitações CRUD a regra se aplica.
 
 - MPR Definir Transição (TMPR)
@@ -404,7 +399,7 @@ O MIM oferece dois tipos de MPRs, Solicitação e Definir Transição:
 
 #### <a name="only-enable-mprs-as-necessary"></a>Habilite as MPRs conforme o necessário
 
-Use o princípio de menos privilégios ao aplicar a configuração. As MPRs controlam a política de acesso à implantação do FIM. Habilite apenas os recursos usados pela maioria dos usuários. Por exemplo, nem todos os usuários usam o FIM para gerenciamento de grupo, assim, as MPRs associadas de gerenciamento de grupo devem ser desabilitadas. Por padrão, o FIM é fornecido com a maioria das permissões de não administrativas desabilitadas.
+Use o princípio de menos privilégios ao aplicar a configuração. As MPRs controlam a política de acesso para a implantação do MIM. Habilite apenas os recursos usados pela maioria dos usuários. Por exemplo, nem todos os usuários utilizam o MIM para gerenciamento de grupo. Portanto, as MPRs associadas de gerenciamento de grupo devem ser desabilitadas. Por padrão, o MIM é fornecido com a maioria das permissões de não administrador desabilitadas.
 
 #### <a name="duplicate-built-in-mprs-instead-of-directly-modifying"></a>Duplicar MPRs internas em vez de modificá-las diretamente
 Caso precise modificar as MPRs internas, crie uma nova MPR com a configuração necessária e desligue a MPR interna. Isso garante que alterações futuras de MPRs internas introduzidas pelo processo de atualização não afetem negativamente a configuração do sistema.
@@ -431,7 +426,7 @@ Para atributos com os mesmos requisitos de acesso que não devem ser alterados, 
 
 #### <a name="avoid-giving-unrestricted-access-even-to-selected-principal-groups"></a>Evite fornecer acesso irrestrito até mesmo para grupos de entidades selecionadas
 
-No FIM, as permissões são definidas como uma asserção positiva. Como o FIM não dá suporte às permissões de Negação, conceder acesso irrestrito a um recurso complica a distribuição de exclusões nas permissões. Como prática recomendada, conceda somente as permissões necessárias.
+No MIM, as permissões são definidas como uma declaração positiva. Como o MIM não tem suporte para permissões de Negação, conceder acesso irrestrito a um recurso complica a distribuição de exclusões nas permissões. Como prática recomendada, conceda somente as permissões necessárias.
 
 #### <a name="use-tmprs-to-define-custom-entitlements"></a>Use TMPRs para definir direitos personalizados
 
@@ -470,7 +465,7 @@ Para remover um direito do sistema (e revogá-lo de todos os membros que têm es
 
 3.  Desabilite a MPR T-Out.
 
-Remover um direito, mas deixar os membros atuais isolados (por exemplo, parar de usar o FIM para gerenciar o direito):
+Para remover um direito, mas deixar os membros atuais isolados (por exemplo, parar de usar o MIM para gerenciar o direito):
 
 1.  Desabilite a MPR T-In. Assim, evita-se novas concessões.
 
@@ -504,11 +499,11 @@ O uso de condições baseadas em atributos de referência multivalorados deve se
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Computadores do tipo quiosque usados para redefinição de senha devem configurar a segurança local para limpar o arquivo de paginação da memória virtual
 
-Ao implantar a redefinição de senha do FIM 2010 em uma estação de trabalho destinada a ser um quiosque, recomenda-se que a política de segurança local Encerrar: Limpar do arquivo de paginação da memória virtual seja ativada para garantir que informações confidenciais da memória do processo não sejam disponibilizadas para usuários não autorizados.
+Quando implantar a redefinição de senha do MIM em uma estação de trabalho destinada a ser um quiosque, recomendamos ativar a configuração da política de segurança local, "Desligamento: limpar arquivo de paginação de memória virtual", para garantir que as informações confidenciais da memória do processo não sejam disponibilizadas para usuários não autorizados.
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Os usuários sempre devem se registrar para redefinir a senha em um computador ao qual estão conectados
 
-Quando um usuário tenta se registrar para redefinir a senha por meio de um portal da Web, o FIM 2010 sempre inicia o registro em nome do usuário conectado, independentemente de quem está conectado ao site da Web. Os usuários sempre devem se registrar para redefinir a senha em um computador ao qual estão conectados.
+Quando um usuário tenta se registrar para redefinir a senha por meio de um portal da Web, o MIM sempre inicia o registro em nome do usuário conectado, independentemente de quem está conectado ao site da Web. Os usuários sempre devem se registrar para redefinir a senha em um computador ao qual estão conectados.
 
 #### <a name="do-not-set-the-avoidpdconwan-registry-key-to-true"></a>Não defina a chave do Registro AvoidPdcOnWan como true
 
@@ -580,7 +575,7 @@ Não exclua os recursos de esquema enquanto ainda tiver requisitos de auditoria 
 
 #### <a name="making-regular-expressions-case-insensitive"></a>Fazer com que expressões regulares não diferenciem maiúsculas de minúsculas
 
-No FIM, pode ser útil para fazer com que algumas expressões regulares não diferenciem maiúsculas de minúsculas. É possível ignorar a diferenciação entre maiúsculas e minúsculas usando ?!:. Por exemplo, para o Tipo de Funcionário, use
+No MIM, pode ser útil para fazer com que algumas expressões regulares não diferenciem maiúsculas de minúsculas. É possível ignorar a diferenciação entre maiúsculas e minúsculas usando ?!:. Por exemplo, para o Tipo de Funcionário, use
 
 `\^(?!:contractor\|full time employee)%.`
 
@@ -590,17 +585,17 @@ O atributo de membro exposto ao mecanismo de sincronização, na verdade, é map
 
 #### <a name="leading-and-trailing-spaces-in-strings-are-ignored"></a>Espaços à direita e à esquerda em cadeias de caracteres são ignorados
 
-No FIM, é possível inserir cadeias de caracteres com espaços à esquerda e à direita, mas o sistema do FIM ignora esses espaços. Se uma cadeia de caracteres com espaços à esquerda e à direita for enviada, o mecanismo de sincronização e os serviços Web ignorarão esses espaços.
+É possível inserir cadeias de caracteres com espaços à esquerda e à direita, mas o sistema do MIM ignora esses espaços. Se uma cadeia de caracteres com espaços à esquerda e à direita for enviada, o mecanismo de sincronização e os serviços Web ignorarão esses espaços.
 
 #### <a name="empty-strings-do-not-equal-null"></a>Cadeias de caracteres vazias não são iguais a null
 
-Cadeias de caracteres vazias não são iguais a null nesta versão do FIM. Entradas de cadeia de caracteres vazias são consideradas um valor válido. Ausente é considerado um valor nulo.
+As cadeias de caracteres vazias são diferentes de nulas neste lançamento do MIM. Entradas de cadeia de caracteres vazias são consideradas um valor válido. Ausente é considerado um valor nulo.
 
 ### <a name="workflow-and-request-processing"></a>Processamento de Fluxo de Trabalho e Solicitação
 
 #### <a name="do-not-delete-default-workflows-that-are-shipped-with-mim-2016"></a>Não exclua os fluxos de trabalho padrão fornecidos com o MIM 2016
 
-Os seguintes fluxos de trabalho são fornecidos com o FIM 2010 e não devem ser excluídos:
+Os seguintes fluxos de trabalho são fornecidos com o MIM e não devem ser excluídos:
 
 -   Fluxo de trabalho de expiração
 
@@ -634,4 +629,11 @@ Evite usar as atividades que modificam os recursos do MIM, como a Atividade do A
 
 ### <a name="understanding-fim-service-partitions"></a>Noções Básicas das Partições de Serviço do FIM
 
-O objetivo do FIM é processar solicitações que podem ser iniciadas por vários clientes, como o serviço de sincronização do FIM e os componentes de autoatendimento, de acordo com as políticas configuradas pela empresa. Por padrão, cada instância de serviço do FIM pertence a um grupo lógico composto por uma ou mais instâncias de serviço do FIM, também conhecidas como partição de serviço do FIM. Caso haja apenas uma instância de serviço do FIM implantada para manipular todas as solicitações, podem haver latências de processamento. Algumas operações podem até exceder os valores de tempo limite padrão apropriados para operações de autoatendimento. As partições de serviço do FIM podem ajudá-lo a resolver esse problema. Para obter mais informações, consulte Noções Básicas das Partições de Serviço do FIM.
+O objetivo do MIM é processar solicitações que podem ser iniciadas por vários clientes, como o serviço de sincronização do FIM e os componentes de autoatendimento, de acordo com as políticas configuradas pela empresa. Por padrão, cada instância de serviço do FIM pertence a um grupo lógico composto por uma ou mais instâncias de serviço do FIM, também conhecidas como partição de serviço do FIM. Caso haja apenas uma instância de serviço do FIM implantada para manipular todas as solicitações, podem haver latências de processamento. Algumas operações podem até exceder os valores de tempo limite padrão apropriados para operações de autoatendimento. As partições de serviço do FIM podem ajudá-lo a resolver esse problema.
+
+Para saber mais, confira o artigo [Understanding FIM Service Partitions](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx) (Noções básicas sobre as Partições de Serviço do FIM).
+
+## <a name="next-steps"></a>Próximas etapas
+- [Guia de backup e restauração do FIM](http://go.microsoft.com/fwlink/?LinkID=165864)
+- [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Como faço para sincronizar usuários do Active Directory para o FIM) 
+- [Visão geral do modelo de recuperação](http://go.microsoft.com/fwlink/?LinkID=185370).

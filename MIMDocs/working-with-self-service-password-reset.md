@@ -12,14 +12,14 @@ ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 90c773c30b0ab23ad29ca1a215745bf59b188764
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.openlocfilehash: 0463a91275f3e181a66eb460c167bb9a2008f444
+ms.sourcegitcommit: 27a23142393bbb0f66a3d533d89a5a8366a29e41
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 >[!IMPORTANT]
-Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de desativação em 1 de outubro de 2018. Os clientes novos ou atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando no planejamento de alterações para a MFA por meio da integração com o SDK do Servidor de Autenticação Multifator do Microsoft Azure. Esse recurso será incluído em um hotfix futuro, no início de 2018.
+Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de baixa, em 14 de novembro de 2018. Os clientes novos ou atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando no planejamento de alterações para a MFA por meio da integração com o SDK do Servidor de Autenticação Multifator do Microsoft Azure. Esse recurso será incluído em um hotfix futuro, no início de 2018.
 
 # <a name="working-with-self-service-password-reset"></a>Como trabalhar com a redefinição de senha de autoatendimento
 O Microsoft Identity Manager 2016 fornece funcionalidade adicional para o recurso de redefinição de senha do serviço de autoatendimento. Essa funcionalidade foi aprimorada com vários recursos importantes:
