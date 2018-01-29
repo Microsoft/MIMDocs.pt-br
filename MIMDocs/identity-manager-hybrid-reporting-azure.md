@@ -1,6 +1,6 @@
 ---
-title: "O que é o relatório híbrido | Microsoft Docs"
-description: "Os relatórios da Atividade de Auditoria no Azure Active Directory permitem que você exiba os eventos de auditoria locais e na nuvem."
+title: "O que é um relatório híbrido no Azure AD? | Microsoft Docs"
+description: "Os relatórios de atividade de auditoria híbrida no Azure Active Directory permitem visualizar os eventos auditados na nuvem e no local."
 keywords: 
 author: fimguy
 ms.author: fimguy
@@ -12,38 +12,39 @@ ms.technology: security
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: ffe372c273aae55278f9b18b45b65425734aa6f7
-ms.sourcegitcommit: e52bab207117390997c6fa8450de24335b502673
+ms.openlocfilehash: e2391be3d05f61335c134c104673a31ad7fc3830
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/20/2018
 ---
-# <a name="hybrid-identity-management-audit-reports-in-azure-active-directory---public-previewrefresh"></a>Relatórios de auditoria de gerenciamento de identidade híbrida no Azure Active Directory – Visualização Pública (atualização)
-Com os relatórios de Atividade de Auditoria do AD (Azure Active Directory), você pode exibir um único relatório para monitorar a atividade de gerenciamento de identidades que acontece localmente ou na nuvem. Esse recurso permite gerenciar todos os dados de identidade e acesso em um único local, poupando tempo e reduzindo os custos gerais.
+# <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory-public-preview-refresh"></a>Relatórios de auditoria de gerenciamento de identidade híbrida na atualização de Visualização Pública do Azure Active Directory
+Com os relatórios de Atividade de Auditoria do Azure Active Directory (Azure AD), você pode monitorar a atividade de gerenciamento de identidades localmente ou na nuvem. Ao gerenciar todas as suas identidades e acessar os dados em um único relatório, é possível economizar tempo e reduzir os custos gerais.
 
 ## <a name="what-is-azure-active-directory-hybrid-reporting"></a>O que é o relatório híbrido do Azure Active Directory?
-O relatório de auditoria híbrido ajuda os profissionais de TI a resolver desafios comuns trazidos pelos relatórios de gerenciamento de identidades.
+O relatório de auditoria híbrido ajuda os profissionais de TI a resolver desafios comuns trazidos pelos relatórios de gerenciamento de identidades, como:
 
-1. **Coletar atividades de gerenciamento de identidades entre sistemas diferentes.** Os relatórios híbridos mostram a atividade de gerenciamento de identidades do Azure AD e o Identity Manager.
+* **Coletar atividades de gerenciamento de identidades entre sistemas diferentes**. Os relatórios híbridos mostram a atividade de gerenciamento de identidades do Azure AD e o Identity Manager.
 
-2. **Exportar dados de relatório e criar relatórios personalizados.** Além de exibir os relatórios no portal do Azure, também é possível exportar os dados para gerar suas próprias exibições personalizadas.
+* **Exportar dados de relatório e criar relatórios personalizados**. Além de exibir os relatórios no portal do Azure, é possível exportar os dados para gerar suas próprias exibições personalizadas.
 
-3. **Reduzir o custo da infraestrutura do sistema de relatórios.** O relatório híbrido na nuvem significa que você pode eliminar a infraestrutura do data warehouse de relatórios locais.
+* **Reduzir o custo da infraestrutura do sistema de relatórios**. O relatório híbrido na nuvem significa que você pode ajudar a eliminar os custos associados à sua infraestrutura de data warehouse local.
 
 ## <a name="how-does-it-work"></a>Como isso funciona?
 
-Para coletar dados locais, primeiramente é preciso instalar um agente de relatório no servidor do Identity Manager 2016. O agente de relatório é baixado da página de Download da Microsoft [aqui](https://www.microsoft.com/download/details.aspx?id=55112).
+Para coletar dados locais, primeiramente é preciso instalar um agente de relatório no servidor do Identity Manager 2016. [Baixar o agente de relatório híbrido do Microsoft Identity Manager](https://www.microsoft.com/download/details.aspx?id=55112).
 
-O processo do relatório híbrido segue estas etapas:
+O relatório híbrido passa pelo seguinte processo:
 1. Após a instalação do agente de relatório, os dados da atividade do Identity Manager são enviados ao Log de Eventos do Windows.
-2. O agente de relatório processa os eventos delta a cada dez minutos ou reinicia o serviço no Log de Eventos do Windows e os carrega no Portal do Azure.
-3. O Portal do Azure processa os dados no prazo de uma hora após o recebimento
+2. O agente de relatório processa os eventos delta a cada dez minutos ou quando o serviço de Log de Eventos do Windows reinicia. Em seguida, o agente carrega os eventos para o portal do Azure.
+3. O portal do Azure processa os dados recebidos em até uma hora após o recebimento.
 4. Os dados da atividade são armazenados por um mês.
-5. O Portal do Azure recupera os dados do relatório de auditoria e os renderiza como auditoria na Folha de relatório de auditoria do Microsoft Azure.
+5. O Portal do Azure recupera os dados do relatório de auditoria e os exibe na janela de Relatório de Auditoria do Microsoft Azure.
 
 ## <a name="next-steps"></a>Próximas etapas
-- Obtenha mais detalhes sobre [Working with Identity Manager Hybrid Reporting (Como trabalhar com o relatório híbrido do Identity Manager)](working-with-identity-manager-hybrid-reporting.md)
-- Obtenha mais detalhes sobre os [Relatórios de atividade de auditoria no portal do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
-- Obtenha mais detalhes sobre as [políticas de retenção de relatório](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
-- Obtenha mais detalhes sobre a [Integração de logs do Microsoft Azure (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
-- Obtenha mais detalhes sobre a [API de Relatório do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)
+Saiba mais sobre:
+- [Trabalhar com o Relatório híbrido do Identity Manager](working-with-identity-manager-hybrid-reporting.md)
+- [Relatórios de atividade de auditoria no portal do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-activity-audit-logs)
+- [Políticas de retenção de emissão de relatórios](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-retention)
+- [Integração de logs do Microsoft Azure (SIEM)](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)
+- [API de relatórios do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-reporting-api-getting-started)

@@ -1,22 +1,19 @@
 ---
 title: "Etapa 7 para implantar o PAM – acesso do usuário | Microsoft Docs"
 description: "Como etapa final, conceda um acesso de usuário privilegiado temporário para demonstrar que a implantação Privileged Access Management foi realizada com êxito."
-keywords: 
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: f8ad03bc072dbf6df36a9ef737479dce60b70b8b
-ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
+ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
+ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="step-7--elevate-a-users-access"></a>Etapa 7 – elevar o acesso do usuário
 
@@ -38,7 +35,12 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
 
 ## <a name="request-privileged-access-from-mim"></a>Solicite acesso privilegiado do MIM.
 
-1. Em CORPWKSTN, ainda como CONTOSO\Julia, digite o comando a seguir.
+> [!NOTE]
+> É recomendável que a estação de trabalho seja uma estação de trabalho com privilégios (PAW).  Para saber mais, confira [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+
+1. Em PRIVWKSTN, faça o logon como PRIV\priv.jen.
+2. Clique em **Iniciar**, **Executar** e digite **PowerShell.exe**.
+3. Digite o seguinte comando.
 
     ```cmd
     runas /user:Priv.Jen@priv.contoso.local powershell
