@@ -1,7 +1,7 @@
 ---
-title: "Usar a Sincronização do Microsoft Identity Manager com o AD | Microsoft Docs"
-description: "Use agentes de gerenciamento e o Serviço de Sincronização do MIM para sincronizar os bancos de dados do Active Directory e do MIM."
-keywords: 
+title: Usar a Sincronização do Microsoft Identity Manager com o AD | Microsoft Docs
+description: Use agentes de gerenciamento e o Serviço de Sincronização do MIM para sincronizar os bancos de dados do Active Directory e do MIM.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 31cc9a61bbcb309dae4ee4d09654432d08bf1e28
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 736d933f2c62d440abafdab27f82b3b1ba0f9a06
+ms.sourcegitcommit: 48f89d555c0ac7caa97d149ee42e0b9ef6ccc5f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalação do MIM 2016: Sincronização do Active Directory e do Serviço do MIM
 
@@ -43,7 +43,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
 
 1.  Abra o Gerenciador de serviço de sincronização.
 
-2.  Para abrir o assistente Criar Agente de Gerenciamento, mude para a página **Ações de Gerenciamento** e, em seguida, no menu **Ações**, clique em **Criar**.
+2.  Para abrir o assistente Criar Agente de Gerenciamento, mude para a página **Agentes de Gerenciamento** e, em seguida, no menu **Ações**, clique em **Criar**.
 
 3.  Na página **Criar Agente de Gerenciamento**, forneça as seguintes configurações e clique em **Avançar**.
 
@@ -57,7 +57,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
 
     -   Banco de dados: FIMService
 
-    -   Endereço básico do Serviço do MIM: http://localhost:5725
+    -   Endereço base do serviço do MIM: http://localhost:5725
 
     -   Modo de autenticação: Autenticação integrada do Windows
 
@@ -117,7 +117,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
     | Domain | Exportar | domain |
     | Email | Exportar | mail |
     | EmployeeID | Exportar | employeeID |
-    | EmployeeTipo | Exportar | employeeTipo |
+    | EmployeeTipo | Exportar | employeeType |
     | Primeiro nome | Exportar | firstName |
     | Sobrenome | Exportar | lastName |
     | ObjectSID | Exportar | objectSid |
@@ -326,7 +326,7 @@ Para criar a regra de sincronização de entrada do usuário do AD:
     |-|-|-|
     |Regra 1|samAccountName|accountName|
     |Regra 2|displayName|displayName|
-    |Regra 3|EmployeeTipo|employeeTipo|
+    |Regra 3|EmployeeTipo|employeeType|
     |Regra 4|givenName|firstName|
     |Regra 5|sn|lastName|
     |Regra 6|Manager|gerenciador|
