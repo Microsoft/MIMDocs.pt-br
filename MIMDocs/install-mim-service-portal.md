@@ -1,7 +1,7 @@
 ---
-title: "Instalar o portal e o serviço do Microsoft Identity Manager | Microsoft Docs"
-description: "Obtenha as etapas para configurar e instalar o Serviço e o Portal do MIM para o Microsoft Identity Manager 2016"
-keywords: 
+title: Instalar o portal e o serviço do Microsoft Identity Manager | Microsoft Docs
+description: Obtenha as etapas para configurar e instalar o Serviço e o Portal do MIM para o Microsoft Identity Manager 2016
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldiwn
@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 77ceaf1b2152a6fa6e1047656bedda31ce383871
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: 204aa33cb21ed3998d9085fc56f0c7bea7afec58
+ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalação do MIM 2016: Serviço e Portal do MIM
 
@@ -50,7 +50,7 @@ Se você não configurou o pacote de instalação do MIM na última etapa, volte
 
     ![Configure a imagem de conexão de banco de dados do MIM](media/MIM-Install10.png)
 
-7. Em **Configurar conexão do servidor de email**, insira o nome do seu Exchange server como **Servidor de Email**. Se você não tiver um servidor de email configurado, use **localhost** como o nome do servidor de email e desmarque as duas caixas de seleção superiores. Clique em **Avançar**.
+7. Em **Configurar conexão do servidor de email**, insira o nome do seu servidor do Exchange como **Servidor de Email**, ou use a Caixa de Correio do O365. Se você não tiver um servidor de email configurado, use **localhost** como o nome do servidor de email e desmarque as duas caixas de seleção superiores. Clique em **Avançar**.
 
     ![Configurar a imagem de conexão do servidor de email](media/MIM-Install11.png)
 
@@ -62,17 +62,17 @@ Se você não configurou o pacote de instalação do MIM na última etapa, volte
 
 10. Observe que pode aparecer um aviso dizendo que a conta de serviço não é segura na sua configuração atual.
 
-11. Aceite os padrões para o local do servidor de sincronização e especifique a conta do Agente de Gerenciamento do MIM como *contoso\MIMMA*.
+11. Aceite os padrões para a localização do servidor de sincronização e especifique a conta do Agente de Gerenciamento do MIM como *contoso\MIMMA*.
 
     ![Configuração da imagem do Serviço e Portal do MIM](media/MIM-Install13.png)
 
 12. Especifique *CORPIDM* (nome deste computador) como o endereço do Servidor do Serviço do MIM para o Portal do MIM.
 
-13. Especifique *http://CorpIDM.contoso.local* como a URL do conjunto de sites do SharePoint.
+13. Especifique *http://mim.contoso.com* como a URL do conjunto de sites do SharePoint.
 
-14. Especifique *http://CorpIDM.contoso.local:8080* como a URL de registro de senha.
+14. Especifique *http://passwordregistration.contoso.com* como a porta 80 da URL de Registro de Senha, recomendamos atualizar posteriormente com o certificado SSL em 443.
 
-15. Especifique *http://CorpIDM.contoso.local:8088* como a URL de redefinição de senha.
+15. Especifique *http://passwordreset.contoso.com* como a porta 80 da URL de Redefinição de Senha, recomendamos atualizar posteriormente com o certificado SSL em 443.
 
 16. Marque a caixa de seleção para abrir as portas 5725 e 5726 no firewall e a caixa de seleção para conceder acesso ao Portal do MIM a todos os usuários autenticados.
 
@@ -80,25 +80,25 @@ Se você não configurou o pacote de instalação do MIM na última etapa, volte
 
 1.  Configure o nome da conta de serviço para o registro SSPR como *contoso\MIMSSPR* e sua senha como *Pass@word1*.
 
-2.  Especifique *CORPIDM* como o nome de host para o Registro de Senha do MIM e defina a porta como **8080**. Habilite a opção **Abrir porta no firewall**.
+2.  Especifique *passwordregistration.contoso.com* como o Nome de Host para o Registro de Senha do MIM e defina a porta como **80**. Habilite a opção **Abrir porta no firewall**.
 
     ![Insira as informações de configuração usadas pela imagem do IIS](media/MIM-Install14.png)
 
 3.  Um aviso será exibido. Leia-o e clique em **Avançar**.
 
-4. Na próxima tela de configuração do Portal de Registro de Senha do MIM, especifique *http://CorpIDM.contoso.local* como o Endereço do Servidor do Serviço de MIM para o Portal de Registro de Senha.
+4. Na próxima tela de configuração do Portal de Registro de Senha do MIM, especifique *mim.contoso.com* como o Endereço do Servidor do Serviço de MIM para o Portal de Registro de Senha.
 
 ## <a name="configure-mim-password-reset-portal"></a>Configuração do Portal de Redefinição de Senha do MIM
 
-1.  Configure o nome da conta de serviço para o registro SSPR como *Contoso\MIMSSPRService* e sua senha como *Pass@word1*.
+1.  Configure o nome da conta de serviço para o registro SSPR como *Contoso\MIMSSPR* e sua senha como *Pass@word1*.
 
-2.  Especifique *CORPIDM* como o nome de host para o Portal de Redefinição de Senha do MIM e defina a porta como **8088**. Habilite a opção **Abrir porta no firewall**.
+2.  Especifique *passwordreset.contoso.com* como o Nome de Host do Portal de Redefinição de Senha do MIM e defina a porta como **80**. Habilite a opção **Abrir porta no firewall**.
 
     ![Insira as informações de configuração usadas pela imagem do IIS](media/MIM-Install15.png)
 
 3.  Um aviso será exibido. Leia-o e clique em **Avançar**.
 
-4. Na próxima tela de configuração do Portal de Registro de Senha do MIM, especifique *CorpIDname  http://CorpIDname.domain.local* como o Endereço do Servidor do Serviço do MIM para o Portal de Redefinição de Senha.
+4. Na próxima tela de configuração do Portal de Registro de Senha do MIM, especifique *mim.contoso.com* como o Endereço do Servidor do Serviço de MIM para o Portal de Redefinição de Senha.
 
 ## <a name="install-mim-service-and-portal"></a>Instalar o portal e o serviço do MIM
 
@@ -106,9 +106,9 @@ Quando todas as definições de pré-instalação estiverem prontas, clique em *
 
 Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
-1. Inicie o Internet Explorer e conecte-se ao Portal do MIM em *http://corpidm.contoso.local/identitymanagement*. Observe que pode haver um pequeno atraso na primeira visita a esta página.
+1. Inicie o Internet Explorer e conecte-se ao Portal do MIM em *http://mim.contoso.com/identitymanagement*. Observe que pode haver um pequeno atraso na primeira visita a esta página.
 
-    - Se necessário, autentique como *contoso\Administrator* para o Internet Explorer.
+    - Se for necessário, autentique-se como *contoso\miminstall* no Internet Explorer.
 
 2. No Internet Explorer, abra **Opções da Internet**altere para a guia **Segurança** e adicione o site à zona da **Intranet Local** se ainda não estiver lá.  Feche a caixa de diálogo **Opções da Internet** .
 
