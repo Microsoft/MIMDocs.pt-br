@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a1f2a30dd6d8519ec09ea3765e5584123725fe03
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 3460436682054acf5e9e1b186c3fa39faaa40a43
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Implantar o Microsoft Identity Manager 2016 SP1
 Os artigos nesta seção fornecem instruções passo a passo para implantar o MIM (Microsoft Identity Manager) 2016 para cenários de autoatendimento de usuário final em um servidor novo que não tenha o FIM ou o MIM implantado anteriormente.
@@ -34,7 +34,7 @@ O MIM funciona com o AD (Active Directory), portanto, siga estas etapas para con
 
 ## <a name="next-prepare-an-identity-management-servers"></a>Próximo: Preparar servidores de gerenciamento de identidade
 Depois que o domínio está em vigor e configurado, prepare seu servidor de gerenciamento de identidade corporativa. Isso inclui configurar:
-- [Windows Server 2012 R2](prepare-server-ws2016.md)
+- [Windows Server 2016](prepare-server-ws2016.md)
 - [SQL Server 2016](prepare-server-sql2016.md)
 - [SharePoint 2016](prepare-server-sharepoint.md)
 - [Exchange Server](prepare-server-exchange.md) (opcional)
