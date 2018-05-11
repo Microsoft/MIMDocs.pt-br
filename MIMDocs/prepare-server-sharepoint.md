@@ -12,11 +12,11 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: eceb1ed31b0212970d5cf0eae0bc8d96aa087ff5
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: 6922c3c2f66b6dbb0b0751420be9dd778206a3cf
+ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configure um servidor de gerenciamento de identidade: SharePoint
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/27/2018
 ## <a name="install-sharepoint-2016"></a>Instalar o **SharePoint 2016**
 
 > [!NOTE]
-> O instalador exige uma conexão com a Internet para baixar seus pré-requisitos. Se o computador estiver em uma rede virtual que não forneça conectividade com a Internet, adicione um adaptador de rede extra para o computador que forneça uma conexão com a Internet. Isso pode ser desabilitado depois que a instalação estiver concluída.
+> O instalador exige uma conexão com a Internet para baixar seus pré-requisitos. Se o computador estiver em uma rede virtual que não forneça conectividade com a Internet, adicione uma interface de rede extra para o computador que forneça uma conexão com a Internet. Isso pode ser desabilitado depois que a instalação estiver concluída.
 
 Siga estas etapas para instalar o SharePoint 2016. Após concluir a instalação, o servidor será reiniciado.
 
@@ -68,14 +68,15 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
 1. Na guia **Conectar-se a um farm de servidores** , altere para criar um novo farm de servidores.
 
 2. Especifique esse servidor como o servidor de banco de dados, por exemplo, **corpsql**, para o banco de dados de configuração, e *Contoso\SharePoint* como a conta de acesso do banco de dados para uso do SharePoint.
-    a. No Assistente de configuração, recomendamos a seleção do tipo [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) de **Front-end**
 3. Crie uma senha de segurança para o farm.
 
-4. Quando o assistente de configuração tiver concluído a tarefa de configuração 10 de 10, clique em Concluir e um navegador da Web será aberto.
+4. No Assistente de configuração, recomendamos a seleção do tipo [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) de **Front-end**
 
-5. No pop-up do Internet Explorer, autentique-se como *Contoso\miminstall* (ou a conta de administrador de domínio equivalente) para continuar.
+5. Quando o assistente de configuração tiver concluído a tarefa de configuração 10 de 10, clique em Concluir e um navegador da Web será aberto.
 
-6. No assistente da Web (dentro do aplicativo Web), clique em **Cancelar/Ignorar**.
+6. Se a pop-up do Internet Explorer for exibida, autentique-se como *Contoso\miminstall* (ou a conta de administrador de domínio equivalente) para continuar.
+
+7. No assistente da Web (dentro do aplicativo Web), clique em **Cancelar/Ignorar**.
 
 
 ## <a name="prepare-sharepoint-to-host-the-mim-portal"></a>Preparação do SharePoint para hospedar o Portal do MIM
@@ -94,14 +95,13 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
     > [!NOTE]
     > Uma mensagem de aviso será exibida informando que o método de autenticação Clássico do Windows está sendo usado e pode ser que demore para que o comando final seja retornado. Quando concluído, a saída indicará a URL do novo portal. Mantenha a janela **Shell de Gerenciamento do SharePoint 2016** aberta para referência posterior.
 
-2. Inicie o Shell de Gerenciamento do SharePoint 2013 e execute o script a seguir do PowerShell para criar um **Conjunto de Sites do SharePoint** associado ao aplicativo Web.
+2. Inicie o Shell de Gerenciamento do SharePoint 2016 e execute o script a seguir do PowerShell para criar um **Conjunto de Sites do SharePoint** associado ao aplicativo Web.
 
   ```
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
-    $s.AllowSelfServiceUpgrade = $false
     $s.CompatibilityLevel
   ```
 
@@ -119,7 +119,7 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
 
 4. No servidor de gerenciamento de identidade, abra uma nova guia do navegador da Web, navegue até http://mim.contoso.com/ e faça logon como *contoso\miminstall*.  Um site do SharePoint vazio chamado *Portal do MIM* será mostrado.
 
-    ![Portal do MIM na imagem http://mim.contoso.com/](media/MIM-DeploySP1.png)
+    ![Portal do MIM na imagem http://mim.contoso.com/](media/prepare-server-sharepoint/MIM_DeploySP1new.png)
 
 5. Em seguida, em Internet Explorer, abra **Opções da Internet**, alterne para a guia **Segurança**, selecione **Intranet local** e clique em **Sites**.
 
