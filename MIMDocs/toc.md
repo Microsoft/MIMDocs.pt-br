@@ -12,6 +12,7 @@
 ## [Planejar a implantação do PAM](./pam/environment-overview.md)
 # [Implantação e usar](microsoft-identity-manager-deploy.md)
 ## [Recursos preteridos](microsoft-identity-manager-2016-deprecated-features.md)
+## [Manipulação de dados](mim-privacy-compliance.md)
 ## [Implantação inicial](microsoft-identity-manager-deploy.md)
 ### [Configuração de domínio](preparing-domain.md)
 ### [Configuração de servidor: Windows Server](prepare-server-ws2016.md)
