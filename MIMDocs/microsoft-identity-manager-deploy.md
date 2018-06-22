@@ -17,6 +17,7 @@ ms.sourcegitcommit: 8316fa41f06f137dba0739a8700910116b5575d8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33078999"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp1"></a>Implantar o Microsoft Identity Manager 2016 SP1
 Os artigos nesta seção fornecem instruções passo a passo para implantar o MIM (Microsoft Identity Manager) 2016 para cenários de autoatendimento de usuário final em um servidor novo que não tenha o FIM ou o MIM implantado anteriormente.

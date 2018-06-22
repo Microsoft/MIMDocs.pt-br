@@ -1,7 +1,7 @@
 ---
-title: "Scripts de implantação do MIM2016 SP1 PAM"
-description: "Essa página faz parte da série de artigos sobre como configurar o Privileged Identity Manager usando scripts. Ela inclui uma lista das pressuposições sobre o ambiente."
-keywords: 
+title: Scripts de implantação do MIM2016 SP1 PAM
+description: Essa página faz parte da série de artigos sobre como configurar o Privileged Identity Manager usando scripts. Ela inclui uma lista das pressuposições sobre o ambiente.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 77a222c0a36f4e244a5114eddfc0edadb168d1cd
 ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/17/2017
+ms.locfileid: "23451167"
 ---
 # <a name="mim2016-sp1-pam-deployment-scripts"></a>Scripts de implantação do MIM2016 SP1 PAM
 

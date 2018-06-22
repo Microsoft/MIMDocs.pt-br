@@ -1,7 +1,7 @@
 ---
 title: Entender os componentes do PAM | Microsoft Docs
-description: "O Privileged Access Management compartilha alguns componentes com o MIM e tem alguns próprios. Saiba como eles funcionam juntos."
-keywords: 
+description: O Privileged Access Management compartilha alguns componentes com o MIM e tem alguns próprios. Saiba como eles funcionam juntos.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2be26acadf35194293cef4310950e121653d2714
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/14/2017
+ms.locfileid: "22052358"
 ---
 # <a name="understand-the-components-of-pam"></a>Noções básicas dos componentes do PAM
 

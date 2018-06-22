@@ -1,7 +1,7 @@
 ---
 title: Modelo de camada do ambiente do PAM | Microsoft Docs
 description: Saiba mais sobre o modelo de camada que separa o seu sistema com base na vulnerabilidade a riscos.
-keywords: 
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: c049dceaf02ab8b6008fe440daae4d07b752ca2e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/31/2017
+ms.locfileid: "21942724"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Modelo de camada para o particionamento de privilégios administrativos
 
