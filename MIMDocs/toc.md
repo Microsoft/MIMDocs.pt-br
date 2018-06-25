@@ -6,6 +6,7 @@
 ## [Relatório híbrido no Azure](identity-manager-hybrid-reporting-azure.md)
 # [Planejar e projetar](microsoft-identity-manager-2016-supported-platforms.md)
 ## [Plataformas com suporte](microsoft-identity-manager-2016-supported-platforms.md)
+## [Idiomas com Suporte](microsoft-identity-manager-2016-language-support.md)
 ## [Conectar aos diretórios](supported-management-agents.md)
 ## [Planejamento de capacidade](capacity-planning-guide.md)
 ## [Topologia de implantação](topology-considerations.md)
