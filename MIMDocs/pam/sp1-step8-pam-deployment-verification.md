@@ -1,7 +1,7 @@
 ---
-title: "Etapa 8 Verificação de implantação do PAM"
-description: "A implantação do PAM com scripts inclui scripts de verificação que podem executar um cenário de PAM a fim de validar se a implantação do PAM está funcionando conforme o esperado."
-keywords: 
+title: Etapa 8 Verificação de implantação do PAM
+description: A implantação do PAM com scripts inclui scripts de verificação que podem executar um cenário de PAM a fim de validar se a implantação do PAM está funcionando conforme o esperado.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28fcbe10366df749796be76f83f608561b5f39d3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: b01980c020b1027c3b40eaf49b4431631ee041be
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289465"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Etapa 8 Verificação de implantação do Pam
 
->[!div class="step-by-step"]
-[«Etapa 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Adendo»](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [«Etapa 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Adendo»](sp1-pam-deployment-addendum.md)
 
 O pacote de implantação vem com scripts de verificação que podem executar um cenário de PAM a fim de validar se a implantação do PAM está funcionando conforme o esperado.
 Para usar a Verificação de implantação, modifique a seção PAMDeploymentConfig.xml chamada <PamValidation/>.
@@ -76,6 +77,6 @@ Na janela do PowerShell, digite:
   Inicialmente, o usuário não terá acesso ao recurso. Depois que o usuário for adicionado de forma Just-In-Time à função, ele receberá o acesso. Após a expiração da duração da solicitação, o usuário deixará de ter acesso novamente.
   O script usa o padrão (11 minutos) para a expiração da solicitação.
 
->[!div class="step-by-step"]
-[«Etapa 7](sp1-step7-setup-sidhistory-sidfiltering.md)
-[Adendo»](sp1-pam-deployment-addendum.md)
+> [!div class="step-by-step"]
+> [«Etapa 7](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [Adendo»](sp1-pam-deployment-addendum.md)
