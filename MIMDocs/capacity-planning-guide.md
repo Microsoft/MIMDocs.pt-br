@@ -1,7 +1,7 @@
 ---
 title: Guia de planejamento de capacidade | Microsoft Docs
-description: "Use este guia para entender as variáveis que devem ser consideradas antes de implantar o MIM 2016, incluindo níveis de carga e decisões de política."
-keywords: 
+description: Use este guia para entender as variáveis que devem ser consideradas antes de implantar o MIM 2016, incluindo níveis de carga e decisões de política.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 32cdf03ffa0d0d282a6277af766f97e93e3a3f3a
-ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289006"
 ---
 # <a name="capacity-planning-guide"></a>Guia de planejamento de capacidade
 

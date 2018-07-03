@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7c77ed0ceb541b9b00ebb9954ce65a53f0f44442
-ms.sourcegitcommit: 32d9a963a4487a8649210745c97a3254645e8744
+ms.openlocfilehash: bfc79d27f015ee3d57c33c26ecae0f5b8ff38370
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289482"
 ---
 # <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Configurar servidores de gerenciamento de identidade: Windows Server 2016
 
->[!div class="step-by-step"]
-[« Como preparar um domínio](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
-
+> [!div class="step-by-step"]
+> [« Como preparar um domínio](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)
+> 
 > [!NOTE]
 > Este passo a passo usa nomes e valores de exemplo de uma empresa chamada Contoso. Substitua-os pelos seus próprios valores. Por exemplo:
 > - Nome do controlador de domínio - **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/27/2018
 > - Nome do Servidor do Serviço MIM - **corpservice**
 > - Nome do Servidor de Sincronização do MIM - **corpsync**
 > - Nome do SQL Server - **corpsql**
-> - Senha – **Pass@word1**
+> - Senha – <strong>Pass@word1</strong>
 
 ## <a name="join-windows-server-2016-to-your-domain"></a>Adicione o Windows Server 2016 ao seu domínio
 
@@ -58,7 +59,7 @@ Comece com um computador com Windows Server 2016, com no mínimo de 8 a 12 GB de
 
     ![Imagem de recursos do PowerShell](media/MIM-DeployWS2.png)
 
-7. No PowerShell, digite os comandos a seguir. Observe que talvez seja necessário especificar uma localização diferente para os arquivos de origem para os recursos do **.NET Framework** 3.5. Normalmente, esses recursos não estão presentes no momento da instalação do Windows Server, mas estão disponíveis na pasta SxS (lado a lado) na pasta de origens do disco de instalação do sistema operacional, por exemplo, “*d:\Sources\SxS\*”.
+7. No PowerShell, digite os comandos a seguir. Observe que talvez seja necessário especificar um local diferente para os arquivos de origem para os recursos do **.NET Framework** 3.5. Normalmente, esses recursos não estão presentes no momento da instalação do Windows Server, mas estão disponíveis na pasta SxS (lado a lado) na pasta de origens do disco de instalação do sistema operacional, por exemplo, “*d:\Sources\SxS\*”.
 
     ```
     import-module ServerManager
@@ -112,6 +113,6 @@ Configure a política de segurança do servidor para permitir que as contas cria
     iisreset /START
     ```
 
->[!div class="step-by-step"]  
-[« Como preparar um domínio](preparing-domain.md)
-[SQL Server 2016 »](prepare-server-sql2016.md)
+> [!div class="step-by-step"]  
+> [« Como preparar um domínio](preparing-domain.md)
+> [SQL Server 2016 »](prepare-server-sql2016.md)

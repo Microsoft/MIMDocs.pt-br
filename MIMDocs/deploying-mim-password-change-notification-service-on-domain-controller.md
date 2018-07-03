@@ -1,7 +1,7 @@
 ---
-title: "Implantar o serviço de notificação de alteração de senha | Microsoft Docs"
-description: "Obter as etapas para instalar e configurar o Serviço de notificação de alteração de senha do MIM em seu controlador de domínio."
-keywords: 
+title: Implantar o serviço de notificação de alteração de senha | Microsoft Docs
+description: Obter as etapas para instalar e configurar o Serviço de notificação de alteração de senha do MIM em seu controlador de domínio.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: 97edae12-6f86-4f9f-8620-a95a096e482a
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 6ce6f8b78d7ea3518bd5d4beeada51cbc3fdc5a3
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288982"
 ---
 # <a name="deploy-the-mim-password-change-notification-service-on-a-domain-controller"></a>Implante o Serviço de notificação de alteração de senha do MIM em um controlador de domínio
 

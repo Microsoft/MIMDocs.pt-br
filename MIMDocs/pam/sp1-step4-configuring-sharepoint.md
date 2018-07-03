@@ -1,7 +1,7 @@
 ---
 title: Etapa 4 Configurar o SharePoint
-description: "Esta é a etapa 4 de configuração do PAM com scripts. Nesta etapa, você deve configurar o SharePoint para poder usá-lo como parte da implantação do PAM."
-keywords: 
+description: Esta é a etapa 4 de configuração do PAM com scripts. Nesta etapa, você deve configurar o SharePoint para poder usá-lo como parte da implantação do PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: f8d033bec440c6efed26dd959acc713638258dd3
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e46b7cf75eb60930441e309448773353668ed454
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289621"
 ---
 # <a name="step-4-configuring-sharepoint"></a>Etapa 4 Configurar o SharePoint
 
->[!div class="step-by-step"]
-[« Etapa 3](sp1-step3-installing-configuring-sql.md)
-[Etapa 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Etapa 3](sp1-step3-installing-configuring-sql.md)
+> [Etapa 5 »](sp1-step5-configuring-pam.md)
 
 SharePoint deve ser SharePoint Foundation 2013 com SP1.
 
@@ -51,6 +52,6 @@ Após a instalação, o GUI de Configuração do SharePoint será aberto e perco
 
 Encontre os detalhes na seção **Configurar o SharePoint** na [Etapa 3: Preparar um servidor PAM](/microsoft-identity-manager/pam/step-3-prepare-pam-server) Após a conclusão, execute o script ".\PAMDeployment.ps1" novamente, selecionando a Opção 4 (Configuração do SharePoint) para concluir esta etapa.
 
->[!div class="step-by-step"]
-[« Etapa 3](sp1-step3-installing-configuring-sql.md)
-[Etapa 5 »](sp1-step5-configuring-pam.md)
+> [!div class="step-by-step"]
+> [« Etapa 3](sp1-step3-installing-configuring-sql.md)
+> [Etapa 5 »](sp1-step5-configuring-pam.md)

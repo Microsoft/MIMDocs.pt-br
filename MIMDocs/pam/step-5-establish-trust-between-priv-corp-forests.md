@@ -1,7 +1,7 @@
 ---
-title: "Etapa 5 para implantar o PAM – link da floresta | Microsoft Docs"
-description: "Estabeleça a confiança entre as florestas PRIV e CORP para que os usuários com privilégios em PRIV ainda possam acessar recursos em CORP."
-keywords: 
+title: Etapa 5 para implantar o PAM – link da floresta | Microsoft Docs
+description: Estabeleça a confiança entre as florestas PRIV e CORP para que os usuários com privilégios em PRIV ainda possam acessar recursos em CORP.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,17 +12,18 @@ ms.technology: active-directory-domain-services
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba4b94c1f0f0879436e370a7f2f041c720bd1f60
-ms.sourcegitcommit: 362475d4018e74e5a17ba574ccaec47a2caebaff
+ms.openlocfilehash: df4294ca6dbc98ec684e690d3ce66765d27cc359
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289084"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Etapa 5 – Estabelecer relação de confiança entre florestas PVI e CORP
 
->[!div class="step-by-step"]
-[« Etapa 4](step-4-install-mim-components-on-pam-server.md)
-[Etapa 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Etapa 4](step-4-install-mim-components-on-pam-server.md)
+> [Etapa 6 »](step-6-transition-group-to-pam.md)
 
 Para cada domínio CORP, como contoso.local, os controladores de domínio PRIV e CONTOSO precisam estar associados por uma relação de confiança. Isso permite que os usuários no domínio PRIV acessem os recursos no domínio CORP.
 
@@ -70,17 +71,17 @@ Em PAMSRV, estabeleça uma relação de confiança unidirecional com CORPDC, par
 
 Para cada floresta existente, habilite o acesso de leitura ao AD por administradores PRIV e o serviço de monitoramento.
 
-1.  Entre no controlador de domínio da floresta CORP existente, (CORPDC), como administrador do domínio primário nessa floresta (Contoso\Administrator).  
-2.  Inicie **Usuários e Computadores do Active Directory**.  
-3.  Clique com o botão direito do mouse no domínio **contoso.local** e selecione **Delegar Controle**.  
-4.  Na guia Usuários e Grupos Selecionados, clique em **Adicionar**.  
-5.  Na janela Selecionar Usuários, Computadores ou Grupos, clique em **Locais** e altere o local para *priv.contoso.local*.  No nome do objeto, digite *Administradores de Domínio* e clique em **Verificar Nomes**. Quando um pop-up for exibido, insira o nome de usuário *priv\administrator* e a senha.  
-6.  Após Administradores de Domínio, adicione “*; MIMMonitor*”. Depois que os nomes **Administradores de Domínio** e **MIMMonitor** forem sublinhados, clique em **OK** e em **Avançar**.  
-7.  Na lista de tarefas comuns, selecione **Ler todas as informações do usuário**, clique em **Avançar** e em **Concluir**.  
-8.  Feche Usuários e Computadores do Active Directory.
+1. Entre no controlador de domínio da floresta CORP existente, (CORPDC), como administrador do domínio primário nessa floresta (Contoso\Administrator).  
+2. Inicie **Usuários e Computadores do Active Directory**.  
+3. Clique com o botão direito do mouse no domínio **contoso.local** e selecione **Delegar Controle**.  
+4. Na guia Usuários e Grupos Selecionados, clique em **Adicionar**.  
+5. Na janela Selecionar Usuários, Computadores ou Grupos, clique em **Locais** e altere o local para *priv.contoso.local*.  No nome do objeto, digite *Administradores de Domínio* e clique em **Verificar Nomes**. Quando um pop-up for exibido, insira o nome de usuário *priv\administrator* e a senha.  
+6. Após Administradores de Domínio, adicione “*; MIMMonitor*”. Depois que os nomes **Administradores de Domínio** e **MIMMonitor** forem sublinhados, clique em **OK** e em **Avançar**.  
+7. Na lista de tarefas comuns, selecione **Ler todas as informações do usuário**, clique em **Avançar** e em **Concluir**.  
+8. Feche Usuários e Computadores do Active Directory.
 
-9.  Abra uma janela do PowerShell.
-10.  Use `netdom` para garantir que o histórico do SID está habilitado e a filtragem de SID desabilitada. Tipo:
+9. Abra uma janela do PowerShell.
+10. Use `netdom` para garantir que o histórico do SID está habilitado e a filtragem de SID desabilitada. Tipo:
     ```cmd
     netdom trust contoso.local /quarantine:no /domain priv.contoso.local
     netdom trust /enablesidhistory:yes /domain priv.contoso.local
@@ -104,6 +105,6 @@ Para cada floresta existente, habilite o acesso de leitura ao AD por administrad
 
 Na próxima etapa, você moverá um grupo para o PAM.
 
->[!div class="step-by-step"]
-[« Etapa 4](step-4-install-mim-components-on-pam-server.md)
-[Etapa 6 »](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Etapa 4](step-4-install-mim-components-on-pam-server.md)
+> [Etapa 6 »](step-6-transition-group-to-pam.md)

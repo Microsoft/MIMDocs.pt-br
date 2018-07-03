@@ -10,11 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 101f4110d6439cfc17f25c8880531e18f51920da
-ms.sourcegitcommit: 19ed53fa6af61086774a0429fd1520067caf4e93
+ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288863"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 
@@ -30,41 +31,41 @@ O Pacote de Idiomas do Serviço e Portal do Microsoft MIM oferece suporte para o
 > [!IMPORTANT]
 > O texto no suplemento SSPR e no portal será localizado, mas as perguntas não serão feitas sem trabalho adicional. Você precisará criar fluxos de trabalho de AuthN (e conjuntos e MPRs acompanhantes para direcioná-los) para direcionar perguntas em cada idioma para o local de destino.
 
-|Language|FIM(4.3.x.x)/MIM(4.4.xx)|MIM(4.5.x.x)
-|-----|-----|-----|
-|Búlgaro|bg-BG|bg|
-|Chinês (simplificado)|zh-CN|zh-hans|
-|Chinês (Taiwan)|zh-TW|zh-hant|
-|Croata|hr-HR|hr|
-|Tcheco|cs-CZ|cs|
-|Dinamarquês|da-DK|da|
-|Holandês|nl-NL|nl|
-|Estoniano|et-EE|et|
-|Francês|fr-FR|fr|
-|Finlandês|fi-FI|fi|
-|Alemão|de-DE|de|
-|Grego|el-GR|el|
-|Hindi|hi-IN|hi|
-|Húngaro|hu-HU|hu|
-|Italiano|it-IT|it|
-|Japonês|ja-JP|ja|
-|Coreano|ko-KR|ko|
-|Lituano|lt-LT|lt|
-|Letão|lv-LV|lv|
-|Norueguês|nb-NO|nb-NO|
-|Polonês|pl-PL|pl|
-|Português (Portugal)|pt-PT|pt|
-|Português (Brasil)|pt-BR|pt-BR|
-|Russo|ru-RU|ru||sv|
-|Romeno|ro-RO|ro|
-|Espanhol|es-ES|Sim|
-|Eslovaco|sk-SK|sk|
-|Sueco|sv-SE|sv|
-|Esloveno|sl-SI|sl|
-|Sérvio - Sérvia |sr-latn-CS (obsoleto)|sr-Latn-RS|
-|Tailandês|th-TH|th|
-|Turco|tr-TR|tr|
-|Ucraniano|uk-UA|uk|
+|       Language        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
+|-----------------------|--------------------------|--------------|
+|       Búlgaro       |          bg-BG           |      bg      |
+| Chinês (simplificado)  |          zh-CN           |   zh-hans    |
+|   Chinês (Taiwan)    |          zh-TW           |   zh-hant    |
+|       Croata        |          hr-HR           |      hr      |
+|         Tcheco         |          cs-CZ           |      cs      |
+|        Dinamarquês         |          da-DK           |      da      |
+|         Holandês         |          nl-NL           |      nl      |
+|       Estoniano        |          et-EE           |      et      |
+|        Francês         |          fr-FR           |      fr      |
+|        Finlandês        |          fi-FI           |      fi      |
+|        Alemão         |          de-DE           |      de      |
+|         Grego         |          el-GR           |      el      |
+|         Hindi         |          hi-IN           |      hi      |
+|       Húngaro       |          hu-HU           |      hu      |
+|        Italiano        |          it-IT           |      it      |
+|       Japonês        |          ja-JP           |      ja      |
+|        Coreano         |          ko-KR           |      ko      |
+|      Lituano       |          lt-LT           |      lt      |
+|        Letão        |          lv-LV           |      lv      |
+|       Norueguês       |          nb-NO           |    nb-NO     |
+|        Polonês         |          pl-PL           |      pl      |
+| Português (Portugal) |          pt-PT           |      pt      |
+|  Português (Brasil)  |          pt-BR           |    pt-BR     |
+|        Russo        |          ru-RU           |      ru      |
+|       Romeno        |          ro-RO           |      ro      |
+|        Espanhol        |          es-ES           |      Sim      |
+|        Eslovaco         |          sk-SK           |      sk      |
+|        Sueco        |          sv-SE           |      sv      |
+|       Esloveno       |          sl-SI           |      sl      |
+|   Sérvio - Sérvia    |  sr-latn-CS (obsoleto)  |  sr-Latn-RS  |
+|         Tailandês          |          th-TH           |      th      |
+|        Turco        |          tr-TR           |      tr      |
+|       Ucraniano       |          uk-UA           |      uk      |
 
 ## <a name="certificate-management"></a>Gerenciamento de certificado 
 O Gerenciamento de Certificados da Microsoft oferece suporte aos 9 idiomas a seguir. 

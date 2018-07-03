@@ -1,7 +1,7 @@
 ---
-title: "Guia de topologia de implantação | Microsoft Docs"
-description: "Compreender os componentes do MIM 2016 e obter sugestões sobre como implantá-los em seu ambiente."
-keywords: 
+title: Guia de topologia de implantação | Microsoft Docs
+description: Compreender os componentes do MIM 2016 e obter sugestões sobre como implantá-los em seu ambiente.
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e257a2e64225a4bc545d8a9384167819412e939b
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289805"
 ---
 # <a name="topology-considerations"></a>Considerações de topologia
 Você pode implantar os componentes do MIM (Microsoft Identity Manager) no mesmo servidor ou entre vários servidores em várias configurações. A topologia que você seleciona para sua implantação afeta o desempenho que você pode obter do MIM. Este artigo apresenta várias topologias de implantação que você pode considerar.
 
 
->[!NOTE]
-Essas opções são aplicáveis a implementações usando somente a Sincronização do MIM, o Serviço do MIM e o Portal do MIM para gerenciamento de identidades.  As implantações com MIM CM, Suite MIM BHOLD ou para gerenciamento de acesso privilegiado têm diferentes opções de implantação.
+> [!NOTE]
+> Essas opções são aplicáveis a implementações usando somente a Sincronização do MIM, o Serviço do MIM e o Portal do MIM para gerenciamento de identidades.  As implantações com MIM CM, Suite MIM BHOLD ou para gerenciamento de acesso privilegiado têm diferentes opções de implantação.
 
 
 ## <a name="mim-components"></a>Componentes do MIM

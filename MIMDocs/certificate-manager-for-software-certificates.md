@@ -1,7 +1,7 @@
 ---
 title: Solicitar certificados no Gerenciador de Certificados usando modelos | Microsoft Docs
 description: Saiba como usar o Gerenciador de certificados para criar e renovar certificados de software com os modelos de perfil.
-keywords: 
+keywords: ''
 author: billmath
 ms.author: barclayn
 manager: mbaldwin
@@ -13,10 +13,11 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: aebf5af709f4f775ce13be49d8f9075a94e864a2
-ms.sourcegitcommit: f077508b5569e2a96084267879c5b6551e1e0905
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290315"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Criar certificados de software com o Gerenciador de certificados
 Para registrar e renovar certificados de software, você não precisa ser um administrador e não precisa de cartão inteligente virtual. Vale a pena observar que, em algum momento, você será solicitado a permitir uma operação de certificado, e isso é normal.
@@ -65,7 +66,7 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
     7.  Selecione **Arquivo** e, em seguida, clique em **Adicionar/Remover Snap-in** para adicionar o snap-in da Autoridade de Certificação ao console do MMC. Quando for perguntado qual computador você deseja gerenciar, selecione **Computador Local**.
 
-    8.  No painel esquerdo do MMC, expanda **Autoridade de Certificação (Local)**e, em seguida, expanda a CA dentro da lista Autoridade de Certificação.
+    8.  No painel esquerdo do MMC, expanda **Autoridade de Certificação (Local)** e, em seguida, expanda a CA dentro da lista Autoridade de Certificação.
 
     9. Clique com o botão direito do mouse em **Modelos de Certificados**, clique em **Novo** e, em seguida, clique em **Modelo de Certificado** a Ser Emitido.
 

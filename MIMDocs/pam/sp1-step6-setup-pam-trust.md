@@ -1,7 +1,7 @@
 ---
-title: "Etapa 6 Configurar a relação de confiança do PAM"
-description: "Etapa 6 da configuração do PAM usando scripts. Esta seção aborda as configurações de confiança necessárias entre os domínios CORP e PRIV"
-keywords: 
+title: Etapa 6 Configurar a relação de confiança do PAM
+description: Etapa 6 da configuração do PAM usando scripts. Esta seção aborda as configurações de confiança necessárias entre os domínios CORP e PRIV
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: a24b2a5a196e633379b696ee82e9428dd67454ca
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 5e3bed084b655535b0ac7b8b4252cdf541f6121f
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288768"
 ---
 # <a name="step-6-set-up-the-pam-trust"></a>Etapa 6 Configurar a relação de confiança do PAM
 
->[!div class="step-by-step"]
-[«Etapa 5](sp1-step5-configuring-pam.md)
-[Etapa 7»](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [!div class="step-by-step"]
+> [«Etapa 5](sp1-step5-configuring-pam.md)
+> [Etapa 7»](sp1-step7-setup-sidhistory-sidfiltering.md)
 
 **Isso não é necessário para um ambiente somente PRIV** Faça logon no PAMServer com a conta MIMAdmin.
 
@@ -32,8 +33,8 @@ ms.lasthandoff: 08/19/2017
 4. .\PAMDeployment.ps1
 5. Selecione a Opção 6 do Menu (Configuração de confiança do PAM)
 
-  Quando receber uma solicitação, insira as credenciais para a conta de administrador CORP. Depois de fornecer as credenciais, a relação de confiança será estabelecida e a configuração estará concluída.
+   Quando receber uma solicitação, insira as credenciais para a conta de administrador CORP. Depois de fornecer as credenciais, a relação de confiança será estabelecida e a configuração estará concluída.
 
->[!div class="step-by-step"]
-[«Etapa 5](sp1-step5-configuring-pam.md)
-[Etapa 7»](sp1-step7-setup-sidhistory-sidfiltering.md)
+> [!div class="step-by-step"]
+> [«Etapa 5](sp1-step5-configuring-pam.md)
+> [Etapa 7»](sp1-step7-setup-sidhistory-sidfiltering.md)

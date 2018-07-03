@@ -13,11 +13,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 3ff2ca7b9a268d4723861fcdec7f2f11932a6026
-ms.sourcegitcommit: 3502d636687e442f7d436ee56218b9b95f5056cf
+ms.openlocfilehash: 1054d611ae0b230005a0f79be69f5c6c2bba7af2
+ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34479291"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Plataformas com suporte para o MIM 2016
 
@@ -39,7 +40,7 @@ Esta tabela descreve as plataformas com suporte, e a versão de cada componente 
 | |Cenário do PAM: Active Directory para florestas (CORP) existentes em cenários do PAM | Windows Server 2008 <br/> Windows Server 2008 R2 * <br/> Windows Server 2012 * <br/> Windows Server 2012 R2 * <br/> Windows Server 2016 * |
 | | Banco de dados do Serviço do MIM | SQL Server 2008 R2 SP3<br/>SQL Server 2012 SP2<br/>SQL Server 2014 SP1 <br/> SQL Server 2016 |
 | | SharePoint | SharePoint Foundation 2010<br/>SharePoint Foundation 2013 SP1 <br/> SharePoint 2016 * |
-| | Servidor de email para aprovação do Serviço do MIM e emails de gerenciamento de grupo (opcional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (somente notificação antes da compilação [4.4.1749.0](https://docs.microsoft.com/en-us/microsoft-identity-manager/reference/version-history#version-4417490) |
+| | Servidor de email para aprovação do Serviço do MIM e emails de gerenciamento de grupo (opcional) | Exchange Server 2010 SP3<br/>Exchange Server 2013 SP1 <br/> Exchange Server 2016 * <br/> Exchange Online * (somente notificação antes da compilação [4.4.1749.0](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history#version-4417490) |
 | | Navegador | Todos os principais navegadores com suporte * (com limitação para dispositivos móveis)|
 | **Relatórios do Serviço do MIM** | Windows Server |  Windows Server 2008 R2 SP1<br/>Windows Server 2012 <br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Data Warehouse | System Center 2012 Service Manager <br/> System Center 2012 R2 Service Manager </br> System Center 2016 Service Manager * (Com 4.4.1459)<br/> [Compatibilidade de Versão do SQL Server para o System Center 2016](https://docs.microsoft.com/system-center/scsm/upgrade-to-sm-2016)

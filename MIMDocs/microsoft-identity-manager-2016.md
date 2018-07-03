@@ -2,22 +2,22 @@
 title: Microsoft Identity Manager 2016 | Microsoft Docs
 description: O MIM inclui recursos de gerenciamento de acesso do FIM 2010 e ajuda a gerenciar usuários, credenciais, políticas e acesso dentro da organização.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/17/2017
+author: billmath
+ms.author: billmath
+manager: mtillman
+ms.date: 05/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cd8191e3fdf571f4140bcdd51c54aa25bd663215
-ms.sourcegitcommit: 06add1a636720f74bc0c0f25b4100b19f1bd31da
+ms.openlocfilehash: bd483ecb0abc3e4bb4444c87715971a3fba9820b
+ms.sourcegitcommit: 5405ed10fea6f50b711eca1153446c04d4faff7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2017
-ms.locfileid: "23451150"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36927180"
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 

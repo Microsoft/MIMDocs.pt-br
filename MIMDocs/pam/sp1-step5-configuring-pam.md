@@ -1,7 +1,7 @@
 ---
 title: Etapa 5 Instalar/configurar o PAM
-description: "Esta é a etapa 5 de configuração do Privileged Identity Manager com scripts e aborda as etapas de implantação do Servidor PAM."
-keywords: 
+description: Esta é a etapa 5 de configuração do Privileged Identity Manager com scripts e aborda as etapas de implantação do Servidor PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 414851f8550f6419db7e268e982b88065730ab4e
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: 839cb4fa69aefa8024d38aeff0ebae96599aefb3
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288829"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Etapa 5 Instalar/configurar o PAM
 
->[!div class="step-by-step"]
-[« Etapa 4](sp1-step4-configuring-sharepoint.md)
-[Etapa 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Etapa 4](sp1-step4-configuring-sharepoint.md)
+> [Etapa 6 »](sp1-step6-setup-pam-trust.md)
 
 Para um PAMServer ingressado no domínio, faça logon como MIMAdmin, caso contrário, faça logon como um administrador local.
 1. Execute o PowerShell como administrador
@@ -40,9 +41,9 @@ Após a reinicialização do PAMServer, faça logon novamente no computador com 
 3. .\PAMDeployment.ps1
 4. Selecione a opção 5 do menu (Configuração do PAM do MIM)
 
-  Quando receber a solicitação, digite a senha da Conta de Monitor do MIM, da Conta do Componente do MIM, da Conta de MA do MIM, da Conta de Serviço de MIM, da Conta de Administrador do MIM e da Conta do SharePoint.
-  Após a conclusão da instalação, o computador será reiniciado.
+   Quando receber a solicitação, digite a senha da Conta de Monitor do MIM, da Conta do Componente do MIM, da Conta de MA do MIM, da Conta de Serviço de MIM, da Conta de Administrador do MIM e da Conta do SharePoint.
+   Após a conclusão da instalação, o computador será reiniciado.
 
->[!div class="step-by-step"]
-[« Etapa 4](sp1-step4-configuring-sharepoint.md)
-[Etapa 6 »](sp1-step6-setup-pam-trust.md)
+> [!div class="step-by-step"]
+> [« Etapa 4](sp1-step4-configuring-sharepoint.md)
+> [Etapa 6 »](sp1-step6-setup-pam-trust.md)

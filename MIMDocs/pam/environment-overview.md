@@ -1,7 +1,7 @@
 ---
-title: "Visão geral do ambiente do PAM | Microsoft Docs"
-description: "Localize o número necessário e a configuração de máquinas virtuais para implantar o Privileged Access Management com êxito"
-keywords: 
+title: Visão geral do ambiente do PAM | Microsoft Docs
+description: Localize o número necessário e a configuração de máquinas virtuais para implantar o Privileged Access Management com êxito
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,11 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3be2e19673a863098739e830d9c83ce264abf412
-ms.sourcegitcommit: 210195369d2ecd610569d57d0f519d683ea6a13b
+ms.openlocfilehash: e83c326d32645ce80541d5c415cd9c0e9d1dae54
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288785"
 ---
 # <a name="environment-overview"></a>Visão geral do ambiente
 
@@ -28,8 +29,8 @@ Será necessário um mínimo de três máquinas virtuais.  Se você ainda não t
 
 As unidades em que serão armazenadas as imagens de disco de VM precisam de, pelo menos, 120 GB de espaço livre em disco.  Se você planeja implantar para obter alta disponibilidade, verifique se o subsistema do disco atende aos requisitos de armazenamento compartilhado do SQL.  O armazenamento compartilhado pode estar na forma de discos de cluster do Clustering de Failover do Windows Server, discos em uma rede SAN (Rede de Área de Armazenamento) ou em compartilhamentos de arquivos em um servidor SMB.
 
->[!IMPORTANT]
-O armazenamento deve ser dedicado ao ambiente de bastiões. O compartilhamento de armazenamento com outras cargas de trabalho fora do ambiente de bastiões não é recomendada, pois pode prejudicar a integridade do ambiente de bastiões.
+> [!IMPORTANT]
+> O armazenamento deve ser dedicado ao ambiente de bastiões. O compartilhamento de armazenamento com outras cargas de trabalho fora do ambiente de bastiões não é recomendada, pois pode prejudicar a integridade do ambiente de bastiões.
 
 ## <a name="next-steps"></a>Próximas etapas
 

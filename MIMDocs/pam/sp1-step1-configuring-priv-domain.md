@@ -1,7 +1,7 @@
 ---
-title: "Etapa 1 Configurando o domínio Priv"
-description: "Prepare o domínio CORP com identidades novas ou existentes para serem gerenciadas pelo Privileged Identity Manager usando scripts"
-keywords: 
+title: Etapa 1 Configurando o domínio Priv
+description: Prepare o domínio CORP com identidades novas ou existentes para serem gerenciadas pelo Privileged Identity Manager usando scripts
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,21 +10,22 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 40822bb7702cf3d7ac23ecd6e98ac392f2d3a480
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: e5be140e7ffea7b0c7cacbc1c82d3b2883804203
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290298"
 ---
 # <a name="step-1-configuring-the-priv-domain"></a>Etapa 1 Configurando o domínio Priv
 
->[!div class="step-by-step"]
-[Etapa 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Etapa 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Faça logon no PRIVDC como administrador
-  * Se este for um ambiente somente PRIV, faça logon no CORPDC
+   * Se este for um ambiente somente PRIV, faça logon no CORPDC
 2. Execute o PowerShell como administrador
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
@@ -41,5 +42,5 @@ Para níveis funcionais abaixo do Windows Server 2016, ignore o aviso que outras
 Copie o SIDs.txt que é gerado no $env:SYSTEMDRIVE\PAM para a pasta semelhante no CORPDC. Isso é exigido pelo CORPDC para configurar as permissões para usuários PRIV para ler as propriedades de usuário CORP.
 Quando o script for concluído, ele solicitará a reinicialização do computador para que as alterações entrem em vigor.
 
->[!div class="step-by-step"]
-[Etapa 2 »](sp1-step2-configuring-corp-domain.md)
+> [!div class="step-by-step"]
+> [Etapa 2 »](sp1-step2-configuring-corp-domain.md)

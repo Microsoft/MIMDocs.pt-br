@@ -1,7 +1,7 @@
 ---
 title: Requisitos de software do PAM | Microsoft Docs
-description: "Encontre os requisitos de hardware e software para uma implantação bem-sucedida do Privileged Access Management"
-keywords: 
+description: Encontre os requisitos de hardware e software para uma implantação bem-sucedida do Privileged Access Management
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -12,18 +12,19 @@ ms.technology: active-directory-domain-services
 ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2ff6fd997dc5bc7e4a4949520e978ae2d8283d4b
-ms.sourcegitcommit: f29f02fa8437fa55e86afd7b0b99a36d2306b96b
+ms.openlocfilehash: c53d8cc815f792d1a1246a7434350f1cfb087844
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288955"
 ---
 # <a name="hardware-and-software-requirements"></a>Requisitos de hardware e software
 
 O Privileged Access Management não tem nenhum requisito de hardware além daqueles das plataformas de software subjacentes. Apenas certifique-se de ter memória ou espaço em disco suficiente e conectividade de rede.
 
->[!IMPORTANT]
-Este artigo fornece os requisitos mínimos para uma implantação básica. Seu objetivo não é demonstrar a alta disponibilidade, a escalabilidade ou o desempenho. Ele não representa uma topologia de implantação recomendada para empresas de grandes porte ou ambientes de produção.
+> [!IMPORTANT]
+> Este artigo fornece os requisitos mínimos para uma implantação básica. Seu objetivo não é demonstrar a alta disponibilidade, a escalabilidade ou o desempenho. Ele não representa uma topologia de implantação recomendada para empresas de grandes porte ou ambientes de produção.
 
 ## <a name="installing-from-software-packages"></a>Instalando por meio de pacotes de software
 
@@ -76,4 +77,4 @@ Para PRIVDC:
 Para PAMSRV:
 
 - [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418.aspx)
-- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) ou [SQL Server 2014](https://msdn.microsoft.com/en-us/library/ms143506(v=sql.120).aspx)
+- [SQL Server 2012](https://msdn.microsoft.com/library/ms143506(sql.110).aspx) ou [SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)

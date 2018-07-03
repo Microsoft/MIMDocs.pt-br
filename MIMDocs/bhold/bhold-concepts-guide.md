@@ -1,19 +1,20 @@
 ---
 title: Guia de conceitos do Microsoft BHOLD Suite | Microsoft Docs
-description: "Comece a usar os componentes do MIM 2016 instalando e configurando o Serviço de Sincronização."
-keywords: 
+description: Comece a usar os componentes do MIM 2016 instalando e configurando o Serviço de Sincronização.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
 ms.date: 09/14/2017
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 0d814dd27fe53ee7cfc46eac24ec577b05f78e52
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 521025de3dc16a9bda02aed8287faeb3449192c1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290060"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Guia de conceitos do Microsoft BHOLD Suite
 
@@ -56,8 +57,8 @@ Com o BHOLD Suite, você pode especificar e organizar funções em sua organiza�
 
 As OrgUnits (unidades organizacionais) são o principal meio pelo qual os usuários são organizados no modelo de função do BHOLD. Cada usuário deve pertencer a pelo menos uma OrgUnit. (Na verdade, quando um usuário é removido da última unidade organizacional no BHOLD, o registro de dados do usuário é excluído do banco de dados do BHOLD.)
 
->[!Important]
-As unidades organizacionais no modelo de função do BHOLD não devem ser confundidas com as unidades organizacionais no AD DS (Active Directory Domain Services). Normalmente, a estrutura da unidade organizacional do BHOLD baseia-se na organização e nas políticas da sua empresa, não nos requisitos da sua infraestrutura de rede.
+> [!Important]
+> As unidades organizacionais no modelo de função do BHOLD não devem ser confundidas com as unidades organizacionais no AD DS (Active Directory Domain Services). Normalmente, a estrutura da unidade organizacional do BHOLD baseia-se na organização e nas políticas da sua empresa, não nos requisitos da sua infraestrutura de rede.
 
 Embora não seja necessário, na maioria dos casos, as unidades organizacionais são estruturadas no BHOLD para representar a estrutura hierárquica da organização real, semelhante à mostrada abaixo:
 
@@ -127,8 +128,8 @@ O primeiro passo para usar o Gerador de Modelo do BHOLD é importar esses arquiv
 - As funções propostas que são vinculadas a uma unidade organizacional, mas que devem ser ativadas para usuários específicos
 - As funções de propriedade que concedem a um usuário o controle de unidades organizacionais e funções para as quais não há um proprietário especificado nos arquivos importados
 
->[!Important]
-Ao carregar os arquivos, marque a caixa de seleção **Reter Modelo Existente** apenas em ambientes de teste. Em ambientes de produção, você deve usar o Gerador de Modelo para criar o modelo de função inicial. Você não pode usá-lo para modificar um modelo de função existente no banco de dados do BHOLD.
+> [!Important]
+> Ao carregar os arquivos, marque a caixa de seleção **Reter Modelo Existente** apenas em ambientes de teste. Em ambientes de produção, você deve usar o Gerador de Modelo para criar o modelo de função inicial. Você não pode usá-lo para modificar um modelo de função existente no banco de dados do BHOLD.
 
 Depois que o Gerador de Modelo criar essas funções no modelo de função, você poderá exportar o modelo de função para o banco de dados BHOLD no formato de um arquivo XML.
 
@@ -252,8 +253,8 @@ Os filtros de regras podem ser de três tipos e usar operadores específicos par
   - **Pode apenas ter qualquer um e Pode apenas ter todos**
   - **Ter exclusivamente qualquer um e Ter exclusivamente todos**
 
->[!Note]
-Os filtros restritivos podem usar os operadores indicados para testar uma chave em relação a um conjunto de vários valores.
+> [!Note]
+> Os filtros restritivos podem usar os operadores indicados para testar uma chave em relação a um conjunto de vários valores.
 
 Por exemplo, se você quiser testar a implementação de uma política de SoD (separação de obrigações) que indique que nenhum usuário que tenha a permissão Solicitar pagamento também tenha a permissão Aprovar pagamento, construa uma regra semelhante à seguinte:
 

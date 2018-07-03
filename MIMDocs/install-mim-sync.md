@@ -12,18 +12,19 @@ ms.technology: security
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d2f8c000205aacafaeb4e159ef692e9666b4b965
-ms.sourcegitcommit: a98a4c1aee12016d480c400f4ff2c6aadb6518ee
+ms.openlocfilehash: c68b33b2ff28d75b6f4e63fa8caf0c87727a5927
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289390"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalação do MIM 2016: Serviço de Sincronização do MIM
 
->[!div class="step-by-step"]
-[« Exchange Server](prepare-server-exchange.md)
-[Serviço MIM e Portal »](install-mim-service-portal.md)
-
+> [!div class="step-by-step"]
+> [« Exchange Server](prepare-server-exchange.md)
+> [Serviço MIM e Portal »](install-mim-service-portal.md)
+> 
 > [!NOTE]
 > Este passo a passo usa nomes e valores de exemplo de uma empresa chamada Contoso. Substitua-os pelos seus próprios valores. Por exemplo:
 > - Nome do controlador de domínio - **corpdc**
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 > - Nome do Servidor do Serviço MIM - **corpservice**
 > - Nome do Servidor de Sincronização do MIM - **corpsync**
 > - Nome do SQL Server - **corpsql**
-> - Senha – **Pass@word1**
+> - Senha – <strong>Pass@word1</strong>
 
 Para instalar os componentes do Microsoft Identity Manager 2016, primeiramente configure o pacote de instalação.
 
@@ -55,37 +56,37 @@ Para instalar os componentes do Microsoft Identity Manager 2016, primeiramente c
 
     ![Imagem de configuração personalizada](media/install-mim-sync/MIM_Install2.png)
 
-6.  Na tela de configuração do banco de dados de Serviço de sincronização, selecione:
+6. Na tela de configuração do banco de dados de Serviço de sincronização, selecione:
 
-    1.  O SQL Server está localizado em: **um computador remoto** chamado **corpsql.contoso.com**.
+   1.  O SQL Server está localizado em: **um computador remoto** chamado **corpsql.contoso.com**.
 
-    2.  A instância do SQL Server é: **a instância padrão**
+   2.  A instância do SQL Server é: **a instância padrão**
 
-    ![Imagem de conexão de banco de dados](media/install-mim-sync/MIM_Install3.png)
+   ![Imagem de conexão de banco de dados](media/install-mim-sync/MIM_Install3.png)
 
-7.  Configure a conta de serviço de sincronização de acordo com a conta criada anteriormente:
+7. Configure a conta de serviço de sincronização de acordo com a conta criada anteriormente:
 
-    1.  Conta de serviço: *MIMSync*
+   1. Conta de serviço: *MIMSync*
 
-    2.  Senha: *Pass@word1*
+   2. Senha: <em>Pass@word1</em>
 
-    3.  Domínio da conta de serviço ou nome do computador local: *contoso*
+   3. Domínio da conta de serviço ou nome do computador local: *contoso*
 
-    ![Imagem de conta de serviço](media/install-mim-sync/MIM_Install4.png)
+   ![Imagem de conta de serviço](media/install-mim-sync/MIM_Install4.png)
 
-8.  Fornece ao instalador do Serviço de sincronização do MIM os grupos de segurança relevantes:
+8. Fornece ao instalador do Serviço de sincronização do MIM os grupos de segurança relevantes:
 
-    1. Administrador = *contoso\MIMSyncAdmins*
+   1. Administrador = *contoso\MIMSyncAdmins*
 
-    2. Operador= *contoso\MIMSyncOperators*
+   2. Operador= *contoso\MIMSyncOperators*
 
-    3. Ligação = *contoso\MIMSyncJoiners*
+   3. Ligação = *contoso\MIMSyncJoiners*
 
-    4. Navegador do conector = *contoso\MIMSyncBrowse*
+   4. Navegador do conector = *contoso\MIMSyncBrowse*
 
-    5. Gerenciamento de senha do WMI = *contoso\MIMSyncPasswordReset*
+   5. Gerenciamento de senha do WMI = *contoso\MIMSyncPasswordReset*
 
-    ![Imagem de grupos de segurança](media/install-mim-sync/MIM_Install5.png)
+   ![Imagem de grupos de segurança](media/install-mim-sync/MIM_Install5.png)
 
 9. Na tela de configurações de segurança, marque **Habilitar regras de firewall para Comunicações RPC de entrada** e clique em **Avançar**.
 
@@ -103,6 +104,6 @@ Para instalar os componentes do Microsoft Identity Manager 2016, primeiramente c
 
     5. Você precisa sair e entrar para que as alterações de associação de grupo entrem em vigor. Clique em **Sim** Sair.
 
->[!div class="step-by-step"]  
-[« Exchange Server](prepare-server-exchange.md)
-[Serviço MIM e Portal »](install-mim-service-portal.md)
+> [!div class="step-by-step"]  
+> [« Exchange Server](prepare-server-exchange.md)
+> [Serviço MIM e Portal »](install-mim-service-portal.md)

@@ -1,7 +1,7 @@
 ---
-title: "Etapa 7 Configurar o histórico de SID/filtragem de SID"
-description: "Esta é a Etapa 7 da configuração do Privileged Identity Manager com scripts. Essa etapa aborda a configuração de filtragem e histórico do SID."
-keywords: 
+title: Etapa 7 Configurar o histórico de SID/filtragem de SID
+description: Esta é a Etapa 7 da configuração do Privileged Identity Manager com scripts. Essa etapa aborda a configuração de filtragem e histórico do SID.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,19 +10,20 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: e3d8578e9d58ccc2f3dc3bb4ff437d124bf15291
-ms.sourcegitcommit: 8edd380f54c3e9e83cfabe8adfa31587612e5773
+ms.openlocfilehash: d2512690ce648767157a7417e5b41095c970b8eb
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289101"
 ---
 # <a name="step-7-set-up-sid-historysid-filtering"></a>Etapa 7 Configurar o histórico de SID/filtragem de SID
 
->[!div class="step-by-step"]
-[«Etapa 6](sp1-step6-setup-pam-trust.md)
-[Etapa 8»](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [«Etapa 6](sp1-step6-setup-pam-trust.md)
+> [Etapa 8»](sp1-step8-pam-deployment-verification.md)
 
 **Isso não é necessário para um ambiente somente PRIV** Faça logon no PAMServer com a conta MIMAdmin.
 
@@ -38,6 +39,6 @@ Para filtragem de SID: <br/></br>
 Para o histórico de SID: </br></br>
 “Habilitando histórico de SID para essa relação de confiança” ou “O histórico de SID já está habilitado para essa relação de confiança”.
 
->[!div class="step-by-step"]
-[«Etapa 6](sp1-step6-setup-pam-trust.md)
-[Etapa 8»](sp1-step8-pam-deployment-verification.md)
+> [!div class="step-by-step"]
+> [«Etapa 6](sp1-step6-setup-pam-trust.md)
+> [Etapa 8»](sp1-step8-pam-deployment-verification.md)

@@ -1,7 +1,7 @@
 ---
 title: Configurar o PAM usando scripts
-description: "Esse artigo faz parte da série que aborda as configurações do PAM com scripts. Ele aborda as modificações do arquivo XML que será usado pelos scripts de implantação do PAM."
-keywords: 
+description: Esse artigo faz parte da série que aborda as configurações do PAM com scripts. Ele aborda as modificações do arquivo XML que será usado pelos scripts de implantação do PAM.
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: MBaldwin
@@ -10,13 +10,14 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 5718ec64fff049cb8717e4cbb36784c8f4ee4db3
-ms.sourcegitcommit: c13f814ce753e1fdacc7d0814087f59542e5098f
+ms.openlocfilehash: 741d722ce315b7265278997275d05981f44826e8
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289414"
 ---
 # <a name="configure-pam-using-scripts"></a>Configurar o PAM usando scripts
 
@@ -43,7 +44,7 @@ etapas:
 
 Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atualizada em todos os computadores.
 
-### <a name="setup"></a>Setup
+### <a name="setup"></a>Configuração
 
 |Virtual   | Para executar como   |Comandos   |
 |---|---|---|
@@ -66,5 +67,5 @@ Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atuali
 |  CORPClient | <PRIV>Usuário \PRIV.pamRequestor e, no caso de PRIVOnly: <CORP>\pamrequestor   | Import-module .\PAMValidation.psm1; Test-PAMValidationScenarioNoApprovalRequest  |
 
 
->[!div class="step-by-step"]
-[Iniciar »](sp1-step1-configuring-priv-domain.md)
+> [!div class="step-by-step"]
+> [Iniciar »](sp1-step1-configuring-priv-domain.md)

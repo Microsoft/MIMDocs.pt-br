@@ -11,19 +11,20 @@ ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 50f7b135ce0d5a46ea08068a7658b229759d2b50
-ms.sourcegitcommit: 24bb3e82f55971696bdefa6c240f1a27f856e110
+ms.openlocfilehash: a4239f1d69d8a43d70dd38af16e9ef8be62bd33c
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36288904"
 ---
 # <a name="deprecated-features"></a>Recursos preteridos
 
 Este artigo descreve os recursos preteridos do Microsoft Identity Manager 2016 SP1. O recurso terá suporte até o momento nos locais em que ainda estiver presente no Microsoft Identity Manager. Os recursos não são recomendados para as novas implantações, uma vez que eles poderão ser removidos em uma versão do recurso.  Para os desenvolvedores, é recomendável não utilizar recursos preteridos em novos aplicativos ou em novas soluções.
 
->[!NOTE]
-As funcionalidades e os recursos removidos do Microsoft Identity Manager SP1 são identificados com **. <br>
-Para obter mais informações sobre o [ciclo de vida de suporte para o Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
+> [!NOTE]
+> As funcionalidades e os recursos removidos do Microsoft Identity Manager SP1 são identificados com **. <br>
+> Para obter mais informações sobre o [ciclo de vida de suporte para o Microsoft Identity Manager](https://support.microsoft.com/en-us/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)
 
 
 ## <a name="bhold"></a>BHOLD 
@@ -31,6 +32,7 @@ Para obter mais informações sobre o [ciclo de vida de suporte para o Microsoft
 A Microsoft não recomenda que os clientes iniciem novas implantações dos componentes do Microsoft BHOLD Suite. As implantações existentes do BHOLD continuarão a receber suporte. O Azure AD agora fornece [revisões de acesso](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-azure-ad-controls-access-reviews-overview), que substituem alguns dos recursos de campanha de atestado BHOLD.
 
 ## <a name="certificate-management"></a>Gerenciamento de certificado 
+
 | **Categoria**                | **Recurso preterido**              | **Substituição e comentário**           |
 |-----------------------------|-------------------------------------|----------------------------------------------|
 | Agentes de gerenciamento | **Gerenciamento de certificado FIM | O agente de gerenciamento de certificado FIM foi removido no MIM 2016.                                                             |
@@ -53,8 +55,8 @@ A Microsoft não recomenda que os clientes iniciem novas implantações dos comp
 | Agentes de gerenciamento           | Configurar o nome de exibição da partição    | Este recurso não será substituído. Esta opção só foi utilizada para fornecer um nome alternativo para uma partição em interfaces do WMI.                                                                                                                                                                       |
 | Perfis de execução                | Perfis combinados                   | Os perfis combinados importação/sincronização delta, importação completa/sincronização delta e importação/sincronização completas serão removidos. Como alternativa, utilize os perfis de execução com duas etapas. 
 
->[!NOTE]
-Mantenha os perfis de execução combinados apenas em ambientes em que o desempenho será afetado por um grande número de desconectores existentes.
+> [!NOTE]
+> Mantenha os perfis de execução combinados apenas em ambientes em que o desempenho será afetado por um grande número de desconectores existentes.
 
 
 | **Categoria**                | **Recurso preterido**              | **Substituição e comentário**           |

@@ -1,7 +1,7 @@
 ---
 title: Gerenciamento de Senha do Microsoft Identity Manager 2016 | Microsoft Docs
-description: 
-keywords: 
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,12 +10,13 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 156551f4083c71ee7059e817213751393db5833e
-ms.sourcegitcommit: 5ba5d916c0ca1e5aa501592af0cef714bfdc8afe
+ms.assetid: ''
+ms.openlocfilehash: 86b8b9bdf5c6441d0708cd874742fa48b65177fa
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289356"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Gerenciamento de Senha do Microsoft Identity Manager 2016
 
@@ -61,8 +62,8 @@ A DDL de extensões de senha do .NET será chamada sempre que uma alteração ou
 
 A sincronização de senha funciona com o serviço de notificação de alteração de senha (PCNS) em um domínio do Active Directory e permite que as alterações de senha que se originam do Active Directory sejam propagadas automaticamente para outras fontes de dados conectadas. O MIM faz isso executando como um servidor de Chamada de Procedimento Remoto (RPC) que detecta uma notificação de alteração de senha de um controlador de domínio do Active Directory. Quando a solicitação de alteração de senha for recebida e autenticada, será processada pelo MIM e propagada para os agentes de gerenciamento apropriados.
 
->[!IMPORTANT]
-O MIM não dá suporte para a sincronização de senha bidirecional. A configuração de uma sincronização de senha bidirecional pode criar um loop, o que consumirá os recursos do servidor e terá um efeito potencialmente negativo no Active Directory e no MIM.
+> [!IMPORTANT]
+> O MIM não dá suporte para a sincronização de senha bidirecional. A configuração de uma sincronização de senha bidirecional pode criar um loop, o que consumirá os recursos do servidor e terá um efeito potencialmente negativo no Active Directory e no MIM.
 
 O PCNS é executado em cada controlador de domínio do Active Directory. Os sistemas que recebem as notificações de senha são conhecidos como destinos. O servidor MIM deve ser configurado como um destino PCNS no Active Directory antes de as notificações de senha serem enviadas. A configuração do PCNS deve definir um grupo de inclusão e, opcionalmente, um grupo de exclusão. Esses grupos são usados para restringir o fluxo de senhas confidenciais do domínio. Por exemplo, para enviar as senhas para todos os usuários, mas não enviar senhas administrativas, é possível optar por usar Usuários de Domínio como o grupo de inclusão e Admins. do Domínio como grupo de exclusão. Para obter mais informações sobre como configurar o serviço de notificação de alteração de senha, consulte [Usando a Sincronização de Senha](https://technet.microsoft.com/library/jj590288(v=ws.10).aspx)
 
@@ -152,11 +153,11 @@ Algumas falhas são tão graves que nenhuma quantidade de tentativas é suficien
 | Evento | Severidade    | Descrição                                                                                                                                                            |
 |-------|-------------|-----------|
 | 6919  | Informações do | Uma operação de definição de sincronização de senha não foi executada porque o carimbo de data/hora estava desatualizado.                                                                      |
-| 6921  | Erro       | A operação de definição de sincronização de senha não foi processada porque o gerenciamento de senhas não está habilitado no agente de gerenciamento de destino.                                |
-| 6922  | Erro       | A operação de definição de sincronização de senha não foi processada porque o gerenciamento de senhas não está configurado no agente de gerenciamento de destino.                             |
+| 6921  | Erro do       | A operação de definição de sincronização de senha não foi processada porque o gerenciamento de senhas não está habilitado no agente de gerenciamento de destino.                                |
+| 6922  | Erro do       | A operação de definição de sincronização de senha não foi processada porque o gerenciamento de senhas não está configurado no agente de gerenciamento de destino.                             |
 | 6923  | Aviso     | A operação de definição de sincronização de senha não foi processada porque o objeto do espaço conector de destino não pôde ser encontrado no diretório conectado.                  |
-| 6927  | Erro       | A operação de definição de sincronização de senha falhou porque a senha não está de acordo com a política de senha do sistema de destino.                                      |
-| 6928  | Erro       | A operação de definição de sincronização de senha falhou porque a extensão de senha do agente de gerenciamento de destino não está configurada para oferecer suporte a operações de definição de senha. |
+| 6927  | Erro do       | A operação de definição de sincronização de senha falhou porque a senha não está de acordo com a política de senha do sistema de destino.                                      |
+| 6928  | Erro do       | A operação de definição de sincronização de senha falhou porque a extensão de senha do agente de gerenciamento de destino não está configurada para oferecer suporte a operações de definição de senha. |
 
 ## <a name="user-based-password-change-management"></a>Gerenciamento de alterações de senha baseado no usuário
 
