@@ -1,7 +1,7 @@
 ---
 title: Microsoft Identity Manager 2016 | Microsoft Docs
-description: "Avalie o processo de criação de usuários no AD DS usando o Microsoft Identity Manager 2016"
-keywords: 
+description: Avalie o processo de criação de usuários no AD DS usando o Microsoft Identity Manager 2016
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 171aa1a2e19ea9f78f9fadbc7368404702095d71
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: a12a8436d70b3ae866df0f615e10a3d76f791168
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290094"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Como Provisionar Usuários no AD DS
 
@@ -87,8 +88,8 @@ A ilustração a seguir descreve o ambiente necessário.
 
 É possível executar todos os componentes em um computador.
 
->[!NOTE]
-Para obter mais informações sobre a configuração do MIM, consulte o [Guia de Instalação do FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+> [!NOTE]
+> Para obter mais informações sobre a configuração do MIM, consulte o [Guia de Instalação do FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## <a name="scenario-components-list"></a>Lista de Componentes do Cenário
 
@@ -160,8 +161,8 @@ Para criar um usuário no AD DS, é necessário realizar um fluxo de saída do D
 
 No AD DS, ainda é comum que os usuários utilizem o atributo sAMAccountName para fazer logon no serviço de diretório. Se um valor não for especificado para esse atributo, o serviço de diretório gerará um valor aleatório para ele. No entanto, esses valores aleatórios não são amigáveis, por isso, uma versão amigável desse atributo normalmente é parte de uma exportação para o AD DS. Para habilitar um usuário a fazer logon no AD DS, também é necessário incluir uma senha criada por meio do atributo unicodePwd na lógica de exportação.
 
->[!Note]                                
-Verifique se o valor especificado como unicodePwd está em conformidade com as políticas de senha do AD DS de destino.
+> [!Note]
+> Verifique se o valor especificado como unicodePwd está em conformidade com as políticas de senha do AD DS de destino.
 
 Ao definir uma senha para contas do AD DS, também é necessário criar uma conta como conta habilitada. Isso pode ser feito por meio da configuração do atributo userAccountControl. Para obter mais informações sobre o atributo userAccountControl, consulte [Usando o FIM para Habilitar ou Desabilitar Contas no Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658).
 
@@ -180,8 +181,8 @@ Para obter mais informações, consulte os seguintes tópicos em Ajuda:
 - Utilizar o Agente de Gerenciamento do Active Directory
 - Configurar partições de diretório
 
->[!Note]
-Verifique se há uma regra de fluxo de atributo de importação foi configurada para o atributo ExpectedRulesList.
+> [!Note]
+> Verifique se há uma regra de fluxo de atributo de importação foi configurada para o atributo ExpectedRulesList.
 
 ### <a name="step-4-create-the-fabrikam-fimma-management-agent"></a>Etapa 4: Criar o agente de gerenciamento FIMMA da Fabrikam
 
@@ -194,7 +195,7 @@ A tabela a seguir lista as configurações específicas do cenário mais importa
 | Página de designer do agente de gerenciamento | Configuração |
 |------------|------------------------------------|
 | Criar um agente de gerenciamento | 1. **Agente de gerenciamento para:** Agente de Gerenciamento do Serviço FIM <br/> 2. **Nome** FIMMA da Fabrikam |
-| Conectar ao banco de dados     | Use as seguintes configurações: <br/> &#183; **Servidor:** localhost <br/> &#183; **Banco de dados:** FIMService <br/> &#183; **Endereço básico do Serviço FIM:** http://localhost:5725 <br/> <br/> Forneça as informações sobre a conta criada para esse agente de gerenciamento |
+| Conectar ao banco de dados     | Use as seguintes configurações: <br/> &#183; **Servidor:** localhost <br/> &#183; **Banco de dados:** FIMService <br/> &#183; **Endereço base do Serviço FIM:** http://localhost:5725 <br/> <br/> Forneça as informações sobre a conta criada para esse agente de gerenciamento |
 | Selecionar tipos de objeto                                     | Além dos tipos de objeto já selecionados, selecione **Pessoa.**   |
 | Configurar mapeamentos de tipo de objeto                          | Além dos mapeamentos de tipo de objeto já existentes, adicione um mapeamento do **Tipo de Objeto da Fonte de Dados** Pessoa à pessoa de Tipo de Objeto **Metaverso**. |
 | Configurar fluxo de atributo                                | Além dos mapeamentos de fluxo de atributo já existentes, adicione os seguintes mapeamentos de fluxo de atributo: <br/><br/> ![Fluxo de atributos](media/how-provision-users-adds/image018.jpg) |
@@ -211,8 +212,8 @@ Para obter mais informações, consulte os tópicos a seguir na Ajuda:
 
 -   Configurar partições de diretório
 
->[!NOTE]
- Verifique se há uma regra de fluxo de atributo de importação foi configurada para o atributo ExpectedRulesList.
+> [!NOTE]
+>  Verifique se há uma regra de fluxo de atributo de importação foi configurada para o atributo ExpectedRulesList.
 
 ### <a name="step-5-create-the-run-profiles"></a>Etapa 5: Criar perfis de execução
 
@@ -226,12 +227,12 @@ A tabela a seguir lista os perfis de execução necessários para criar o cenár
 Crie perfis de execução para cada agente de gerenciamento de acordo com a tabela anterior.
 
 
->[!Note]
-Para obter mais informações, consulte Criar um Perfil de Execução de Agente de Gerenciamento na Ajuda do MIM.                                                                                                                  
-
-
->[!Important]
- Verifique se o provisionamento está habilitado no ambiente. Isso pode ser feito executando o script, Utilizando o Windows PowerShell para Habilitar o Provisionamento (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+> [!Note]
+> Para obter mais informações, consulte Criar um Perfil de Execução de Agente de Gerenciamento na Ajuda do MIM.                                                                                                                  
+> 
+> 
+> [!Important]
+>  Verifique se o provisionamento está habilitado no ambiente. Você pode fazer isso executando o script, usando o Windows PowerShell para habilitar o provisionamento (http://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>Configuração do Serviço FIM
@@ -243,7 +244,7 @@ Para o cenário deste guia, é necessário configurar uma política de provision
 
 O objetivo desta política de provisionamento é colocar grupos dentro do escopo da Regra de Sincronização de Saída de Usuário do AD. Ao colocar o recurso no escopo da regra de sincronização, permite-se que o mecanismo de sincronização provisione o recurso para o AD DS de acordo com a configuração.
 
-Para configurar o Serviço FIM, acesse http://localhost/identitymanagement no Internet Explorer®. Na página do Portal do MIM, para criar a política de provisionamento, acesse as páginas relacionadas na seção Administração. Para verificar a configuração, execute o script [Utilizando o Windows PowerShell para Documentar a Configuração de Política de Provisionamento](http://go.microsoft.com/FWLink/p/?LinkId=189661).
+Para configurar o Serviço FIM, navegue no Windows Internet Explorer® até http://localhost/identitymanagement. Na página do Portal do MIM, para criar a política de provisionamento, acesse as páginas relacionadas na seção Administração. Para verificar a configuração, execute o script [Utilizando o Windows PowerShell para Documentar a Configuração de Política de Provisionamento](http://go.microsoft.com/FWLink/p/?LinkId=189661).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Etapa 6: Criar a regra de sincronização
 
@@ -293,8 +294,8 @@ As tabelas a seguir mostram a configuração da regra de sincronização de prov
 
 
 
- >[!NOTE]
- Importante Verifique se Somente Fluxo Inicial foi selecionado para o fluxo de atributo que tem o DN como destino.                                                                          
+> [!NOTE]
+>  Importante Verifique se Somente Fluxo Inicial foi selecionado para o fluxo de atributo que tem o DN como destino.                                                                          
 
 ### <a name="step-7-create-the-workflow"></a>Etapa 7: Criar o fluxo de trabalho
 
@@ -365,8 +366,8 @@ A tabela a seguir lista os perfis de execução que fazem parte da fase de inici
 
 
 
->[!NOTE]
-Verifique se a regra de sincronização de saída foi projetada com êxito no metaverso.
+> [!NOTE]
+> Verifique se a regra de sincronização de saída foi projetada com êxito no metaverso.
 
 ## <a name="testing-the-configuration"></a>Testar a Configuração
 
@@ -490,8 +491,8 @@ No FIM, cada execução de exportação requer uma importação delta para concl
 
 Execute os perfis de execução de acordo com as instruções nesta seção.
 
->[!IMPORTANT]
-Cada execução de perfil de execução deve ter êxito, sem erros.
+> [!IMPORTANT]
+> Cada execução de perfil de execução deve ter êxito, sem erros.
 
 ### <a name="step-14-verify-the-provisioned-user-in-ad-ds"></a>Etapa 14: Verificar o usuário provisionado no AD DS
 
@@ -512,7 +513,7 @@ Para obter uma descrição de como remover esses objetos do ambiente de teste, c
 Em um cenário normal de sincronização que inclui o AD DS como destino de sincronização, o MIM não será autoritativo para todos os atributos de um objeto. Por exemplo, ao gerenciar objetos de usuário no AD DS usando o FIM, no mínimo, o domínio e os atributos objectSID precisam ser contribuídos pelo agente de gerenciamento do AD DS.
 Os atributos de nome, domínio e objectSID da conta serão necessários se sua intenção for habilitar um usuário para fazer logon no Portal do FIM. Para preencher esses atributos do AD DS, uma regra de sincronização de entrada adicional será necessária para o espaço conector do AD DS. Ao gerenciar objetos com várias fontes de valores de atributo, é necessário garantir que a prioridade de fluxo de atributo está configurada corretamente. Se a prioridade de fluxo de atributo não estiver configurada corretamente, o mecanismo de sincronização bloqueará o preenchimento dos valores de atributo. É possível saber mais sobre a prioridade de fluxo de atributo no artigo [Sobre a Prioridade de Fluxo de Atributo](http://go.microsoft.com/FWLink/p/?LinkId=189675).
 
-<a name="see-also"></a>Consulte também
+<a name="see-also"></a>Consulte Também
 =========
 
 <a name="other-resources"></a>Outros Recursos

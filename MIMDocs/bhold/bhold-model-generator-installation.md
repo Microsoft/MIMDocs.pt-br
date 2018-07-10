@@ -1,7 +1,7 @@
 ---
-title: "Instalação do gerador de modelos do BHOLD | Microsoft Docs"
-description: "O modelo do BHOLD permite que você estruture dados de várias fontes"
-keywords: 
+title: Instalação do gerador de modelos do BHOLD | Microsoft Docs
+description: O modelo do BHOLD permite que você estruture dados de várias fontes
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,12 +9,13 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: 96363fb3b0067ff5c8f8c2f32e9a855464038653
-ms.sourcegitcommit: 0d8b19c5d4bfd39d9c202a3d2f990144402ca79c
+ms.assetid: ''
+ms.openlocfilehash: 90e7da2a1e39b802723ff0714bd0caccf9649440
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289128"
 ---
 # <a name="bhold-model-generator-installation"></a>Instalação do Gerador de Modelos do BHOLD
 
@@ -24,12 +25,12 @@ Usando o módulo Gerador de Modelos do BHOLD, você pode estruturar de dados de 
 
 Antes de instalar o módulo Gerador de Modelos do BHOLD, você deve instalar o seguinte:
 
-1. Módulo BHOLD Core no servidor em que você planeja instalar o módulo Gerador de Modelos do BHOLD. Para obter informações sobre como instalar o módulo BHOLD Core, consulte [Instalação do BHOLD Core](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx).
+1. Módulo BHOLD Core no servidor em que você planeja instalar o módulo Gerador de Modelos do BHOLD. Para obter informações sobre como instalar o módulo BHOLD Core, consulte [Instalação do BHOLD Core](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
 2. O Provedor Microsoft OLE DB para Microsoft Jet deve estar instalado. Para obter mais informações, consulte [este artigo](http://support.microsoft.com/kb/271908).
 
->[!WARNING]
-Não instale o Gerador de Modelos do BHOLD em sua rede de produção. O Gerador de Modelos do BHOLD destina-se a ser usado offline em um ambiente de preparo para criar um modelo de função normalizado que você pode importar para seu modelo de função empresarial. Executar o Gerador de Modelos do BHOLD em sua rede de produção pode resultar na perda de seu modelo de função existente.
+> [!WARNING]
+> Não instale o Gerador de Modelos do BHOLD em sua rede de produção. O Gerador de Modelos do BHOLD destina-se a ser usado offline em um ambiente de preparo para criar um modelo de função normalizado que você pode importar para seu modelo de função empresarial. Executar o Gerador de Modelos do BHOLD em sua rede de produção pode resultar na perda de seu modelo de função existente.
 
 ## <a name="before-you-begin"></a>Antes de começar
 
@@ -50,7 +51,7 @@ Pacotes redistribuíveis do Mecanismo de Banco de Dados do Microsoft Access 2010
 | **Item**                                    | **Descrição**                                                                                                                                                                                                           | **Valor**                                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Usar um provedor de segurança em um Domínio/Computador** | Quando selecionado, especifica que a segurança do Active Directory Domain Services controlará o acesso ao BHOLD Core.                                                                                                                | Marque a caixa de seleção. **Importante:** a instalação falhará se essa caixa de seleção não estiver selecionada.                                                                                                                                                                                                                   |
-| **Domínio**                                  | Especifica o domínio que contém a conta de serviço que você criou ao instalar o BHOLD Core. Para obter mais informações, consulte [Instalação do BHOLD Core](https://technet.microsoft.com/en-us/library/jj134095(v=ws.10).aspx). | O nome de domínio é fornecido automaticamente pelo assistente. Altere o nome somente se ele estiver incorreto. **Importante:** especifique o nome de domínio usando o nome NetBIOS (curto), não o FQDN (nome de domínio totalmente qualificado). Por exemplo, se o FQDN do domínio é fabrikam.com, especifique o nome de domínio como FABRIKAM. |
+| **Domínio**                                  | Especifica o domínio que contém a conta de serviço que você criou ao instalar o BHOLD Core. Para obter mais informações, consulte [Instalação do BHOLD Core](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | O nome de domínio é fornecido automaticamente pelo assistente. Altere o nome somente se ele estiver incorreto. **Importante:** especifique o nome de domínio usando o nome NetBIOS (curto), não o FQDN (nome de domínio totalmente qualificado). Por exemplo, se o FQDN do domínio é fabrikam.com, especifique o nome de domínio como FABRIKAM. |
 | **Usuário**                                    | Especifica o nome de logon da conta de usuário do serviço BHOLD Core.                                                                                                                                                          | Grave o nome da conta de usuário aqui:                                                                                                                                                                                                                                                                                    |
 | **Senha**                                | Especifica a senha da conta de usuário do serviço.                                                                                                                                                                       | Grave a senha aqui: **Importante:** certifique-se de manter essa senha em um local seguro, oculto.                                                                                                                                                                                                                  |
 
@@ -74,7 +75,7 @@ Para executar o arquivo de programa como administrador, clique com o botão dire
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- Para obter informações sobre como criar arquivos de entrada, consulte a [Referência técnica do Microsoft BHOLD Suite](https://technet.microsoft.com/en-us/library/jj134935(v=ws.10).aspx)
+- Para obter informações sobre como criar arquivos de entrada, consulte a [Referência técnica do Microsoft BHOLD Suite](https://technet.microsoft.com/library/jj134935(v=ws.10).aspx)
 - [Guia de instalação do BHOLD](bhold-installation-guide.md)
 - [Referência do BHOLD para desenvolvedores](../reference/mim2016-bhold-developer-reference.md)
 - [Histórico de versão do BHOLD](../reference/version-bhold-history.md)

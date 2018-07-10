@@ -1,6 +1,6 @@
 ---
-title: "Etapa 7 para implantar o PAM – acesso do usuário | Microsoft Docs"
-description: "Como etapa final, conceda um acesso de usuário privilegiado temporário para demonstrar que a implantação Privileged Access Management foi realizada com êxito."
+title: Etapa 7 para implantar o PAM – acesso do usuário | Microsoft Docs
+description: Como etapa final, conceda um acesso de usuário privilegiado temporário para demonstrar que a implantação Privileged Access Management foi realizada com êxito.
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -9,16 +9,17 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: active-directory-domain-services
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 2d92be315547da1c352c0e60732f9aeecf0c2d90
-ms.sourcegitcommit: 3d8a2493eae1218bfdb75a399ffa4adc8c2a8fdf
+ms.openlocfilehash: 9515d17767a75b349b0d3150fb90c136c478baa2
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36289839"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Etapa 7 – elevar o acesso do usuário
 
->[!div class="step-by-step"]
-[« Etapa 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Etapa 6 ](step-6-transition-group-to-pam.md)
 
 
 Esta etapa demonstra que um usuário pode solicitar acesso a uma função pelo MIM.
@@ -90,7 +91,7 @@ Ative com a solicitação de acesso privilegiado por meio do portal de exemplo d
     ```
 
 3. Quando for solicitado, digite a senha da conta PRIV.Julia. Uma nova janela do navegador da Web será exibida.
-4. Navegue até http://pamsrv.priv.contoso.local:8090 e verifique se uma página da Web no portal de exemplo está visível.
+4. Navegue até http://pamsrv.priv.contoso.local:8090 e verifique se uma página da Web do portal de exemplo está visível.
 5. No Internet Explorer, selecione **Ferramentas** > **Opções da Internet** e clique na guia **Segurança**.
 6. Clique na **Zona de intranet local** > **Sites** > **Avançado** e adicione o site à zona.
 7. Feche os diálogos **Opções da Internet** .
@@ -103,5 +104,5 @@ Ative com a solicitação de acesso privilegiado por meio do portal de exemplo d
 
 Depois de concluir as etapas neste passo a passo, você terá demonstrado um cenário do Privileged Access Management, no qual os privilégios do usuário são elevados por uma quantidade limitada de tempo, permitindo ao usuário acessar recursos protegidos com uma conta privilegiada separada. Assim que a sessão de elevação expirar, a conta privilegiada não pode mais acessar o recurso protegido. A decisão de quais grupos de segurança representam funções privilegiadas é coordenada pelo administrador do PAM. Depois que os direitos de acesso são migrados para o sistema do Privileged Access Management, o acesso antes possibilitado com a conta de usuário original é agora possibilitado apenas ao entrar com uma conta privilegiada especial e disponibilizado mediante solicitação. Como resultado, associações de grupo para grupos altamente privilegiados são efetivas por uma quantidade limitada de tempo.
 
->[!div class="step-by-step"]
-[« Etapa 6 ](step-6-transition-group-to-pam.md)
+> [!div class="step-by-step"]
+> [« Etapa 6 ](step-6-transition-group-to-pam.md)

@@ -1,7 +1,7 @@
 ---
-title: "Práticas recomendadas do Microsoft Identity Manager 2016 | Microsoft Docs"
-description: 
-keywords: 
+title: Práticas recomendadas do Microsoft Identity Manager 2016 | Microsoft Docs
+description: ''
+keywords: ''
 author: barclayn
 ms.author: barclayn
 manager: mbaldwin
@@ -10,20 +10,21 @@ ms.topic: reference
 ms.prod: identity-manager-2016
 ms.service: microsoft-identity-manager
 ms.technology: security
-ms.assetid: 
-ms.openlocfilehash: bb967bfb43218384044e324c270d3d6b35d33afe
-ms.sourcegitcommit: b4513f0f72ac6efd5c2610863f4e3e8c8e65c860
+ms.assetid: ''
+ms.openlocfilehash: 9ef96b88942fd33107d9021ddddb90d0d80dbed1
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290111"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Práticas recomendadas do Microsoft Identity Manager 2016 | Microsoft Docs
 
 Este tópico descreve as práticas recomendadas para implantar e operar o Microsoft Identity Manager 2016 (MIM)
 
 ## <a name="sql-setup"></a>Configuração do SQL
->[!NOTE]
-Estas recomendações para configurar um servidor que executa o SQL partem do princípio de que há uma instância do SQL dedicada ao FIMService e outra dedicada ao banco de dados FIMSynchronizationService. Caso o FIMService seja executado em um ambiente consolidado, será necessário fazer os ajustes apropriados à configuração.
+> [!NOTE]
+> Estas recomendações para configurar um servidor que executa o SQL partem do princípio de que há uma instância do SQL dedicada ao FIMService e outra dedicada ao banco de dados FIMSynchronizationService. Caso o FIMService seja executado em um ambiente consolidado, será necessário fazer os ajustes apropriados à configuração.
 
 A configuração do servidor de linguagem SQL é essencial para que o sistema tenha um desempenho otimizado. Em implementações em grande escala, o desempenho otimizado do MIM depende da aplicação das práticas recomendadas em um servidor que executa o SQL. Para obter mais informações, consulte os seguintes tópicos sobre as práticas recomendadas do SQL:
 
@@ -71,40 +72,40 @@ Para obter um desempenho otimizado, recomenda-se a criação de um arquivo de da
 
 Dependendo da quantidade de memória do SQL Server e se ele é compartilhado com outros serviços (ou seja, o Serviço do MIM 2016 e o Serviço de Sincronização do MIM 2016), talvez você queira restringir o consumo de memória do SQL. Isso pode ser feito por meio das etapas a seguir.
 
-1.  Inicie o SQL Server Enterprise Manager.
+1. Inicie o SQL Server Enterprise Manager.
 
-2.  Selecione Nova Consulta.
+2. Selecione Nova Consulta.
 
-3.  Execute a seguinte consulta:
+3. Execute a seguinte consulta:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'show advanced options', 1
+   EXEC sp_configure 'show advanced options', 1
 
-  RECONFIGURE WITH OVERRIDE
+   RECONFIGURE WITH OVERRIDE
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
-  WITH OVERRIDE
-  ```
+   EXEC sp_configure 'max server memory (MB)', 12000--- max=12G RECONFIGURE
+   WITH OVERRIDE
+   ```
 
-  Este exemplo reconfigura o servidor SQL para usar no máximo 12 gigabytes (GB) de memória.
+   Este exemplo reconfigura o servidor SQL para usar no máximo 12 gigabytes (GB) de memória.
 
-4.  Verifique a configuração usando a seguinte consulta:
+4. Verifique a configuração usando a seguinte consulta:
 
-  ```SQL
-  USE master
+   ```SQL
+   USE master
 
-  EXEC sp_configure 'max server memory (MB)'--- verify the setting
+   EXEC sp_configure 'max server memory (MB)'--- verify the setting
 
-  USE master
+   USE master
 
-  EXEC sp_configure 'show advanced options', 0
+   EXEC sp_configure 'show advanced options', 0
 
-  RECONFIGURE WITH OVERRIDE
-  ```
+   RECONFIGURE WITH OVERRIDE
+   ```
 
 ### <a name="backup-and-recovery-configuration"></a>Configuração de backup e recuperação
 
@@ -169,11 +170,11 @@ Para obter mais informações, consulte [Configurar Restrições de Entrega de M
 
 Esta seção descreve uma série de etapas para aumentar o desempenho do carregamento de dados inicial do sistema externo para o MIM. É importante entender que várias dessas etapas são realizadas apenas durante o preenchimento inicial do sistema. Elas devem ser redefinidas após a conclusão do carregamento. Essa operação é realizada uma única vez e não é uma sincronização contínua.
 
->[!NOTE]
-Para saber mais sobre a sincronização de usuários entre o MIM e o AD DS (Active Directory Domain Services), confira o artigo [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Como sincronizar usuários do Active Directory Domain Services para o FIM), na documentação do FIM.
-
->[!IMPORTANT]
-Verifique se as práticas recomendadas abordadas na seção de configuração do SQL deste guia foram aplicadas. 
+> [!NOTE]
+> Para saber mais sobre a sincronização de usuários entre o MIM e o AD DS (Active Directory Domain Services), confira o artigo [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Como sincronizar usuários do Active Directory Domain Services para o FIM), na documentação do FIM.
+> 
+> [!IMPORTANT]
+> Verifique se as práticas recomendadas abordadas na seção de configuração do SQL deste guia foram aplicadas. 
 
 ### <a name="step-1-configure-the-sql-server-for-initial-data-load"></a>Etapa 1: configurar o SQL Server para o carregamento de dados inicial
 O carregamento inicial de dados pode ser um processo longo. Quando planejar o carregamento inicial de uma grande quantidade de dados, é possível reduzir o tempo necessário para preencher o banco de dados. Para fazer isso, desative temporariamente a pesquisa de texto completo e ative-a novamente, após concluir a exportação no agente de gerenciamento do MIM 2016.
@@ -191,8 +192,8 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = MANUAL
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
->[!IMPORTANT]
-Não implementar esses procedimentos pode gerar um uso excessivo do espaço em disco, o que pode fazer com que ele acabe. É possível encontrar mais detalhes sobre este tópico em [Visão Geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370). O [Guia de Backup e Restauração do FIM](http://go.microsoft.com/fwlink/?LinkID=165864) contém mais informações.
+> [!IMPORTANT]
+> Não implementar esses procedimentos pode gerar um uso excessivo do espaço em disco, o que pode fazer com que ele acabe. É possível encontrar mais detalhes sobre este tópico em [Visão Geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370). O [Guia de Backup e Restauração do FIM](http://go.microsoft.com/fwlink/?LinkID=165864) contém mais informações.
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Etapa 2: aplicar a configuração de MIM mínima necessária durante o processo de carregamento
 
@@ -288,8 +289,8 @@ As contas de serviço não devem ser membros do grupo local de administradores.
 
 A conta de serviço do Serviço de Sincronização do FIM não deve ser um membro dos grupos de segurança usados para controlar o acesso ao Serviço de Sincronização do FIM (grupos que iniciam com FIMSync, por exemplo, FIMSyncAdmins e assim por diante).
 
->[!IMPORTANT]
- Se as opções de usar a mesma conta para ambas as contas de serviço forem selecionadas e o Serviço de Sincronização FIM e os Serviços FIM forem separados, não será possível negar acesso a esse computador na rede no servidor de Serviço de Sincronização mms. Se o acesso for negado, o Serviço FIM seria proibido de contatar o Serviço de Sincronização FIM para alterar configurações e gerenciar senhas.
+> [!IMPORTANT]
+>  Se as opções de usar a mesma conta para ambas as contas de serviço forem selecionadas e o Serviço de Sincronização FIM e os Serviços FIM forem separados, não será possível negar acesso a esse computador na rede no servidor de Serviço de Sincronização mms. Se o acesso for negado, o Serviço FIM seria proibido de contatar o Serviço de Sincronização FIM para alterar configurações e gerenciar senhas.
 
 ### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>A redefinição de senha implantada em computadores do tipo quiosque deve configurar a segurança local para limpar o arquivo de paginação da memória virtual
 
@@ -315,7 +316,7 @@ Para implementar o SSL:
 
 7.  Salve o arquivo em qualquer local. Será necessário acessar esse local nas próximas etapas.
 
-8.  Vá para https://nomedoservidor/certsrv. Substitua servername pelo nome do servidor que emite certificados.
+8.  Navegue até https://servername/certsrv. Substitua servername pelo nome do servidor que emite certificados.
 
 9.  Clique em Solicitar um Novo Certificado.
 
@@ -359,7 +360,7 @@ Para implementar o SSL:
 
 29. Clique em http://servername.
 
-30. Alterar http://servername para https://servername e, em seguida, clique em OK.
+30. Altere http://servername para https://servername e clique em OK.
 
 31. Clique em Iniciar, clique em Executar, digite iisreset e clique em OK.
 
@@ -384,7 +385,7 @@ Por padrão, o MIM 2016 limpa objetos expirados do sistema, o que inclui solicit
 
 O MIM oferece dois tipos de MPRs, Solicitação e Definir Transição:
 
--  MPR de Solicitação (RMPR)
+- MPR de Solicitação (RMPR)
 
   - É utilizada para definir a política de controle de acesso (autenticação, autorização e ação) para as operações de Criar, Ler, Atualizar ou Excluir (CRUD) em recursos.
   - É aplicada quando uma operação CRUD é emitida em um recurso de destino no MIM.
@@ -432,8 +433,8 @@ No MIM, as permissões são definidas como uma declaração positiva. Como o MIM
 
 Use MPRs Definir Transição (TMPRs) em vez de RMPRs para definir direitos personalizados. As TMPRs oferecem um modelo baseado em estado para atribuir ou remover direitos com base na associação em Conjuntos de Transição definidos ou funções, e nas atividades de fluxo de trabalho que os acompanham. As TMPRs sempre devem ser definidas em pares, um para a transição de recursos de entrada e outro para recursos de transição de saída. Além disso, cada MPR de transição deve conter fluxos de trabalho separados para atividades de provisionamento e desprovisionamento.
 
->[!NOTE]
-Qualquer fluxo de trabalho de desprovisionamento deve garantir que o atributo Executar na Atualização da Política está definido como true.
+> [!NOTE]
+> Qualquer fluxo de trabalho de desprovisionamento deve garantir que o atributo Executar na Atualização da Política está definido como true.
 
 #### <a name="enable-the-set-transition-in-mpr-last"></a>Habilite a MPR Definir Transição de Entrada por último
 

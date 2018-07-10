@@ -3,32 +3,33 @@ title: Como trabalhar com o portal de Redefinição de Senha de Autoatendimento 
 description: Veja as novidades de redefinição de senha de autoatendimento no MIM 2016, incluindo como a SSPR funciona com autenticação multifator.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
-ms.date: 10/12/2017
+ms.author: billmath
+manager: mtillman
+ms.reviewer: davidste
+ms.date: 06/26/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.reviewer: mwahl
-ms.suite: ems
-ms.openlocfilehash: 18c3e4ea623b4b092bbd9236c5fa1b2a63af0486
-ms.sourcegitcommit: 637988684768c994398b5725eb142e16e4b03bb3
+ms.openlocfilehash: b1b30b744a5f735512f31d98184a561ce3f9b047
+ms.sourcegitcommit: 03617b441135a55b664e0d81cce4d17541bee93b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963368"
 ---
->[!IMPORTANT]
-Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de baixa, em 14 de novembro de 2018. Os clientes novos ou atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando no planejamento de alterações para a MFA por meio da integração com o SDK do Servidor de Autenticação Multifator do Microsoft Azure. Esse recurso será incluído em um hotfix futuro, no início de 2018.
-
 # <a name="working-with-self-service-password-reset"></a>Como trabalhar com a redefinição de senha de autoatendimento
+
+> [!IMPORTANT]
+> Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de baixa, em 14 de novembro de 2018. Os clientes novos ou atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando nas alterações para a MFA por meio da integração com o SDK do Servidor de MFA.  Isso será incluído em um hotfix futuro. Confira o [histórico de versão](/reference/version-history.md) para ver os comunicados.
+
 O Microsoft Identity Manager 2016 fornece funcionalidade adicional para o recurso de redefinição de senha do serviço de autoatendimento. Essa funcionalidade foi aprimorada com vários recursos importantes:
 
--   O portal de redefinição de senha de autoatendimento e a tela Logon do Windows agora permitem aos usuários desbloquear suas contas sem alterar suas senhas ou chamar os administradores de suportes. Normalmente, os usuários ficam bloqueados fora das suas contas por muitos motivos legítimos, como porque acidentalmente inseriram uma senha antiga, usam computadores bilíngues e estavam com o teclado definido para o idioma errado ou tentaram fazer logon em uma estação de trabalho compartilhada já aberta para a conta de outra pessoa.
+-   O portal de Redefinição de Senha de Autoatendimento e a tela de logon do Windows agora permitem aos usuários desbloquear suas contas sem alterar suas senhas ou chamar os administradores de suportes. Normalmente, os usuários ficam bloqueados fora das suas contas por muitos motivos legítimos, como porque acidentalmente inseriram uma senha antiga, usam computadores bilíngues e estavam com o teclado definido para o idioma errado ou tentaram fazer logon em uma estação de trabalho compartilhada já aberta para a conta de outra pessoa.
 
 -   Um novo portão de autenticação, Portão de Telefone, foi adicionado. Isso permite a autenticação do usuário por meio de chamada telefônica.
 
--   Foi adicionado suporte para o serviço Microsoft Azure Multi-Factor Authentication (MFA) do Microsoft Azure. Pode ser usado para o Portão de senha de uso único de SMS existente ou para a nova Porta de telefone.
+-   Foi adicionado suporte para o serviço Autenticação Multifator do Microsoft Azure (MFA). Esse serviço pode ser usado para o Portão de Senha de Uso Único de SMS existente ou para a nova Porta de Telefone.
 
 ## <a name="azure-for-multi-factor-authentication"></a>Azure para Multi-Factor Authentication
 O Microsoft Azure Multi-Factor Authentication é um serviço de autenticação que exige que os usuários verifiquem suas tentativas de entrada com um aplicativo móvel, chamada telefônica ou mensagem de texto. Ele está disponível para uso com o Active Directory do Microsoft Azure e como um serviço para aplicativos corporativos de nuvem e local.
@@ -56,16 +57,16 @@ Esta seção pressupõe que você tenha baixado e concluído a implantação do 
 
     -   Configurando as regras de sincronização no Portal do MIM para permitir a sincronização de dados de usuário e facilitar a atividades baseadas em sincronização no Serviço do MIM.
 
--   Os Suplementos e as Extensões do MIM 2016, incluindo o cliente integrado de Logon do Windows do SSPR, são implantados no servidor ou em um computador cliente separado.
+-   Os Suplementos e as Extensões &amp; do MIM 2016, incluindo o cliente integrado de Logon do Windows do SSPR, são implantados no servidor ou em um computador cliente separado.
 
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Preparação do MIM para trabalhar com à autenticação multifator
 Configure a Sincronização do MIM para dar suporte para redefinição de senha e funcionalidade de desbloqueio de conta. Para obter mais informações, consulte [Instalação dos complementos e extensões FIM](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Instalação do FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [Portões de autenticação de SSPR](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) e [Guia de laboratório de teste de SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
-Na próxima seção, você configurará o provedor do Azure MFA no Active Directory do Microsoft Azure. Como parte dessa ação, você gerará um arquivo que contém o material de autenticação que o MFA exige para poder entrar em contato com o Azure MFA.  Para continuar, você precisará de uma assinatura do Azure.
+Na próxima seção, você configurará o provedor do Azure MFA no Active Directory do Microsoft Azure. Você gerará um arquivo que contém o material de autenticação que o MFA exige para poder entrar em contato com o Azure MFA.  Para continuar, você precisará de uma assinatura do Azure.
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Como registrar o provedor de autenticação multifator no Azure
 
-1.  Crie um [provedor do MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
+1.  Crie um [provedor do MFA](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Abra um caso de suporte e solicite o SDK direto para o ASP.net 2.0 C#. O SDK só será fornecido aos usuários atuais do MIM com o MFA, pois o SDK direto foi descontinuado. Novos clientes devem adotar a próxima versão do MIM que será integrada ao servidor MFA.
 
@@ -85,7 +86,7 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 7.  Na nova janela, no painel esquerdo, em **Configurar**, clique em **Configurações**.
 
-8.  Em **Alertas de Fraude**, desmarque **Bloquear usuário quando fraude for relatada. Isso é feito para evitar o bloqueio de todo o serviço.
+8.  Em **Alertas de Fraude**, desmarque **Bloquear usuário quando fraude for relatada. A caixa é desmarcada para evitar o bloqueio de todo o serviço.
 
 9. Na janela **Azure Multi-Factor Authentication** que se abre, clique em **SDK** sob **Downloads** no menu à esquerda.
 
@@ -117,13 +118,13 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 9. No elemento `<username>` , insira qualquer nome de usuário.
 
-10. No elemento `<DefaultCountryCode>`, insira seu código de país padrão. No caso de os números de telefone serem registrados para usuários sem um código de país, este é o código de país que eles receberão. Caso um usuário tenha um código de país internacional, ele deve ser incluído no número de telefone registrado.
+10. No elemento `<DefaultCountryCode>`, insira seu código de país padrão. Casos os números de telefone sejam registrados para usuários sem um código de país, os usuários receberão esse código. Caso um usuário tenha um código de país internacional, ele deve ser incluído no número de telefone registrado.
 
 11. Salve o arquivo MfaSettings.xml com o mesmo nome no mesmo local.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Configurar a porta de telefone ou o grupo de SMS de senha de uso único
 
-1.  Inicie o Internet Explorer e navegue até o Portal do MIM, autenticando como o administrador do MIM e, em seguida, clique em  **Fluxos de Trabalho** na barra de navegação à esquerda.
+1.  Inicie o Internet Explorer e navegue até o Portal do MIM, autenticando como o administrador do MIM e clique em  **Fluxos de Trabalho** na barra de navegação à esquerda.
 
     ![Imagem de navegação do Portal do MIM](media/MIM-SSPR-workflow.jpg)
 

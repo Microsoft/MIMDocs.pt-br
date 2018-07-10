@@ -10,11 +10,12 @@ ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: ''
-ms.openlocfilehash: 241ad68d3f4a692c87d0d2a0069781ad042453c7
-ms.sourcegitcommit: 39f34a38967baa9c0da6ae5b57734b222f5771a5
+ms.openlocfilehash: 25a511dc590b02019c65a688c9b2c8dc821fff50
+ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36290077"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implantando o MIM CM (Microsoft Identity Manager Certificate Manager) 2016
 
@@ -80,13 +81,13 @@ O processo para estender o esquema é simples, mas deve ser abordado com cuidado
     ![diagrama](media/mim-cm-deploy/image005.png)
 
 3. Execute o cenário de floresta única do script resourceForestModifySchema.vbs. Para o cenário de floresta de recursos, execute os scripts:
-    - DomainA – usuários localizados (userForestModifySchema.vbs)
-    - ResourceForestB – local da instalação do CM (resourceForestModifySchema.vbs).
+   - DomainA – usuários localizados (userForestModifySchema.vbs)
+   - ResourceForestB – local da instalação do CM (resourceForestModifySchema.vbs).
 
-    >[!NOTE]
-    >As alterações de esquema são uma operação unidirecional e exigem uma recuperação da floresta para serem revertidas, portanto, verifique se você tem os backups necessários. Para obter detalhes sobre as alterações feitas no esquema ao realizar esta operação examine o artigo [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx) (Alterações de esquema do Forefront Identity Manager 2010 Certificate Management)
+     >[!NOTE]
+     >As alterações de esquema são uma operação unidirecional e exigem uma recuperação da floresta para serem revertidas, portanto, verifique se você tem os backups necessários. Para obter detalhes sobre as alterações feitas no esquema ao realizar esta operação examine o artigo [Forefront Identity Manager 2010 Certificate Management Schema Changes](https://technet.microsoft.com/library/jj159298(v=ws.10).aspx) (Alterações de esquema do Forefront Identity Manager 2010 Certificate Management)
 
-    ![diagrama](media/mim-cm-deploy/image007.png)
+     ![diagrama](media/mim-cm-deploy/image007.png)
 
 4. Execute o script e você deverá receber uma mensagem de êxito quando ele for concluído.
 
@@ -355,7 +356,6 @@ A conta MIMCMWebAgent executará o portal do MIM CM. Por padrão a autenticaçã
 SETSPN -S http/cm.contoso.com contoso\MIMCMWebAgent
 #Delegation for certificate authority
 Get-ADUser CONTOSO\MIMCMWebAgent | Set-ADObject -Add @{"msDS-AllowedToDelegateTo"="rpcss/CORPCA","rpcss/CORPCA.contoso.com"}
-
 ```
 
 **Atualizando o IIS no CORPCM**
@@ -368,7 +368,6 @@ add-pssnapin WebAdministration
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name enabled -Value $true
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useKernelMode -Value $false
 Set-WebConfigurationProperty -Filter System.webServer/security/authentication/WindowsAuthentication -Location 'Default Web Site' -Name useAppPoolCredentials -Value $true
-
 ```
 
 >[!NOTE]
@@ -465,10 +464,10 @@ Antes de fazer logon no CORPCM, adicione MIMINSTALL ao grupo **Admins de domíni
 
    - Usar um usuário existente: **Habilitado**
 
-    >[!NOTE]
-    >Nós já criamos essas contas anteriormente. Repita os procedimentos da etapa 8 para as seis guias de conta de agente.
+     >[!NOTE]
+     >Nós já criamos essas contas anteriormente. Repita os procedimentos da etapa 8 para as seis guias de conta de agente.
 
-    ![Contas do MIM CM](media/mim-cm-deploy/image030.png)
+     ![Contas do MIM CM](media/mim-cm-deploy/image030.png)
 
 10. Quando todas as informações de conta de agente forem concluídas, clique em **OK**.
 
@@ -602,9 +601,9 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 6. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA**, clique em **OK**.
 
-7. Clique com o botão direito do mouse em **contoso-CORPCA-CA***,* aponte para **Todas as Tarefas** e, em seguida, clique em **Interromper Serviço**. Aguarde até que os Serviços de Certificados do Active Directory sejam interrompidos.
+7. Clique com o botão direito do mouse em **contoso-CORPCA-CA** *,* aponte para **Todas as Tarefas** e clique em **Interromper Serviço**. Aguarde até que os Serviços de Certificados do Active Directory sejam interrompidos.
 
-8. Clique com o botão direito do mouse em **contoso-CORPCA-CA***,* aponte para **Todas as Tarefas** e, em seguida, clique em **Iniciar Serviço**.
+8. Clique com o botão direito do mouse em **contoso-CORPCA-CA** *,* aponte para **Todas as Tarefas** e clique em **Iniciar Serviço**.
 
 9. Minimize o console **Autoridade de Certificação**.
 
@@ -668,7 +667,7 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
     - Na caixa de diálogo Certificado, clique com botão direito do mouse na caixa **Especifique o hash do certificado codificado em hexa** e, em seguida, clique em **Colar**.
 
     - Na caixa de diálogo **Certificado**, clique em **OK**.
-    
+
         >[!Note]
         >Se o botão **OK** não está habilitado, você incluiu acidentalmente um caractere oculto na cadeia de impressão digital quando copiou a impressão digital do certificado clmAgent. Repita todas as etapas a partir da **Tarefa 4: Copiar a impressão digital do certificado MIMCMAgent para área de transferência do Windows** neste exercício.
 
@@ -678,11 +677,11 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 6. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA**, clique em **OK**.
 
-7. Clique com o botão direito do mouse em **contoso-CORPCA-CA***,* aponte para **Todas as Tarefas** e, em seguida, clique em **Interromper Serviço**.
+7. Clique com o botão direito do mouse em **contoso-CORPCA-CA** *,* aponte para **Todas as Tarefas** e clique em **Interromper Serviço**.
 
 8. Aguarde até que os Serviços de Certificados do Active Directory sejam interrompidos.
 
-9. Clique com o botão direito do mouse em **contoso-CORPCA-CA***,* aponte para **Todas as Tarefas** e, em seguida, clique em **Iniciar Serviço**.
+9. Clique com o botão direito do mouse em **contoso-CORPCA-CA** *,* aponte para **Todas as Tarefas** e clique em **Iniciar Serviço**.
 
 10. Feche o console **Autoridade de Certificação**.
 
@@ -736,7 +735,7 @@ Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no
 6. Na caixa de diálogo **Entrada de Permissão para Contoso**, na lista **Aplica-se a**, selecione **Objetos de Usuário Descendentes** e, em seguida, habilite a caixa de seleção **Permitir** para as seguintes **Permissões**:
 
     - **Ler todas as propriedades**
-    
+
     - **Permissões de leitura**
 
     - **Auditoria do FIM CM**
@@ -904,7 +903,7 @@ $adace.GetEnumerator() | **Foreach-Object** {
 $acl = **Get-Acl** *-Path* $_.Value
 $sid=(**Get-ADGroup** "MIMCM-Managers").SID
 $p = **New-Object** System.Security.Principal.SecurityIdentifier($sid)
-##https://msdn.microsoft.com/en-us/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
+##https://msdn.microsoft.com/library/system.directoryservices.activedirectorysecurityinheritance(v=vs.110).aspx
 $ace = **New-Object** System.DirectoryServices.ActiveDirectoryAccessRule
 ($p,[System.DirectoryServices.ActiveDirectoryRights]"GenericAll",[System.Security.AccessControl.AccessControlType]::Allow,
 [DirectoryServices.ActiveDirectorySecurityInheritance]::All)
