@@ -10,12 +10,12 @@ ms.topic: get-started-article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 834343243dfeefa8d1874414fa369751288fd64d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: bb0287b894786d13398819b04bdb089f0f36b33e
+ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36288863"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694632"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 
@@ -26,7 +26,7 @@ Este artigo descreve os idiomas com suporte e o mapeamento de atualizações do 
 O Pacote de Idiomas do Serviço e Portal do Microsoft MIM oferece suporte para os 33 idiomas a seguir.  
 
 > [!NOTE]
-> No [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft), foi adicionada uma chave de registro chamada "OverrideDefaultUILocale" ao pacote de idioma Extensões e Suplementos do MIM, que tentará mapear todos os idiomas semelhantes àquele que tem suporte. Por exemplo, se o idioma de exibição do Windows for ES-CL (espanhol do Chile) ou qualquer ES - **, ele tentará mapeá-lo para ES-ES (espanhol da Espanha).
+> No [4.4.1642.0](https://support.microsoft.com/en-us/help/4021562/hotfix-rollup-package-build-4-4-1642-0-is-available-for-microsoft), foi adicionada uma chave de registro chamada "OverrideDefaultUILocale" ao pacote de idioma Extensões e Suplementos do MIM, que tentará mapear todos os idiomas semelhantes àquele que tem suporte. Por exemplo, se o idioma de exibição do Windows for ES-CL (espanhol do Chile) ou qualquer ES -\*, ele tentará mapeá-lo para ES-ES (espanhol da Espanha).
 
 > [!IMPORTANT]
 > O texto no suplemento SSPR e no portal será localizado, mas as perguntas não serão feitas sem trabalho adicional. Você precisará criar fluxos de trabalho de AuthN (e conjuntos e MPRs acompanhantes para direcioná-los) para direcionar perguntas em cada idioma para o local de destino.
