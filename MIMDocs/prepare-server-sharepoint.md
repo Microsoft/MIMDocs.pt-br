@@ -12,12 +12,12 @@ ms.technology: security
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f69648e7e4229ca7c8de895cdf10ccb2c5f368e2
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: a64ee79897ce73242d0f8510842fdcb6758fab2c
+ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289526"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45538567"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configure um servidor de gerenciamento de identidade: SharePoint
 
@@ -71,7 +71,7 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
 2. Especifique esse servidor como o servidor de banco de dados, por exemplo, **corpsql**, para o banco de dados de configuração, e *Contoso\SharePoint* como a conta de acesso do banco de dados para uso do SharePoint.
 3. Crie uma senha de segurança para o farm.
 
-4. No Assistente de configuração, recomendamos a seleção do tipo [MinRole](https://docs.microsoft.com/en-us/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) de **Front-end**
+4. No Assistente de configuração, recomendamos a seleção do tipo [MinRole](https://docs.microsoft.com/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server-2016) de **Front-end**
 
 5. Quando o assistente de configuração tiver concluído a tarefa de configuração 10 de 10, clique em Concluir e um navegador da Web será aberto.
 
