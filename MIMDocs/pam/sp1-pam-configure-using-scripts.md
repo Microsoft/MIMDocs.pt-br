@@ -12,12 +12,12 @@ ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 741d722ce315b7265278997275d05981f44826e8
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: f5ae81fe8c0c695b26f2a28626512e056df4db8b
+ms.sourcegitcommit: 46c68e2e0ebbf3cebae9fc04f1d2ba73bc987d5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289414"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47414968"
 ---
 # <a name="configure-pam-using-scripts"></a>Configurar o PAM usando scripts
 

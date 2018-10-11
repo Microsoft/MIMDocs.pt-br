@@ -1,31 +1,29 @@
 ---
-title: O agente de gerenciamento Microsoft Identity Manager para o Microsoft Graph | Microsoft Docs
+title: O conector do Microsoft Identity Manager para o Microsoft Graph | Microsoft Docs
 author: fimguy
-description: O Microsoft Graph (visualização) é o gerenciamento de ciclo de vida de conta do AD de usuário externo. Nesse cenário, uma organização convidou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada do Windows local ou aplicativos baseados em Kerberos
+description: O conector do Microsoft Identity Manager para o Microsoft Graph permite o gerenciamento de ciclo de vida de conta do AD de usuário externo. Nesse cenário, uma organização convidou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada do Windows local ou aplicativos baseados em Kerberos
 keywords: ''
-ms.author: davidste
+ms.author: billmath
 manager: bhu
-ms.date: 04/25/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.service: microsoft-identity-manager
 ms.technology: security
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: a66d424e8388005855ac8e64623f5a00f89682e9
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 09052bc9f5cecd0a599e9a93ee43cc44ce435671
+ms.sourcegitcommit: 032b3cdd8a88b1ccfb30c0070f216020feee6293
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34479359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48045642"
 ---
-<a name="the-microsoft-identity-manager-management-agent-for-microsoft-graph-public-preview"></a>O agente de gerenciamento do Microsoft Identity Manager para o Microsoft Graph (Visualização Pública)
+<a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Conector do Microsoft Identity Manager para o Microsoft Graph
 =======================================================================================
 
 <a name="summary"></a>Resumo 
 =======
 
-O [agente de gerenciamento do Microsoft Identity Manager para o Microsoft Graph (visualização)](http://go.microsoft.com/fwlink/?LinkId=717495) habilita cenários de integração adicional para os clientes do Azure AD Premium.
-
-O [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) integra diretórios locais ao Azure AD e garante que os usuários tenham uma identidade comum e autenticação consistente em aplicativos do AD DS, Office 365, Azure e SaaS integrados ao Azure AD, sincronizando os usuários e grupos de diretórios locais com o Azure AD.   Esse agente de gerenciamento pode ser implantado para operações de gerenciamento de acesso e identidade especializadas além da sincronização de usuários e grupos no Azure AD.  Esse agente de gerenciamento aparece em objetos adicionais de metaverso de sincronização de MIM obtidos do [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/) v1 e beta. 
+O [conector do Microsoft Identity Manager para o Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) habilita cenários de integração adicional para os clientes do Azure AD Premium.  Ele aparece em objetos adicionais de metaverso de sincronização do MIM obtidos da [API do Microsoft Graph](https://developer.microsoft.com/en-us/graph/) v1 e beta.
 
 <a name="scenarios-covered"></a>Cenários abordados
 =================
@@ -33,54 +31,108 @@ O [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47
 <a name="b2b-account-lifecycle-management"></a>Gerenciamento de ciclo de vida de conta B2B
 --------------------------------
 
-O cenário inicial na visualização para o agente de gerenciamento do Microsoft Identity Manager do Microsoft Graph (visualização) é o gerenciamento de ciclo de vida de contas do AD de usuário externo. Nesse cenário, uma organização convidou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada do Windows local ou aplicativos baseados em Kerberos, por meio do proxy de [aplicativo do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) ou outros mecanismos de gateway. O proxy do aplicativo Azure AD exige que cada usuário tenha sua própria conta do AD DS, para fins de identificação e delegação
+O cenário inicial para o conector do Microsoft Identity Manager para o Microsoft Graph é como um conector para ajudar a automatizar o gerenciamento de ciclo de vida de conta do AD DS para usuários externos. Nesse cenário, uma organização está sincronizando os funcionários com o Azure AD do AD DS usando o Azure AD Connect e também convidou convidados para seu diretório do Azure AD. Convidar alguém resulta em um objeto de usuário externo estar no diretório do Azure AD daquela organização, que não está do AD DS da organização. Então a organização deseja dar a esses convidados acesso a Autenticação Integrada do Windows local ou a aplicativos baseados em Kerberos por meio de [Proxy de Aplicativo do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) ou outros mecanismos de gateway. O Proxy de Aplicativo do Azure AD exige que cada usuário tenha sua própria conta do AD DS, para fins de identificação e delegação.  
 
-Cenários adicionais podem ser adicionados no futuro e [documentados aqui](./microsoft-identity-manager-2016-graph-b2b-scenario.md)
+Para saber como configurar a sincronização de MIM para criar e manter automaticamente contas do AD DS para convidados, depois de ler as instruções neste artigo, continue lendo o artigo [Colaboração B2B (entre empresas) do Azure AD com o MIM 2016 SP1 com o Proxy de Aplicativo do Azure](~/microsoft-identity-manager-2016-graph-b2b-scenario.md).  Este artigo ilustra as regras de sincronização necessárias para o conector.
 
-<a name="determining-your-deployment-topology"></a>Determinar a topologia de implantação
-====================================
+<a name="other-identity-management-scenarios"></a>Outros cenários de gerenciamento de identidade
+---------------
+
+O conector pode ser usado para outros cenários de gerenciamento de identidade específicos que envolvem criar, ler, atualizar e excluir objetos de usuário, grupo e contato no Azure AD, além da sincronização de usuário e grupo com o Azure AD. Ao avaliar os cenários possíveis, lembre: esse conector não pode ser operado em um cenário que resultaria em uma sobreposição de fluxo de dados, conflito de sincronização real ou potencial com uma implantação do Azure AD Connect.  O [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) é a abordagem recomendada para integrar diretórios locais ao Azure AD, sincronizando os usuários e grupos de diretórios locais ao Azure AD.  O Azure AD Connect tem muitos outros recursos de sincronização e permite cenários como senha e write-back de dispositivo, que não são possíveis para objetos criados pelo MIM. Se os dados estiverem sendo levados para o AD DS, por exemplo, garanta que sejam excluídos da tentativa do Azure AD Connect de combinar esses objetos de volta com o diretório do Azure AD.  Esse conector também não pode ser usado para fazer alterações a objetos do Azure AD criados pelo Azure AD Connect.
 
 
-<a name="preparing-to-use-the-management-agentma-for-microsoft-graph"></a>Preparar-se para usar o MA(Agente de Gerenciamento) para o Microsoft Graph
+
+<a name="preparing-to-use-the-connector-for-microsoft-graph"></a>Como preparar-se para usar o Connector para o Microsoft Graph
 =============================================================
 
-<a name="authorizing-the-ma-to-manage-your-azure-ad-directory"></a>Autorizar o MA a gerenciar seu diretório do Azure AD
+<a name="authorizing-the-connector-to-retrieve-or-manage-objects-in-your-azure-ad-directory"></a>Como autorizar o conector a recuperar ou gerenciar objetos no diretório do Azure AD
 ----------------------------------------------------
 
-1.  O agente de gerenciamento do Graph requer que o aplicativo Web/aplicativo de API seja criado no Azure AD.
+1.  O conector requer que um aplicativo Web/API seja criado no Azure AD para que ele possa ser autorizado com as permissões apropriadas para operar no Azure AD por meio do Microsoft Graph.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/724d3fc33b4c405ab7eb9126e7fe831f.png)
 
 Figura 1. Novo registro do aplicativo
 
-2.  Abra o aplicativo criado e use a ID do Aplicativo como Id do Cliente na página de conectividade do MA:
+2.  No portal do Azure, abra o aplicativo criado e salve a ID do aplicativo como uma ID de cliente para usar mais tarde na página de conectividade do MA:
 
 ![](media/microsoft-identity-manager-2016-ma-graph/ecfcb97674790290aa9ca2dcaccdafbc.png)
 
 Figura 2. ID do Aplicativo
 
-2.  Gerar novo segredo do cliente por meio da abertura de todas as configurações-\> chaves. Defina uma descrição de chave e selecione duração needful. Salve as alterações. Um valor secreto não estará disponível depois que você sair de página.
+3.  Gerar novo segredo do cliente por meio da abertura de todas as configurações-\> chaves. Defina uma descrição de chave e selecione duração needful. Salve as alterações. Um valor secreto não estará disponível depois que você sair de página.
 
 ![](media/microsoft-identity-manager-2016-ma-graph/fdbae443f9e6ccb650a0cb73c9e1a56f.png)
 
 Figura 3. Novo segredo do cliente
 
-3.  Adicione "API do Microsoft Graph" para o aplicativo abrindo "Permissões necessárias".
+4.  Adicione "API do Microsoft Graph" para o aplicativo abrindo "Permissões necessárias".
 
 ![](media/microsoft-identity-manager-2016-ma-graph/908788fbf8c3c75101f7b663a8d78a4b.png)
 
 Figura 4. Adicionar nova API
 
-A seguinte permissão deve ser adicionada para a "API do Microsoft Graph":
+A permissão a seguir deve ser adicionada ao aplicativo para permitir que ele use a "API do Microsoft Graph", dependendo do cenário:
 
 | Operação com objeto | Permissão necessária                                                                  | Tipo de permissão |
 |-----------------------|--------------------------------------------------------------------------------------|-----------------|
-| Importar Grupo          | Group.Read.All ou Group.ReadWrite.All                                                | Aplicativo     |
-| Importar Usuário           | User.Read.All ou User.ReadWrite.All ou Directory.Read.All ou Directory.ReadWrite.All | Aplicativo     |
+| Importar Grupo          | `Group.Read.All` ou `Group.ReadWrite.All`                                                | Aplicativo     |
+| Importar Usuário           | `User.Read.All`, `User.ReadWrite.All`, `Directory.Read.All` ou `Directory.ReadWrite.All` | Aplicativo     |
 
-Mais detalhes sobre as permissões necessárias podem ser encontrados [aqui](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference)
+Mais detalhes sobre as permissões necessárias podem ser encontrados [aqui](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference).
 
-1.  Crie um conector com a ID do Aplicativo e o Segredo do Cliente gerado. Cada agente de gerenciamento deve ter seu próprio aplicativo no Azure AD para evitar a importação em paralelo para o mesmo aplicativo. O conector do Graph dá suporte à seguinte lista de tipos de objeto:
+5. Conceda ao aplicativo as permissões necessárias.
+
+
+<a name="installing-the-connector"></a>Instalar o conector
+========================
+
+6.  Antes de instalar o conector, verifique se que você tem o seguinte no servidor de sincronização: 
+
+ - Microsoft .NET 4.5.2 Framework ou posterior
+ - Microsoft Identity Manager 2016 SP1, e deve usar o hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) ou posterior.
+
+7. O conector do Microsoft Graph, além de outros conectores para o Microsoft Identity Manager 2016 SP1, está disponível como um download do [Centro de Download da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=51495).
+
+8.  Reinicie o Serviço de Sincronização do MIM.
+ 
+<a name="connector-configuration"></a>Configuração do conector
+=======================
+
+
+9.  Na interface de usuário do Synchronization Service Manager, selecione **Conectores** e **Criar**.
+Selecione **Graph (Microsoft)**, crie um conector e dê a ele um nome descritivo.
+
+![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
+
+
+10. No serviço de sincronização de MIM da interface do usuário, especifique a ID do aplicativo e o Segredo do Cliente gerado. Cada agente de gerenciamento configurado na Sincronização do MIM deve ter seu próprio aplicativo no Azure AD para evitar a execução da importação em paralelo para o mesmo aplicativo.
+
+
+![](media/microsoft-identity-manager-2016-ma-graph/77c2eb73bab8d5187da06293938f5fd9.png)
+
+Figura 5. Página Conectividade
+
+A página de conectividade (Figura 5) contém a versão de API do Graph que é usada e o nome do locatário. A ID do Cliente e o Segredo do Cliente representam a ID do Aplicativo e o valor de Chave do aplicativo WebAPI que deve ser criado no Azure AD.
+
+11. Faça as alterações necessárias na página Parâmetros Globais:
+
+![](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
+
+Figura 6. Página Parâmetros globais
+
+A página de parâmetros globais contém as seguintes configurações:
+
+- Formato de data/hora – formato que é usado para qualquer atributo com o tipo Edm.DateTimeOffset. Todas as datas são convertidas em uma cadeia de caracteres usando esse formato durante a importação. O formato de conjunto é aplicado a qualquer atributo, o que salva a data.
+
+ - Tempo limite de HTTP (segundos) – tempo limite em segundos que será usado durante cada chamada HTTP para o aplicativo WebAPI.
+
+ - Forçar a alteração de senha do usuário criado no próximo logon – essa opção é usada para o novo usuário que será criado durante a exportação. Se a opção estiver habilitada, a propriedade [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) será definida como true; caso contrário, será false.
+
+<a name="configuring-the-connector-schema-and-operations"></a>Configurando o esquema do conector e as operações
+=========================
+
+12.   Configure o esquema.  O conector dá suporte à seguinte lista de tipos de objeto:
 
 -   Usuário
 
@@ -97,73 +149,41 @@ Mais detalhes sobre as permissões necessárias podem ser encontrados [aqui](htt
 
 A lista de tipos de atributos que têm suporte:
 
--   Edm.Boolean
+-   `Edm.Boolean`
 
--   Edm.String
+-   `Edm.String`
 
--   Edm.DateTimeOffset (cadeia de caracteres no espaço do conector)
+-   `Edm.DateTimeOffset` (cadeia de caracteres no espaço do conector)
 
--   microsoft.graph.directoryObject (referência no espaço do conector para qualquer um dos objetos com suporte)
+-   `microsoft.graph.directoryObject` (referência no espaço do conector a qualquer um dos objetos com suporte)
 
--   microsoft.graph.contact
+-   `microsoft.graph.contact`
 
-Os atributos de múltiplos valores (Conjunto) também têm suporte para qualquer tipo de formulário da lista anterior.
+Os atributos de múltiplos valores (Coleção) também têm suporte para qualquer tipo de formulário da lista acima.
 
-O conector do Graph usa o atributo 'id' para âncora e DN para todos os objetos.
+O conector usa o atributo '`id`' para âncora e DN para todos os objetos.  Portanto, não é necessário renomear, pois a API do Graph não permite que um objeto altere o atributo 'id'.
 
-Não há suporte para renomeação no momento, pois a GraphAPI não permite a alteração de objeto para o atributo 'id' para o objeto existente.
 
 <a name="access-token-lifetime"></a>Tempo de vida do token de acesso
 =====================
 
-Um aplicativo do Graph requer um token de acesso para acessar a GraphAPI. Um conector solicitará um novo token de acesso para cada iteração de importação (a iteração de importação depende do tamanho da página). Por exemplo:
+Um aplicativo do Graph requer um token de acesso para acessar a API do Graph. Um conector solicitará um novo token de acesso para cada iteração de importação (a iteração de importação depende do tamanho da página). Por exemplo:
 
--   O AzureAD contém 10000 objetos
+-   O Azure AD contém 10.000 objetos
 
 -   O tamanho de página configurado no conector é 5000
 
-Nesse caso, haverá duas iterações durante a importação, e cada uma delas retornará 5 000 objetos para sincronização. Portanto, um novo token de acesso será solicitado duas vezes.
+Nesse caso, haverá duas iterações durante a importação, e cada uma delas retornará 5.000 objetos para sincronização. Portanto, um novo token de acesso será solicitado duas vezes.
 
-Observe que, durante a exportação, um novo token de acesso será solicitado para cada objeto que deve ser adicionado/atualizado/excluído.
-
-<a name="installing-the-connector"></a>Instalar o conector
-========================
-
-Antes de usar o conector, verifique se você tem o seguinte no servidor de sincronização: Microsoft .NET 4.5.2 Framework ou posterior; Microsoft Identity Manager 2016 SP1; deve ser usado o hotfix 4.4.1642.0 [KB4021562](https://www.microsoft.com/en-us/download/details.aspx?id=55794) ou posterior.
-
-Conectores para o Microsoft Identity Manager 2016 SP1, o Conector do Connector está disponível como um download do [Centro de Download da Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=51495).
-
-<a name="connector-configuration"></a>Configuração do conector
-=======================
-
-Página Conectividade:
-
-![](media/microsoft-identity-manager-2016-ma-graph/77c2eb73bab8d5187da06293938f5fd9.png)
-
-Figura 5. Página Conectividade
-
-A página de conectividade (Figura 1) contém a versão de API do Graph que é usada e o nome do locatário. A Id do Cliente e o Segredo do Cliente representam a ID do Aplicativo e o valor de Chave do aplicativo WebAPI que deve ser criado no Azure AD.
-
-Página Parâmetros globais:
-
-![](media/microsoft-identity-manager-2016-ma-graph/e22d4ee99f2bb825704dd83c1b26dac2.png)
-
-Figura 6. Página Parâmetros globais
-
-A página de parâmetros globais contém as seguintes configurações:
-
-Formato de data/hora – formato que é usado para qualquer atributo com o tipo Edm.DateTimeOffset. Todas as datas são convertidas em uma cadeia de caracteres usando esse formato durante a importação. O formato de conjunto é aplicado a qualquer atributo, o que salva a data.
-
-Tempo limite de HTTP (segundos) – tempo limite em segundos que será usado durante cada chamada HTTP para o aplicativo WebAPI.
-
-Forçar a alteração de senha do usuário criado no próximo logon – essa opção é usada para o novo usuário que será criado durante a exportação. Se a opção estiver habilitada, a propriedade [forceChangePasswordNextSignIn](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/passwordprofile) será definida como true; caso contrário, será false.
+Durante a exportação, um novo token de acesso será solicitado para cada objeto que deve ser adicionado/atualizado/excluído.
 
 <a name="troubleshooting"></a>Solução de problemas
 ===============
 
 **Habilitar logs**
 
-Se houver algum problema no Graph, os logs poderão ser usados para localizar o problema. O conector do Graph usa a mesma origem que todos os conectores genéricos. Assim, os rastreamentos podem ser habilitados da [mesma forma que para conectores Genéricos; confira o wiki](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Ou, simplesmente adicionando o seguinte a miiserver.exe.config (na seção system.diagnostics/sources):
+Se houver algum problema no Graph, os logs poderão ser usados para localizar o problema. Assim, os rastreamentos podem ser habilitados da [mesma forma que para conectores Genéricos](https://social.technet.microsoft.com/wiki/contents/articles/21086.fim-2010-r2-troubleshooting-how-to-enable-etw-tracing-for-connectors.aspx). Ou simplesmente adicionando o seguinte a `miiserver.exe.config` (dentro da seção `system.diagnostics/sources`):
+
 
 \<source name="ConnectorsLog" switchValue="Verbose"\>
 
@@ -177,7 +197,8 @@ Se houver algum problema no Graph, os logs poderão ser usados para localizar o 
 
 \</source\>
 
-Observação: se 'Executar este agente de gerenciamento em um processo separado' estiver habilitado, dllhost.exe.config deverá ser usado em vez de miiserver.exe.config.
+>[!NOTE]
+>Se 'Executar este agente de gerenciamento em um processo separado' estiver habilitado, `dllhost.exe.config` deverá ser usado em vez de `miiserver.exe.config`.
 
 **Erro de token de acesso expirado**
 
@@ -197,10 +218,10 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"Access
 
 <a name="next-steps"></a>Próximas etapas
 ----------
-- [Explorador do Graph (ótimo para solução de problemas de chamada HTTP)]( https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [Explorador do Graph, ótimo para solução de problemas de chamada HTTP]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Controle de versão, suporte e políticas de alteração de falha para o Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
-- [Baixar o agente de gerenciamento do Microsoft Identity Manager para o Microsoft Graph (visualização)](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Baixe o conector do Microsoft Identity Manager para o Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
 
-<a name="scenario-specific-supported-guides"></a>Guias com suporte de cenários específicos
+<a name="scenario-specific-guides"></a>Guias específicas do cenário
 ----------------------------------
 [Implantação de ponta a ponta de MIM B2B]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
