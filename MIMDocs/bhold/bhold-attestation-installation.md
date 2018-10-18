@@ -2,20 +2,19 @@
 title: Instalação do Atestado do BHOLD | Microsoft Docs
 description: O módulo Atestado do BHOLD permite designar revisores e realizar análises
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/07/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 6838355c05f7c19436d8a83839044ea5f4e2533d
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: e4c3a6248585d55fddbbca3153f33734d7c5c429
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290332"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358101"
 ---
 # <a name="bhold-attestation-installation"></a>Instalação do Atestado do BHOLD
 

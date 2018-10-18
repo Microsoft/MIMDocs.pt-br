@@ -2,22 +2,21 @@
 title: Conectores com suporte | Microsoft Docs
 description: Use conectores para gerenciar a transferência de dados entre o MIM e suas fontes de dados conectadas.
 keywords: ''
-author: fimguy
-ms.author: fimguy
-manager: bhu
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 1/24/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 7b685ffb6f2a52bd2782395e4c1f26501ffe3101
-ms.sourcegitcommit: c773edc8262b38df50d82dae0f026bb49500d0a4
+ms.openlocfilehash: 16dba460d9b5f9ce81076f8f883c352b1e8f4a81
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34479327"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358391"
 ---
 # <a name="connect-to-your-directories"></a>Conectar aos seus diretórios
 

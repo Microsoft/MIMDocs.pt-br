@@ -2,22 +2,21 @@
 title: Microsoft Identity Manager 2016 Service Pack 1 | Microsoft Docs
 description: Compreenda o funcionamento do MIM 2016 para criar uma experiência de gerenciamento de identidade mais segura e mais conveniente na nuvem e local.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 9b12f8bebf44847d76e94fe083266b1b32b608a9
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 1a5fa9c67803af59582f1383dec8264d64d5a2d4
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290281"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358476"
 ---
 # <a name="whats-new-for-microsoft-identity-manager-2016-service-pack-1"></a>Novidades no Microsoft Identity Manager 2016 Service Pack 1 #
 

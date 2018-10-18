@@ -7,17 +7,16 @@ ms.author: billmath
 manager: mtillman
 ms.date: 05/02/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ccdd8a9f-02da-440a-81a8-354800dcd2a8
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: bd483ecb0abc3e4bb4444c87715971a3fba9820b
-ms.sourcegitcommit: 5405ed10fea6f50b711eca1153446c04d4faff7a
+ms.openlocfilehash: abbd661fa1bef13ad92b916f8485934390905bf4
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927180"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358305"
 ---
 # <a name="microsoft-identity-manager-2016"></a>Microsoft Identity Manager 2016
 

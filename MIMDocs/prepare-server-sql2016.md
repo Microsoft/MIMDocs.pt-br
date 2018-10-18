@@ -3,21 +3,20 @@ title: Configurar o SQL Server para o Microsoft Identity Manager 2016 SP1 | Micr
 description: Instale o SQL Server 2016 durante a preparação para a instalação do MIM 2016.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 04/26/2018
 ms.topic: get-started-article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6fe251a3976167909aa55a687884585b1937ebf3
-ms.sourcegitcommit: 28834821cbddd6384613d8ba45424c35f4c39ce6
+ms.openlocfilehash: cc6b2680f2e5cd8d2063af01b2031ce3a4a7be0f
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45538550"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358254"
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2016"></a>Configure um servidor de gerenciamento de identidade: SQL Server 2016
 

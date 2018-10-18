@@ -2,20 +2,19 @@
 title: Idiomas com suporte no Microsoft Identity Manager 2016 SP1 | Microsoft Docs
 description: Uma lista de idiomas com suporte no Microsoft Identity Manager 2016 SP1.
 keywords: ''
-author: fimguy
-ms.author: davidste
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 05/23/2018
 ms.topic: get-started-article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: bb0287b894786d13398819b04bdb089f0f36b33e
-ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
+ms.openlocfilehash: 61d5f4ec20f5e29d1846a6822bec9669b364760f
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43694632"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358696"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 

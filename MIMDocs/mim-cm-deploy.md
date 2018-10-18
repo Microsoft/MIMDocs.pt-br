@@ -2,20 +2,19 @@
 title: Implantando o Microsoft Identity Manager Certificate Manager | Microsoft Docs
 description: Instalar o Microsoft Identity Manager 2016 Certificate Manager
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/19/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 25a511dc590b02019c65a688c9b2c8dc821fff50
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 01c5c8357c8cb0424bd38b61836919f5c2c3e96a
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36290077"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358866"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implantando o MIM CM (Microsoft Identity Manager Certificate Manager) 2016
 

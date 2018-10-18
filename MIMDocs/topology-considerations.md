@@ -3,21 +3,20 @@ title: Guia de topologia de implantação | Microsoft Docs
 description: Compreender os componentes do MIM 2016 e obter sugestões sobre como implantá-los em seu ambiente.
 keywords: ''
 author: billmath
-ms.author: barclayn
-manager: mbaldwin
+ms.author: billmath
+manager: mtillman
 ms.date: 10/12/2017
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 735dc357-dfba-4f68-a5b3-d66d6c018803
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f67068709cf9910fa04110fce75623fd2f94ca4a
-ms.sourcegitcommit: 35f2989dc007336422c58a6a94e304fa84d1bcb6
+ms.openlocfilehash: 42562e92b3fe0daa63110d33d8952a3a1fc3de17
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36289805"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358073"
 ---
 # <a name="topology-considerations"></a>Considerações de topologia
 Você pode implantar os componentes do MIM (Microsoft Identity Manager) no mesmo servidor ou entre vários servidores em várias configurações. A topologia que você seleciona para sua implantação afeta o desempenho que você pode obter do MIM. Este artigo apresenta várias topologias de implantação que você pode considerar.

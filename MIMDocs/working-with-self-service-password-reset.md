@@ -7,15 +7,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 08/30/2018
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: a7314aaf559836fb77b32ae191527917c4854417
-ms.sourcegitcommit: acb2c61831cb634278acc439d6d9496ff51a6a54
+ms.openlocfilehash: 3a86569a8de77f4cf4d5aeafe0cd01dab40232b3
+ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43694615"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358459"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Opções de implantação de Autoatendimento de Redefinição de Senha
 
