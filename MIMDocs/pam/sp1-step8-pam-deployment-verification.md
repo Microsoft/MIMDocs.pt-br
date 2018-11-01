@@ -2,22 +2,21 @@
 title: Etapa 8 Verificação de implantação do PAM
 description: A implantação do PAM com scripts inclui scripts de verificação que podem executar um cenário de PAM a fim de validar se a implantação do PAM está funcionando conforme o esperado.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 53ffcd4832ded5dce0878715cc716559c3883d6a
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: d6b0327b39a76799b2943565dd0c3e00f55f745f
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379949"
 ---
 # <a name="step-8-pam-deployment-verification"></a>Etapa 8 Verificação de implantação do Pam
 

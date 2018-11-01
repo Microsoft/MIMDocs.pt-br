@@ -2,22 +2,21 @@
 title: Visão geral do ambiente do PAM | Microsoft Docs
 description: Localize o número necessário e a configuração de máquinas virtuais para implantar o Privileged Access Management com êxito
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4e3a3fb2b23deced2202994463645521beef81e8
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 6f4b6e224b6b50bf2190688a994f35159d273713
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49332911"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379491"
 ---
 # <a name="environment-overview"></a>Visão geral do ambiente
 

@@ -2,22 +2,21 @@
 title: Adendo
 description: Esse é o adendo aos documentos que abordam a implantação de PAM com scripts. Ele explica como configurar os domínios PRIV e CORP, bem como configurar um cliente para que ele faça a validação, e fornece informações sobre como solicitar assistência.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: MBaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: fb478c7f5df50cc4f4a8f9fb9fff1b3a0b431a14
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: 814386272bba0c3fa2cb73bc93dc842ac46e86fb
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333914"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379457"
 ---
 # <a name="pam-deployment-scripts-addendum"></a>Adendo dos scripts de implantação do PAM:
 

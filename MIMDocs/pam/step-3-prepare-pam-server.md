@@ -2,23 +2,22 @@
 title: Etapa 3 para implantar o PAM – servidor PAM | Microsoft Docs
 description: Prepare um servidor PAM que hospedará o SQL e SharePoint para sua implantação do Privileged Access Management.
 keywords: ''
-author: barclayn
-ms.author: barclayn
-manager: mbaldwin
+author: billmath
+ms.author: billmath
+manager: mtillman
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: active-directory-domain-services
 ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 99c99d1808142ae60f90a44f43208a8a0a25e10f
-ms.sourcegitcommit: ace4d997c599215e46566386a1a3d335e991d821
+ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
+ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49333421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50379898"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Etapa 3 – Preparar um servidor PAM
 
