@@ -7,12 +7,12 @@ manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: d3c0b6677c42d4f14d4f6255a2a661d3ef23661d
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 63f2509d35355a8fe3a59b173756257298079a92
+ms.sourcegitcommit: 6374aa4f7d58b7218626d36d0fc2dc4b38cb8332
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358288"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237223"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversão de serviços específicos do MIM em gMSA
 
@@ -82,9 +82,9 @@ Primeira etapa em seu controlador de domínio do Windows
 
     -   No servidor em que o Serviço de Sincronização está instalado, localize a ferramenta de Gerenciamento de Chave de Serviço de Sincronização
 
-    -   Por padrão, **Exportar conjunto de chaves** já está selecionado
+    -   Por padrão, o item **Exportar conjunto de chaves**  já está selecionado
 
-    -   Clique em **Avançar**
+    -   Clique em  **Avançar**
 
     -   Agora você será solicitado a inserir as informações de conta de sincronização existente
 
@@ -94,15 +94,15 @@ Primeira etapa em seu controlador de domínio do Windows
 
         -   Senha - senha da conta de serviço de sincronização
 
-        -   Domínio - domínio do qual a conta de serviço de sincronização faz parte
+        -   Domínio – domínio do qual a conta de serviço de sincronização faz parte
 
-    -   Clique em **Avançar**
+    -   Clique em  **Avançar**
 
     -   Se tiver digitado algo incorretamente, você receberá o erro a seguir
 
     -   Agora que você inseriu as informações de conta com êxito, verá uma opção para alterar o destino (local do arquivo de exportação) da chave de criptografia de backup
 
-        -   Por padrão, o local do arquivo de exportação é **C:\\Windows\\system32**\\miiskeys-1.bin.
+        -   Por padrão, o local do arquivo de exportação é  **C:\\Windows\\system32**\\miiskeys-1.bin.
 
 4. Instalação do Serviço de Sincronização do Microsoft Identity Manager SP1 build 4.4.1302.0. Você pode ser encontrado no Site de Download do MSDN ou no Centro de Download de Licença por Volume. Depois que você concluir a instalação, salve o conjunto de chaves miiskeys.bin.
 
@@ -152,7 +152,7 @@ Primeira etapa em seu controlador de domínio do Windows
 
 ![](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
-3.  **OBSERVAÇÃO**.  Problema conhecido em que os serviços que usam a conta gerenciada travam depois de reiniciar o servidor porque o Serviço de Distribuição de Chaves da Microsoft não foi iniciado depois de reiniciar o Windows. Não foi possível iniciar o serviço, e o Windows também não pôde ser reiniciado. O problema é reproduzível pelo menos no Windows Server 2012 R2. A solução alternativa para esse problema é executar o comando 
+3.  **OBSERVAÇÃO**.  Problema conhecido em que os serviços que usam a conta gerenciada travam depois de reiniciar o servidor porque o Serviço de Distribuição de Chaves da Microsoft não foi iniciado depois de reiniciar o Windows. Não foi possível iniciar o serviço, e o Windows também não pôde ser reiniciado. O problema é reproduzível pelo menos no Windows Server 2012 R2. A solução alternativa para esse problema é executar o comando 
 
 -   **sc triggerinfo kdssvc start/networkon**
 
