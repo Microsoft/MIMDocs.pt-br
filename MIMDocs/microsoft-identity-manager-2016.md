@@ -9,18 +9,18 @@ ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.technology: security
-ms.openlocfilehash: b25819d864f773578ba8aa52217c7b27536b7327
-ms.sourcegitcommit: f73a83f424d7e32b0119e870bc0020c061e966f7
+ms.openlocfilehash: 67064d930935f0091c14c64bf271dd0e1ded6bb4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265258"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718226"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Atualizações e notícias do Microsoft Identity Manager 2016
 
 O MIM (Microsoft Identity Manager) 2016 foi desenvolvido com base nos recursos de gerenciamento de identidades e acessos do Forefront Identity Manager. Como seu antecessor, o MIM ajuda você a gerenciar usuários, credenciais, políticas e acessos na sua organização.  Além disso, o MIM 2016 adiciona uma experiência híbrida, recursos de gerenciamento com acesso privilegiado e suporte para novas plataformas.
 
-A versão atual com suporte base é o MIM 2016 Service Pack 1 (SP1).  Essa versão de agosto de 2017 incluiu atualizações do Portal MIM, o cenário de PAM e adicionou suporte para novas plataformas.  Os clientes que estejam executando versões FIM ou MIM anteriores à MIM 2016 SP1 devem atualizar para MIM 2016 SP1 ou um hotfix posterior.  Leia mais sobre a [Atualização para MIM 2016 SP1](microsoft-identity-manager-2016-sp1-release-notes.md).
+A versão atual com suporte base é o MIM 2016 Service Pack 1 (SP1).  Essa versão de agosto de 2017 incluiu atualizações do Portal MIM, o cenário de PAM e adicionou suporte para novas plataformas.  Os clientes que estejam executando versões FIM ou MIM anteriores à MIM 2016 SP1 devem atualizar para MIM 2016 SP1 ou um hotfix posterior.  Leia mais sobre a [Atualização para MIM 2016 SP1](./reference/version-history.md).
 
 ## <a name="updates-since-mim-2016-sp1"></a>Atualizações desde o MIM 2016 SP1
 

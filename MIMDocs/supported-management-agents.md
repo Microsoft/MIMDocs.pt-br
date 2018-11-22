@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 16dba460d9b5f9ce81076f8f883c352b1e8f4a81
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 4c39b5e3ba651464989bd0bc1f600629c7e89a0f
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358391"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718252"
 ---
 # <a name="connect-to-your-directories"></a>Conectar aos seus diretórios
 
@@ -44,7 +44,7 @@ Este artigo aborda os conectores que estão incluídos e têm suporte no MIM, ma
 | [Conector do Windows PowerShell para o FIM 2010 R2](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 ou superior |
 | [Microsoft Azure Active Directory Connector para FIM 2010 R2](https://msdn.microsoft.com/library/dn511001.aspx) | Active Directory do Microsoft Azure |
 | [Conector LDAP genérico para FIM 2010 R2](https://msdn.microsoft.com/library/dn510997.aspx) | [Servidor do LDAP v3 (em conformidade com RFC 4510)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
-| [Conector SQL genérico para FIM 2010 R2 / MIM](https://msdn.microsoft.com/library/dn510997.aspx) | [O conector é compatível com todos os drivers ODBC de 64 bits](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql) |
+| [Conector SQL genérico para FIM 2010 R2 / MIM](./reference/microsoft-identity-manager-2016-connector-genericsql.md) | [O conector é compatível com todos os drivers ODBC de 64 bits](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md) |
 | [Conector para Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
 | [Conector de Serviços do SharePoint UPA](https://msdn.microsoft.com/library/dn511003.aspx) | O SharePoint server 2013 ou 2016 com o UPA (Aplicativo de Serviço de Perfil do Usuário) |
 | [Conector de Serviços Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 ou 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
