@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 0501dbeb279dc37655d1d9a5e99545b07eea0623
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 077a0330e3a9169583331854525d19cee2d9eaf4
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358668"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718318"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Plataformas com suporte para o MIM 2016
 
@@ -47,7 +47,7 @@ Esta tabela descreve as plataformas com suporte, e a versão de cada componente 
 | **Portais de Registro e Redefinição de Senha do MIM** | Windows Server | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Navegador da Web | Todos os principais navegadores com suporte |
 | **Suplementos e extensões do MIM** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Integração com o Outlook (opcional) | Outlook 2010<br/>Outlook 2013 <br/> Outlook 2016 (no Windows 10) * |
+| | Integração com o Outlook (opcional) | Outlook 2010 (no Windows, exceto Clique para Executar)<br/>Outlook 2013 (no Windows, exceto Clique para Executar) <br/> Outlook 2016 (no Windows 10, exceto Clique para Executar) * |
 | | Cmdlets do solicitante do PowerShell no PAM (opcional) | Windows 8.1<br/>Windows 10 |
 | **Gerenciamento de certificados do MIM** (Integração de servidor e a AC (Autoridade de Certificação)) | Windows server | Windows Server 2008 R2 SP1<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |
 | | Autoridade de certificação | Windows Server 2008 R2 SP1<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 * |

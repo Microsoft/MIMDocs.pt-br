@@ -11,14 +11,14 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 49e549913a5fd87528df2205b8d5b0a83f3d2b24
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: a0fa1e837fd73872043748ee73f19a29d1d1412f
+ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358237"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51718326"
 ---
-# <a name="set-up-an-identity-management-servers-windows-server-2016"></a>Configurar servidores de gerenciamento de identidade: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Configurar um serviço de gerenciamento de identidade: Windows Server 2016
 
 > [!div class="step-by-step"]
 > [« Como preparar um domínio](preparing-domain.md)
@@ -39,9 +39,9 @@ Comece com um computador com Windows Server 2016, com no mínimo de 8 a 12 GB de
 
 1. Faça logon no novo computador como administrador.
 
-2. Usando o painel de controle, dê ao computador um endereço IP estático em uma rede. Configure esse adaptador de rede para enviar consultas DNS para o endereço IP do controlador de domínio na etapa anterior e defina o nome do computador para **CORPSERVICE**.  Isso exigirá reinicializar o servidor.
+2. Usando o painel de controle, dê ao computador um endereço IP estático em uma rede. Configure esse adaptador de rede para enviar consultas DNS para o endereço IP do controlador de domínio na etapa anterior e defina o nome do computador para **CORPSERVICE**.  Esta operação exigirá uma reinicialização do servidor.
 
-3. Abra o painel de controle e ingresse o computador no domínio que você configurou na última etapa, *contoso.com*.  Isso inclui fornecer o nome de usuário e s credenciais de um administrador de domínio, tal como *Contoso\Administrador*.  Depois que a mensagem de boas-vindas for exibida, feche a caixa de diálogo e reinicie o servidor novamente.
+3. Abra o painel de controle e ingresse o computador no domínio que você configurou na última etapa, *contoso.com*.  Esta operação inclui o fornecimento do nome de usuário e das credenciais de um administrador de domínio, tal como *Contoso\Administrador*.  Depois que a mensagem de boas-vindas for exibida, feche a caixa de diálogo e reinicie o servidor novamente.
 
 4. Entre no computador *CORPSERVICE* como uma conta de domínio com administrador do computador local, por exemplo *Contoso\MIMINSTALL*.
 
@@ -69,13 +69,13 @@ Comece com um computador com Windows Server 2016, com no mínimo de 8 a 12 GB de
 
 Configure a política de segurança do servidor para permitir que as contas criadas recentemente sejam executadas como serviço.
 > [!NOTE] 
-> Dependendo da configuração de server único (tudo em um só) ou servidor distribuído, você só precisará adicionar com base na função da máquina membro, como servidor de sincronização. 
+> Dependendo da sua configuração, o servidor único (tudo em um) ou servidores distribuídos que você só precisará adicionar, com base na função da máquina membro, como servidor de sincronização. 
 
 1. Inicie o programa de Política de Segurança Local
 
 2. Navegue até **Políticas Locais > Atribuição de Direitos do Usuário**.
 
-3. No painel de detalhes, clique com o botão direito do mouse em **Fazer logon como um serviço**e selecione **Propriedades**.
+3. No painel de detalhes, clique com o botão direito do mouse em **Fazer logon como um serviço** e selecione **Propriedades**.
 
     ![Imagem de política de segurança local](media/MIM-DeployWS3.png)
 
@@ -85,7 +85,7 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 6.  No painel de detalhes, clique com o botão direito do mouse em **Negar acesso a este computador pela rede** e selecione **Propriedades**.>
 
-[!NOTE] Se houver servidores de função separados, esta etapa interromperá funcionalidades, como o recurso de SSPR.
+[!NOTE] A separação de servidores de função interromperá algumas funcionalidades, como a SSPR.
 
 7. Clique em **Adicionar Usuário ou Grupo** e na caixa de texto digite `contoso\MIMSync; contoso\MIMService` e clique em **OK**.
 
