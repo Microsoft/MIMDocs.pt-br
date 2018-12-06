@@ -7,12 +7,12 @@ manager: mtillman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 63f2509d35355a8fe3a59b173756257298079a92
-ms.sourcegitcommit: 6374aa4f7d58b7218626d36d0fc2dc4b38cb8332
+ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825766"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversão de serviços específicos do MIM em gMSA
 
@@ -84,7 +84,7 @@ Primeira etapa em seu controlador de domínio do Windows
 
     -   Por padrão, o item **Exportar conjunto de chaves**  já está selecionado
 
-    -   Clique em  **Avançar**
+    -   Clique em **Avançar**
 
     -   Agora você será solicitado a inserir as informações de conta de sincronização existente
 
@@ -96,7 +96,7 @@ Primeira etapa em seu controlador de domínio do Windows
 
         -   Domínio – domínio do qual a conta de serviço de sincronização faz parte
 
-    -   Clique em  **Avançar**
+    -   Clique em **Avançar**
 
     -   Se tiver digitado algo incorretamente, você receberá o erro a seguir
 
