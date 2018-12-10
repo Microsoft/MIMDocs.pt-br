@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 535c80fa2ff1b6250ae9a3f340cb514e58f390a9
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
+ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358611"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52825800"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalação do MIM 2016: Serviço e Portal do MIM
 
@@ -68,11 +68,11 @@ Se você não configurou o pacote de instalação do MIM na última etapa, volte
 
 12. Especifique *CORPIDM* (nome deste computador) como o endereço do Servidor do Serviço do MIM para o Portal do MIM.
 
-13. Especifique *http://mim.contoso.com* como a URL do conjunto de sites do SharePoint.
+13. Especifique `*http://mim.contoso.com*` como a URL do conjunto de sites do SharePoint.
 
-14. Especifique *http://passwordregistration.contoso.com* como a porta 80 da URL de Registro de Senha, recomendamos atualizar posteriormente com o certificado SSL em 443.
+14. Especifique `*http://passwordregistration.contoso.com*` como a porta 80 da URL de Registro de Senha. Recomendamos que você atualize mais tarde com o certificado SSL em 443.
 
-15. Especifique *http://passwordreset.contoso.com* como a porta 80 da URL de Redefinição de Senha, recomendamos atualizar posteriormente com o certificado SSL em 443.
+15. Especifique `*http://passwordreset.contoso.com*` como a porta 80 da URL de Redefinição de Senha. Recomendamos que você atualize mais tarde com o certificado SSL em 443.
 
 16. Marque a caixa de seleção para abrir as portas 5725 e 5726 no firewall e a caixa de seleção para conceder acesso ao Portal do MIM a todos os usuários autenticados.
 
