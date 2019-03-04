@@ -1,5 +1,5 @@
 ---
-title: Microsoft Identity Manager 2016 | Microsoft Docs
+title: Provisionamento de usuário do Microsoft Identity Manager 2016 no AD | Microsoft Docs
 description: Avalie o processo de criação de usuários no AD DS usando o Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 88473df88271937b07450df409353c0b3ca08684
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 5e259df617c5a95fcd54f49c9cbb70f9cd0c36a4
+ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358781"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852656"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Como Provisionar Usuários no AD DS
 
@@ -121,14 +121,14 @@ O cenário descrito neste guia é composto pelos blocos de construção mostrado
 
 Nesta seção, encontram-se instruções sobre os recursos que você precisa criar que estão fora do ambiente do MIM.
 
-### <a name="step-1-create-the-ou"></a>Etapa 1: Criar a OU
+### <a name="step-1-create-the-ou"></a>Etapa 1: Criar a UO
 
 
 A OU serve como um contêiner para o usuário de exemplo provisionado. Para obter mais informações sobre a criação de OUs, consulte [Criar uma Nova Unidade Organizacional](http://go.microsoft.com/FWLink/p/?LinkId=189655).
 
 Crie uma OU chamada MIMObjects no AD DS.
 
-### <a name="step-2-create-the-active-directory-user-accounts"></a>Etapa 2: Criar as contas de usuário do Active Directory
+### <a name="step-2-create-the-active-directory-user-accounts"></a>Etapa 2: Criar as contas de usuário do Active Directory Domain Services
 
 Para o cenário deste guia, duas contas de usuário do Active Directory são necessárias:
 
@@ -170,7 +170,7 @@ A tabela a seguir lista as configurações específicas do cenário mais importa
 | Página de designer do agente de gerenciamento                          | Configuração                                                  |
 |---------------------------------------------------------|----------------------------------------------------------------|
 | Criar um agente de gerenciamento                                 | 1. **Agente de gerenciamento para:** AD DS  <br/> 2.  **Nome:** ADMA da Fabrikam |
-| Conectar à floresta do Active Directory                      | 1. **Selecionar as partições de diretório:** “DC=Fabrikam,DC=com”   <br/>   2. Clique em **Contêineres** para abrir a caixa de diálogo **Selecionar Contêineres** e verifique se **MIMObjects** é a única OU selecionada.        |
+| Conectar à floresta do Active Directory                      | 1. **Selecione as partições de diretório:** “DC=Fabrikam,DC=com”   <br/>   2. Clique em **Contêineres** para abrir a caixa de diálogo **Selecionar Contêineres** e verifique se **MIMObjects** é a única OU selecionada.        |
 | Selecionar tipos de objeto                                     | Além dos tipos de objeto já selecionados, selecione **usuário.** |
 | Selecionar atributos                                       | 1. Clique em **Mostrar Tudo.** <br/>   2. Selecione os seguintes atributos: <br/> &nbsp;&nbsp;&nbsp;&#176; **displayName** <br/> &nbsp;&nbsp;&nbsp;&#176; **givenName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **sn** <br/> &nbsp;&nbsp;&nbsp;&#176;  **SamAccountName** <br/> &nbsp;&nbsp;&nbsp;&#176;  **unicodePwd** <br/> &nbsp;&nbsp;&nbsp;&#176;  **userAccountControl**     
 
@@ -193,7 +193,7 @@ A tabela a seguir lista as configurações específicas do cenário mais importa
 
 | Página de designer do agente de gerenciamento | Configuração |
 |------------|------------------------------------|
-| Criar um agente de gerenciamento | 1. **Agente de gerenciamento para:** Agente de Gerenciamento do Serviço FIM <br/> 2. **Nome** FIMMA da Fabrikam |
+| Criar um agente de gerenciamento | 1. **Agente de gerenciamento para:** agente de gerenciamento de serviço do FIM <br/> 2. **Nome** FIMMA da Fabrikam |
 | Conectar ao banco de dados     | Use as seguintes configurações: <br/> &#183; **Servidor:** localhost <br/> &#183; **Banco de dados:** FIMService <br/> &#183; **Endereço base do Serviço FIM:** http://localhost:5725 <br/> <br/> Forneça as informações sobre a conta criada para esse agente de gerenciamento |
 | Selecionar tipos de objeto                                     | Além dos tipos de objeto já selecionados, selecione **Pessoa.**   |
 | Configurar mapeamentos de tipo de objeto                          | Além dos mapeamentos de tipo de objeto já existentes, adicione um mapeamento do **Tipo de Objeto da Fonte de Dados** Pessoa à pessoa de Tipo de Objeto **Metaverso**. |
@@ -524,7 +524,7 @@ Os atributos de nome, domínio e objectSID da conta serão necessários se sua i
 
 [Como Gerenciar Minha Conta FIM MA](http://go.microsoft.com/FWLink/p/?LinkId=189672)
 
-[Detectando Contas Não Autoritativas – Parte 1: Previsão](http://go.microsoft.com/FWLink/p/?LinkId=189673)
+[Como detectar Contas Não Autoritativas – Parte 1: Previsão](http://go.microsoft.com/FWLink/p/?LinkId=189673)
 
 [A Versão Pobre do Mecanismo de Detecção de Conector](http://go.microsoft.com/FWLink/p/?LinkId=189674)
 

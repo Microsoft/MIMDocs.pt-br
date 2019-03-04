@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 07998c20fcdc325cd33d8f9ee3d06c9c8572b654
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 36b5e97675d5900bf3b5348ad4857827c426e60e
+ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358662"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56952155"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Atualização do Forefront Identity Manager 2010 R2
 
@@ -41,7 +41,7 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 2.  Em cada servidor em que os componentes do FIM 2010 R2 estejam instalados – por exemplo, *CORPIDM*, faça logon como Contoso\Administrador. Neste exemplo de implantação, os direitos administrativos são necessários para atualizar o FIM 2010 R2 para **MIM**.
 
-3.  Baixe ou desempacote o software MIM.
+3.  Baixe ou desempacote o software MIM.  Caso não tenha este software, acesse [Downloads e licenciamento do Microsoft Identity Manager](microsoft-identity-manager-licensing.md).
 
 ## <a name="upgrade-the-synchronization-service"></a>Atualize o Serviço de Sincronização
 
@@ -197,6 +197,6 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 4. Observe que o **Forefront Identity Manager Service** reiniciou.
 
-Observação: Se os complementos e extensões do FIM estão implantadas no momento nos computadores dos usuários para SSPR, não configure a nova porta de telefone MFA para redefinição de senha até que todos os complementos e extensões do FIM tenham sido atualizados para o MIM 2016.  Como os complementos e extensões do FIM 2010 e FIM 2010 R2 não reconhecem as novas portas, eles fornecerão um erro e o usuário não poderá concluir a redefinição de senha.
+Observação: se os complementos e extensões do FIM estão implantados no momento nos computadores dos usuários para SSPR, não configure a nova porta de telefone MFA para redefinição de senha até que todos os complementos e extensões do FIM tenham sido atualizados para o MIM 2016.  Como os complementos e extensões do FIM 2010 e FIM 2010 R2 não reconhecem as novas portas, eles fornecerão um erro e o usuário não poderá concluir a redefinição de senha.
 
 Para obter orientação sobre atualização do Microsoft Identity Manager 2016 SP1, consulte o seguinte [pacote de atualização do Microsoft Identity Manager 2016 Service Pack 1](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)

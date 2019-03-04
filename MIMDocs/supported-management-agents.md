@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 4c39b5e3ba651464989bd0bc1f600629c7e89a0f
-ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
+ms.openlocfilehash: 023232b9ddb3cb0a299cbc14ab4c311b8c63fc47
+ms.sourcegitcommit: fa30a8eb9c3a7f1ed6f8ce0f67362ca32751e00d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51718252"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56667192"
 ---
 # <a name="connect-to-your-directories"></a>Conectar aos seus diretórios
 
@@ -30,29 +30,30 @@ Este artigo aborda os conectores que estão incluídos e têm suporte no MIM, ma
 
 | Nome | Versões com suporte da fonte de dados conectada e links técnicos |
 | ---- | ----------------------------------------------- |
-| Active Directory Domain Services | Active Directory 2012, 2016 |
+| Active Directory Domain Services | Active Directory Domain Services no Windows Server 2012 e no Windows Server 2016 |
 | ADLDS (Active Directory Lightweight Directory Services) | ADLDS (Active Directory Lightweight Directory Services) |
-| GAL (Lista de Endereços Global) do Active Directory | GAL (Lista de endereços Global) do Active Directory – Exchange 2013, 2016 |
+| GAL (Lista de Endereços Global) do Active Directory | GAL (Lista de Endereços Global) do Active Directory Domain Services – Exchange 2013, Exchange 2016 |
 | Extensible Connectivity 2.0 | Qualquer fonte de dados baseada em chamada ou arquivo |
-| Serviço FIM | O Agente de Gerenciamento de Serviço do FIM (Serviço de Sincronização) deve ser a mesma versão do "Forefront Identity Manager Service" instalado |
+| Serviço FIM | Serviço MIM. Observe que o Serviço de Sincronização de MIM e o Serviço de MIM devem ser da mesma versão. |
 | Banco de dados Universal do IBM DB2 | IBM DB2 versão 9.5 ou 9.7; IBM DB2 OLEDB v9.5 FP5 ou v9.7 FP1 |
 | Servidor de diretório IBM | IBM Tivoli Directory Server 6. x |
 | Novell eDirectory | Novell eDirectory versão 8.7.3, 8.8.5 e 8.8.6 |
 | Banco de dados Oracle | Banco de dados do Oracle 10g ou 11g; cliente de 64 bits |
 | Microsoft SQL Server | SQL Server 2012, 2014, 2016 |
 | Servidores de diretório Oracle (anteriormente Sun e Netscape) | Sun Directory Server 6. x, 7. x e Oracle 11 |
-| [Conector do Windows PowerShell para o FIM 2010 R2](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 ou superior |
-| [Microsoft Azure Active Directory Connector para FIM 2010 R2](https://msdn.microsoft.com/library/dn511001.aspx) | Active Directory do Microsoft Azure |
-| [Conector LDAP genérico para FIM 2010 R2](https://msdn.microsoft.com/library/dn510997.aspx) | [Servidor do LDAP v3 (em conformidade com RFC 4510)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
-| [Conector SQL genérico para FIM 2010 R2 / MIM](./reference/microsoft-identity-manager-2016-connector-genericsql.md) | [O conector é compatível com todos os drivers ODBC de 64 bits](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md) |
+| [Conector do Windows PowerShell](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 ou superior |
+| [Conector do Microsoft Azure Active Directory](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (não recomendado para novas implantações) |
+| [Conector LDAP genérico](https://msdn.microsoft.com/library/dn510997.aspx) | [Servidor do LDAP v3 (em conformidade com RFC 4510)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericldap) |
+| [Conector do SQL Genérico](./reference/microsoft-identity-manager-2016-connector-genericsql.md) | [O conector é compatível com todos os drivers ODBC de 64 bits](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-connector-genericsql.md) |
 | [Conector para Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes Release v8.5.x |
 | [Conector de Serviços do SharePoint UPA](https://msdn.microsoft.com/library/dn511003.aspx) | O SharePoint server 2013 ou 2016 com o UPA (Aplicativo de Serviço de Perfil do Usuário) |
-| [Conector de Serviços Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 ou 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
+| [Conector de Serviços Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 ou 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 e outras APIs REST e SOAP](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |
 | [Arquivo de texto do Par Atributo-Valor](https://technet.microsoft.com/library/cc708644(v=ws.10).aspx) | Arquivos de texto do par atributo-valor |
 | [Arquivo de texto delimitado](https://technet.microsoft.com/library/cc720612(v=ws.10).aspx) | Arquivos de texto delimitado |
 | [DSML (Linguagem de Marcação de Serviços de Diretório)](https://technet.microsoft.com/library/cc720660(v=ws.10).aspx) | DSML (Linguagem de Marcação de Serviços de Diretório) 2.0 |
 | [Arquivo de texto de largura fixa](https://technet.microsoft.com/library/cc720633(v=ws.10).aspx) | Arquivos de texto de largura fixa |
 | [LDIF (Formato de Troca de Dados LDAP)](https://technet.microsoft.com/library/cc708662(v=ws.10).aspx) | LDIF (Formato de Troca de Dados LDAP) |
+| [Conector do Microsoft Graph](microsoft-identity-manager-2016-connector-graph.md) | Microsoft Graph |
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
