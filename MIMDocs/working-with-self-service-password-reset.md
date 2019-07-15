@@ -5,27 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 08/30/2018
+ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 3a86569a8de77f4cf4d5aeafe0cd01dab40232b3
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 90452391170114270765e9a7fe08e98eea0747e4
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358459"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690690"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Opções de implantação de Autoatendimento de Redefinição de Senha
 
-Para novos clientes que estão [licenciados para o Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), é recomendável usar o [Autoatendimento de Redefinição de Senha do Azure AD](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-howitworks.md) para fornecer a experiência do usuário final.  O Autoatendimento de Redefinição de Senha do Azure AD fornece uma experiência baseada na Web e integrada ao Windows para que um usuário redefina sua própria senha e dá suporte a muitas das mesmas funcionalidades que o MIM, incluindo email alternativo e portões de Perguntas e Respostas.  Ao implantar o Autoatendimento de Redefinição de Senha do Azure AD, o Azure AD Connect dá suporte à [realização de write-back das novas senhas no AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md), e o [Serviço de Notificação de Alteração de Senha](deploying-mim-password-change-notification-service-on-domain-controller.md) do MIM também pode ser usado para encaminhar as senhas para outros sistemas, tais como um servidor de diretório de outro fornecedor.  A implantação do MIM para [gerenciamento de senhas](infrastructure/mim2016-password-management.md) não exige que o Serviço MIM ou os portais de registro ou de autoatendimento de redefinição de senha estejam implantados.  Em vez disso, você pode seguir estas etapas:
+Para novos clientes que estão [licenciados para o Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-licensing), é recomendável usar o [Autoatendimento de Redefinição de Senha do Azure AD](/azure/active-directory/authentication/concept-sspr-howitworks) para fornecer a experiência do usuário final.  O Autoatendimento de Redefinição de Senha do Azure AD fornece uma experiência baseada na Web e integrada ao Windows para que um usuário redefina sua própria senha e dá suporte a muitas das mesmas funcionalidades que o MIM, incluindo email alternativo e portões de Perguntas e Respostas.  Ao implantar o Autoatendimento de Redefinição de Senha do Azure AD, o Azure AD Connect dá suporte à [realização de write-back das novas senhas no AD DS](/azure/active-directory/authentication/concept-sspr-writeback), e o [Serviço de Notificação de Alteração de Senha](deploying-mim-password-change-notification-service-on-domain-controller.md) do MIM também pode ser usado para encaminhar as senhas para outros sistemas, tais como um servidor de diretório de outro fornecedor.  A implantação do MIM para [gerenciamento de senhas](infrastructure/mim2016-password-management.md) não exige que o Serviço MIM ou os portais de registro ou de autoatendimento de redefinição de senha estejam implantados.  Em vez disso, você pode seguir estas etapas:
 
 - Primeiro, se você precisar enviar senhas de diretórios que não sejam do Azure AD e do AD DS, implantar a Sincronização do MIM com conectores para o Active Directory Domain Services e quaisquer sistemas de destino adicionais, configurar o MIM para [gerenciamento de senhas](infrastructure/mim2016-password-management.md) e implantar o [Serviço de Notificação de Alteração de Senha](deploying-mim-password-change-notification-service-on-domain-controller.md).
-- Em seguida, se você precisar enviar senhas em diretórios diferentes do Azure AD, configure o Azure AD Connect para [efetuar write-back das novas senhas para o AD DS](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback.md).
-- Opcionalmente, [faça o pré-registro de usuários](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md).
-- Por fim, [distribua o Autoatendimento de Redefinição de Senha do Azure AD para seus usuários finais](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-deployment.md).
+- Em seguida, se você precisar enviar senhas em diretórios diferentes do Azure AD, configure o Azure AD Connect para [efetuar write-back das novas senhas para o AD DS](/azure/active-directory/authentication/concept-sspr-writeback).
+- Opcionalmente, [faça o pré-registro de usuários](/azure/active-directory/authentication/howto-sspr-authenticationdata).
+- Por fim, [distribua o Autoatendimento de Redefinição de Senha do Azure AD para seus usuários finais](/azure/active-directory/authentication/howto-sspr-deployment).
 
-Para clientes existentes que implantaram o FIM (Forefront Identity Manager) para o Autoatendimento de Redefinição de Senha e são licenciados para o Azure Active Directory Premium, é recomendável planejar a transição para o Autoatendimento de Redefinição de Senha do Azure AD.  Você pode fazer a transição dos usuários finais para o Autoatendimento de Redefinição de Senha do Azure AD sem necessidade de registrá-los novamente, [sincronizando um número de telefone celular ou endereço de email alternativo do usuário ou configurando-o por meio do PowerShell](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-authenticationdata.md). Após os usuários se registrarem para o Autoatendimento de Redefinição de Senha do Azure AD, o portal de redefinição de senha do FIM pode ser desativado.
+Para clientes existentes que implantaram o FIM (Forefront Identity Manager) para o Autoatendimento de Redefinição de Senha e são licenciados para o Azure Active Directory Premium, é recomendável planejar a transição para o Autoatendimento de Redefinição de Senha do Azure AD.  Você pode fazer a transição dos usuários finais para o Autoatendimento de Redefinição de Senha do Azure AD sem necessidade de registrá-los novamente, [sincronizando um número de telefone celular ou endereço de email alternativo do usuário ou configurando-o por meio do PowerShell](/azure/active-directory/authentication/howto-sspr-authenticationdata). Após os usuários se registrarem para o Autoatendimento de Redefinição de Senha do Azure AD, o portal de redefinição de senha do FIM pode ser desativado.
 
 Para clientes que ainda não implantaram o Autoatendimento de Redefinição de Senha do Azure AD para seus usuários, o MIM também fornece portais de Autoatendimento de Redefinição de Senha.  Quando comparado ao FIM, o MIM 2016 inclui as seguintes alterações:
 
@@ -79,7 +79,7 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 ### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Como registrar o provedor de autenticação multifator no Azure
 
-1.  Crie um [provedor do MFA](https://docs.microsoft.com/en-us/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider.md).
+1.  Crie um [provedor do MFA](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
 
 2. Abra um caso de suporte e solicite o SDK direto para o ASP.net 2.0 C#. O SDK só será fornecido aos usuários atuais do MIM com o MFA, pois o SDK direto foi descontinuado. Novos clientes devem adotar a próxima versão do MIM que será integrada ao servidor MFA.
 
@@ -125,6 +125,8 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 4.  Selecione **Porta do Telefone** ou **Portão de SMS de Senha de Uso Único**, clique em **Selecionar** e, em seguida, em **OK**.
 
+Observação: se você estiver usando o Servidor de MFA do Azure ou outro provedor que gere a senha de uso único, verifique se o campo de comprimento acima tem o mesmo comprimento gerado pelo provedor de MFA.  Para o Servidor de MFA do Azure, o comprimento precisa ser de 6.  O Servidor de MFA do Azure também gera mensagens de texto para que a mensagem SMS seja ignorada.
+
 Agora, os usuários em sua organização podem se registrar para redefinição de senha.  Durante este processo, eles deverão inserir o número de telefone de trabalho e de celular para que o sistema possa ligar para eles (ou enviar mensagens SMS).
 
 #### <a name="register-users-for-password-reset"></a>Registrar usuários para redefinição de senha
@@ -148,7 +150,7 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 
 #### <a name="windows-desktop-login-integrated-password-reset"></a>Redefinição de senha integrada do logon na área de trabalho do Windows
 
-1.  Se o usuário inserir a senha incorreta várias vezes, na tela de entrada, haverá a opção de clicar em **Problemas ao efetuar logon?**. .
+1.  Se o usuário inserir a senha incorreta várias vezes, na tela de entrada, haverá a opção de clicar em **Problemas ao efetuar logon?** . .
 
     ![Imagem de tela de entrada](media/MIM-SSPR-problemsloggingin.JPG)
 

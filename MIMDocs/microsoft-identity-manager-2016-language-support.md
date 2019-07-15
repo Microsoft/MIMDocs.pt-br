@@ -9,12 +9,12 @@ ms.date: 05/23/2018
 ms.topic: get-started-article
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 61d5f4ec20f5e29d1846a6822bec9669b364760f
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 2d843dcd5285d02a67955e763769a16f1a535abb
+ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358696"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690725"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 
@@ -30,7 +30,7 @@ O Pacote de Idiomas do Serviço e Portal do Microsoft MIM oferece suporte para o
 > [!IMPORTANT]
 > O texto no suplemento SSPR e no portal será localizado, mas as perguntas não serão feitas sem trabalho adicional. Você precisará criar fluxos de trabalho de AuthN (e conjuntos e MPRs acompanhantes para direcioná-los) para direcionar perguntas em cada idioma para o local de destino.
 
-|       Language        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
+|       Linguagem        | FIM(4.3.x.x)/MIM(4.4.xx) | MIM(4.5.x.x) |
 |-----------------------|--------------------------|--------------|
 |       Búlgaro       |          bg-BG           |      bg      |
 | Chinês (simplificado)  |          zh-CN           |   zh-hans    |
@@ -69,7 +69,7 @@ O Pacote de Idiomas do Serviço e Portal do Microsoft MIM oferece suporte para o
 ## <a name="certificate-management"></a>Gerenciamento de certificado 
 O Gerenciamento de Certificados da Microsoft oferece suporte aos 9 idiomas a seguir. 
 
-|Language|FIM(4.3.x.x)/MIM(4.4.xx)|New MIM(4.5.x.x)
+|Linguagem|FIM(4.3.x.x)/MIM(4.4.xx)|New MIM(4.5.x.x)
 |-----|-----|-----|-----|
 |Chinês (simplificado)|zh-CN|zh-hans|
 |Chinês (Taiwan)|zh-TW|zh-hant|
@@ -84,7 +84,7 @@ O Gerenciamento de Certificados da Microsoft oferece suporte aos 9 idiomas a seg
 ## <a name="certificate-management-modern-application"></a>Aplicativo Moderno de Gerenciamento de Certificados  
 O Aplicativo Moderno de Gerenciamento de Certificados da Microsoft oferece suporte aos 33 idiomas a seguir. 
 
-|Language | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
+|Linguagem | [1.0.225.104](https://www.microsoft.com/en-us/download/details.aspx?id=54954) | |
 |-----|-----|-----|-----|
 |Holandês|nl-NL|nl|
 |Chinês (simplificado)|zh-CN|zh-hans|
@@ -112,4 +112,4 @@ O Aplicativo Moderno de Gerenciamento de Certificados da Microsoft oferece supor
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Implantação inicial](microsoft-identity-manager-deploy.md)
-- [Histórico de Versão](/reference/version-history.md)
+- [Histórico de Versão](reference/version-history.md)
