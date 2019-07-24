@@ -9,12 +9,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: d5edf4c16f32c401db32abb9bab1fa7e9e23e4a5
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
+ms.sourcegitcommit: 4c4bc7aa42cd5984c838abdd302490355ddcb4ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358494"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238895"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Guia de instalação do Microsoft BHOLD Suite SP1 (6.0)
 
@@ -38,7 +38,7 @@ Este documento explica como planejar sua implantação do BHOLD para atender às
 
 ## <a name="pre-requisite-knowledge"></a>Conhecimento de pré-requisito
 
-Este documento pressupõe que você tenha um entendimento básico de como instalar o software em computadores servidores. Ele também pressupõe que você tenha um conhecimento básico de software de banco de dados Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM) e Microsoft SQL Server 2008. Uma descrição de como instalar e configurar tecnologias dependentes como o AD DS e o FIM está fora do escopo desta documentação. Para obter informações sobre as funções desempenhadas pelos módulos do Microsoft BHOLD, consulte [o guia de conceitos do Microsoft BHOLD Suite](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
+Este documento pressupõe que você tenha um entendimento básico de como instalar o software em computadores servidores. Ele também pressupõe que você tenha um conhecimento básico de software de banco de dados Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM) e Microsoft SQL Server 2012. Uma descrição de como instalar e configurar tecnologias dependentes como o AD DS e o FIM está fora do escopo desta documentação. Para obter informações sobre as funções desempenhadas pelos módulos do Microsoft BHOLD, consulte [o guia de conceitos do Microsoft BHOLD Suite](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## <a name="audience"></a>Público-alvo
 
@@ -87,7 +87,6 @@ Se você está implantando o BHOLD em uma grande organização, é altamente rec
 - Isole o arquivo de log do arquivo de dados no nível do disco físico.
 - Se você estiver usando RAID para fornecer redundância de armazenamento, use o nível de RAID 10 (1+0). Não use o RAID nível 5.
 - Certifique-se de definir as configurações corretas ao usar mais de 2 GB de memória física para o servidor que executa o SQL Server.
-- Para um desempenho ideal do BHOLD, use o Microsoft SQL Server 2008 R2 ou superior.
 
 Para obter mais informações sobre as práticas recomendadas do SQL Server, consulte [As 10 Melhores Práticas Recomendadas de Armazenamento](https://www.microsoft.com/technet/prodtechnol/sql/bestpractice/storage-top-10.mspx) na Biblioteca do Microsoft TechNet.
 
