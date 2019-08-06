@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 5beee58388c12abbe8e3245ff610d3528b03786a
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.openlocfilehash: 46080360dd0ad6c3554e2d9b3418ac518b75a5cd
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690762"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701392"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configurar um servidor de gerenciamento de identidade: SharePoint
 

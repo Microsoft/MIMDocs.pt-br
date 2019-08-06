@@ -8,13 +8,12 @@ manager: mtillman
 ms.date: 11/05/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.technology: security
-ms.openlocfilehash: 60d40a622475351efee846d8510373ecdc565a24
-ms.sourcegitcommit: 486f860f0951413aed335138eb6ad4ce6c50ed4d
+ms.openlocfilehash: e1419f7b7ae49ec56f4294051d8e094846ac2ed0
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852622"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701447"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Atualizações e notícias do Microsoft Identity Manager 2016
 

@@ -6,15 +6,15 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/23/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 2d843dcd5285d02a67955e763769a16f1a535abb
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.openlocfilehash: 5704e978734bea13f1a362aeb203810f3864205a
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690725"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701464"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 

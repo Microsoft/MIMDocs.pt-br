@@ -6,19 +6,19 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: a0fa1e837fd73872043748ee73f19a29d1d1412f
-ms.sourcegitcommit: 3b514aba69af203f176b40cdb7c2a51c477c944a
+ms.openlocfilehash: 7348507593426ba112feef9d68686ee493a6391d
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51718326"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701402"
 ---
-# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Configurar um serviço de gerenciamento de identidade: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Configurar um servidor de gerenciamento de identidade: Windows Server 2016
 
 > [!div class="step-by-step"]
 > [« Como preparar um domínio](preparing-domain.md)

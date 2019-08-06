@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/26/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 297df3b3-192e-4ed9-82ed-c95eb5297c84
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2dc7c1ffecbd4f52ab031512f501922f458324a3
-ms.sourcegitcommit: 4ae62943aea3aab622195896956c5c88ecd9e97c
+ms.openlocfilehash: d32638bda8fd757233af0c697ea3d1ac9eb47eb9
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53815895"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701366"
 ---
 # <a name="set-up-an-identity-management-server-sql-server-2016"></a>Configurar um servidor de gerenciamento de identidade: SQL Server 2016
 

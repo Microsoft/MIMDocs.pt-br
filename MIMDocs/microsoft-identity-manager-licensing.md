@@ -3,21 +3,20 @@ title: Downloads e licenciamento do Microsoft Identity Manager | Microsoft Docs
 description: Este artigo descreve as abordagens de licenciamento do Microsoft Identity Manager (MIM) 2016, com ponteiros sobre onde baixar o software.
 keywords: ''
 author: markwahl-msft
-ms.author: markwahl-msft
+ms.author: mwahl
 manager: femila
 ms.date: 02/25/2019
 ms.topic: article
-ms.service: microsoft-identity-manager
-ms.technology: security
+ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: 7c5ab987801c63dca2457025442a35560dca3b86
-ms.sourcegitcommit: 225fca802d6b59bdc98d50020b297eb6393f70eb
+ms.openlocfilehash: f8c2ec9c0fbdf797acca4a699fec6d358b63f5c8
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "64518745"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701436"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Downloads e licenciamento do Microsoft Identity Manager 2016
 
