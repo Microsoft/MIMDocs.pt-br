@@ -6,14 +6,15 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 09/14/2017
+ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 32bd77140cf70047eaa02d363a1348e73783f87a
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 3749b74fd867601ee05f8e45d273ad2de9144b5b
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358832"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701417"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Guia de conceitos do Microsoft BHOLD Suite
 

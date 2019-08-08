@@ -6,12 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 10/29/2018
 ms.topic: article
-ms.openlocfilehash: e5d8bcc640ad77b71a515b13bcb3bcf6985654f5
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.prod: microsoft-identity-manager
+ms.openlocfilehash: 90ef2ab63be3914d1d48c7319821177e7e62f9e0
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380078"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701308"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Registro de log dinâmico do serviço do SP1 MIM (4.4.1436.0)
 
@@ -30,7 +31,7 @@ Os níveis de registro de log dinâmico podem ser encontrados [aqui](https://msd
 - Crítico = o serviço de nível padrão gravará somente os eventos críticos
 - Atualizar a linha 8 (dynamicLogging mode="true" loggingLevel="Critical") com o valor de registro de log preferencial
 
-Configuração de registro de log dinâmico localizado na linha 266: Microsoft.ResourceManagement.Service.exe.config
+Configuração de log dinâmico localizado na linha 266: Microsoft.ResourceManagement.Service.exe.config
 
 ![As seções destacadas mostram linhas com as diversas áreas de registro de log disponíveis](media/mim-service-dynamic-logging/screen02.png)
 
@@ -48,9 +49,9 @@ Para exibir o rastreamento, você pode usar a [ferramenta Visualizador de rastre
 
  ![Captura de tela do visualizador de rastreamento de serviço](media/mim-service-dynamic-logging/screen04.png)
 
-# <a name="updates-build-45xx-or-greater"></a>Atualizações: Build 4.5.x.x ou posterior
+# <a name="updates-build-45xx-or-greater"></a>Atualizações: build 4.5.x.x ou posterior
 
-No build 4.5.x.x, revisamos o recurso de registro em log para especificar o nível de log padrão como **"Aviso"**. O serviço grava mensagens em dois arquivos (os índices "00" e "01" são adicionados antes da extensão). Os arquivos estão localizados no diretório "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Quando o arquivo excede o tamanho máximo, o serviço inicia a gravação em outro arquivo. Se outro arquivo existir, ele será substituído. O tamanho máximo de arquivo padrão é de 1 GB. Para alterar o tamanho máximo padrão, é necessário adicionar o parâmetro **"maxOutputFileSizeKB"** com valor de tamanho máximo em KB no ouvinte (confira o exemplo a seguir) e reinicie o Serviço do MIM. Quando o serviço é iniciado, ele acrescenta os logs ao arquivo mais recente (se o limite de espaço for excedido, ele substituirá o arquivo mais antigo). 
+No build 4.5.x.x, revisamos o recurso de registro em log para especificar o nível de log padrão como **"Aviso"** . O serviço grava mensagens em dois arquivos (os índices "00" e "01" são adicionados antes da extensão). Os arquivos estão localizados no diretório "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Quando o arquivo excede o tamanho máximo, o serviço inicia a gravação em outro arquivo. Se outro arquivo existir, ele será substituído. O tamanho máximo de arquivo padrão é de 1 GB. Para alterar o tamanho máximo padrão, é necessário adicionar o parâmetro **"maxOutputFileSizeKB"** com valor de tamanho máximo em KB no ouvinte (confira o exemplo a seguir) e reinicie o Serviço do MIM. Quando o serviço é iniciado, ele acrescenta os logs ao arquivo mais recente (se o limite de espaço for excedido, ele substituirá o arquivo mais antigo). 
 
 > [!NOTE] 
 > Como o tamanho do arquivo de verificação de serviço antes da mensagem é gravado, o tamanho do arquivo pode ser maior do que o tamanho máximo do tamanho de uma mensagem. Por padrão, o tamanho dos logs pode ser de aproximadamente 6 GB (três > ouvintes com dois arquivos para o tamanho de um GB).

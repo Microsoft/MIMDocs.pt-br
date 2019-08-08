@@ -6,19 +6,19 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 10/12/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 75935513ccb4ec3ebc089f9c5aad1d1624789a13
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: 69698721b0fbabc78cf5bb4c1032ab8fc2613772
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358815"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701193"
 ---
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalação do MIM 2016: Sincronização do Active Directory e do Serviço do MIM
+# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalação do MIM 2016: Sincronizar o Serviço do MIM e do Active Directory
 
 > [!div class="step-by-step"]
 > [« Serviço e Portal do MIM](install-mim-service-portal.md)
@@ -47,7 +47,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
 
 3.  Na página **Criar Agente de Gerenciamento**, forneça as seguintes configurações e clique em **Avançar**.
 
-    -   Agente de gerenciamento para: Agente de gerenciamento de serviço do FIM
+    -   Agente de gerenciamento para: agente de gerenciamento de serviço do FIM
 
     -   Nome: MIMMA
 
@@ -168,7 +168,7 @@ O agente de gerenciamento do Active Directory é um conector para serviços de d
 
 2. Na página **Criar Agente de Gerenciamento**, forneça as seguintes configurações e clique em **Avançar**:
 
-    - Agente de gerenciamento para: Serviços de Domínio do Active Directory
+    - Agente de gerenciamento para: Active Directory Domain Services
     - Nome: ADMA
 
 3. Na página **Conectar à Floresta do Active Directory**, forneça as seguintes configurações e clique em **Avançar**:
@@ -305,8 +305,8 @@ Para criar a regra de sincronização de entrada do usuário do AD:
 
 4. Na guia **Geral**, especifique as seguintes informações e, em seguida, clique em **Avançar**:
 
-    -   Nome de exibição: Regra de sincronização de entrada de usuário do AD
-    -   Direção do fluxo de dados: Entrada
+    -   Nome de exibição: regra de sincronização de entrada de usuário do AD
+    -   Direção do Fluxo de Dados: Entrada
 
 5. Na guia **Escopo**, forneça as seguintes informações e, em seguida, clique em **Avançar**:
 

@@ -6,16 +6,16 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 12/02/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: f75eb69360852c9f629b60d4900638c8b51e068a
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: 6f861c5b1984de70a91edcac89276402f289e355
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825783"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701489"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Manipulação de dados do Microsoft Identity Manager 
 
@@ -180,4 +180,4 @@ ou edite o registro e defina o valor como 0: (Component)CEIP HKLM\SOFTWARE\Micro
 ## <a name="next-steps"></a>Próximas etapas 
 - [Para Diretrizes de privacidade relacionadas ao SQL](https://docs.microsoft.com/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements?view=sql-server-2017)
 - [Seção RGPD do Portal de Confiança do Serviço](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted)
-- [Arquivamento do FIM 2010: Aumento – Implementação do Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)
+- [Arquivamento do FIM 2010: aumento – Implementação do Forefront Identity Manager 2010](https://social.technet.microsoft.com/wiki/contents/articles/35789.fim-2010-archive-ramp-up-implementing-forefront-identity-manager-2010.aspx)

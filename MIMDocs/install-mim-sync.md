@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 05/01/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: cec04cf430ba38ec40b61e4aad68fd8447d13c99
-ms.sourcegitcommit: 4f0b2883922bcb8fbef6b4284c35c6ca62c11565
+ms.openlocfilehash: fba7eb3caea1f00c37f00f3fd2bf67dfe3f12871
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56952172"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701266"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalação do MIM 2016: Serviço de Sincronização do MIM
 
