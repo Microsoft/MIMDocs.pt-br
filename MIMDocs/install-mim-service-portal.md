@@ -6,17 +6,17 @@ author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 04/30/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fc70a0edb610fcb862d85902dd5e611e65f6e689
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.openlocfilehash: ca2a9a4a646387b044e3a504c19eae904b2a6be1
+ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825800"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701277"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalação do MIM 2016: Serviço e Portal do MIM
 
@@ -68,11 +68,11 @@ Se você não configurou o pacote de instalação do MIM na última etapa, volte
 
 12. Especifique *CORPIDM* (nome deste computador) como o endereço do Servidor do Serviço do MIM para o Portal do MIM.
 
-13. Especifique `*http://mim.contoso.com*` como a URL do conjunto de sites do SharePoint.
+13. Especifique `* http://mim.contoso.com*` como a URL do conjunto de sites do SharePoint.
 
-14. Especifique `*http://passwordregistration.contoso.com*` como a porta 80 da URL de Registro de Senha. Recomendamos que você atualize mais tarde com o certificado SSL em 443.
+14. Especifique `* http://passwordregistration.contoso.com*` como a porta 80 da URL de Registro de Senha. Recomendamos que você atualize mais tarde com o certificado SSL em 443.
 
-15. Especifique `*http://passwordreset.contoso.com*` como a porta 80 da URL de Redefinição de Senha. Recomendamos que você atualize mais tarde com o certificado SSL em 443.
+15. Especifique `* http://passwordreset.contoso.com*` como a porta 80 da URL de Redefinição de Senha. Recomendamos que você atualize mais tarde com o certificado SSL em 443.
 
 16. Marque a caixa de seleção para abrir as portas 5725 e 5726 no firewall e a caixa de seleção para conceder acesso ao Portal do MIM a todos os usuários autenticados.
 
@@ -106,7 +106,7 @@ Quando todas as definições de pré-instalação estiverem prontas, clique em *
 
 Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
-1. Inicie o Internet Explorer e conecte-se ao Portal do MIM em *http://mim.contoso.com/identitymanagement*. Observe que pode haver um pequeno atraso na primeira visita a esta página.
+1. Inicie o Internet Explorer e conecte-se ao Portal do MIM em *http://mim.contoso.com/identitymanagement* . Observe que pode haver um pequeno atraso na primeira visita a esta página.
 
     - Se for necessário, autentique-se como *contoso\miminstall* no Internet Explorer.
 
@@ -116,7 +116,7 @@ Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
     1.  Usando o Internet Explorer, no **Portal do MIM**, clique em **Regras de da Política de Gerenciamento**.
 
-    2.  Pesquise a regra de política de gerenciamento **Gerenciamento de usuários: os usuários podem ler seus próprios atributos**.
+    2.  Procure a regra da política de gerenciamento, **Gerenciamento de usuário: os usuários podem ler atributos próprios**.
 
     3.  Selecione essa regra de política de gerenciamento, desmarque **Política está desabilitada**.
 
