@@ -5,18 +5,18 @@ keywords: ''
 author: markwahl-msft
 ms.author: mwahl
 manager: femila
-ms.date: 02/25/2019
+ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: f8c2ec9c0fbdf797acca4a699fec6d358b63f5c8
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: e0bfd868345b8e7dcc6a02e745d3ccbf632a6c58
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701436"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329293"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Downloads e licenciamento do Microsoft Identity Manager 2016
 
@@ -24,17 +24,17 @@ Este artigo descreve as abordagens de licenciamento do Microsoft Identity Manage
 
 ## <a name="licensing-mim-for-your-organization"></a>Licenciamento do MIM para sua organização
 
-O Microsoft Identity Manager 2016 é licenciado por usuário.  Os detalhes sobre o licenciamento estão incluídos nos termos do produto e documentos relacionados, que podem ser baixados na página dos [termos de licenciamento](https://www.microsoft.com/en-us/licensing/product-licensing/products.aspx).
+O Microsoft Identity Manager 2016 é licenciado por usuário.  Os detalhes sobre o licenciamento estão incluídos nos termos do produto e documentos relacionados, que podem ser baixados na página dos [termos de licenciamento](https://www.microsoft.com/licensing/product-licensing/products.aspx).
 
 ### <a name="licensing-for-azure-ad-premium-customers"></a>Licenciamento para os clientes do Azure AD Premium
 
 O Microsoft Identity Manager 2016 é incluído com o Azure Active Directory Premium (P1 e P2), que faz parte do Enterprise Mobility + Security.
 
-O Azure AD Premium fica disponível por meio de um [Microsoft Enterprise Agreement](https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx), do [Programa de Licença de Volume Aberto](https://www.microsoft.com/en-us/licensing/licensing-programs/open-license.aspx)e do programa [Provedores de Soluções na Nuvem](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409). Os assinantes do Azure e do Office 365 também podem comprar o Active Directory Premium P1 e P2 online.  Leia mais em [preços do Azure Active Directory](https://azure.microsoft.com/en-us/pricing/details/active-directory/).
+O Azure AD Premium fica disponível por meio de um [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), do [Programa de Licença de Volume Aberto](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)e do programa [Provedores de Soluções na Nuvem](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409). Os assinantes do Azure e do Office 365 também podem comprar o Active Directory Premium P1 e P2 online.  Leia mais em [preços do Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>CALs do MIM
 
-Se você não tiver assinaturas do Azure Active Directory Premium para os seus usuários e estiver usando mais recursos do MIM além da sincronização, então será necessária ter uma [CAL (Licença de Acesso de Cliente)](https://www.microsoft.com/en-us/licensing/product-licensing/client-access-license.aspx) para cada usuário cuja identidade seja gerenciada pelo MIM. Se você quiser que os usuários externos — como clientes, prestadores de serviços externos ou parceiros de negócios — possam acessar o MIM, você pode adquirir CALs para cada um dos seus usuários externos ou adquirir ECs (Licenças de Conector Externo). As CALs do Microsoft Identity Manager 2016 não são necessárias para usuários cuja identidade esteja apenas no serviço de sincronização do Microsoft Identity Manager e não seja gerenciada por qualquer outro componente do MIM.
+Se você não tiver assinaturas do Azure Active Directory Premium para os seus usuários e estiver usando mais recursos do MIM além da sincronização, então será necessária ter uma [CAL (Licença de Acesso de Cliente)](https://www.microsoft.com/licensing/product-licensing/client-access-license.aspx) para cada usuário cuja identidade seja gerenciada pelo MIM. Se você quiser que os usuários externos — como clientes, prestadores de serviços externos ou parceiros de negócios — possam acessar o MIM, você pode adquirir CALs para cada um dos seus usuários externos ou adquirir ECs (Licenças de Conector Externo). As CALs do Microsoft Identity Manager 2016 não são necessárias para usuários cuja identidade esteja apenas no serviço de sincronização do Microsoft Identity Manager e não seja gerenciada por qualquer outro componente do MIM.
 
 ### <a name="licenses-for-platform-components"></a>Licenças de componentes da plataforma
 
@@ -70,9 +70,9 @@ Para uma nova instalação, a maioria das organizações baixa os pacotes de ins
 
 O arquivo ISO do DVD contém uma pasta para cada componente do MIM: Serviço de sincronização, Serviço e Portal, etc. Se você pretende instalar o software em um computador diferente do qual baixou, certifique-se de copiar o arquivo ISO ou a pasta inteiros para o componente: não copie simplesmente só o arquivo MSI de uma pasta sem o restante dos arquivos e subpastas.
 
-Se você não tiver acesso ao Centro de Serviços de Licenciamento por Volume, os clientes com uma assinatura de desenvolvedor apropriada também podem baixar o MIM 2016 SP1 como um arquivo ISO em [Downloads dos Meus Benefícios do Visual Studio](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%201&pgroup=).  Procurar o "Microsoft Identity Manager 2016 com Service Pack 1".  
+Se você não tiver acesso ao Centro de Serviços de Licenciamento por Volume, os clientes com uma assinatura de desenvolvedor apropriada também podem baixar o MIM 2016 SP2 como um arquivo ISO em [Downloads dos Meus Benefícios do Visual Studio](https://my.visualstudio.com/Downloads?q=Microsoft%20Identity%20Manager%202016%20with%20Service%20Pack%202&pgroup=).  Procure "Microsoft Identity Manager 2016 com Service Pack 2".  
 
-Se você não tiver acesso ao Centro de Serviços de Licenciamento por Volume e simplesmente quiser experimentar o software MIM por um período limitado, é possível baixar uma [versão de avaliação do MIM 2016](https://www.microsoft.com/en-us/download/details.aspx?id=48244). Este software não se destina para uso em produção e deixa de funcionar 180 dias após a primeira instalação, não podendo ser atualizado. A versão de avaliação requer o Windows Server 2008 R2, o Windows Server 2012 ou o Windows Server 2012 R2 para instalação.  Se o MIM for novidade e você estiver aprendendo essa tecnologia, lembre-se de que todos os cenários do MIM exigem um domínio do Active Directory, um Windows Server e o SQL Server. Se você não tiver o Windows Server ou SQL Server já instalados, poderá tentar o [provisionamento de uma VM com o SQL Server 2016 e o Windows Server 2016](https://azure.microsoft.com/en-us/blog/azure-images-sql-server-2016-on-windows-server-2016/).
+Se você não tiver acesso ao Centro de Serviços de Licenciamento por Volume e simplesmente quiser experimentar o software MIM por um período limitado, é possível baixar uma [versão de avaliação do MIM 2016](https://www.microsoft.com/en-us/download/details.aspx?id=48244). Este software não se destina para uso em produção e deixa de funcionar 180 dias após a primeira instalação, não podendo ser atualizado. A versão de avaliação requer o Windows Server 2008 R2, o Windows Server 2012 ou o Windows Server 2012 R2 para instalação.  Se o MIM for novidade e você estiver aprendendo essa tecnologia, lembre-se de que todos os cenários do MIM exigem um domínio do Active Directory, um Windows Server e o SQL Server. Se você não tiver o Windows Server ou SQL Server já instalados, poderá tentar o [provisionamento de uma VM com o SQL Server 2016 e o Windows Server 2016](https://azure.microsoft.com/blog/azure-images-sql-server-2016-on-windows-server-2016/).
 
 ### <a name="obtaining-updates"></a>Obtenção de atualizações
 
@@ -84,18 +84,18 @@ Para determinar quais arquivos de atualização são necessários, esta tabela l
 
 | Cenário | Componente | Nome da pasta ISO do DVD | Nome do arquivo de patch de atualização correspondente |
 |----------|-----------|-   |-------------------|----------|--------------|
-|Sincronização| Serviço de sincronização | `Synchronization Service` | `FIMSyncService_x64*.msp` |
-| Autoatendimento | Serviço e Portal do MIM | `Service and Portal` | `FIMService_x64*msp` |
-| Autoatendimento | Suplementos e extensões | `Add-ins and extensions` | `FIMAddinsExtensions*msp` |
+|Sincronização| Serviço de sincronização | `Synchronization Service` | `MIMSyncService_x64*.msp` |
+| Autoatendimento | Serviço e Portal do MIM | `Service and Portal` | `MIMService_x64*msp` |
+| Autoatendimento | Suplementos e extensões | `Add-ins and extensions` | `MIMAddinsExtensions*msp` |
 | Autoatendimento | Pacotes de idiomas | `LANGUAGE Packs` | `LANGUAGE Packs.zip` |
 | Gerenciamento de acesso (BHOLD) | BHOLD | `BHOLD` | `AccessManagementConnector.msi`, `BHOLD*.msi` |
-| Gerenciamento de certificado | CM |  `Certificate Management` | `FIMCM*.msp` |
-| Gerenciamento de certificado | Cliente em massa do CM |  `CM Bulk Client` |`FIMCMBulkClient*msp` |
-| Gerenciamento de certificado | Cliente CM | Cliente CM |`FIMCMClient*msp` |
+| Gerenciamento de certificado | CM |  `Certificate Management` | `MIMCM*.msp` |
+| Gerenciamento de certificado | Cliente em massa do CM |  `CM Bulk Client` |`MIMCMBulkClient*msp` |
+| Gerenciamento de certificado | Cliente CM | `CM Client` |`MIMCMClient*msp` |
 
 Leia todas as notas de versão associado com a atualização antes de instalar o arquivo MSP.
 
-As atualizações de [BHOLD](https://www.microsoft.com/en-us/download/details.aspx?id=55950) não são distribuídas como arquivos MSP, apenas como instaladores do MSI.
+As atualizações de [BHOLD](https://www.microsoft.com/download/details.aspx?id=55950) não são distribuídas como arquivos MSP, apenas como instaladores do MSI.
 
 ### <a name="additional-downloads"></a>Downloads adicionais
 
@@ -105,7 +105,7 @@ Os downloads a seguir também podem ser relevantes:
 
 - [Conector LDAP genérico, conector de SQL genérico, conector do Graph, conector do Lotus Domino, conector do PowerShell, conector de serviços Web](http://go.microsoft.com/fwlink/?LinkId=717495)
 
-- [Conector do Repositório de Perfis de Usuários do SharePoint](https://www.microsoft.com/en-us/download/details.aspx?id=41164)
+- [Conector do Repositório de Perfis de Usuários do SharePoint](https://www.microsoft.com/download/details.aspx?id=41164)
 
 - Se você ainda não tiver um domínio do Active Directory e estiver configurando um cenário de PAM para experimentação, consulte os [scripts de implantação do PAM no MIM 2016 SP1](sp1-deployment-scripts.md).
 

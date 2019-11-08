@@ -11,19 +11,23 @@ ms.prod: microsoft-identity-manager
 ms.assetid: c01487f2-3de6-4fc4-8c3a-7d62f7c2496c
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 46080360dd0ad6c3554e2d9b3418ac518b75a5cd
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 62ef8796717dbcaea18d21bc3d28248efdeef92e
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701392"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568100"
 ---
 # <a name="set-up-an-identity-management-server-sharepoint"></a>Configurar um servidor de gerenciamento de identidade: SharePoint
 
 > [!div class="step-by-step"]
-> [« SQL Server 2016](prepare-server-sql2016.md)
+> [« SQL Server](prepare-server-sql2016.md)
 > [Exchange Server »](prepare-server-exchange.md)
 > 
+
+> [!NOTE]
+> O procedimento de instalação do SharePoint Server 2019 não difere daquele da versão 2016, **exceto** por uma etapa adicional que deve ser executada para desbloquear os arquivos ASHX usados pelo portal do MIM.
+
 > [!NOTE]
 > Este passo a passo usa nomes e valores de exemplo de uma empresa chamada Contoso. Substitua-os pelos seus próprios valores. Por exemplo:
 > - Nome do controlador de domínio - **corpdc**
@@ -46,10 +50,9 @@ Siga estas etapas para instalar o SharePoint 2016. Após concluir a instalação
     -   Altere para o diretório em que o SharePoint foi desempacotado.
 
     -   Digite o seguinte comando.
-
-        ```
-        .\prerequisiteinstaller.exe
-        ```
+    ```
+    .\prerequisiteinstaller.exe
+    ```
 
 2.  Após a instalação dos pré-requisitos do **SharePoint**, instale o **SharePoint 2016** digitando o seguinte comando:
 
@@ -86,7 +89,7 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
 
 1. Inicie o **Shell de Gerenciamento do SharePoint 2016** e execute o script do PowerShell a seguir para criar um **Aplicativo Web do SharePoint 2016**.
 
-    ```
+    ```PowerShell
     New-SPManagedAccount ##Will prompt for new account enter contoso\mimpool 
     $dbManagedAccount = Get-SPManagedAccount -Identity contoso\mimpool
     New-SpWebApplication -Name "MIM Portal" -ApplicationPool "MIMAppPool" -ApplicationPoolAccount $dbManagedAccount -AuthenticationMethod "Kerberos" -Port 80 -URL http://mim.contoso.com
@@ -96,21 +99,33 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
     > Uma mensagem de aviso será exibida informando que o método de autenticação Clássico do Windows está sendo usado e pode ser que demore para que o comando final seja retornado. Quando concluído, a saída indicará a URL do novo portal. Mantenha a janela **Shell de Gerenciamento do SharePoint 2016** aberta para referência posterior.
 
 2. Inicie o Shell de Gerenciamento do SharePoint 2016 e execute o script a seguir do PowerShell para criar um **Conjunto de Sites do SharePoint** associado ao aplicativo Web.
-
-   ```
+    ```PowerShell
     $t = Get-SPWebTemplate -compatibilityLevel 15 -Identity "STS#1"
     $w = Get-SPWebApplication http://mim.contoso.com/
     New-SPSite -Url $w.Url -Template $t -OwnerAlias contoso\miminstall -CompatibilityLevel 15 -Name "MIM Portal"
     $s = SpSite($w.Url)
     $s.CompatibilityLevel
-   ```
+    ```
+    > [!NOTE]
+    > Verifique se o resultado da variável *CompatibilityLevel* é "15". Se o resultado for diferente de "15", o conjunto de sites não terá sido criado para a versão correta; exclua o conjunto de sites e recrie-o.
 
+    > [!IMPORTANT]
+    > O SharePoint Server 2019 usa uma propriedade de aplicativo Web diferente para manter uma lista de extensões de arquivos bloqueados. Portanto, para desbloquear os arquivos .ASHX usados pelo portal do MIM, três comandos extras devem ser executados manualmente no Shell de gerenciamento do SharePoint.
+    <br/>
+    **Execute os três próximos comandos somente para o SharePoint 2019:**
+
+    ```PowerShell
+    $w.BlockedASPNetExtensions.Remove("ashx")
+    $w.Update()
+    $w.BlockedASPNetExtensions
+    ```
    > [!NOTE]
-   > Verifique se o resultado da variável *CompatibilityLevel* é "15". Se o resultado for diferente de "15", o conjunto de sites não terá sido criado para a versão correta; exclua o conjunto de sites e recrie-o.
+   > Verifique se a lista *BlockedASPNetExtensions* não contém mais a extensão ASHX, caso contrário, várias páginas do portal do MIM não serão renderizadas corretamente.
+
 
 3. Desabilite o **estado de exibição do lado do servidor do SharePoint** e a tarefa do SharePoint "Trabalho de Análise de Integridade (Por Hora, Timer do Microsoft SharePoint Foundation, Todos os Servidores)", executando os seguintes comandos do PowerShell no **Shell de Gerenciamento do SharePoint 2016**:
 
-   ```
+   ```PowerShell
    $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
    $contentService.ViewStateOnServer = $false;
    $contentService.Update();
@@ -130,5 +145,5 @@ Siga as etapas alinhadas no **Assistente de Configuração de Produtos do ShareP
 7. Abra o programa **Ferramentas Administrativas**, navegue até **Serviços**, localize o serviço de Administração do SharePoint e inicie-o, se ainda não estiver sendo executado.
 
 > [!div class="step-by-step"]  
-> [« SQL Server 2016](prepare-server-sql2016.md)
+> [« SQL Server](prepare-server-sql2016.md)
 > [Exchange Server »](prepare-server-exchange.md)

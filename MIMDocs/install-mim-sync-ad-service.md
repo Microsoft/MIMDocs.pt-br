@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 69698721b0fbabc78cf5bb4c1032ab8fc2613772
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: 1627bae6aecdfc3d57261485de04a78feb264013
+ms.sourcegitcommit: b09a8c93983d9d92ca4871054650b994e9996ecf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701193"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73329320"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalação do MIM 2016: Sincronizar o Serviço do MIM e do Active Directory
 
@@ -37,7 +37,7 @@ O MIM MA (Agente de gerenciamento) é um conector para a sincronização do MIM 
 Quando você configura um MIM MA, precisa especificar uma conta de usuário. Este documento usa **MIMMA** como nome para essa conta.
 
 > [!NOTE]
-> A conta usada para o MIM MA deve ser a mesma especificada durante a instalação do serviço do MIM.
+> A conta usada para o MIM MA deve ser a mesma especificada durante a instalação do serviço do MIM. Se você pretende habilitar o recurso "Usar conta de MIMSync", o Serviço de Sincronização do MIM deve ser instalado usando a Conta de Serviço Gerenciado de Grupo.
 
 ### <a name="to-create-the-mim-ma"></a>Para criar o MIM MA
 
@@ -52,7 +52,6 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
     -   Nome: MIMMA
 
 4.  Na página **Conectar ao Banco de Dados**, forneça as seguintes configurações e clique em **Avançar**
-
     -   Servidor: localhost
 
     -   Banco de dados: FIMService

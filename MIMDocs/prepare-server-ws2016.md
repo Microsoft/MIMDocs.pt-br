@@ -1,29 +1,34 @@
 ---
-title: Configurar o Windows Server 2016 para o MIM 2016 SP1 | Microsoft Docs
-description: Conheça as etapas e requisitos mínimos para preparar o Windows Server 2016 para funcionar com o MIM 2016 SP1.
+title: Configurar o Windows Server 2016 ou 2019 para o MIM 2016 SP2 | Microsoft Docs
+description: Conheça as etapas e os requisitos mínimos para preparar o Windows Server 2016 ou 2019 para funcionar com o MIM 2016 SP2.
 keywords: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 04/26/2018
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7348507593426ba112feef9d68686ee493a6391d
-ms.sourcegitcommit: 65e11fd639464ed383219ef61632decb69859065
+ms.openlocfilehash: c6d5d5081f0e932b9c60d8f2025b54e47dc352d5
+ms.sourcegitcommit: 323c2748dcc6b6991b1421dd8e3721588247bc17
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701402"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568045"
 ---
-# <a name="set-up-an-identity-management-server-windows-server-2016"></a>Configurar um servidor de gerenciamento de identidade: Windows Server 2016
+# <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Configurar um servidor de gerenciamento de identidade: Windows Server 2016 ou 2019
 
 > [!div class="step-by-step"]
 > [« Como preparar um domínio](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)
 > 
+
+> [!NOTE]
+> O procedimento de instalação do Windows Server 2019 é igual ao do Windows Server 2016.
+
+
 > [!NOTE]
 > Este passo a passo usa nomes e valores de exemplo de uma empresa chamada Contoso. Substitua-os pelos seus próprios valores. Por exemplo:
 > - Nome do controlador de domínio - **corpdc**
@@ -85,8 +90,6 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 6.  No painel de detalhes, clique com o botão direito do mouse em **Negar acesso a este computador pela rede** e selecione **Propriedades**.>
 
-[!NOTE] A separação de servidores de função interromperá algumas funcionalidades, como a SSPR.
-
 7. Clique em **Adicionar Usuário ou Grupo** e na caixa de texto digite `contoso\MIMSync; contoso\MIMService` e clique em **OK**.
 
 8. Clique em **OK** para fechar a janela **Negar acesso a este computador das Propriedades de rede**.
@@ -99,6 +102,19 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 12. Feche a janela de Política de Segurança Local.
 
+## <a name="software-prerequisites"></a>Pré-requisitos de software
+
+Antes de instalar os componentes do MIM 2016 SP2, certifique-se de instalar todos os pré-requisitos de software:
+
+13. Instale os [Pacotes Redistribuíveis do Visual C++ 2013](https://www.microsoft.com/download/details.aspx?id=40784).
+
+14. Instale o .NET Framework 4.6.
+
+15. No servidor que o hospedará, o Serviço de Sincronização do MIM precisará do [SQL Server Native Client](https://www.microsoft.com/download/details.aspx?id=50402).
+
+16. No servidor que o hospedará, o Serviço do MIM precisará do .NET Framework 3.5.
+
+17. Opcionalmente, se estiver usando o modo FIPS ou TLS 1.2, confira [MIM 2016 SP2 em "Apenas TL 1.2" ou ambientes de modo FIPS](preparing-tls.md).
 
 ## <a name="change-the-iis-windows-authentication-mode-if-needed"></a>Altere o Modo de autenticação do Windows do IIS, se for necessário
 
@@ -114,4 +130,4 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 > [!div class="step-by-step"]  
 > [« Como preparar um domínio](preparing-domain.md)
-> [SQL Server 2016 »](prepare-server-sql2016.md)
+> [SQL Server »](prepare-server-sql2016.md)
