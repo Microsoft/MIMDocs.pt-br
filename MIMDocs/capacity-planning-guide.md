@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7df93a0a24aee886ec4d07ee2894d93a91606fa0
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.openlocfilehash: b14066543c036eb4ec8a350843743b87902a13a1
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358362"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73636976"
 ---
 # <a name="capacity-planning-guide"></a>Guia de planejamento de capacidade
 
@@ -96,4 +96,4 @@ A configuração da política do MIM também inclui decisões sobre provisioname
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Considerações de topologia para implantação do MIM](topology-considerations.md)
-- O [Guia de planejamento de capacidade do FIM (Forefront Identity Manager) 2010](http://go.microsoft.com/fwlink/?LinkId=200180) baixável apresenta mais detalhes sobre um build de teste e resultados de teste de desempenho.
+- O [Guia de planejamento de capacidade do FIM (Forefront Identity Manager) 2010](https://www.microsoft.com/en-us/download/details.aspx?id=7437) baixável apresenta mais detalhes sobre um build de teste e resultados de teste de desempenho.
