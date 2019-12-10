@@ -12,10 +12,10 @@ ms.assetid: 8bc2f6d2-9f53-4db6-aee6-a937ae468163
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 1f7d4150ce7012cd4726126ba50b1ab0f94f474c
-ms.sourcegitcommit: f58926a9e681131596a25b66418af410a028ad2c
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67690682"
 ---
 # <a name="connect-to-your-directories"></a>Conectar aos seus diretórios

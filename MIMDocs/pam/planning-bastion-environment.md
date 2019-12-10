@@ -12,11 +12,11 @@ ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: f8fd71d2244760d3a6561c6f55bf676e6f42561a
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380061"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518917"
 ---
 # <a name="planning-a-bastion-environment"></a>Planejando um ambiente de bastiões
 
@@ -164,7 +164,7 @@ Há sete requisitos para habilitar o gerenciamento de um domínio existente.
 
 ### <a name="1-a-security-group-on-the-local-domain"></a>1. Um grupo de segurança no domínio local
 
-Deve haver um grupo no domínio existente cujo nome é o nome NetBIOS do domínio seguido de três cifrões, por exemplo, *CONTOSO$$$*. O escopo do grupo deve ser *domínio local* e o tipo de grupo deve ser *Segurança*. Isso será necessário para a criação dos grupos na floresta administrativa dedicada com o mesmo Identificador de segurança dos grupos neste domínio. Crie esse grupo com o seguinte comando do PowerShell, executado por um administrador do domínio existente e em uma estação de trabalho ingressada no domínio existente:
+Deve haver um grupo no domínio existente cujo nome é o nome NetBIOS do domínio seguido de três cifrões, por exemplo, *CONTOSO$$$* . O escopo do grupo deve ser *domínio local* e o tipo de grupo deve ser *Segurança*. Isso será necessário para a criação dos grupos na floresta administrativa dedicada com o mesmo Identificador de segurança dos grupos neste domínio. Crie esse grupo com o seguinte comando do PowerShell, executado por um administrador do domínio existente e em uma estação de trabalho ingressada no domínio existente:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'

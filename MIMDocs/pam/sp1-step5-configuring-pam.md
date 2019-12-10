@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 03c5b1cb52f16090e6b241d588bbded6be4c6687
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379355"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518397"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Etapa 5 Instalar/configurar o PAM
 

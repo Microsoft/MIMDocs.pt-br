@@ -12,11 +12,11 @@ ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379760"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518255"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Etapa 5 – Estabelecer relação de confiança entre florestas PVI e CORP
 
@@ -75,7 +75,7 @@ Para cada floresta existente, habilite o acesso de leitura ao AD por administrad
 3. Clique com o botão direito do mouse no domínio **contoso.local** e selecione **Delegar Controle**.  
 4. Na guia Usuários e Grupos Selecionados, clique em **Adicionar**.  
 5. Na janela Selecionar Usuários, Computadores ou Grupos, clique em **Locais** e altere o local para *priv.contoso.local*.  No nome do objeto, digite *Administradores de Domínio* e clique em **Verificar Nomes**. Quando um pop-up for exibido, insira o nome de usuário *priv\administrator* e a senha.  
-6. Após Administradores de Domínio, adicione “*; MIMMonitor*”. Depois que os nomes **Administradores de Domínio** e **MIMMonitor** forem sublinhados, clique em **OK** e em **Avançar**.  
+6. Após Administradores de Domínio, adicione “ *; MIMMonitor*”. Depois que os nomes **Administradores de Domínio** e **MIMMonitor** forem sublinhados, clique em **OK** e em **Avançar**.  
 7. Na lista de tarefas comuns, selecione **Ler todas as informações do usuário**, clique em **Avançar** e em **Concluir**.  
 8. Feche Usuários e Computadores do Active Directory.
 

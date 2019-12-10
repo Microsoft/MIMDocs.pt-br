@@ -12,11 +12,11 @@ ms.assetid: 82a9085c-9667-4b3b-8079-657eab1d1e58
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 4838e9e8a495866902a78e713bb3b226eaf9def1
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379804"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518822"
 ---
 # <a name="hardware-and-software-requirements"></a>Requisitos de hardware e software
 

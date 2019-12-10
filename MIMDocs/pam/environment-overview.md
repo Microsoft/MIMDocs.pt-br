@@ -12,11 +12,11 @@ ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 6f4b6e224b6b50bf2190688a994f35159d273713
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379491"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518555"
 ---
 # <a name="environment-overview"></a>Visão geral do ambiente
 
