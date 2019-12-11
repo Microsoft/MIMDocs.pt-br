@@ -12,11 +12,11 @@ ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 38a9fc174c037e5d7c3ea17b46dcf9f6ea924822
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380010"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518579"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definir funções do Privileged Access Management
 
@@ -134,10 +134,10 @@ A tabela a seguir fornece exemplos de permissões que seriam relevantes para inc
 | ---- | ---- |
 | Modificar UO de Administrador da Camada 1                 | Modificar UOs que contêm objetos de Administrador da Camada 1 no Active Directory |
 | Modificar UO de Administrador da Camada 2                 | Modificar UOs que contêm objetos de Administrador da Camada 2 no Active Directory |
-| Gerenciamento de contas: criar/excluir/mover | Modificar contas de usuário padrão                                      |
-| Gerenciamento de contas: redefinir desbloqueio       | Redefinir senhas e desbloquear contas                                  |
-| Grupo de segurança: criar e modificar          | Criar e modificar grupos de segurança no Active Directory              |
-| Grupo de segurança: excluir                 | Excluir grupos de segurança no Active Directory                         |
+| Gerenciamento de contas: Ler/Criar/Excluir | Modificar contas de usuário padrão                                      |
+| Gerenciamento de contas: Redefinir Desbloqueio       | Redefinir senhas e desbloquear contas                                  |
+| Grupo de segurança: Criar, Modificar          | Criar e modificar grupos de segurança no Active Directory              |
+| Grupo de segurança: Excluir                 | Excluir grupos de segurança no Active Directory                         |
 | Gerenciamento de GPO                         | Gerenciar todos os GPOs no domínio ou na floresta que não afetam os servidores da Camada 0             |
 | Ingressar PC/Administrador local                    | Direitos administrativos locais para todas as estações de trabalho                               |
 | Ingressar Servidor/Administrador local                   | Direitos administrativos locais para todos os servidores                                    |

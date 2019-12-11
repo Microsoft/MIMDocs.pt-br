@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 2e376bcc88518b911f93ce9cd4ab920eb428815b
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358645"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64519329"
 ---
 <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Conector do Microsoft Identity Manager para o Microsoft Graph
 =======================================================================================
@@ -22,7 +22,7 @@ ms.locfileid: "49358645"
 <a name="summary"></a>Resumo 
 =======
 
-O [conector do Microsoft Identity Manager para o Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) habilita cenários de integração adicional para os clientes do Azure AD Premium.  Ele aparece em objetos adicionais de metaverso de sincronização do MIM obtidos da [API do Microsoft Graph](https://developer.microsoft.com/en-us/graph/) v1 e beta.
+O [conector do Microsoft Identity Manager para o Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) habilita cenários de integração adicional para os clientes do Azure AD Premium.  Ele aparece em objetos adicionais de metaverso de sincronização do MIM obtidos da  [API do Microsoft Graph](https://developer.microsoft.com/en-us/graph/) v1 e beta.
 
 <a name="scenarios-covered"></a>Cenários abordados
 =================
@@ -37,7 +37,7 @@ Para saber como configurar a sincronização de MIM para criar e manter automati
 <a name="other-identity-management-scenarios"></a>Outros cenários de gerenciamento de identidade
 ---------------
 
-O conector pode ser usado para outros cenários de gerenciamento de identidade específicos que envolvem criar, ler, atualizar e excluir objetos de usuário, grupo e contato no Azure AD, além da sincronização de usuário e grupo com o Azure AD. Ao avaliar os cenários possíveis, lembre: esse conector não pode ser operado em um cenário que resultaria em uma sobreposição de fluxo de dados, conflito de sincronização real ou potencial com uma implantação do Azure AD Connect.  O [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594) é a abordagem recomendada para integrar diretórios locais ao Azure AD, sincronizando os usuários e grupos de diretórios locais ao Azure AD.  O Azure AD Connect tem muitos outros recursos de sincronização e permite cenários como senha e write-back de dispositivo, que não são possíveis para objetos criados pelo MIM. Se os dados estiverem sendo levados para o AD DS, por exemplo, garanta que sejam excluídos da tentativa do Azure AD Connect de combinar esses objetos de volta com o diretório do Azure AD.  Esse conector também não pode ser usado para fazer alterações a objetos do Azure AD criados pelo Azure AD Connect.
+O conector pode ser usado para outros cenários de gerenciamento de identidade específicos que envolvem criar, ler, atualizar e excluir objetos de usuário, grupo e contato no Azure AD, além da sincronização de usuário e grupo com o Azure AD. Ao avaliar os cenários possíveis, lembre: esse conector não pode ser operado em um cenário que resultaria em uma sobreposição de fluxo de dados, conflito de sincronização real ou potencial com uma implantação do Azure AD Connect.  O [Azure AD Connect](https://www.microsoft.com/en-us/download/details.aspx?id=47594)  é a abordagem recomendada para integrar diretórios locais ao Azure AD, sincronizando os usuários e grupos de diretórios locais ao Azure AD.  O Azure AD Connect tem muitos outros recursos de sincronização e permite cenários como senha e write-back de dispositivo, que não são possíveis para objetos criados pelo MIM. Se os dados estiverem sendo levados para o AD DS, por exemplo, garanta que sejam excluídos da tentativa do Azure AD Connect de combinar esses objetos de volta com o diretório do Azure AD.  Esse conector também não pode ser usado para fazer alterações a objetos do Azure AD criados pelo Azure AD Connect.
 
 
 
@@ -57,7 +57,7 @@ Figura 1. Novo registro do aplicativo
 
 ![](media/microsoft-identity-manager-2016-ma-graph/ecfcb97674790290aa9ca2dcaccdafbc.png)
 
-Figura 2. ID do Aplicativo
+Figura 2. ID do aplicativo
 
 3.  Gerar novo segredo do cliente por meio da abertura de todas as configurações-\> chaves. Defina uma descrição de chave e selecione duração needful. Salve as alterações. Um valor secreto não estará disponível depois que você sair de página.
 
@@ -99,8 +99,8 @@ Mais detalhes sobre as permissões necessárias podem ser encontrados [aqui](htt
 =======================
 
 
-9.  Na interface de usuário do Synchronization Service Manager, selecione **Conectores** e **Criar**.
-Selecione **Graph (Microsoft)**, crie um conector e dê a ele um nome descritivo.
+9.  Na interface do usuário do Synchronization Service Manager, selecione  **Conectores**  e  **Criar**.
+Selecione  **Graph (Microsoft)**  , crie um conector e dê a ele um nome descritivo.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -213,7 +213,7 @@ Exemplo de como usar a [versão de visualização pública do módulo do PowerSh
 
 ![](media/microsoft-identity-manager-2016-ma-graph/a26ded518f94b9b557064b73615c71f6.png)
 
-New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"AccessTokenLifetime":"5:00:00"**}}') -DisplayName "OrganizationDefaultPolicyScenario" -IsOrganizationDefault \$true -Type "TokenLifetimePolicy"
+New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"AccessTokenLifetime":"5:00:00"** }}') -DisplayName "OrganizationDefaultPolicyScenario" -IsOrganizationDefault \$true -Type "TokenLifetimePolicy"
 
 <a name="next-steps"></a>Próximas etapas
 ----------

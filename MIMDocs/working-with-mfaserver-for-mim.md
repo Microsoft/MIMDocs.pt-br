@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 69b7f8f4b94f9f94b2aef6afd9573ad8173e148e
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379786"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64517640"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Usar o Servidor de Autenticação Multifator do Azure para ativar SSPR ou PAM
 O documento a seguir descreve como configurar o servidor de MFA do Azure como uma segunda camada de segurança quando os usuários ativarem funções no Privileged Access Management ou no Autoatendimento de Redefinição de Senha.
@@ -69,7 +69,7 @@ Depois de baixar o servidor, [instale](https://docs.microsoft.com/en-us/azure/ac
  
 ### <a name="step-2-backup-and-open-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Etapa 2: fazer backup e abrir o arquivo MfaSettings.xml, localizado na pasta "C:\Arquivos de Programas\Microsoft Forefront Identity Manager\2010\Service"
 
-### <a name="step-3-update-the-following-lines"></a>Etapa 3: adicionar as linhas a seguir
+### <a name="step-3-update-the-following-lines"></a>Etapa 3: Atualizar as linhas a seguir
 1. Remover/desmarcar as linhas de entradas de configuração a seguir <br>
 <LICENSE_KEY></LICENSE_KEY><br>
 <GROUP_KEY></GROUP_KEY><br>

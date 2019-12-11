@@ -11,12 +11,13 @@ ms.prod: microsoft-identity-manager
 ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
+experiment_id: kgremban_images
 ms.openlocfilehash: 40ed05c1f77cace74b86dc3a5675855993d4bc56
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379881"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518377"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management para Serviços de Domínio do Active Directory
 
@@ -46,13 +47,13 @@ O PAM se baseia no princípio da administração Just-In-Time, que está relacio
 
 A instalação e operação do PAM têm quatro etapas.
 
-1. **Preparar**: Identifique quais grupos em sua floresta existente tem privilégios significativos. Recrie esses grupos sem membros na floresta de bastiões.
+1. **Preparar**: identifique quais grupos em sua floresta existente tem privilégios significativos. Recrie esses grupos sem membros na floresta de bastiões.
 
-2. **Proteger**: configure a proteção do ciclo de vida e da autenticação, como o MFA (Multi-Factor Authentication), para quando os usuários solicitarem a administração Just-In-Time. A MFA ajuda a impedir ataques programáticos de software mal-intencionado ou a seguir roubo de credenciais.
+2. **Proteger**: Configure a proteção do ciclo de vida e autenticação, como a Autenticação Multifator (MFA), para quando os usuários solicitarem administração just-in-time. A MFA ajuda a impedir ataques programáticos de software mal-intencionado ou a seguir roubo de credenciais.
 
 3. **Operar**: depois que os requisitos de autenticação forem atendidos e uma solicitação for aprovada, uma conta de usuário será adicionada temporariamente a um grupo privilegiado na floresta de bastiões. Durante um intervalo de tempo predefinido, o administrador tem todos os privilégios e permissões de acesso atribuídos a esse grupo. Após esse tempo, a conta é removida do grupo.
 
-4. **Monitorar**: o PAM adiciona auditoria, alertas e relatórios de solicitações de acesso privilegiado. É possível examinar o histórico do acesso privilegiado e ver quem executou uma atividade. Você pode entender se a atividade é válida ou não e identificar facilmente atividades não autorizadas, como uma tentativa de adicionar um usuário diretamente a um grupo privilegiado na floresta original. Essa etapa é importante não somente para identificar o software mal-intencionado, mas também para acompanhamento de invasores “internos”.
+4. **Monitorar**: o PAM acrescenta auditoria, alertas e relatórios de solicitações de acesso privilegiadas. É possível examinar o histórico do acesso privilegiado e ver quem executou uma atividade. Você pode entender se a atividade é válida ou não e identificar facilmente atividades não autorizadas, como uma tentativa de adicionar um usuário diretamente a um grupo privilegiado na floresta original. Essa etapa é importante não somente para identificar o software mal-intencionado, mas também para acompanhamento de invasores “internos”.
 
 ## <a name="how-does-pam-work"></a>Como funciona o PAM?
 
@@ -70,13 +71,13 @@ Contas de usuário diárias não precisam ser movidas para uma nova floresta. O 
 
 O PAM oferece as seguintes vantagens:
 
-- **Isolamento/controle de privilégios**: os usuários não mantêm privilégios em contas que também são usadas para tarefas não privilegiadas, como verificação de email ou navegação na Internet. Os usuários precisam solicitar privilégios. As solicitações são aprovadas ou negadas com base nas políticas do MIM definidas por um administrador do PAM. Até uma solicitação ser aprovada, o acesso privilegiado não estará disponível.
+- **Isolamento/definição de escopo de privilégios**: os usuários não mantêm privilégios em contas que também são usadas para tarefas não privilegiadas, como verificação de email ou navegação na Internet. Os usuários precisam solicitar privilégios. As solicitações são aprovadas ou negadas com base nas políticas do MIM definidas por um administrador do PAM. Até uma solicitação ser aprovada, o acesso privilegiado não estará disponível.
 
 - **Step-up e proof-up**: esses são os novos desafios de autenticação e autorização para ajudar a gerenciar o ciclo de vida de contas administrativas separadas. O usuário pode solicitar a elevação de uma conta administrativa e essa solicitação passa por fluxos de trabalho MIM.
 
-- **Log adicional**: além de fluxos de trabalho internos do MIM, há um log adicional para o PAM que identifica a solicitação, como ela foi autorizada e os eventos que ocorrem após a aprovação.
+- **Registro em log adicional**: além de fluxos de trabalho internos do MIM, há um log adicional para o PAM que identifica a solicitação, como ela foi autorizada e os eventos que ocorrem após a aprovação.
 
-- **Fluxo de trabalho personalizável**: Os fluxos de trabalho MIM podem ser configurados para cenários diferentes e vários fluxos de trabalho podem ser usados, com base nos parâmetros do usuário solicitante ou nas funções solicitadas.
+- **Fluxo de trabalho personalizável**: os fluxos de trabalho MIM podem ser configurados para cenários diferentes e vários fluxos de trabalho podem ser usados, com base nos parâmetros do usuário solicitante ou nas funções solicitadas.
 
 ## <a name="how-do-users-request-privileged-access"></a>Como os usuários solicitam o acesso privilegiado?
 

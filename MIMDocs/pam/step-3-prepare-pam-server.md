@@ -13,11 +13,11 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379898"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518234"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Etapa 3 – Preparar um servidor PAM
 
@@ -35,7 +35,7 @@ Em uma terceira máquina virtual, instale o Windows Server 2012 R2, especificame
 
 2. Leia e aceite os termos de licença.
 
-3.  Uma vez que o disco estará vazio, selecione **Personalizar: instalar somente o Windows** e use o **espaço em disco não inicializado**.
+3.  Já que o disco estará vazio, selecione **Personalizado: instalar somente o Windows** e use o **espaço em disco não inicializado**.
 
 4.  Entre no novo computador como administrador.  Usando o Painel de Controle, dê a ele um endereço IP estático na rede virtual, configure essa interface de rede para enviar consultas DNS para o endereço IP de PRIVDC e defina o nome do computador como *PAMSRV*.  Isso exigirá reinicializar o servidor.
 
@@ -186,7 +186,7 @@ Em seguida, crie uma Coleção de Sites do SharePoint associado a esse aplicativ
 
     Verifique se a variável **CompatibilityLevel** está definida como *14*. Se ele retornar *15*, o conjunto de sites não foi criado para a versão da experiência 2010; exclua o conjunto de sites e recrie-o.
 
-2.  Execute os seguintes comandos do PowerShell no **Shell de Gerenciamento do SharePoint 2013**. Isso desabilitará o viewstate do servidor do SharePoint e a tarefa do SharePoint **Trabalho de Análise da Integridade (Por Hora, Temporizador do Microsoft SharePoint Foundation, Todos os Servidores)**.
+2.  Execute os seguintes comandos do PowerShell no **Shell de Gerenciamento do SharePoint 2013**. Isso desabilitará o viewstate do servidor do SharePoint e a tarefa do SharePoint **Trabalho de Análise da Integridade (Por Hora, Temporizador do Microsoft SharePoint Foundation, Todos os Servidores)** .
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;

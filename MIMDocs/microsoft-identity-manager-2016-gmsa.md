@@ -8,11 +8,11 @@ ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
-ms.sourcegitcommit: 9e420840815adb133ac014a8694de9af4d307815
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52825766"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64520744"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversão de serviços específicos do MIM em gMSA
 
@@ -20,7 +20,7 @@ Este guia percorrerá as etapas básicas para configurar gMSA para serviços com
 
 Hotfix necessário: \<link para KB mais recente\>
 
-Com suporte:
+Compatível:
 
 -   Serviço de Sincronização do MIM (FIMSynchronizationService)
 -   Serviço MIM (FIMService)
@@ -36,7 +36,7 @@ Sem suporte:
 -   Gerenciamento de Certificados da Microsoft
 -   BHOLD
 
-<a name="general-information"></a>Informações gerais 
+<a name="general-information"></a>Informações Gerais 
 --------------------
 
 Leitura necessária para concluir a instalação e entender

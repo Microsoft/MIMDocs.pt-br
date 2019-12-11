@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: fcf9ec8387761b6f154a95d6100ef54a12d4caf8
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358403"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518953"
 ---
 # <a name="deprecated-features"></a>Recursos preteridos
 
@@ -65,7 +65,7 @@ A Microsoft não recomenda que os clientes iniciem novas implantações dos comp
 | Fluxos de atributos      | “Não recuperar atributos”                            | Este recurso não será substituído. Os atributos sempre serão recuperados, o que é a prática recomendada.  |
 | Extensão das regras      | Executar o metaverso e a extensão das regras MA fora do processo | Este recurso não será substituído. As regras de fluxo de atributo e o metaverso serão executados no mesmo processo que o mecanismo de sincronização.       |
 | Extensão das regras      | Propriedades da transação                                | Este recurso não será substituído. Evite transmitir dados entre a sincronização de entrada, de provisionamento e de saída usando essa classe de utilitário.  |
-| Extensão das regras      | Métodos ExchangeUtils: Create55\*                     | Os métodos para criar objetos para os servidores Exchange 5.5 serão removidos.        |
+| Extensão das regras      | ExchangeUtils: Métodos \*Create55                     | Os métodos para criar objetos para os servidores Exchange 5.5 serão removidos.        |
 | Interface            | Mms_Metaverse                                        | Todos os membros da classe ClmUtils serão removidos em uma próxima versão.   |
 
 ## <a name="next-steps"></a>Próximas etapas

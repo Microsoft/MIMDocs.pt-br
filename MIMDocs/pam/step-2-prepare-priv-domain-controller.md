@@ -12,11 +12,11 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 0364b0d14d08ab3af32010675e0ba80d39404342
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380044"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518074"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Etapa 2 – Preparar o primeiro controlador de domínio PRIV
 
@@ -38,7 +38,7 @@ Em outra máquina virtual nova sem software instalado, instale o Windows Server 
 
 2. Leia e aceite os termos de licença.
 
-3. Já que o disco estará vazio, selecione **Personalizar: instalar somente o Windows** e use o espaço em disco não inicializado.
+3. Já que o disco estará vazio, selecione **Personalizado: instalar somente o Windows** e use o espaço em disco não inicializado.
 
 4. Depois de instalar a versão do sistema operacional, entre nesse novo computador como o novo administrador. Use o Painel de Controle para definir o nome do computador como *PRIVDC*, dê a ele um endereço IP estático na rede virtual e configure o servidor DNS para ser o do controlador de domínio instalado na etapa anterior. Isso exigirá reinicializar o servidor.
 
@@ -237,7 +237,7 @@ Usando o PowerShell em PRIVDC, configure o encaminhamento de nome DNS para que o
    ```
 
 > [!NOTE]
-> As próximas etapas deste documento descrevem como instalar os componentes do servidor MIM 2016 em um único computador. Se você planeja adicionar outro servidor para obter alta disponibilidade, será necessária uma configuração adicional do Kerberos, conforme descrito em [FIM 2010: configuração da autenticação Kerberos](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
+> As próximas etapas deste documento descrevem como instalar os componentes do servidor MIM 2016 em um único computador. Se você planeja adicionar outro servidor para obter alta disponibilidade, será necessária uma configuração adicional do Kerberos, conforme descrito no [FIM 2010: configuração da autenticação Kerberos](http://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
 ### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Configurar a delegação para conceder acesso de contas do serviço MIM
 
@@ -289,7 +289,7 @@ Se você ainda não tiver um computador de estação de trabalho que será ingre
 
 ### <a name="install-windows-81-or-windows-10-enterprise"></a>Instalar o Windows 8.1 ou Windows 10 Enterprise
 
-Em outra máquina virtual nova sem software instalado, instale o Windows 8.1 Enterprise ou Windows 10 Enterprise para tornar um computador *“PRIVWKSTN”*.
+Em outra máquina virtual nova sem software instalado, instale o Windows 8.1 Enterprise ou Windows 10 Enterprise para tornar um computador *“PRIVWKSTN”* .
 
 1. Use as configurações Express durante a instalação.
 

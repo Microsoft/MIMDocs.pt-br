@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 45b46ed10f7eda506fe1fc1af94c4be06a1a37b9
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50380185"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516590"
 ---
 # <a name="microsoft-identity-manager-2016-password-management"></a>Gerenciamento de Senha do Microsoft Identity Manager 2016
 
@@ -144,7 +144,7 @@ Idealmente, sempre que um usuário alterar uma senha, a alteração será sincro
 -   **Falha na sincronização de senha para uma fonte de dados de destino** – Isso também poderá ocorrer se a rede estiver inoperante ou se a fonte de dados de destino não estiver disponível.
     A notificação de alteração de senha será enfileirada e repetida de acordo com a configuração do agente de gerenciamento para tentativa e intervalo de repetição. Todas as senhas são criptografadas enquanto estiverem armazenadas para repetição e excluídas quando a operação for bem-sucedida ou os limites de repetição sejam atingidos.
 
--   **Ativar um servidor em espera passiva que executa o MIM após uma falha** – No caso de o servidor primário que executa o MIM falhar, é possível configurar um servidor em espera passiva para sincronização de senha e ativá-lo sem perda de alterações de senha. Para obter mais informações, consulte [MIISactivate: Ferramenta de Ativação do Servidor](https://technet.microsoft.com/library/jj590194(v=ws.10).aspx)
+-   **Ativar um servidor em espera passiva que executa o MIM após uma falha** – No caso de o servidor primário que executa o MIM falhar, é possível configurar um servidor em espera passiva para sincronização de senha e ativá-lo sem perda de alterações de senha. Para obter mais informações, confira [MIISactivate: ferramenta de ativação de servidor](https://technet.microsoft.com/library/jj590194(v=ws.10).aspx)
 
 Algumas falhas são tão graves que nenhuma quantidade de tentativas é suficiente para que a operação seja bem-sucedida. Nesses casos, um evento de erro é registrado e o processo é interrompido. Os eventos a seguir não serão repetidos:
 

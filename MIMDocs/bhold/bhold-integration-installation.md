@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 317c9ae4c940a509b6ac328cd5bb7cd7baa4dde9
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358798"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64516006"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Instalação de Integração de FIM/MIM com o BHOLD
 
@@ -48,14 +48,14 @@ Além disso, você precisa estar preparado para fornecer as informações que o 
 | **Usar um provedor de segurança em um Domínio** | Quando selecionado, especifica que a segurança do Active Directory Domain Services controlará o acesso ao BHOLD Core.                                                                                                                    | Marque a caixa de seleção. **Importante:** a instalação falhará se essa caixa de seleção não estiver selecionada.                                                                                                                                                                                                                   |
 | **Domínio**                          | Especifica o domínio que contém a **conta de serviço** que você criou ao instalar o BHOLD Core. Para obter mais informações, consulte [Instalação do BHOLD Core](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx). | O nome de domínio é fornecido automaticamente pelo assistente. Altere o nome somente se ele estiver incorreto. **Importante:** especifique o nome de domínio usando o nome NetBIOS (curto), não o FQDN (nome de domínio totalmente qualificado). Por exemplo, se o FQDN do domínio é fabrikam.com, especifique o nome de domínio como FABRIKAM. |
 | **Nome de usuário**                        | Especifica o nome de logon da conta de usuário do serviço BHOLD Core.                                                                                                                                                              | Grave o nome da conta de usuário aqui:                                                                                                                                                                                                                                                                                    |
-| **Senha**                        | Especifica a senha da conta de usuário do serviço.                                                                                                                                                                           | Grave a senha aqui: **Importante:** certifique-se de manter essa senha em um local seguro, oculto.                                                                                                                                                                                                                  |
+| **Senha**                        | Especifica a senha da conta de usuário do serviço.                                                                                                                                                                           | Grave a senha aqui: **Importante:** mantenha essa senha em um local seguro e oculto.                                                                                                                                                                                                                  |
 
 ### <a name="fim-service-settings"></a>Configurações do Serviço FIM
 
 | **Item**            | **Descrição**                                                                                                                                                                                                                               | **Valor**                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Usuário**            | Especifica o nome de logon de uma conta com privilégios de administrador para o FIM. A Microsoft recomenda fortemente que você não use a conta associada ao usuário raiz no BHOLD Core (por padrão, a conta usada para instalar o BHOLD Core). | Grave o nome da conta de usuário aqui:                                                                   |
-| **Senha**        | Especifica a senha da conta de usuário do administrador do FIM.                                                                                                                                                                                 | Grave a senha aqui: **Importante:** certifique-se de manter essa senha em um local seguro, oculto. |
+| **Senha**        | Especifica a senha da conta de usuário do administrador do FIM.                                                                                                                                                                                 | Grave a senha aqui: **Importante:** mantenha essa senha em um local seguro e oculto. |
 | **Banco de dados do FIM**    | Especifica o nome do banco de dados do Serviço FIM.                                                                                                                                                                                               | FIMService                                                                                          |
 | **IP/Porta do Site** | Especifica o nome ou endereço IP do servidor de Portal do FIM e a porta do site.                                                                                                                                                               | Grave o nome do servidor ou o endereço e a porta aqui:                                                     |
 
@@ -65,7 +65,7 @@ Além disso, você precisa estar preparado para fornecer as informações que o 
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Domínio**             | Especifica o nome do domínio da conta especificada no **Usuário**, abaixo. Especifique o domínio no formato de NetBIOS (curto).                                                                                                                                                                                                                                                                   | Grave o nome de domínio da conta de usuário aqui:                                                            |
 | **Usuário**               | Especifica o nome de logon da conta de **um usuário BHOLD que é um supervisor** de todos os usuários e funções e tem permissão para vincular e desvincular funções de usuário. A Microsoft recomenda fortemente que você não use a conta associada ao usuário raiz no BHOLD Core (por padrão, a conta usada para instalar o BHOLD Core). Essa conta pode ser a mesma conta que você usa para se conectar ao FIM | Grave o nome da conta de usuário aqui:                                                                   |
-| **Senha**           | Especifica a senha da conta de usuário especificada em **Usuário**.                                                                                                                                                                                                                                                                                                                             | Grave a senha aqui: **Importante:** certifique-se de manter essa senha em um local seguro, oculto. |
+| **Senha**           | Especifica a senha da conta de usuário especificada em **Usuário**.                                                                                                                                                                                                                                                                                                                             | Grave a senha aqui: **Importante:** mantenha essa senha em um local seguro e oculto. |
 | **Endereço IP/de Máquina** | Especifica o endereço IP do servidor do site do BHOLD Core. Não use o nome do servidor.                                                                                                                                                                                                                                                                                                        | Grave o endereço IP aqui:                                                                          |
 | **Número da porta**        | Especifica o número da porta do site do BHOLD Core.                                                                                                                                                                                                                                                                                                                                          | Grave o número da porta aqui:                                                                         |
 
@@ -121,9 +121,9 @@ A tabela a seguir lista os arquivos e as versões originais e alteradas das cade
 | AttestationCampaigns.aspx |    http://<BHOLD_Server>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | https://<BHOLD_Server_FQDN>/bhold/Attestation/Campaigns.aspx?hideMenu=1 | 
 | AttestationMain.aspx      |  http://<BHOLD_Server>/bhold/Attestation/Dashboard.aspx?hideMenu=1        | https://<BHOLD_Server_FQDN>/bhold/Attestation/Dashboard.aspx?hideMenu=1 |
 | Reporting.aspx            | http://<BHOLD_Server>/bhold/Reporting/index_fim.html |  https://<BHOLD_Server_FQDN>/bhold/Reporting/index_fim.html |
-| Selfservice.aspx          | RoleExchangePoint=http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport | RoleExchangePoint=https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port\>*\>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport |
+| Selfservice.aspx          | RoleExchangePoint=http://\<*FIM_Server*\>: \<*FIM_Port*\>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport | RoleExchangePoint=https://\<*FIM_Server_FQDN*\>: \<*FIM_SSL_Port\>* \>/BHOLD/RoleExchangePoint/ BHOLDRoleExchangePoint.svc,TransportMode=Transport |
 
-Em que:
+Sendo que:
 
 -   *\<BHOLD_Server\>* especifica o nome do servidor do BHOLD conforme encontrado na versão original do arquivo
 
@@ -189,7 +189,7 @@ Se um aprovador para uma solicitação de função de autoatendimento não é es
 
 18. Na página **Unidade organizacional/raiz**, clique em **Modificar**.
 
-19. Na página **Modificar atributos da unidade organizacional/raiz**, em **Aprovador**, digite o nome de usuário e de domínio do usuário que aprovará solicitações de atribuição de função, no formato *\<domínio\>*\\*\<usuário\>*, em que  *\<domínio\>* é o nome de domínio NetBIOS (curto) e *\<usuário\>* é o nome de logon do usuário.
+19. Na página **Modificar atributos da unidade organizacional/raiz**, em **Aprovador**, digite o nome de usuário e de domínio do usuário que aprovará solicitações de atribuição de função, no formato *\<domínio\>* \\ *\<usuário\>* , em que  *\<domínio\>* é o nome de domínio NetBIOS (curto) e *\<usuário\>* é o nome de logon do usuário.
 20. Clique em **OK**.
 
 > [!IMPORTANT]

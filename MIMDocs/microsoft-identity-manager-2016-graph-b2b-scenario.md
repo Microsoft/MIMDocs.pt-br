@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 139c58510117ad422529a4ff0facd23040023713
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358764"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64521505"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Colaboração B2B (entre empresas) do Azure AD com Microsoft Identity Manager (MIM) 2016 SP1 com Proxy do Aplicativo Azure
 ============================================================================================================================
 
-O cenário inicial é o gerenciamento do ciclo de vida da conta do AD do usuário externo.   Nesse cenário, uma organização convidou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada do Windows local ou aplicativos baseados em Kerberos, por meio do [Proxy de Aplicativo do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) ou outros mecanismos de gateway. O Proxy de Aplicativo do Azure AD exige que cada usuário tenha sua própria conta do AD DS, para fins de identificação e delegação.
+O cenário inicial é o gerenciamento do ciclo de vida da conta do AD do usuário externo.   Nesse cenário, uma organização chamou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada local do Windows ou aplicativos baseados em Kerberos, por meio do  [Proxy de Aplicativo do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) ou outros mecanismos de gateway. O Proxy de Aplicativo do Azure AD exige que cada usuário tenha sua própria conta do AD DS, para fins de identificação e delegação.
 
 ## <a name="scenario-specific-guidance"></a>Orientação específicas do cenário
 
@@ -75,8 +75,8 @@ Verifique se o aplicativo foi autorizado para pelo menos uma destas permissões:
 ## <a name="create-the-new-management-agent"></a>Criar o agente de gerenciamento
 
 
-Na interface de usuário do Synchronization Service Manager, selecione **Conectores** e **Criar**.
-Selecione **Graph (Microsoft)** e forneça um nome descritivo.
+Na interface do usuário do Synchronization Service Manager, selecione  **Conectores** e **Criar**.
+Selecione  **Graph (Microsoft)**   e forneça a ele um nome descritivo.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 
@@ -183,7 +183,7 @@ Por fim, preencha os seguintes detalhes
 
 Nome do atributo: **userPrincipalName**
 
-Tipo de Atributo: **String (Indexável)**
+Tipo de Atributo: **Cadeia de Caracteres (Indexável)**
 
 Indexado = **Verdadeiro**
 
@@ -199,7 +199,7 @@ As próximas etapas exigirão a adição de uma configuração mínima para o MA
 
 Mais detalhes podem ser encontrados aqui para a configuração <https://technet.microsoft.com/library/ff686263(v=ws.10).aspx> - Como Provisionar Usuários no AD DS
 
-### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Regra de Sincronização: Importar Usuário Convidado para MV para o Metaverse do Serviço de Sincronização do Azure Active Directory<br>
+### <a name="synchronization-rule-import-guest-user-to-mv-to-synchronization-service-metaverse-from-azure-active-directorybr"></a>Regra de Sincronização: importar Usuário Convidado para MV para o Metaverso do Serviço de Sincronização do Azure Active Directory<br>
 
 Navegue até o Portal do MIM, selecione Regras de Sincronização e clique em Nova.  Crie uma regra de sincronização de entrada para o fluxo de B2B por meio do conector do Graph.
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/ba39855f54268aa824cd8d484bae83cf.png)
@@ -226,7 +226,7 @@ Configure as seguintes regras de fluxo de atributos de entrada.  Preencha os atr
 |                       |                           | [mail⇒mail](javascript:void(0);)                                      |
 |                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
 
-### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Regra de sincronização: Criar conta de usuário convidado para o Active Directory 
+### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Regra de Sincronização: criar conta de usuário convidado para o Active Directory 
 
 Esta regra de sincronização cria o usuário no Active Directory.  Verifique se o fluxo para `dn` deve colocar o usuário na unidade organizacional excluída do Azure AD Connect.  Além disso, atualize o fluxo para `unicodePwd` para cumprir a política de senha do AD. O usuário não precisará saber a senha.  Observe que o valor de `262656` para `userAccountControl` codifica os sinalizadores `SMARTCARD_REQUIRED` e `NORMAL_ACCOUNT`.
 

@@ -10,11 +10,11 @@ ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 8987bc53af37b32b95b00c3df67d9581d4e47120
-ms.sourcegitcommit: 7de35aaca3a21192e4696fdfd57d4dac2a7b9f90
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49358849"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518784"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Práticas recomendadas do Microsoft Identity Manager 2016 | Microsoft Docs
 
@@ -259,7 +259,7 @@ ActivityInformationConfiguration exigem que o número de versão se refira com p
 
 Em geral, as referências cíclicas não são recomendadas em uma configuração de MIM. No entanto, às vezes os ciclos ocorrem quando um conjunto A se refere ao conjunto B e o conjunto B também se refere ao conjunto A. Para evitar problemas com referências cíclicas, altere a definição de um conjunto A ou B para que um não faça referência ao outro. Então, reinicie o processo de migração. Se houver referências cíclicas e o cmdlet Compare-FIMConfig tiver um erro como resultado, será necessário interromper o ciclo manualmente. Como o cmdlet Compare-FIMConfig gera uma lista de alterações em ordem de precedência, é necessário que não exista nenhum ciclo entre as referências de objetos de configuração.
 
-## <a name="security"></a>Segurança 
+## <a name="security"></a>Segurança
 
 ### <a name="mim-ma-account"></a>Conta do MIM MA
 
@@ -292,7 +292,7 @@ A conta de serviço do Serviço de Sincronização do FIM não deve ser um membr
 
 ### <a name="password-reset-deployed-to-kiosk-like-computers-should-set-local-security-to-clear-virtual-memory-pagefile"></a>A redefinição de senha implantada em computadores do tipo quiosque deve configurar a segurança local para limpar o arquivo de paginação da memória virtual
 
-Ao implantar a redefinição de senha do FIM em uma estação de trabalho destinada a ser um quiosque, recomenda-se que a política de segurança local Encerrar: Limpar do arquivo de paginação da memória virtual seja ativada para garantir que informações confidenciais da memória do processo não sejam disponibilizadas para usuários não autorizados.
+Ao implantar a redefinição de senha do FIM em uma estação de trabalho destinada a ser um quiosque, recomenda-se que a configuração de política de segurança local Encerrar: Limpar o arquivo de paginação da memória virtual seja ativada para garantir que informações confidenciais da memória do processo não sejam disponibilizadas para usuários não autorizados.
 
 ### <a name="implementing-ssl-for-the-fim-portal"></a>Implementando o SSL para o Portal do FIM
 
@@ -498,7 +498,7 @@ O uso de condições baseadas em atributos de referência multivalorados deve se
 
 #### <a name="kiosk-like-computers-that-are-used-for-password-reset-should-set-local-security-to-clear-the-virtual-memory-pagefile"></a>Computadores do tipo quiosque usados para redefinição de senha devem configurar a segurança local para limpar o arquivo de paginação da memória virtual
 
-Quando implantar a redefinição de senha do MIM em uma estação de trabalho destinada a ser um quiosque, recomendamos ativar a configuração da política de segurança local, "Desligamento: limpar arquivo de paginação de memória virtual", para garantir que as informações confidenciais da memória do processo não sejam disponibilizadas para usuários não autorizados.
+Ao implantar a redefinição de senha do MIM em uma estação de trabalho destinada a ser um quiosque, recomenda-se que a configuração de política de segurança local Encerrar: Limpar do arquivo de paginação da memória virtual seja ativada para garantir que informações confidenciais da memória do processo não sejam disponibilizadas para usuários não autorizados.
 
 #### <a name="users-should-always-register-for-a-password-reset-on-a-computer-that-they-are-logged-on-to"></a>Os usuários sempre devem se registrar para redefinir a senha em um computador ao qual estão conectados
 

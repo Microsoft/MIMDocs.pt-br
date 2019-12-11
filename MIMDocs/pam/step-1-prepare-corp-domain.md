@@ -12,11 +12,11 @@ ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: dda6a05337e9a9778135fc7d833a38369540b3e0
-ms.sourcegitcommit: 44a2293ff17c50381a59053303311d7db8b25249
+ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50379983"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "64518177"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Etapa 1 – Preparar o host e o domínio CORP
 
@@ -35,11 +35,11 @@ Esta seção descreve como configurar um controlador de domínio para um domíni
 
 Instale o Windows Server 2012 R2 ou Windows Server 2016 Technical Preview 4 ou posterior em uma máquina virtual para criar um computador chamado *CORPDC*.
 
-1. Escolha **Windows Server 2012 R2 Standard (Servidor com GUI) x64** ou **Windows Server 2016 Technical Preview (Servidor com a Experiência Desktop)**.
+1. Escolha **Windows Server 2012 R2 Standard (Servidor com GUI) x64** ou **Windows Server 2016 Technical Preview (Servidor com a Experiência Desktop)** .
 
 2. Leia e aceite os termos de licença.
 
-3. Já que o disco estará vazio, selecione **Personalizar: instalar somente o Windows** e use o espaço em disco não inicializado.
+3. Já que o disco estará vazio, selecione **Personalizado: instalar somente o Windows** e use o espaço em disco não inicializado.
 
 4. Entre no novo computador como administrador. Navegue até o Painel de Controle. Defina o nome do computador como *CORPDC* e dê a ele um endereço IP estático na rede virtual. Reinicie o servidor.
 
@@ -72,7 +72,7 @@ Nesta seção, você vai adicionar as funções AD DS (Serviços de Domínio do 
 
 ### <a name="create-a-group"></a>Criar um grupo
 
-Crie um grupo para fins de auditoria pelo Active Directory, se o grupo não existir. O nome do grupo deve ser o nome de domínio NetBIOS seguido de três cifrões, por exemplo, *CONTOSO$$$*.
+Crie um grupo para fins de auditoria pelo Active Directory, se o grupo não existir. O nome do grupo deve ser o nome de domínio NetBIOS seguido de três cifrões, por exemplo, *CONTOSO$$$* .
 
 Para cada domínio, entre em um controlador de domínio como administrador de domínio e realize as seguintes etapas:
 
