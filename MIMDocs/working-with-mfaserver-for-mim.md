@@ -1,6 +1,6 @@
 ---
-title: Usar o SDK do Servidor de Autenticação Multifator do Azure para ativar cenários de SSPR ou PAM | Microsoft Docs
-description: Configure o SDK do Servidor de Autenticação Multifator do Azure como uma segunda camada de segurança quando os usuários ativarem funções no Privileged Access Management e no Autoatendimento de Redefinição de Senha.
+title: Usar o Servidor de Autenticação Multifator do Azure para ativar cenários de SSPR ou PAM | Microsoft Docs
+description: Configure o Servidor de Autenticação Multifator do Azure como uma segunda camada de segurança quando os usuários ativarem funções no Privileged Access Management e na Redefinição de senha self-service.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -9,20 +9,20 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 69b7f8f4b94f9f94b2aef6afd9573ad8173e148e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 39ebec3002f488077cfda28a5780b0c78c19f363
+ms.sourcegitcommit: 28a20aaa1f08b428cc1ae0eae43ae47de4d9d22a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517640"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684084"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Usar o Servidor de Autenticação Multifator do Azure para ativar SSPR ou PAM
-O documento a seguir descreve como configurar o servidor de MFA do Azure como uma segunda camada de segurança quando os usuários ativarem funções no Privileged Access Management ou no Autoatendimento de Redefinição de Senha.
+O documento a seguir descreve como configurar o servidor do Azure MFA como uma segunda camada de segurança quando os usuários ativarem funções no Privileged Access Management ou na Redefinição de senha self-service.
 
 > [!IMPORTANT]
-> Devido ao aviso de reprovação do Software Development Kit da Autenticação Multifator do Microsoft Azure. O SDK da MFA do Azure terá suporte para os clientes atuais até a data de baixa, em 14 de novembro de 2018. Os clientes novos e atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA. <br> A equipe de desenvolvimento da Microsoft está trabalhando nas alterações para a MFA por meio da integração com o SDK do Servidor de Autenticação Multifator do Azure.
+> Devido ao anúncio de substituição do Software Development Kit da Autenticação Multifator do Azure, o SDK do Azure MFA terá suporte para clientes existentes até a data de desativação, em 14 de novembro de 2018. Os clientes novos e atuais não poderão mais baixar o SDK por meio do portal clássico do Azure. Para baixá-lo, fale com o atendimento ao cliente do Microsoft Azure a fim de receber o pacote de credenciais de serviço gerado pela MFA.
 
-O artigo a seguir descreverá a atualização da configuração e as etapas para habilitar uma mudança simples do SDK do MFA do Azure para o SDK do Servidor de Autenticação Multifator do Azure, quando lançadas, pois serão incluídas em um hotfix futuro. Confira o [histórico de versão](./reference/version-history.md) para ver os comunicados. 
+O artigo a seguir descreve a atualização de configuração e as etapas para habilitar a mudança do SDK do Azure MFA para o Servidor de Autenticação Multifator do Azure.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -47,7 +47,7 @@ Entre no [portal do Azure](https://portal.azure.com/) e baixe o servidor de MFA 
 Use o link **Gerar credenciais de ativação para iniciar o uso** para gerar credenciais de ativação. Uma vez gerado, salve para uso posterior.
 
 ### <a name="step-3-install-the-azure-multi-factor-authentication-server"></a>Etapa 3: instalar o Servidor de Autenticação Multifator do Azure
-Depois de baixar o servidor, [instale](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server)-o.  Suas credenciais de ativação serão necessárias. 
+Depois de baixar o servidor, [instale](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy#install-and-configure-the-mfa-server)-o.  Suas credenciais de ativação serão necessárias. 
 
 ### <a name="step-4-create-your-iis-web-application-that-will-host-the-sdk"></a>Etapa 4: criar seu aplicativo Web do IIS que hospedará o SDK
 1. Abra o Gerenciador do IIS ![working-with-mfaserver-for-mim_iis.PNG](media/working-with-mfaserver-for-mim/working-with-mfaserver-for-mim_iis.PNG)
@@ -87,9 +87,9 @@ Depois de baixar o servidor, [instale](https://docs.microsoft.com/en-us/azure/ac
 > Para reverter a configuração, substitua MfaSettings.xml pelo arquivo de backup na etapa 2
 
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="see-also"></a>Consulte também
 
--    [Guia de Introdução com o Servidor de Autenticação Multifator do Azure](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfaserver-deploy)
+-    [Guia de Introdução com o Servidor de Autenticação Multifator do Azure](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [O que é a Autenticação Multifator do Azure?](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)
 - [Usar a API de Autenticação Multifator Personalizada para ativar SSPR ou PAM](Working-with-custommfaserver-for-mim.md)
 - [Histórico de lançamento de versão do MIM](./reference/version-history.md)

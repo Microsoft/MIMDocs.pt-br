@@ -9,12 +9,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 48ff4a06233ba95288432c4cfe48e37b4d1449ab
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: e4b18d3caa866767524c56ce184e787a190e9390
+ms.sourcegitcommit: 8ba50298cef65e8cc90402282e88410fad86b4d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519145"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75187318"
 ---
 # <a name="bhold-core-installation"></a>Instalação do BHOLD Core
 
@@ -70,7 +70,7 @@ O módulo BHOLD Core deve ser capaz de fazer logon no domínio com uma conta de 
 
 3.  Na caixa de diálogo **Novo Objeto – Grupo**, em **Nome do grupo**, digite o nome do grupo (padrão do BHOLD: BHOLDApplicationGroup) e, em seguida, clique em **OK**.
 
-4.  Clique com o botão direito do mouse em **Usuários**, aponte para **Novo**e clique em **Usuário**.
+4.  Clique com o botão direito do mouse em **Usuários**, aponte para **Novo** e clique em **Usuário**.
 
 5.  Em **Nome completo**, digite um nome que ajudará você a identificar a conta, por exemplo, Conta de Serviço do BHOLD Core.
 
@@ -108,11 +108,11 @@ Antes de você começar a instalar o módulo BHOLD Core, você precisa estar pre
 | **Item**                                       | **Descrição**                                                                                                                                                                                                                                                           | **Valor**                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Usar segurança integrada**                    | Especifica que a Autenticação do Windows é usada para acessar o banco de dados.                                                                                                                                                                                                     | Marque a caixa de seleção se a autenticação do Windows for usada para se conectar ao SQL Server. Desmarque a caixa de seleção se a autenticação do SQL Server for usada. O banco de dados deverá ter sido criado antes de executar a Instalação do BHOLD Core se a Autenticação do SQL Server for usada. **Observação:** se a Autenticação do Windows for usada, você deverá fazer logon com uma conta que tenha a função de servidor sysadmin no servidor de banco de dados. |
-| **Usuário de Banco de Dados** e  **Senha de Banco de Dados** | Especifica o nome de usuário e a senha de um usuário com a função de servidor sysadmin no servidor de banco de dados. Esses valores são fornecidos somente quando a Autenticação do SQL Server é usada.                                                                                               | Escreva o nome de usuário do SQL Server aqui:  Escreva a senha do usuário do SQL Server aqui: **Observação:** mantenha essa senha em um local seguro e oculto.                                                                                                                                                                                                                                                  |
-| **Servidor de Banco de Dados** e  **Nome do Banco de Dados**   | Especifica o nome NetBIOS do servidor de banco de dados e o nome do banco de dados (padrão: b1) que a Instalação do BHOLD Core criará. Se você não estiver usando a instância padrão do servidor de banco de dados, especifique a instância do servidor de banco de dados no formato *\<servidor\>* \\ *\<instância\>* . | Grave o nome de servidor (ou servidor e instância) aqui:  Grave o nome do banco de dados aqui:                                                                                                                                                                                                                                                                                                                   |
+| **Usuário de Banco de Dados** e **Senha de Banco de Dados** | Especifica o nome de usuário e a senha de um usuário com a função de servidor sysadmin no servidor de banco de dados. Esses valores são fornecidos somente quando a Autenticação do SQL Server é usada.                                                                                               | Escreva o nome de usuário do SQL Server aqui:  Escreva a senha do usuário do SQL Server aqui: **Observação:** mantenha essa senha em um local seguro e oculto.                                                                                                                                                                                                                                                  |
+| **Servidor de Banco de Dados** e **Nome do Banco de Dados**   | Especifica o nome NetBIOS do servidor de banco de dados e o nome do banco de dados (padrão: b1) que a Instalação do BHOLD Core criará. Se você não estiver usando a instância padrão do servidor de banco de dados, especifique a instância do servidor de banco de dados no formato *\<servidor\>* \\ *\<instância\>* . | Grave o nome de servidor (ou servidor e instância) aqui:  Grave o nome do banco de dados aqui:                                                                                                                                                                                                                                                                                                                   |
 | **Verifique as restrições para o usuário de banco de dados**    | Obsoleto.                                                                                                                                                                                                                                                                 | Não altere o valor padrão                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
-|                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                                                |                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## <a name="bhold-core-setup"></a>Instalação do BHOLD Core
 
@@ -132,7 +132,7 @@ Concluída a instalação do BHOLD Core, você deverá configurar o Firewall do 
 
 Se os usuários acessarão o BHOLD por meio de navegadores da web em computadores remotos, você deverá configurar o Firewall do Windows no servidor do BHOLD Core para permitir conexões de entrada na porta do site que você especificou quando você instalou BHOLD Core.
 
-Para executar esse procedimento, você deve ser membro do grupo Administradores no computador local.
+Para realizar esse procedimento, você deve ser um membro do grupo Administradores do computador local.
 
 #### <a name="to-permit-incoming-connections-to-the-bhold-website"></a>Para permitir conexões de entrada para o site do BHOLD
 
@@ -177,7 +177,7 @@ A associação em **Administradores do Domínio** ou equivalente é o requisito 
 
 1.  No controlador de domínio do Active Directory Domain Services, clique em **Iniciar**, **Todos os Programas** e **Acessórios**. Em seguida, clique com o botão direito do mouse em **Prompt de Comando** e clique em **Executar como administrador**.
 
-2.  No prompt de comando, digite o seguinte comando e pressione ENTER: setspn –S HTTP/ *\<networkalias\> \<domain\>*  \\ *\<accountname\>* , em que:
+2.  No prompt de comando, digite o seguinte comando e pressione ENTER: setspn –S HTTP/ *\<networkalias\> \<domain\>* \\ *\<accountname\>* , em que:
 
     -   *\<networkalias\>* é o endereço que os clientes usam para entrar em contato com o site do BHOLD
 
