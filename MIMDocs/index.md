@@ -4,12 +4,12 @@ ms.topic: landing-page
 ms.prod: microsoft-identity-manager
 title: Documentação do Microsoft Identity Manager | Microsoft Docs
 description: Saiba como usar o Microsoft Identity Manager.
-ms.openlocfilehash: fb89ce57b751cf150306f0a10d2e051377fa1181
-ms.sourcegitcommit: 2d4eeaec83199473d987fed9fae557ecefe7c1bd
+ms.openlocfilehash: b117b5226ab5181f3a4a2999bae9a7067beeec42
+ms.sourcegitcommit: 8c23165aa69f26f484b9a01482cd4e990fe783d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49474171"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955916"
 ---
 # <a name="microsoft-identity-manager-documentation"></a>Documentação do Microsoft Identity Manager
 
@@ -76,7 +76,6 @@ O Microsoft Identity Manager 2016 une as soluções de gerenciamento de identida
 > [!WARNING]
 > O suporte base do FIM (Forefront Identity Manager) termina em 10/10/2017. <a href="microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md" data-raw-source="[upgrade](microsoft-identity-manager-2016-upgrade-from-fim-2010-r2.md)">Atualize</a> para o Microsoft Identity Manager 2016. Mais informações: 
 > - As informações do ciclo de vida do FIM são fornecidas <a href="https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010" data-raw-source="[here](https://support.microsoft.com/lifecycle/search?alpha=Microsoft%20Forefront%20Identity%20Manager%202010%20R2%20Service%20Pack%201,Microsoft%20Identity%20Manager%202016,Microsoft%20Forefront%20Identity%20Manager%202010)">aqui</a> 
-> - Para obter informações sobre lançamentos públicos de produtos de identidade, veja <a href="https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/" data-raw-source="[Microsoft Identity Software: Public Release Build Versions](https://blogs.technet.microsoft.com/iamsupport/idmbuildversions/)">Software do Microsoft Identity: versões de build de lançamento público</a>
 
 <h2>Referência</h2>
 <ul class="panelContent cardsFTitle">
