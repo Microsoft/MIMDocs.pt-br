@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: fa0af422-b5e9-4599-9d9b-cb6c18ea07f9
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 8216dc144dd7cee2ccb30d89198f6d2bb3a726c1
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ea9caef07c2496c5d2e040f5d88764938231220b
+ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329433"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756179"
 ---
 # <a name="deploy-microsoft-identity-manager-2016-sp2"></a>Implantar o Microsoft Identity Manager 2016 SP2
 Os artigos nesta seção fornecem instruções passo a passo para implantar o MIM (Microsoft Identity Manager) 2016 para cenários de autoatendimento de usuário final em um servidor novo que não tenha o FIM ou o MIM implantado anteriormente.
@@ -30,7 +30,8 @@ O processo de implantação do MIM é muito semelhante ao processo de seu antece
 
 ## <a name="first-prepare-a-domain"></a>Primeiro: preparar um domínio
 O MIM funciona com o AD (Active Directory), portanto, siga estas etapas para configurar seu controlador de domínio do AD.
-- [Configuração de domínio](preparing-domain.md)
+- [Configuração de domínio](preparing-domain.md) ou
+- [Configuração de domínio para Contas de Serviço Gerenciado de Grupo](preparing-domain-gmsa.md)
 
 
 ## <a name="next-prepare-an-identity-management-servers"></a>Em seguida: preparar servidores de gerenciamento de identidade
@@ -49,4 +50,3 @@ Depois que você configurar o domínio e o servidor, estará pronto para instala
 - [Serviço de Sincronização do MIM](install-mim-sync.md)
 - [Serviço e Portal do MIM](install-mim-service-portal.md)
 - [Sincronizar bancos de dados do Serviço do MIM e do Active Directory](install-mim-sync-ad-service.md)
-
