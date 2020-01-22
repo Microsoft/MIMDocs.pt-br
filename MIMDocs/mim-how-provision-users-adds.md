@@ -9,12 +9,12 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 5e259df617c5a95fcd54f49c9cbb70f9cd0c36a4
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 77f1eb5d8355472c7aee7bc9f389ca8b24ab76a9
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519760"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256607"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Como Provisionar Usuários no AD DS
 
@@ -27,7 +27,7 @@ Este guia explica os principais blocos de construção envolvidos no processo de
 ## <a name="before-you-begin"></a>Antes de começar
 
 
-Nesta seção, você encontrará informações sobre o escopo deste documento. Em geral, os guias “Como...” são destinados a leitores que já têm experiência básica com o processo de sincronização de objetos com o MIM, conforme abordado nos [Guias de Introdução](http://go.microsoft.com/FWLink/p/?LinkId=190486) relacionados.
+Nesta seção, você encontrará informações sobre o escopo deste documento. Em geral, os guias “Como...” são destinados a leitores que já têm experiência básica com o processo de sincronização de objetos com o MIM, conforme abordado nos [Guias de Introdução](https://go.microsoft.com/FWLink/p/?LinkId=190486) relacionados.
 
 ### <a name="audience"></a>Público-alvo
 
@@ -39,9 +39,9 @@ Este guia destina-se a profissionais de tecnologia da informação (TI) que já 
 
 Este documento presume que você tem acesso a uma instância de execução do MIM e experiência na configuração de cenários de sincronização simples, conforme descrito nos seguintes documentos:
 
--   [Introdução à Sincronização de Entrada](http://go.microsoft.com/FWLink/p/?LinkId=189652)
+-   [Introdução à Sincronização de Entrada](https://go.microsoft.com/FWLink/p/?LinkId=189652)
 
--   [Introdução à Sincronização de Saída](http://go.microsoft.com/FWLink/p/?LinkId=189653)
+-   [Introdução à Sincronização de Saída](https://go.microsoft.com/FWLink/p/?LinkId=189653)
 
 O conteúdo deste documento foi concebido para funcionar como uma extensão desses documentos introdutórios.
 
@@ -62,7 +62,7 @@ Essas estimativas pressupõem que o ambiente de testes já está configurado e n
 ### <a name="getting-support"></a>Como obter suporte
 
 
-Se houver dúvidas sobre o conteúdo deste documento ou se você tiver comentários gerais que gostaria de discutir, fique à vontade para postar uma mensagem no [Fórum do Forefront Identity Manager 2010](http://go.microsoft.com/FWLink/p/?LinkId=189654).
+Se houver dúvidas sobre o conteúdo deste documento ou se você tiver comentários gerais que gostaria de discutir, fique à vontade para postar uma mensagem no [Fórum do Forefront Identity Manager 2010](https://go.microsoft.com/FWLink/p/?LinkId=189654).
 
 ## <a name="scenario-description"></a>Descrição do cenário
 
@@ -88,7 +88,7 @@ A ilustração a seguir descreve o ambiente necessário.
 É possível executar todos os componentes em um computador.
 
 > [!NOTE]
-> Para obter mais informações sobre a configuração do MIM, consulte o [Guia de Instalação do FIM](http://go.microsoft.com/FWLink/p/?LinkId=165845).
+> Para obter mais informações sobre a configuração do MIM, consulte o [Guia de Instalação do FIM](https://go.microsoft.com/FWLink/p/?LinkId=165845).
 
 ## <a name="scenario-components-list"></a>Lista de Componentes do Cenário
 
@@ -124,7 +124,7 @@ Nesta seção, encontram-se instruções sobre os recursos que você precisa cri
 ### <a name="step-1-create-the-ou"></a>Etapa 1: Criar a UO
 
 
-A OU serve como um contêiner para o usuário de exemplo provisionado. Para obter mais informações sobre a criação de OUs, consulte [Criar uma Nova Unidade Organizacional](http://go.microsoft.com/FWLink/p/?LinkId=189655).
+A OU serve como um contêiner para o usuário de exemplo provisionado. Para obter mais informações sobre a criação de OUs, consulte [Criar uma Nova Unidade Organizacional](https://go.microsoft.com/FWLink/p/?LinkId=189655).
 
 Crie uma OU chamada MIMObjects no AD DS.
 
@@ -136,7 +136,7 @@ Para o cenário deste guia, duas contas de usuário do Active Directory são nec
 
 - **FIMMA** – Utilizada pelo agente de gerenciamento do Serviço FIM.
 
-Em ambos os casos, isso é suficiente para criar contas de usuário normais. Mais informações sobre os requisitos específicos de ambas as contas serão fornecidas mais adiante neste documento. Para obter mais informações sobre a criação de usuários, consulte [Criar uma Nova Conta de Usuário](http://go.microsoft.com/FWLink/p/?LinkId=189656).
+Em ambos os casos, isso é suficiente para criar contas de usuário normais. Mais informações sobre os requisitos específicos de ambas as contas serão fornecidas mais adiante neste documento. Para obter mais informações sobre a criação de usuários, consulte [Criar uma Nova Conta de Usuário](https://go.microsoft.com/FWLink/p/?LinkId=189656).
 
 
 ## <a name="configuring-the-fim-synchronization-service"></a>Configuração do Serviço de Sincronização FIM
@@ -154,7 +154,7 @@ Para o cenário deste guia, será necessário criar dois agentes de gerenciament
 
 ### <a name="step-3-create-the-fabrikam-adma-management-agent"></a>Etapa 3: Criar o agente de gerenciamento ADMA da Fabrikam
 
-Ao configurar um agente de gerenciamento do AD DS, é necessário especificar uma conta usada pelo agente de gerenciamento na troca de dados com o AD DS. Use uma conta de usuário normal. No entanto, para importar dados do AD DS, a conta deve ter o direito de sondar alterações do controle DirSync. Se você quiser que o agente de gerenciamento exporte dados para o AD DS, será necessário conceder direitos suficientes à conta nas OUs de destino. Para obter mais informações sobre esse tópico, consulte [Configuração da Conta ADMA](http://go.microsoft.com/FWLink/p/?LinkId=189657).
+Ao configurar um agente de gerenciamento do AD DS, é necessário especificar uma conta usada pelo agente de gerenciamento na troca de dados com o AD DS. Use uma conta de usuário normal. No entanto, para importar dados do AD DS, a conta deve ter o direito de sondar alterações do controle DirSync. Se você quiser que o agente de gerenciamento exporte dados para o AD DS, será necessário conceder direitos suficientes à conta nas OUs de destino. Para obter mais informações sobre esse tópico, consulte [Configuração da Conta ADMA](https://go.microsoft.com/FWLink/p/?LinkId=189657).
 
 Para criar um usuário no AD DS, é necessário realizar um fluxo de saída do DN do objeto. Além disso, é uma boa prática realizar o fluxo do nome, sobrenome e nome de exibição para garantir que os objetos sejam detectáveis.
 
@@ -163,7 +163,7 @@ No AD DS, ainda é comum que os usuários utilizem o atributo sAMAccountName par
 > [!Note]
 > Verifique se o valor especificado como unicodePwd está em conformidade com as políticas de senha do AD DS de destino.
 
-Ao definir uma senha para contas do AD DS, também é necessário criar uma conta como conta habilitada. Isso pode ser feito por meio da configuração do atributo userAccountControl. Para obter mais informações sobre o atributo userAccountControl, consulte [Usando o FIM para Habilitar ou Desabilitar Contas no Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189658).
+Ao definir uma senha para contas do AD DS, também é necessário criar uma conta como conta habilitada. Isso pode ser feito por meio da configuração do atributo userAccountControl. Para obter mais informações sobre o atributo userAccountControl, consulte [Usando o FIM para Habilitar ou Desabilitar Contas no Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189658).
 
 A tabela a seguir lista as configurações específicas do cenário mais importantes que precisam ser configuradas.
 
@@ -187,7 +187,7 @@ Para obter mais informações, consulte os seguintes tópicos em Ajuda:
 
 Ao configurar um agente de gerenciamento do Serviço FIM, é necessário especificar uma conta usada pelo agente de gerenciamento na troca de dados com o Serviço FIM.
 
-Use uma conta de usuário normal. A conta deve ser a mesma especificada durante a instalação do MIM. Consulte Utilizando o Windows PowerShell para Realizar um [Teste Rápido da Configuração de Conta do FIM MA](http://go.microsoft.com/FWLink/p/?LinkId=189659) para um script que pode ser usado para determinar o nome da conta FIMMA especificada durante a configuração e para testar se a conta ainda é válida.
+Use uma conta de usuário normal. A conta deve ser a mesma especificada durante a instalação do MIM. Consulte Utilizando o Windows PowerShell para Realizar um [Teste Rápido da Configuração de Conta do FIM MA](https://go.microsoft.com/FWLink/p/?LinkId=189659) para um script que pode ser usado para determinar o nome da conta FIMMA especificada durante a configuração e para testar se a conta ainda é válida.
 
 A tabela a seguir lista as configurações específicas do cenário mais importantes que precisam ser configuradas. Crie o agente de gerenciamento com base nas informações fornecidas na tabela a seguir.  
 
@@ -231,7 +231,7 @@ Crie perfis de execução para cada agente de gerenciamento de acordo com a tabe
 > 
 > 
 > [!Important]
->  Verifique se o provisionamento está habilitado no ambiente. Você pode fazer isso executando o script, usando o Windows PowerShell para habilitar o provisionamento (http://go.microsoft.com/FWLink/p/?LinkId=189660).
+>  Verifique se o provisionamento está habilitado no ambiente. Você pode fazer isso executando o script, usando o Windows PowerShell para habilitar o provisionamento (https://go.microsoft.com/FWLink/p/?LinkId=189660).
 
 
 ## <a name="configuring-the-fim-service"></a>Configuração do Serviço FIM
@@ -243,7 +243,7 @@ Para o cenário deste guia, é necessário configurar uma política de provision
 
 O objetivo desta política de provisionamento é colocar grupos dentro do escopo da Regra de Sincronização de Saída de Usuário do AD. Ao colocar o recurso no escopo da regra de sincronização, permite-se que o mecanismo de sincronização provisione o recurso para o AD DS de acordo com a configuração.
 
-Para configurar o Serviço FIM, navegue no Windows Internet Explorer® até http://localhost/identitymanagement. Na página do Portal do MIM, para criar a política de provisionamento, acesse as páginas relacionadas na seção Administração. Para verificar a configuração, execute o script [Utilizando o Windows PowerShell para Documentar a Configuração de Política de Provisionamento](http://go.microsoft.com/FWLink/p/?LinkId=189661).
+Para configurar o Serviço FIM, navegue no Windows Internet Explorer® até http://localhost/identitymanagement. Na página do Portal do MIM, para criar a política de provisionamento, acesse as páginas relacionadas na seção Administração. Para verificar a configuração, execute o script [Utilizando o Windows PowerShell para Documentar a Configuração de Política de Provisionamento](https://go.microsoft.com/FWLink/p/?LinkId=189661).
 
 ### <a name="step-6-create-the-synchronization-rule"></a>Etapa 6: Criar a regra de sincronização
 
@@ -251,7 +251,7 @@ As tabelas a seguir mostram a configuração da regra de sincronização de prov
 
 | Configuração da regra de sincronização                                                                         |                                                                             |                                                           
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------|
-| Nome                                                                                                       | Regra de Sincronização de Saída de Usuário do Active Directory                         |                                                          
+| Name                                                                                                       | Regra de Sincronização de Saída de Usuário do Active Directory                         |                                                          
 | Descrição                                                                                               |                                                                             |                                                           
 | Precedência                                                                                                | 2                                                                           |                                                           
 | Direção do Fluxo de Dados   | Saída             |       
@@ -302,14 +302,14 @@ O objetivo do Fluxo de Trabalho de Provisionamento do AD é adicionar a regra de
 
 | Configuração do fluxo de trabalho               |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Nome                                 | Fluxo de Trabalho de Provisionamento de Usuários do Active Directory                     |
+| Name                                 | Fluxo de Trabalho de Provisionamento de Usuários do Active Directory                     |
 | Descrição                          |                                                                 |
 | Tipo de Fluxo de Trabalho                        | Ação                                                          |
 | Executar na Atualização da Política                 | Falso                                                           |
 
 | Regra de sincronização                 |                                                                 |
 |--------------------------------------|-----------------------------------------------------------------|
-| Nome                                 | Regra de Sincronização de Saída de Usuário do Active Directory             |
+| Name                                 | Regra de Sincronização de Saída de Usuário do Active Directory             |
 | Ação                               | Adicionar                                                             |
 
 
@@ -321,9 +321,9 @@ A MPR necessária é do tipo Definir Transição e dispara quando um recurso se 
 
 | Configuração da MPR                    |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Nome                                 | Regra de Política de Gerenciamento de Provisionamento de Usuários do AD                 |
+| Name                                 | Regra de Política de Gerenciamento de Provisionamento de Usuários do AD                 |
 | Descrição                          |                                                             |
-| Tipo                                 | Definir Transição                                              |
+| Digite                                 | Definir Transição                                              |
 | Concede Permissões                   | Falso                                                       |
 | Desativado                             | Falso                                                       |
 
@@ -334,7 +334,7 @@ A MPR necessária é do tipo Definir Transição e dispara quando um recurso se 
 
 | Fluxos de trabalho de política                     |                                                             |
 |--------------------------------------|-------------------------------------------------------------|
-| Tipo                                 | Ação                                                      |
+| Digite                                 | Ação                                                      |
 | Nome para Exibição                         | Fluxo de Trabalho de Provisionamento de Usuários do Active Directory                 |
 
 
@@ -417,7 +417,7 @@ Para verificar se o usuário é membro do conjunto Todos os Prestadores de Servi
 
 Para verificar se o usuário está no escopo da regra de sincronização, abra a página de propriedades do usuário e examine o atributo Lista de Regras Esperadas na guia Provisionamento. O atributo Lista de Regras Esperadas deve listar o Usuário do AD
 
-Regra de Sincronização de Saída. A captura de tela a seguir mostra um exemplo do atributo Lista de Regras Esperadas.
+Regra de Sincronização de Saída. A captura de tela a seguir mostra um exemplo do atributo de lista de regras esperado.
 
 ![Status da regra de sincronização](media/how-provision-users-adds/image023.jpg)
 
@@ -459,7 +459,7 @@ Para realizar essas tarefas, execute os seguintes perfis de execução.
 | FIMMA da Fabrikam   | 1. Exportar <br/> 2. Importação de delta       |
 
 
-Após a importação do banco de dados do FIM Service, Britta Simon e o objeto ExpectedRuleEntry que vincula Britta à Regra de Sincronização de Saída de Usuários do AD serão testados no espaço conector FIMMA da Fabrikam. Quando revisar as propriedades de Britta no espaço conector, ao lado dos valores de atributo configurados no Portal do FIM, você encontrará também uma referência válida para o objeto Entrada da Regra Esperada. A captura de tela a seguir mostra um exemplo.
+Após a importação do banco de dados do FIM Service, Britta Simon e o objeto ExpectedRuleEntry que vincula Britta à Regra de Sincronização de Saída de Usuários do AD serão testados no espaço conector FIMMA da Fabrikam. Quando revisar as propriedades de Britta no espaço conector, ao lado dos valores de atributo configurados no Portal do FIM, você encontrará também uma referência válida para o objeto Entrada da Regra Esperada. A captura de tela a seguir mostra um exemplo disso.
 
 ![Propriedades de objeto do espaço conector](media/how-provision-users-adds/image025.jpg)
 
@@ -481,7 +481,7 @@ Durante a exportação no FIMMA da Fabrikam a seguir, o status da regra de sincr
 
 ![Regra de sincronização aplicada](media/how-provision-users-adds/image028.jpg)
 
-Como um novo objeto foi provisionado no espaço conector do ADMA, deve haver um Adicionar exportação pendente nesse agente de gerenciamento. Usando um script para essa finalidade, é possível ver um Adicionar exportação pendente relatado para o ADMA da Fabrikam. Para usar o script, consulte [Utilizando o Windows PowerShell para Exibir o Estado de Exportação de um Agente de Gerenciamento](http://go.microsoft.com/FWLink/p/?LinkId=189664).
+Como um novo objeto foi provisionado no espaço conector do ADMA, deve haver um Adicionar exportação pendente nesse agente de gerenciamento. 
 
 ![Exportações pendentes do agente de gerenciamento](media/how-provision-users-adds/image029.jpg)
 
@@ -507,10 +507,10 @@ O objetivo deste documento é apresentar os principais blocos de construção pa
 Ao testar a configuração, é muito provável que você exclua e crie novamente novos objetos de teste. Para objetos com um
 
 atributo ExpectedRulesList preenchido, isso pode ter como resultado objetos ERE órfãos.
-Para obter uma descrição de como remover esses objetos do ambiente de teste, consulte [Um Método para Remover Objetos ExpectedRuleEntry Órfãos do Ambiente](http://go.microsoft.com/FWLink/p/?LinkId=189667).
+Para obter uma descrição de como remover esses objetos do ambiente de teste, consulte [Um Método para Remover Objetos ExpectedRuleEntry Órfãos do Ambiente](https://go.microsoft.com/FWLink/p/?LinkId=189667).
 
 Em um cenário normal de sincronização que inclui o AD DS como destino de sincronização, o MIM não será autoritativo para todos os atributos de um objeto. Por exemplo, ao gerenciar objetos de usuário no AD DS usando o FIM, no mínimo, o domínio e os atributos objectSID precisam ser contribuídos pelo agente de gerenciamento do AD DS.
-Os atributos de nome, domínio e objectSID da conta serão necessários se sua intenção for habilitar um usuário para fazer logon no Portal do FIM. Para preencher esses atributos do AD DS, uma regra de sincronização de entrada adicional será necessária para o espaço conector do AD DS. Ao gerenciar objetos com várias fontes de valores de atributo, é necessário garantir que a prioridade de fluxo de atributo está configurada corretamente. Se a prioridade de fluxo de atributo não estiver configurada corretamente, o mecanismo de sincronização bloqueará o preenchimento dos valores de atributo. É possível saber mais sobre a prioridade de fluxo de atributo no artigo [Sobre a Prioridade de Fluxo de Atributo](http://go.microsoft.com/FWLink/p/?LinkId=189675).
+Os atributos de nome, domínio e objectSID da conta serão necessários se sua intenção for habilitar um usuário para fazer logon no Portal do FIM. Para preencher esses atributos do AD DS, uma regra de sincronização de entrada adicional será necessária para o espaço conector do AD DS. Ao gerenciar objetos com várias fontes de valores de atributo, é necessário garantir que a prioridade de fluxo de atributo está configurada corretamente. Se a prioridade de fluxo de atributo não estiver configurada corretamente, o mecanismo de sincronização bloqueará o preenchimento dos valores de atributo. É possível saber mais sobre a prioridade de fluxo de atributo no artigo [Sobre a Prioridade de Fluxo de Atributo](https://go.microsoft.com/FWLink/p/?LinkId=189675).
 
 <a name="see-also"></a>Consulte Também
 =========
@@ -518,20 +518,18 @@ Os atributos de nome, domínio e objectSID da conta serão necessários se sua i
 <a name="other-resources"></a>Outros Recursos
 ---------------
 
-[Utilizando o FIM para Habilitar ou Desabilitar Contas no Active Directory](http://go.microsoft.com/FWLink/p/?LinkId=189670)
+[Utilizando o FIM para Habilitar ou Desabilitar Contas no Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189670)
 
-[Sobre Atributos de Referência](http://go.microsoft.com/FWLink/p/?LinkId=189671)
+[Noções básicas sobre o processamento de atributos de referência](https://go.microsoft.com/FWLink/p/?LinkId=189671)
 
-[Como Gerenciar Minha Conta FIM MA](http://go.microsoft.com/FWLink/p/?LinkId=189672)
+[Como gerenciar a conta do FIM MA](https://go.microsoft.com/FWLink/p/?LinkId=189672)
 
-[Como detectar Contas Não Autoritativas – Parte 1: Previsão](http://go.microsoft.com/FWLink/p/?LinkId=189673)
+[Como detectar contas não autoritativas – Parte 1: Previsão](https://go.microsoft.com/FWLink/p/?LinkId=189673)
 
-[A Versão Pobre do Mecanismo de Detecção de Conector](http://go.microsoft.com/FWLink/p/?LinkId=189674)
+[Como detectar conectores](https://go.microsoft.com/FWLink/p/?LinkId=189674)
 
-[Configurando a Conta ADMA](http://go.microsoft.com/FWLink/p/?LinkId=189657)
+[Como configurar a conta do ADMA](https://go.microsoft.com/FWLink/p/?LinkId=189657)
 
-[Um Método para Remover Objetos ExpectedRuleEntry Órfãos do Ambiente](http://go.microsoft.com/FWLink/p/?LinkId=189667)
+[Sobre a Prioridade de Fluxo de Atributo](https://go.microsoft.com/FWLink/p/?LinkId=189675)
 
-[Sobre a Prioridade de Fluxo de Atributo](http://go.microsoft.com/FWLink/p/?LinkId=189675)
-
-[Sobre Exportações](http://go.microsoft.com/FWLink/p/?LinkId=189676)
+[Noções básicas sobre exportações](https://social.technet.microsoft.com/wiki/contents/articles/1861.understanding-exports-in-ilm-2007.aspx)
