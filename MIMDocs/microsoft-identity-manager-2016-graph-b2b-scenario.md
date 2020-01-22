@@ -9,12 +9,12 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 139c58510117ad422529a4ff0facd23040023713
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: ba70cd299f2ebec31555bb40b935a6b54779d198
+ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64521505"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76256624"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Colaboração B2B (entre empresas) do Azure AD com Microsoft Identity Manager (MIM) 2016 SP1 com Proxy do Aplicativo Azure
 ============================================================================================================================
@@ -31,8 +31,6 @@ Algumas suposições feitas na configuração de B2B com o MIM e o Proxy de Apli
 -   Você já seguiu as instruções no artigo sobre como baixar e instalar o [conector do Graph](microsoft-identity-manager-2016-connector-graph.md).
 
 -   Você tem o Azure AD Connect configurado para sincronização de usuários e grupos com o Azure AD.
-
--   Você configurou o Azure AD Connect para a sincronizar Grupos do Office para controlar o aplicativo do Azure AD Connect [de volta no AD DS local](http://robsgroupsblog.com/blog/how-to-write-back-an-office-group-in-azure-active-directory-to-a-mail-enabled-security-group-in-an-on-premises-active-directory)
 
 -   Você já configurou os conectores do proxy de aplicativos e os grupos de conectores. Caso contrário, você pode visitar [aqui](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable#install-and-register-a-connector) para instalar e configurar
 
@@ -63,7 +61,7 @@ Por padrão, o Azure AD Connect presumirá que os usuários não administradores
 Portanto, os usuários incluídos no AD DS pelo MIM do Azure AD precisam ser armazenados de maneira que o Azure AD não tente sincronizá-los com o Azure AD.
 Uma maneira de fazer isso é criar uma nova unidade organizacional no AD DS e configurar o Azure AD Connect para excluir a unidade organizacional.  
 
-Mais informações podem ser encontradas em [Sincronização do Azure AD Connect: configurar a filtragem](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
+Mais informações podem ser encontradas em [Sincronização do Azure AD Connect: configurar a filtragem](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-configure-filtering). 
  
 
 ## <a name="create-the-azure-ad-application"></a>Criar o aplicativo do Azure AD 
@@ -318,4 +316,4 @@ Depois que tudo estiver configurado, peça para o usuário B2B fazer logon e ver
 
 [Como fornecer acesso remoto seguro a aplicativos locais](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
 
-[Baixe o conector do Microsoft Identity Manager para o Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+[Baixe o conector do Microsoft Identity Manager para o Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
