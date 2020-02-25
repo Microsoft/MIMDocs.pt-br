@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: a74f4074d9a0cf8378fd4972b7f51f723bd2f1c6
-ms.sourcegitcommit: 80cdfd782cc6e2a4c4698decd54342f0e1460f5f
+ms.openlocfilehash: be5dc1e8615f56d3157a78891e80897e446eafab
+ms.sourcegitcommit: 32c7a46b2f8ed3f2f9ebc6f79a4ecb0019fe62e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756251"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77527915"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Configurar um domínio para o cenário de gMSA (Contas de Serviço Gerenciado de grupo)
 
@@ -109,7 +109,7 @@ Todos os componentes da implantação do MIM precisam de suas próprias identida
 4.  Adicione os SPNs (Nomes da Entidade de Serviço) para habilitar a autenticação Kerberos para contas de serviço
 
     ```PowerShell
-    Set-ADServiceAccount -Identity svcMIMAppPool -ServicePrincipalNames @{Add="http/mim.contoso.com"}
+    setspn -S http/mim.contoso.com contoso\svcMIMAppPool
     ```
 
 5.  Não se esqueça de registrar os registros 'A' de DNS a seguir para a resolução apropriada dos nomes (supondo que os sites da Web do Serviço do MIM, do Portal do MIM, de Redefinição de Senha e de Registro de Senha sejam hospedados no mesmo computador)
