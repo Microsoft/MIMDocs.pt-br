@@ -1,24 +1,24 @@
 ---
 title: Conversão de serviços específicos do MIM em gMSA | Microsoft Docs
 description: Tópico que descreve as etapas básicas para configurar o gMSA.
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 96d375d82a71a21f0be444d628f387c4e1ffdd09
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 49216a2d2077dd1be83f17719e996a20abb61cf8
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64520744"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289508"
 ---
 # <a name="conversion-of-mim-specific-services-to-gmsa"></a>Conversão de serviços específicos do MIM em gMSA
 
 Este guia percorrerá as etapas básicas para configurar gMSA para serviços com suporte. O processo de converter em gMSA é fácil depois que você configura previamente seu ambiente.
 
-Hotfix necessário: \<link para KB mais recente\>
+Hotfix necessário: [4.5.26.0 ou posterior](https://docs.microsoft.com/microsoft-identity-manager/reference/version-history)
 
 Compatível:
 
@@ -163,7 +163,9 @@ Primeira etapa em seu controlador de domínio do Windows
 4.  Execute o MSI com privilégios elevados do Serviço do MIM e selecione a alteração.
 
 5.  Em "Configurar página de conexão do servidor principal", marque a caixa de seleção "Usar conta diferente para o Exchange (para contas gerenciadas)". Aqui, você terá uma opção para usar a conta antiga que tem uma caixa de correio ou usar a caixa de correio da nuvem.
-
+    >[!NOTE]
+    >Quando a opção **Usar o Exchange Online** está selecionada, para habilitar o Serviço do MIM para processar respostas de aprovação do complemento do Outlook do MIM, você precisa definir o valor da chave do Registro HKLM\SYSTEM\CurrentControlSet\Services\FIMService de PollExchangeEnabled como 1 após a instalação.
+    
 ![](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
 6.  Na página "Conta de serviço do MIM", digite conta de serviço com o símbolo \$ no fim. Também digite a Senha da Conta do Serviço de Email. A Senha da Conta de Serviço deve ser desabilitada.

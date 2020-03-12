@@ -2,21 +2,21 @@
 title: Instalar o portal e o serviço do Microsoft Identity Manager | Microsoft Docs
 description: Obtenha as etapas para configurar e instalar o Serviço e o Portal do MIM para o Microsoft Identity Manager 2016
 keywords: ''
-author: billmath
-ms.author: billmath
-manager: mtillman
+author: EugeneSergeev
+ms.author: esergeev
+manager: aashiman
 ms.date: 10/18/2019
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 1f7aa8e257ef4fd1d97ee602a4e0f3f878d8c1b6
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 4604c17d3e58c57f9819aaa036dc12a669aed55d
+ms.sourcegitcommit: d98a76d933d4d7ecb02c72c30d57abe3e7f5d015
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73568081"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78289475"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalação do MIM 2016: Serviço e Portal do MIM
 
@@ -51,6 +51,11 @@ Se você não configurou o pacote de instalação do MIM na última etapa, volte
     ![Configure a imagem de conexão de banco de dados do MIM](media/install-mim-service-portal/MIM_Install10.png)
 
 7. Em **Configurar conexão do servidor de email**, insira o nome do seu servidor do Exchange como **Servidor de Email**, ou use a Caixa de **Correio do O365**. Se você não tiver um servidor de email configurado, use **localhost** como o nome do servidor de email e desmarque as duas caixas de seleção superiores. Clique em **Avançar**.
+    >[!NOTE]
+    >MIM 2016 SP2 e posterior: se você estiver usando contas de serviço gerenciado de grupo, marque a caixa de seleção **Usar usuário diferente para o Exchange** mesmo que não planeje usar o Exchange.
+    
+    >[!NOTE]
+    >Quando a opção **Usar o Exchange Online** está selecionada, para habilitar o Serviço do MIM para processar respostas de aprovação do complemento do Outlook do MIM, você precisa definir o valor da chave do Registro HKLM\SYSTEM\CurrentControlSet\Services\FIMService de PollExchangeEnabled como 1 após a instalação.
 
     ![Configurar a imagem de conexão do servidor de email](media/install-mim-service-portal/MIM_Install11.png)
 
