@@ -4,19 +4,19 @@ description: ''
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f8fd71d2244760d3a6561c6f55bf676e6f42561a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518917"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043946"
 ---
 # <a name="planning-a-bastion-environment"></a>Planejando um ambiente de bastiões
 
@@ -42,7 +42,7 @@ De acordo com o [Modelo de camada](tier-model-for-partitioning-administrative-pr
 
 A floresta *CORP* de produção deve confiar na floresta *PRIV* administrativa, mas não o oposto. Isso pode ser uma relação de confiança de domínio ou uma relação de confiança de floresta. O domínio da floresta de administrador não precisa confiar nos domínios e florestas gerenciadas para gerenciar o Active Directory, embora outros aplicativos possam exigir uma relação de confiança bidirecional, validação de segurança e testes.
 
-A autenticação seletiva deve ser usada para garantir que as contas na floresta de administrador usam apenas os hosts de produção apropriados. Para manter os controladores de domínio e direitos de delegação no Active Directory, isso geralmente exige a concessão do direito “Autorizado a fazer logon” de controladores de domínio a contas de administrador da Camada 0 designadas na floresta de administrador. Veja [Configuring Selective Authentication Settings](http://technet.microsoft.com/library/cc816580.aspx)para obter mais informações.
+A autenticação seletiva deve ser usada para garantir que as contas na floresta de administrador usam apenas os hosts de produção apropriados. Para manter os controladores de domínio e direitos de delegação no Active Directory, isso geralmente exige a concessão do direito “Autorizado a fazer logon” de controladores de domínio a contas de administrador da Camada 0 designadas na floresta de administrador. Veja [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx)para obter mais informações.
 
 ## <a name="maintain-logical-separation"></a>Mantendo uma separação lógica
 

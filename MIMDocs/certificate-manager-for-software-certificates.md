@@ -4,19 +4,19 @@ description: Saiba como usar o Gerenciador de certificados para criar e renovar 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e9454643f425a6bd306c2828479129312d5a5d4f
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: b8a1b55ed836f46c184941ccf6ec25ef63ad4c30
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516631"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042093"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Criar certificados de software com o Gerenciador de certificados
 Para registrar e renovar certificados de software, você não precisa ser um administrador e não precisa de cartão inteligente virtual. Vale a pena observar que, em algum momento, você será solicitado a permitir uma operação de certificado, e isso é normal.

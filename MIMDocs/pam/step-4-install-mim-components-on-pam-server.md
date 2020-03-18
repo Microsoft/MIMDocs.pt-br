@@ -4,7 +4,7 @@ description: Instale e configure o Serviço e Portal do MIM nas estações de tr
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 2b5340ef3f98ba94904e595c3526d09bdac3f95f
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 0456f463357aea69913804b8d15241737932ff4d
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518442"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043674"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Etapa 4 – Instalar componentes MIM no servidor PAM e estação de trabalho
 

@@ -4,18 +4,18 @@ description: Entenda a manipulação de dados do Microsoft Identity Manager para
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: 6f861c5b1984de70a91edcac89276402f289e355
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: e95cf26b62e582eaa3c07c40e551bc5930d3b1b0
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701489"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044099"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Manipulação de dados do Microsoft Identity Manager 
 

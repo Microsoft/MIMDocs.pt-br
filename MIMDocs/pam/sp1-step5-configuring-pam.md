@@ -4,19 +4,19 @@ description: Esta é a etapa 5 de configuração do Privileged Identity Manager 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 03c5b1cb52f16090e6b241d588bbded6be4c6687
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 58a70336af4f79d87d6175aa99dc79fc81aa62dd
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518397"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043776"
 ---
 # <a name="step-5-installingconfiguring-pam"></a>Etapa 5 Instalar/configurar o PAM
 

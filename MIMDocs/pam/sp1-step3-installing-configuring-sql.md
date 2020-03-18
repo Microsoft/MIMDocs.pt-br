@@ -4,19 +4,19 @@ description: Esse artigo representa a etapa 3 da série de artigos que abordam c
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 69f86c5366f7b662f3a11fa4ac8d44159421f909
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: e9bc0345358a634adb0d7c0bdf9bd0f22ccea27e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518142"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043810"
 ---
 # <a name="step-3-configuring-sql"></a>Etapa 3 Configurar o SQL
 

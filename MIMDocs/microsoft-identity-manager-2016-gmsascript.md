@@ -3,16 +3,16 @@ title: Atualização de contas de Serviços do MIM específicos para notificaç�
 description: Tópico que descreve as etapas básicas para configurar o gMSA.
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 06/27/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: af293106b11651dfd720c03165938f8079a3e49b
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: a380135c82a6e4d1b317ae64a8c135ecc9e9ad45
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518843"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044184"
 ---
 # <a name="update-of-mim-specific-service-account-for-notifications-to-gmsa"></a>Atualização da conta de Serviço do MIM específica para notificações para gMSA
 ===========================================

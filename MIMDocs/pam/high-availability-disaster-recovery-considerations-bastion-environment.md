@@ -4,25 +4,25 @@ description: Saiba como configurar o Privileged Access Management para alta disp
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0d0d55d4007ab88df4c2f3b5a30ca0fdedea9fe2
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518728"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043963"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Considerações sobre alta disponibilidade e recuperação de desastre do ambiente de bastiões
 
 Este artigo descreve as considerações sobre alta disponibilidade e recuperação de desastre ao implantar o AD DS (Serviços de Domínio do Active Directory) e o MIM (Microsoft Identity Manager) 2016 no PAM (Privileged Access Management).
 
-As empresas se concentram em alta disponibilidade e recuperação de desastre para cargas de trabalho no Windows Server, SQL Server e Active Directory. Mas a disponibilidade confiável do ambiente de bastiões do Privileged Access Management também é importante. O ambiente de bastiões é uma parte essencial da infraestrutura de TI da organização, pois os usuários interagem com seus componentes a fim de assumirem funções administrativas. Para obter mais informações sobre alta disponibilidade em geral, baixe o white paper [Microsoft High Availability Overview](http://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Visão geral da Alta Disponibilidade da Microsoft).
+As empresas se concentram em alta disponibilidade e recuperação de desastre para cargas de trabalho no Windows Server, SQL Server e Active Directory. Mas a disponibilidade confiável do ambiente de bastiões do Privileged Access Management também é importante. O ambiente de bastiões é uma parte essencial da infraestrutura de TI da organização, pois os usuários interagem com seus componentes a fim de assumirem funções administrativas. Para obter mais informações sobre alta disponibilidade em geral, baixe o white paper [Microsoft High Availability Overview](https://download.microsoft.com/download/3/B/5/3B51A025-7522-4686-AA16-8AE2E536034D/Microsoft%20High%20Availability%20Strategy%20White%20Paper.doc) (Visão geral da Alta Disponibilidade da Microsoft).
 
 ## <a name="high-availability-and-disaster-recovery-scenarios"></a>Cenários de alta disponibilidade e recuperação de desastre
 
@@ -214,7 +214,7 @@ O Serviço MIM é necessário para processar as solicitações de ativação.  P
 
 #### <a name="preparation"></a>Preparação
 É recomendável implantar o Serviço MIM em vários servidores ingressados no domínio PRIV.
-Para alta disponibilidade, veja os documentos do Windows Server referentes aos [Requisitos de hardware de clustering de failover e opções de armazenamento](https://technet.microsoft.com/library/jj612869.aspx) e [Creating a Windows Server 2012 Failover Cluster](http://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Criando um cluster de failover do Windows Server 2012).
+Para alta disponibilidade, veja os documentos do Windows Server referentes aos [Requisitos de hardware de clustering de failover e opções de armazenamento](https://technet.microsoft.com/library/jj612869.aspx) e [Creating a Windows Server 2012 Failover Cluster](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Criando um cluster de failover do Windows Server 2012).
 
 Para a implantação de produção em vários servidores, é possível usar o NLB (Balanceamento de Carga de Rede) para distribuir a carga de processamento.  Você também deve ter um único alias (por exemplo, registros A ou CNAME) para que um nome comum seja exposto ao usuário.
 

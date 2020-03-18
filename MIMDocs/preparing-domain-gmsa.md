@@ -4,19 +4,19 @@ description: Configurar Contas de Serviço Gerenciado de Grupo em um domínio pa
 keywords: ''
 author: EugeneSergeev
 ms.author: esergeev
-manager: aashiman
+manager: daveba
 ms.date: 1/7/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: be5dc1e8615f56d3157a78891e80897e446eafab
-ms.sourcegitcommit: 32c7a46b2f8ed3f2f9ebc6f79a4ecb0019fe62e0
+ms.openlocfilehash: 32b346dd9cf99b617edfaca953389cba30d6681c
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77527915"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043504"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Configurar um domínio para o cenário de gMSA (Contas de Serviço Gerenciado de grupo)
 

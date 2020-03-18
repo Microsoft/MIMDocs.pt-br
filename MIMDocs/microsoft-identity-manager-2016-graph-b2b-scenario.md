@@ -4,22 +4,22 @@ author: billmath
 description: O conector do Microsoft Graph é o gerenciamento de ciclo de vida de conta do AD de usuário externo. Nesse cenário, uma organização convidou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada do Windows local ou aplicativos baseados em Kerberos
 keywords: ''
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: ba70cd299f2ebec31555bb40b935a6b54779d198
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 0d5f970168934f3fcc4c721aad0a439e2babcfe7
+ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256624"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79381498"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Colaboração B2B (entre empresas) do Azure AD com Microsoft Identity Manager (MIM) 2016 SP1 com Proxy do Aplicativo Azure
 ============================================================================================================================
 
-O cenário inicial é o gerenciamento do ciclo de vida da conta do AD do usuário externo.   Nesse cenário, uma organização chamou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada local do Windows ou aplicativos baseados em Kerberos, por meio do  [Proxy de Aplicativo do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) ou outros mecanismos de gateway. O Proxy de Aplicativo do Azure AD exige que cada usuário tenha sua própria conta do AD DS, para fins de identificação e delegação.
+O cenário inicial é o gerenciamento do ciclo de vida da conta do AD do usuário externo.   Nesse cenário, uma organização convidou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada do Windows local ou aplicativos baseados em Kerberos, por meio do [Proxy de Aplicativo do Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-publish) ou outros mecanismos de gateway. O Proxy de Aplicativo do Azure AD exige que cada usuário tenha sua própria conta do AD DS, para fins de identificação e delegação.
 
 ## <a name="scenario-specific-guidance"></a>Orientação específicas do cenário
 
@@ -73,8 +73,8 @@ Verifique se o aplicativo foi autorizado para pelo menos uma destas permissões:
 ## <a name="create-the-new-management-agent"></a>Criar o agente de gerenciamento
 
 
-Na interface do usuário do Synchronization Service Manager, selecione  **Conectores** e **Criar**.
-Selecione  **Graph (Microsoft)**   e forneça a ele um nome descritivo.
+Na interface de usuário do Synchronization Service Manager, selecione **Conectores** e **Criar**.
+Selecione **Graph (Microsoft)** e forneça um nome descritivo.
 
 ![](media/microsoft-identity-manager-2016-graph-b2b-scenario/d95c6b2cc7951b607388cbd25920d7d0.png)
 

@@ -4,7 +4,7 @@ description: Prepare um servidor PAM que hospedará o SQL e SharePoint para sua 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: e306748e982eb2eb123246bc7f309465823eaf35
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518234"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043657"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Etapa 3 – Preparar um servidor PAM
 
@@ -78,7 +78,7 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 9. No painel de detalhes, clique com o botão direito do mouse em **Negar logon localmente** e selecione **Propriedades**.  
 10. Clique em **Adicionar Usuário ou Grupo** e, em Nomes de usuário e grupo, digite *priv\mimmonitor; priv\MIMService; priv\mimcomponent* e clique em **OK**.  
-11. Clique em **OK** para fechar a janela Propriedades.  
+11. Clique em **OK** para fechar a janela de propriedades.  
 12. Feche a janela de Política de Segurança Local.  
 
 13. Abra o Painel de controle e mude para **Contas de Usuário**.

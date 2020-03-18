@@ -4,19 +4,19 @@ description: Saiba como atualizar os componentes do FIM 2010 R2 ou MIM 2016 SP2 
 keywords: ''
 author: EugeneSergeev
 ms.author: esergeev
-manager: aashiman
+manager: daveba
 ms.date: 09/16/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: bdf34be4841b1a911fdb61673e5a3855e66e7320
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: bfe604795d44cdea61fe0d10bc2943f9b8433784
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73568051"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044133"
 ---
 # <a name="mim-2016-sp2-upgrade--from-forefront-identity--or-microsoft-identity-manager"></a>Atualização do MIM 2016 SP2 para Forefront Identity ou Microsoft Identity Manager
 

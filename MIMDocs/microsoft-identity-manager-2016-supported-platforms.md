@@ -4,7 +4,7 @@ description: Localize os produtos e versões compatíveis com cada um dos compon
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/19/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: f69566c9d6abc6b7c54cc875a958b66a112c3111
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 40a79d234e702ca8f98349b13687a7262ffc4a27
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329348"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044065"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Plataformas com suporte para o MIM 2016
 

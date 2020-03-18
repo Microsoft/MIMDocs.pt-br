@@ -4,17 +4,17 @@ description: Avalie o processo de criação de usuários no AD DS usando o Micro
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 77f1eb5d8355472c7aee7bc9f389ca8b24ab76a9
-ms.sourcegitcommit: 1ca298d61f6020623f1936f86346b47ec5105d44
+ms.openlocfilehash: 149339a6e1029f01378a518a98029c1d588de6f9
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76256607"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044167"
 ---
 # <a name="how-do-i-provision-users-to-ad-ds"></a>Como Provisionar Usuários no AD DS
 
@@ -499,8 +499,8 @@ Para verificar se o usuário de exemplo foi provisionado no AD DS, abra a OU do 
 
 ![verificar se o usuário está na OU do FIMObjects](media/how-provision-users-adds/image033.jpg)
 
-<a name="summary"></a>Resumo
-=======
+## <a name="summary"></a>Resumo
+
 
 O objetivo deste documento é apresentar os principais blocos de construção para a sincronização de um usuário no MIM com o AD DS. No teste inicial, inicie com o mínimo de atributos necessários para concluir uma tarefa e adicione mais atributos ao cenário quando as etapas gerais funcionarem conforme o esperado. Quanto menor a complexidade, mais simples será o processo de solução de problemas.
 
@@ -512,11 +512,7 @@ Para obter uma descrição de como remover esses objetos do ambiente de teste, c
 Em um cenário normal de sincronização que inclui o AD DS como destino de sincronização, o MIM não será autoritativo para todos os atributos de um objeto. Por exemplo, ao gerenciar objetos de usuário no AD DS usando o FIM, no mínimo, o domínio e os atributos objectSID precisam ser contribuídos pelo agente de gerenciamento do AD DS.
 Os atributos de nome, domínio e objectSID da conta serão necessários se sua intenção for habilitar um usuário para fazer logon no Portal do FIM. Para preencher esses atributos do AD DS, uma regra de sincronização de entrada adicional será necessária para o espaço conector do AD DS. Ao gerenciar objetos com várias fontes de valores de atributo, é necessário garantir que a prioridade de fluxo de atributo está configurada corretamente. Se a prioridade de fluxo de atributo não estiver configurada corretamente, o mecanismo de sincronização bloqueará o preenchimento dos valores de atributo. É possível saber mais sobre a prioridade de fluxo de atributo no artigo [Sobre a Prioridade de Fluxo de Atributo](https://go.microsoft.com/FWLink/p/?LinkId=189675).
 
-<a name="see-also"></a>Consulte Também
-=========
-
-<a name="other-resources"></a>Outros Recursos
----------------
+## <a name="next-steps"></a>Próximas etapas
 
 [Utilizando o FIM para Habilitar ou Desabilitar Contas no Active Directory](https://go.microsoft.com/FWLink/p/?LinkId=189670)
 

@@ -4,19 +4,19 @@ description: Saiba como implantar o aplicativo Gerenciador de certificados para 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/16/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 66060045-d0be-4874-914b-5926fd924ede
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 8ff9edce6da865418e300095ff0827853a35d4eb
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 2adf1152aaf874d0ff0d93079fb4bfbfcf731b60
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517212"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044286"
 ---
 # <a name="mim-certificate-manager-windows-store-application-deployment"></a>Implantação de aplicativo Gerenciador de Certificados do MIM da Windows Store
 
@@ -115,8 +115,8 @@ Certifique-se de quando criar um modelo de perfil para defini-lo para criar/dest
 
    |                     |                                                                                                                                                                                                          |
    |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |      URL do MIMCM      |                                              O FQDN do portal usado para configurar o CM. Por exemplo, https://mimcmServerAddress/certificatemanagement.                                              |
-   |      URL DO ADFS       | Se for usar o AD FS, insira a URL do AD FS. Por exemplo, <https://adfsServerSame/adfs>. </br> Se o ADFS não for usado, defina essa configuração com uma cadeia de caracteres vazia.  Por exemplo, ```<ADFS URL=""/>``` |
+   |      URL do MIMCM      |                                              O FQDN do portal usado para configurar o CM. Por exemplo, https://mimcmServerAddress/certificatemanagement                                              |
+   |      URL DO ADFS       | Se for usar o AD FS, insira a URL do AD FS. Por exemplo, <https://adfsServerSame/adfs> </br> Se o ADFS não for usado, defina essa configuração com uma cadeia de caracteres vazia.  Por exemplo, ```<ADFS URL=""/>``` |
    |     PrivacyUrl      |                                         Você pode incluir uma URL para uma página da Web explicando o que fazer com os detalhes do usuário coletados para o registro de certificado.                                          |
    |     SupportMail     |                                                                           Você pode incluir um endereço de email para problemas de suporte.                                                                           |
    | LobComplianceEnable |                                                                     Você pode definir isso como true ou false. Por padrão, é definido para true.                                                                      |

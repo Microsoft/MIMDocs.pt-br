@@ -4,17 +4,17 @@ description: O módulo Análise do BHOLD fornece teste de acesso a dados baseado
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: ec7069156aa033b33a139ae83e26abcdea7b482a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7d26abb58fa976d40638b9512d5684d86f483378
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516867"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79041923"
 ---
 # <a name="bhold-analytics-installation"></a>Instalação da Análise do BHOLD
 
@@ -45,7 +45,7 @@ Substitua *\<Versão\>* pelo número de versão da Análise do BHOLD que você e
 
 Para executar o arquivo de programa como administrador, clique com o botão direito do mouse no arquivo e, em seguida, clique em **Executar como administrador**.
 
-# <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 - [Instalação do BHOLD Core](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx)
 - [Guia de instalação do BHOLD](bhold-installation-guide.md)

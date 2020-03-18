@@ -4,17 +4,17 @@ description: O módulo Relatório do BHOLD permite gerar relatórios sobre as fu
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 1f69f9f08cba24898509c771e4477b81c5ed272f
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 7bac40105aa53add914599c59e812587b6be9585
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519192"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042026"
 ---
 # <a name="bhold-reporting-installation"></a>Instalação de relatório do BHOLD
 

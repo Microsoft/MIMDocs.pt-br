@@ -4,19 +4,19 @@ description: Saiba mais sobre o modelo de camada que separa o seu sistema com ba
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/30/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 8e7b7217714f0ef74c1d959eb51dac07018d6e77
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 4fb5689400d170adc19f15cbbc2d45915cb39fe3
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517851"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043589"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Modelo de camada para o particionamento de privilégios administrativos
 
@@ -26,7 +26,7 @@ Este artigo descreve um modelo de segurança que se destina a proteger contra a 
 
 As contas de usuário, de serviços ou de aplicativos que receberam privilégios administrativos permanentes em florestas do AD (Active Directory) do Windows Server apresentam uma quantidade significativa de risco à missão e aos negócios da organização. Em geral, essas contas são alvo de invasores, pois, se forem comprometidas, o invasor terá direito de se conectar a outros servidores ou aplicativos no domínio.
 
-O modelo de camada cria divisões entre os administradores com base nos recursos que eles gerenciam. Os administradores com controle das estações de trabalho do usuário são separados daqueles que controlam aplicativos ou que gerenciam identidades corporativas. Saiba mais sobre esse modelo em [Securing privileged access reference material](http://aka.ms/tiermodel) (Protegendo materiais de referência de acesso privilegiado).
+O modelo de camada cria divisões entre os administradores com base nos recursos que eles gerenciam. Os administradores com controle das estações de trabalho do usuário são separados daqueles que controlam aplicativos ou que gerenciam identidades corporativas. Saiba mais sobre esse modelo em [Securing privileged access reference material](https://aka.ms/tiermodel) (Protegendo materiais de referência de acesso privilegiado).
 
 ## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Restringindo a exposição de credencial com restrições de logon
 

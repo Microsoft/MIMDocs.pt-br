@@ -4,19 +4,19 @@ description: Esse artigo faz parte da série que aborda as configurações do PA
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 07/20/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 28e8f5c28cd38ad820c6a1f12385dffbd0641ddd
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 102754fc88af32cb9abed40716ba9168a041d58e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518325"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043878"
 ---
 # <a name="configure-pam-using-scripts"></a>Configurar o PAM usando scripts
 
@@ -57,7 +57,7 @@ Antes de continuar, atualize o PAMDeploymentConfig.xml e coloque a cópia atuali
 
 ### <a name="validation"></a>Validação
 
-|  Virtual | Para executar como   | Comandos   |
+|  Machine | Para executar como   | Comandos   |
 |---|---|---|
 | CORPClient  | Usuário CORP (administrador local)  |   .\PAMDeployment.ps1 Selecione a opção de menu 7 (Configuração do Cliente do PAM do MIM)  |
 | CORPDC  | Administrador de Domínio CORP   | Import-module .\PAMValidation.psm1; Create-PAMValidationCORPDCConfig   |

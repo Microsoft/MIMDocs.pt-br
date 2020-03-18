@@ -4,17 +4,17 @@ description: Saiba mais sobre a implantação do Privileged Access Management co
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 347eda5872792872a9bb30357c45835303f92e01
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518531"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044014"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Implantar o PAM do MIM com o Windows Server 2016
 
@@ -50,7 +50,7 @@ Execute a instalação, conforme descrito no [Guia de Introdução](privileged-i
 
   - As alterações descritas em "Configurar auditoria"(item 8) e "Definir configurações do Registro" (item 10) são **recomendadas, mas não necessárias** quando controladores de domínio CORP e PRIV são o nível funcional de domínio do Windows Server 2016.
 
-- Se você optar por usar o Windows Server 2012 R2 como o sistema operacional para CORPDC, deverá instalar hotfixes 2919442, 2919355 [e atualizar 3155495](http://support.microsoft.com/kb/3156418) no CORPDC.
+- Se você optar por usar o Windows Server 2012 R2 como o sistema operacional para CORPDC, deverá instalar hotfixes 2919442, 2919355 [e atualizar 3155495](https://support.microsoft.com/kb/3156418) no CORPDC.
 
 - Siga as instruções em [Etapa 2 – Preparar o controlador de domínio PRIV](step-2-prepare-priv-domain-controller.md), exceto para esses ajustes:
 

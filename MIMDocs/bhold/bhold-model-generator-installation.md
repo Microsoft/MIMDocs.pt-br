@@ -4,17 +4,17 @@ description: O modelo do BHOLD permite que você estruture dados de várias font
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 3d2510d6ea604dd88e56436812ed8bc975bc5c2b
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 6f7e0979246eb2124604f594c57b40ec11cc7140
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516742"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042009"
 ---
 # <a name="bhold-model-generator-installation"></a>Instalação do Gerador de Modelos do BHOLD
 
@@ -26,7 +26,7 @@ Antes de instalar o módulo Gerador de Modelos do BHOLD, você deve instalar o s
 
 1. Módulo BHOLD Core no servidor em que você planeja instalar o módulo Gerador de Modelos do BHOLD. Para obter informações sobre como instalar o módulo BHOLD Core, consulte [Instalação do BHOLD Core](https://technet.microsoft.com/library/jj134095(v=ws.10).aspx).
 
-2. O Provedor Microsoft OLE DB para Microsoft Jet deve estar instalado. Para obter mais informações, consulte [este artigo](http://support.microsoft.com/kb/271908).
+2. O Provedor Microsoft OLE DB para Microsoft Jet deve estar instalado. Para obter mais informações, consulte [este artigo](https://support.microsoft.com/kb/271908).
 
 > [!WARNING]
 > Não instale o Gerador de Modelos do BHOLD em sua rede de produção. O Gerador de Modelos do BHOLD destina-se a ser usado offline em um ambiente de preparo para criar um modelo de função normalizado que você pode importar para seu modelo de função empresarial. Executar o Gerador de Modelos do BHOLD em sua rede de produção pode resultar na perda de seu modelo de função existente.

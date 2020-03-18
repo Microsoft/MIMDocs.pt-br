@@ -4,19 +4,19 @@ description: Este artigo descreve as abordagens de licenciamento do Microsoft Id
 keywords: ''
 author: markwahl-msft
 ms.author: mwahl
-manager: femila
+manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: e0bfd868345b8e7dcc6a02e745d3ccbf632a6c58
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329293"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043011"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Downloads e licenciamento do Microsoft Identity Manager 2016
 

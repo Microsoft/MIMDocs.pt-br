@@ -4,19 +4,19 @@ description: Decida quais funções com privilégios devem ser gerenciadas e def
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 38a9fc174c037e5d7c3ea17b46dcf9f6ea924822
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518579"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044031"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definir funções do Privileged Access Management
 

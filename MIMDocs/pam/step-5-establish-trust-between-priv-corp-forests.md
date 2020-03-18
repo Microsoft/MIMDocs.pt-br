@@ -4,19 +4,19 @@ description: Estabeleça a confiança entre as florestas PRIV e CORP para que os
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 11/29/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: eef248c4-b3b6-4b28-9dd0-ae2f0b552425
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 04195febdb721291e9dcf72f5bbda04923075596
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 0cf952c93c0a7b95fd41939efc767e9e8c20be5e
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518255"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043640"
 ---
 # <a name="step-5--establish-trust-between-priv-and-corp-forests"></a>Etapa 5 – Estabelecer relação de confiança entre florestas PVI e CORP
 
@@ -87,7 +87,7 @@ Para cada floresta existente, habilite o acesso de leitura ao AD por administrad
     ```
     A saída deve indicar **Habilitando histórico do SID para essa relação de confiança** ou **O histórico do SID já está habilitado para essa relação de confiança**.
 
-    A saída também deve indicar que **A filtragem de SID não está habilitada para essa relação de confiança**. Veja [Disable SID filter quarantining](http://technet.microsoft.com/library/cc772816.aspx) (Desabilitar quarentena de filtro de SID) para obter mais informações.
+    A saída também deve indicar que **A filtragem de SID não está habilitada para essa relação de confiança**. Veja [Disable SID filter quarantining](https://technet.microsoft.com/library/cc772816.aspx) (Desabilitar quarentena de filtro de SID) para obter mais informações.
 
 ## <a name="start-the-monitoring-and-component-services"></a>Iniciar os serviços de Monitoramento e Componente
 

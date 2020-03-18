@@ -3,16 +3,16 @@ title: Registro dinâmico do serviço MIM | Microsoft Docs
 description: Habilitar o registro de log dinâmico do serviço MIM sem a necessidade de reiniciar o serviço de gerenciamento
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 90ef2ab63be3914d1d48c7319821177e7e62f9e0
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701308"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042161"
 ---
 # <a name="mim-sp1-4414360--service-dynamic-logging"></a>Registro de log dinâmico do serviço do SP1 MIM (4.4.1436.0)
 
@@ -49,7 +49,7 @@ Para exibir o rastreamento, você pode usar a [ferramenta Visualizador de rastre
 
  ![Captura de tela do visualizador de rastreamento de serviço](media/mim-service-dynamic-logging/screen04.png)
 
-# <a name="updates-build-45xx-or-greater"></a>Atualizações: build 4.5.x.x ou posterior
+## <a name="updates-build-45xx-or-greater"></a>Atualizações: build 4.5.x.x ou posterior
 
 No build 4.5.x.x, revisamos o recurso de registro em log para especificar o nível de log padrão como **"Aviso"** . O serviço grava mensagens em dois arquivos (os índices "00" e "01" são adicionados antes da extensão). Os arquivos estão localizados no diretório "C:\Program Files\Microsoft Forefront Identity Manager\2010\Service". Quando o arquivo excede o tamanho máximo, o serviço inicia a gravação em outro arquivo. Se outro arquivo existir, ele será substituído. O tamanho máximo de arquivo padrão é de 1 GB. Para alterar o tamanho máximo padrão, é necessário adicionar o parâmetro **"maxOutputFileSizeKB"** com valor de tamanho máximo em KB no ouvinte (confira o exemplo a seguir) e reinicie o Serviço do MIM. Quando o serviço é iniciado, ele acrescenta os logs ao arquivo mais recente (se o limite de espaço for excedido, ele substituirá o arquivo mais antigo). 
 

@@ -4,17 +4,17 @@ description: O módulo Integração do BHOLD adiciona gerenciamento de função 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 317c9ae4c940a509b6ac328cd5bb7cd7baa4dde9
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3005e06606ec4b3b6854003213c712770376b35d
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516006"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042195"
 ---
 # <a name="bhold-fimmim-integration-installation"></a>Instalação de Integração de FIM/MIM com o BHOLD
 
@@ -129,7 +129,7 @@ Sendo que:
 
 -   *\<MIM_Server\>* especifica o nome do servidor do FIM conforme encontrado na versão original do arquivo
 
--   *\<BHOLD_Server_FQDN\>*  Especifica o FQDN (nome de domínio totalmente qualificado) do servidor do BHOLD
+-   *\<BHOLD_Server_FQDN\>* Especifica o FQDN (nome de domínio totalmente qualificado) do servidor do BHOLD
 
 -   *\<MIM_Port\>* especifica o número da porta do servidor do FIM conforme encontrado na versão original do arquivo
 
@@ -189,7 +189,7 @@ Se um aprovador para uma solicitação de função de autoatendimento não é es
 
 18. Na página **Unidade organizacional/raiz**, clique em **Modificar**.
 
-19. Na página **Modificar atributos da unidade organizacional/raiz**, em **Aprovador**, digite o nome de usuário e de domínio do usuário que aprovará solicitações de atribuição de função, no formato *\<domínio\>* \\ *\<usuário\>* , em que  *\<domínio\>* é o nome de domínio NetBIOS (curto) e *\<usuário\>* é o nome de logon do usuário.
+19. Na página **Modificar atributos da unidade organizacional/raiz**, em **Aprovador**, digite o nome de usuário e de domínio do usuário que aprovará solicitações de atribuição de função, no formato *\<domínio\>* \\ *\<usuário\>* , em que *\<domínio\>* é o nome de domínio NetBIOS (curto) e *\<usuário\>* é o nome de logon do usuário.
 20. Clique em **OK**.
 
 > [!IMPORTANT]

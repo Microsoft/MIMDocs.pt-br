@@ -4,17 +4,17 @@ description: Documentação da instalação do BHOLD SP1
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 05eb2afc0ddbf6104e27a5c24e121a55bd805292
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68238895"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042246"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Guia de instalação do Microsoft BHOLD Suite SP1 (6.0)
 
@@ -93,7 +93,7 @@ Para obter mais informações sobre as práticas recomendadas do SQL Server, con
 ### <a name="trusted-certificates-list-update"></a>Atualização de lista de certificados confiáveis
 
 O Windows pode ser configurado para validar cadeias de certificados antes de iniciar um serviço. Em tais sistemas, um serviço não pode iniciar se o código executável do serviço foi assinado com um certificado que não está na TCL (lista de certificados confiáveis) do servidor. O código do software Microsoft BHOLD Suite SP1 é assinado usando uma cadeia de certificados de assinatura de código que é originada com o certificado da Autoridade de Certificação Raiz 2010 da Microsoft.
-O Windows pode ser configurado para recuperar os certificados raiz da Microsoft por uma conexão de Internet. Em um sistema desconectado, no entanto, o Windows Server inclui somente os certificados que estavam presentes no programa raiz antes do lançamento do Windows. Em versões do Windows Server anteriores ao Windows Server 2010, esses certificados não incluirão o certificado raiz necessário para validar a cadeia de certificados de assinatura de código do BHOLD Suite SP1. Se você pretende instalar um ou mais módulos do Microsoft BHOLD Suite SP1 em um sistema que talvez não tenha uma TCL atualizada, você deve baixar e instalar o pacote de atualização raiz ou usar a Política de Grupo para instalar o pacote de atualização raiz, antes de instalar um módulo do SP1 BHOLD Suite. Para obter mais informações, consulte [Membros do programa de certificados raiz do Windows](http://support.microsoft.com/kb/931125).
+O Windows pode ser configurado para recuperar os certificados raiz da Microsoft por uma conexão de Internet. Em um sistema desconectado, no entanto, o Windows Server inclui somente os certificados que estavam presentes no programa raiz antes do lançamento do Windows. Em versões do Windows Server anteriores ao Windows Server 2010, esses certificados não incluirão o certificado raiz necessário para validar a cadeia de certificados de assinatura de código do BHOLD Suite SP1. Se você pretende instalar um ou mais módulos do Microsoft BHOLD Suite SP1 em um sistema que talvez não tenha uma TCL atualizada, você deve baixar e instalar o pacote de atualização raiz ou usar a Política de Grupo para instalar o pacote de atualização raiz, antes de instalar um módulo do SP1 BHOLD Suite. Para obter mais informações, consulte [Membros do programa de certificados raiz do Windows](https://support.microsoft.com/kb/931125).
 
 ### <a name="installing-bhold-suite-sp1-on-windows-server-20122016-required-step"></a>Instalando o BHOLD Suite SP1 no Windows Server 2012/2016 – etapa necessária 
 

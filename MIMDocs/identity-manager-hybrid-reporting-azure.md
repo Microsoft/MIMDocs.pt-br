@@ -4,18 +4,18 @@ description: Os relatórios de atividade de auditoria híbrida no Azure Active D
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 7320f014-8b60-4866-92de-cfbd3e6edc48
 ms.suite: ems
-ms.openlocfilehash: dd87f00fb3faded60671a47a0ba1dab7e4c2a531
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 6f4f2aea998fc5682d1fb21d77e4d4f1c582d770
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516770"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042144"
 ---
 # <a name="hybrid-identity-management-audit-reporting-in-azure-active-directory"></a>Relatórios de auditoria de gerenciamento de identidades híbridas no Azure Active Directory
 Com os relatórios de Atividade de Auditoria do Azure Active Directory (Azure AD), você pode monitorar a atividade de gerenciamento de identidades localmente ou na nuvem. Ao gerenciar todas as suas identidades e acessar os dados em um único relatório, é possível economizar tempo e reduzir os custos gerais.

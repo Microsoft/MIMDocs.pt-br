@@ -4,19 +4,19 @@ description: Localize o número necessário e a configuração de máquinas virt
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/31/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6f4b6e224b6b50bf2190688a994f35159d273713
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: c758bd924c6f7272a44567c2e9dc919215cdd273
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518555"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043997"
 ---
 # <a name="environment-overview"></a>Visão geral do ambiente
 

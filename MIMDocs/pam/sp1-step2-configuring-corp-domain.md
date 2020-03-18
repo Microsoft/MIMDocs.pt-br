@@ -4,19 +4,19 @@ description: Esse artigo descreve a segunda etapa necessária para configurar o 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 030ebf1f5d655cff712aac8acc393e7d3cc13696
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 1215e0be4d978e879ebc09ecdd99223fb3667a85
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518131"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043827"
 ---
 # <a name="step-2-configuring-the-corp-domain"></a>Etapa 2 Configurando o domínio CORP
 

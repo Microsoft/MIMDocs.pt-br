@@ -4,17 +4,17 @@ description: O módulo Atestado do BHOLD permite designar revisores e realizar a
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e4c3a6248585d55fddbbca3153f33734d7c5c429
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 3d7e136ee86272429ff16a49b3c1319a4543648f
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64519162"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042314"
 ---
 # <a name="bhold-attestation-installation"></a>Instalação do Atestado do BHOLD
 

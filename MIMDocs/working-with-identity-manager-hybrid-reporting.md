@@ -4,18 +4,18 @@ description: Saiba como combinar dados locais e na nuvem em relatórios de híbr
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 2/20/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.suite: ems
-ms.openlocfilehash: 18e4127b1d854a53734142bb58442627619491ef
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: fd0efd3e3d5c42f4b67d0abd42f6dab8254573e5
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64517510"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044337"
 ---
 # <a name="work-with-hybrid-reporting-in-identity-manager"></a>Trabalhar com relatórios híbridos no Identity Manager
 
