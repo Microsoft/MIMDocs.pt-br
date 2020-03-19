@@ -4,17 +4,17 @@ description: Uma lista de idiomas com suporte no Microsoft Identity Manager 2016
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 05/23/2018
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
-ms.openlocfilehash: 5704e978734bea13f1a362aeb203810f3864205a
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 2caf9f06067c229d585019f912a7ff4e00fad3e6
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701464"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79044116"
 ---
 # <a name="supported-languages"></a>Idiomas com suporte
 
@@ -57,7 +57,7 @@ O Pacote de Idiomas do Serviço e Portal do Microsoft MIM oferece suporte para o
 |  Português (Brasil)  |          pt-BR           |    pt-BR     |
 |        Russo        |          ru-RU           |      ru      |
 |       Romeno        |          ro-RO           |      ro      |
-|        Espanhol        |          es-ES           |      Sim      |
+|        Espanhol        |          es-ES           |      es      |
 |        Eslovaco         |          sk-SK           |      sk      |
 |        Sueco        |          sv-SE           |      sv      |
 |       Esloveno       |          sl-SI           |      sl      |
@@ -79,7 +79,7 @@ O Gerenciamento de Certificados da Microsoft oferece suporte aos 9 idiomas a seg
 |Italiano|it-IT|it|
 |Japonês|ja-JP|ja|
 |Português (Portugal)|pt-PT|pt-PT|
-|Espanhol|es-ES|Sim|
+|Espanhol|es-ES|es|
 
 ## <a name="certificate-management-modern-application"></a>Aplicativo Moderno de Gerenciamento de Certificados  
 O Aplicativo Moderno de Gerenciamento de Certificados da Microsoft oferece suporte aos 33 idiomas a seguir. 
@@ -105,7 +105,7 @@ O Aplicativo Moderno de Gerenciamento de Certificados da Microsoft oferece supor
 |Português (Brasil)|pt-BR|pt-BR|
 |Russo|ru-RU|ru|
 |Romeno|ro-RO|ro|
-|Espanhol|es-ES|Sim|
+|Espanhol|es-ES|es|
 |Sueco|sv-SE|sv|
 |Turco|tr-TR|tr|
 

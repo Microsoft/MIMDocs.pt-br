@@ -4,19 +4,19 @@ description: Saiba como registrar cartões inteligentes para usuários sem acess
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfabc562-a2f0-4cff-ac31-36927f41e102
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4d66c566912f186bce175dde9f16346942afd72e
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 91409b0272c0b21cac90dbc4c162e5bf4d9f8464
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64516659"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042127"
 ---
 # <a name="enroll-smart-cards-for-non-administrators"></a>Registrar cartões inteligentes para não administradores
 Se um usuário não for um administrador local no seu computador, ele não poderá registrar um cartão inteligente em seu próprio computador por padrão. O procedimento a seguir permite que você contorne essa limitação.
@@ -69,7 +69,7 @@ Se um usuário não for um administrador local no seu computador, ele não poder
 
     1.  Faça logon no portal do CM como um usuário com privilégios administrativos.
 
-    2.  Vá para **Administração** &gt; **Gerenciar modelos de perfil** e verifique se a caixa está marcada ao lado do modelo de perfil criado. Em seguida, clique em Copiar um modelo de perfil selecionado.
+    2.  Acesse **Administração** &gt; **Gerenciar modelos de perfil** e certifique-se de que a caixa esteja marcada ao lado do modelo de perfil que você criou, então clique em Copiar um modelo de perfil selecionado.
 
     3.  Digite o nome do modelo de perfil, adicione "nonAdmin" e clique em **OK**.
 

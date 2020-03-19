@@ -4,7 +4,7 @@ description: Saiba mais sobre o Privileged Access Management e como ele pode aju
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 08/30/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -13,12 +13,12 @@ ms.reviewer: mwahl
 ms.suite: ems
 experimental: true
 experiment_id: kgremban_images
-ms.openlocfilehash: 3855842f0339e2611c75761484de9c059eec6fa0
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 1d00b232d8c7b09fea72e033a51dd590992291c3
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518801"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043895"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management para Serviços de Domínio do Active Directory
 
@@ -50,14 +50,14 @@ O PAM dificulta a entrada de invasores à rede e seu acesso à conta privilegiad
 
 ## <a name="setting-up-pam"></a>Configuração do PAM
 
-O PAM se baseia no princípio da administração Just-In-Time, que está relacionada ao [JEA (Just Enough Administration)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA é um kit de ferramentas do Windows PowerShell que define um conjunto de comandos para executar atividades privilegiadas. É um ponto de extremidade onde os administradores podem obter autorização para executar comandos. No JEA, um administrador decide que usuários com determinado privilégio podem executar determinada tarefa. Sempre que um usuário qualificado precisa executar essa tarefa, o administrador habilita essa permissão. As permissões expiram após um período especificado, para que um usuário mal-intencionado não possa roubar o acesso.
+O PAM se baseia no princípio da administração Just-In-Time, que está relacionada ao [JEA (Just Enough Administration)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA é um kit de ferramentas do Windows PowerShell que define um conjunto de comandos para executar atividades privilegiadas. É um ponto de extremidade onde os administradores podem obter autorização para executar comandos. No JEA, um administrador decide que usuários com determinado privilégio podem executar determinada tarefa. Sempre que um usuário qualificado precisa executar essa tarefa, o administrador habilita essa permissão. As permissões expiram após um período especificado, para que um usuário mal-intencionado não possa roubar o acesso.
 
 A instalação e operação do PAM têm quatro etapas.
 
 ![Etapas do PAM: preparar, proteger, operar e monitorar – diagrama](media/MIM_PIM_SetupProcess.png)
 
 1. **Preparar**: identifique quais grupos em sua floresta existente tem privilégios significativos. Recrie esses grupos sem membros na floresta de bastiões.
-2. **Proteger**: Configure a proteção do ciclo de vida e autenticação, como a Autenticação Multifator (MFA), para quando os usuários solicitarem administração just-in-time. A MFA ajuda a impedir ataques programáticos de software mal-intencionado ou a seguir roubo de credenciais.
+2. **Proteger**: configure a proteção do ciclo de vida e da autenticação, como a MFA (Autenticação Multifator), para quando os usuários solicitarem a administração Just-In-Time. A MFA ajuda a impedir ataques programáticos de software mal-intencionado ou a seguir roubo de credenciais.
 3. **Operar**: depois que os requisitos de autenticação forem atendidos e uma solicitação for aprovada, uma conta de usuário será adicionada temporariamente a um grupo privilegiado na floresta de bastiões. Durante um intervalo de tempo predefinido, o administrador tem todos os privilégios e permissões de acesso atribuídos a esse grupo. Após esse tempo, a conta é removida do grupo.
 4. **Monitorar**: o PAM acrescenta auditoria, alertas e relatórios de solicitações de acesso privilegiadas. É possível examinar o histórico do acesso privilegiado e ver quem executou uma atividade. Você pode entender se a atividade é válida ou não e identificar facilmente atividades não autorizadas, como uma tentativa de adicionar um usuário diretamente a um grupo privilegiado na floresta original. Essa etapa é importante não somente para identificar o software mal-intencionado, mas também para acompanhamento de invasores “internos”.
 

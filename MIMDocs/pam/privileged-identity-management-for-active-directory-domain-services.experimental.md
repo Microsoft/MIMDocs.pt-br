@@ -4,7 +4,7 @@ description: O PAM (Privileged Access Management) ajuda as organizações a rest
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 03/13/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
@@ -12,12 +12,12 @@ ms.assetid: cf3796f7-bc68-4cf7-b887-c5b14e855297
 ms.reviewer: mwahl
 ms.suite: ems
 experiment_id: kgremban_images
-ms.openlocfilehash: 40ed05c1f77cace74b86dc3a5675855993d4bc56
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: acec45a2843febd3821d9045336098cdeb4ddcf7
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "64518377"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043929"
 ---
 # <a name="privileged-access-management-for-active-directory-domain-services"></a>Privileged Access Management para Serviços de Domínio do Active Directory
 
@@ -43,13 +43,13 @@ O PAM dificulta a entrada de invasores à rede e seu acesso à conta privilegiad
 
 ## <a name="how-is-pam-set-up"></a>Como o PAM é configurado?
 
-O PAM se baseia no princípio da administração Just-In-Time, que está relacionada ao [JEA (Just Enough Administration)](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA é um kit de ferramentas do Windows PowerShell define um conjunto de comandos para executar atividades privilegiadas e um ponto de extremidade em que os administradores podem obter autorização para executar esses comandos. No JEA, um administrador decide que usuários com determinado privilégio podem executar determinada tarefa. Sempre que um usuário qualificado precisa executar essa tarefa, o administrador habilita essa permissão. As permissões expiram após um período especificado, para que um usuário mal-intencionado não possa roubar o acesso.
+O PAM se baseia no princípio da administração Just-In-Time, que está relacionada ao [JEA (Just Enough Administration)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DCIM-B362). JEA é um kit de ferramentas do Windows PowerShell define um conjunto de comandos para executar atividades privilegiadas e um ponto de extremidade em que os administradores podem obter autorização para executar esses comandos. No JEA, um administrador decide que usuários com determinado privilégio podem executar determinada tarefa. Sempre que um usuário qualificado precisa executar essa tarefa, o administrador habilita essa permissão. As permissões expiram após um período especificado, para que um usuário mal-intencionado não possa roubar o acesso.
 
 A instalação e operação do PAM têm quatro etapas.
 
 1. **Preparar**: identifique quais grupos em sua floresta existente tem privilégios significativos. Recrie esses grupos sem membros na floresta de bastiões.
 
-2. **Proteger**: Configure a proteção do ciclo de vida e autenticação, como a Autenticação Multifator (MFA), para quando os usuários solicitarem administração just-in-time. A MFA ajuda a impedir ataques programáticos de software mal-intencionado ou a seguir roubo de credenciais.
+2. **Proteger**: configure a proteção do ciclo de vida e da autenticação, como a MFA (Autenticação Multifator), para quando os usuários solicitarem a administração Just-In-Time. A MFA ajuda a impedir ataques programáticos de software mal-intencionado ou a seguir roubo de credenciais.
 
 3. **Operar**: depois que os requisitos de autenticação forem atendidos e uma solicitação for aprovada, uma conta de usuário será adicionada temporariamente a um grupo privilegiado na floresta de bastiões. Durante um intervalo de tempo predefinido, o administrador tem todos os privilégios e permissões de acesso atribuídos a esse grupo. Após esse tempo, a conta é removida do grupo.
 

@@ -4,17 +4,17 @@ description: Instalar o Microsoft Identity Manager 2016 Certificate Manager
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 9a9e00f7dca118627a5140967a104d13273cbc26
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 35fe08363b6964bf6d264ab1e60cd9751aa7b6aa
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67690795"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79043028"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implantando o MIM CM (Microsoft Identity Manager Certificate Manager) 2016
 
@@ -212,7 +212,7 @@ As três contas acima terão direitos elevados na organização e deverão ser t
 
 2. No console **Autoridade de Certificação**, na árvore de console, expanda **Contoso-CorpCA** e clique em **Modelos de Certificado**.
 
-3. Clique com o botão direito do mouse em **Modelos de Certificado**e clique em **Gerenciar**.
+3. Clique com o botão direito do mouse em **Modelos de Certificado** e clique em **Gerenciar**.
 
 4. No **Console de Modelos de Certificado**, no painel **Detalhes**, selecione **Usuário**, clique com botão direito do mouse e, em seguida, clique em **Duplicar Modelo**.
 
@@ -233,7 +233,7 @@ As três contas acima terão direitos elevados na organização e deverão ser t
 
 10. Na guia **Extensões**, na lista **Extensões incluídas neste modelo** lista, verifique se **Políticas de Aplicativo** está selecionado e, em seguida, clique em **Editar**.
 
-11. Na caixa de diálogo **Editar extensão de Políticas de Aplicativo**, selecione as políticas de aplicativo **Encrypting File System** e **Proteger Email**. Clique em **Remover**e depois em **OK**.
+11. Na caixa de diálogo **Editar extensão de Políticas de Aplicativo**, selecione as políticas de aplicativo **Encrypting File System** e **Proteger Email**. Clique em **Remover** e em **OK**.
 
 12. Na guia **Segurança**, execute as seguintes etapas:
 
@@ -704,13 +704,13 @@ Primeiro passo: **Configurar permissões no ponto de conexão de serviço e no g
 
 7. Em **Usuários e Computadores do Active Directory**, no menu **Exibição**, verifique se **Recursos Avançados** está habilitado.
 
-8. Na árvore de console, expanda **Contoso.com** \| **Sistema** \| **Microsoft** \| **Gerenciador de Ciclo de Vida de Certificado** e, em seguida, clique em **CORPCM**.
+8. Na árvore de console, expanda **Contoso.com** \| **Sistema** \| **Microsoft** \| **Gerenciador de Ciclo de Vida de Certificado** e clique em **CORPCM**.
 
 9. Clique com botão direito do mouse em **CORPCM** e, em seguida, clique em **Propriedades**.
 
 10. Na caixa de diálogo **Propriedades de CORPCM** na guia **Segurança**, adicione os seguintes grupos com as permissões correspondentes:
 
-    | Group          | Permissões      |
+    | Grupo          | Permissões      |
     |----------------|------------------|
     | mimcm-Managers | Ler </br> Auditoria do FIM CM</br> Agente de Registro do FIM CM</br> Solicitar Inscrição do FIM CM</br> Solicitar Recuperação do FIM CM</br> Solicitar Renovação do FIM CM</br> Solicitar Revogação do FIM CM </br> Solicitar Desbloqueio de Cartão Inteligente do FIM CM |
     | mimcm-HelpDesk | Ler</br> Agente de Registro do FIM CM</br> Solicitar Revogação do FIM CM</br> Solicitar Desbloqueio de Cartão Inteligente do FIM CM |

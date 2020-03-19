@@ -4,19 +4,19 @@ description: Use agentes de gerenciamento e o Serviço de Sincronização do MIM
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 10/12/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 1627bae6aecdfc3d57261485de04a78feb264013
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: 81cf34959ccdea5ad9eb463f85a25d26bc1d8ede
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73329320"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042416"
 ---
 # <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalação do MIM 2016: Sincronizar o Serviço do MIM e do Active Directory
 
@@ -72,7 +72,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
 
     -   ExpectedRuleEntry
 
-    -   Group
+    -   Grupo
 
     -   Person
 
@@ -117,7 +117,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
     | Email | Exportar | mail |
     | EmployeeID | Exportar | employeeID |
     | EmployeeTipo | Exportar | employeeType |
-    | Primeiro nome | Exportar | firstName |
+    | FirstName | Exportar | firstName |
     | Sobrenome | Exportar | lastName |
     | ObjectSID | Exportar | objectSid |
 
@@ -145,7 +145,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
     | Membro | Exportar | membro |
     | ObjectSID | Exportar | objectSid |
     | Escopo | Exportar | scope |
-    | Tipo | Exportar | tipo |
+    | Digite | Exportar | type |
     | MembroshipAddWorkflow | Exportar | membershipAddWorkflow |
     | MembroshipLocked | Exportar | membershipLocked |
     | AccountName | Importar | accountName |
@@ -154,7 +154,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
     | MailNickName | Importar | mailNickName |
     | Membro | Importar | membro |
     | Escopo | Importar | scope |
-    | Tipo | Importar | tipo |
+    | Digite | Importar | type |
 
 10.  Na página **Configurar Desprovisionamento**, clique em **Avançar**
 
@@ -195,7 +195,7 @@ O agente de gerenciamento do Active Directory é um conector para serviços de d
 
 7. Na página **Selecionar atributos**, marque **Mostrar TUDO**, escolha os seguintes atributos e, em seguida, clique em **Avançar**:
 
-    -   empresa
+    -   company
     -   displayName
     -   employeeID
     -   employeeType
@@ -230,7 +230,7 @@ Crie perfis de execução para os conectores MIMMA e ADMA.
 
 Esta tabela mostra que os cinco perfis de execução que você criará para o conector ADMA:
 
-| Nome | Tipo |
+| Name | Digite |
 | ---- | ---- |
 | Profile1 | Importação completa (somente estágio) |
 | Profile2 | Sincronização completa |
@@ -262,7 +262,7 @@ Para criar perfis de execução para o conector ADMA:
 
 Esta tabela mostra os cinco perfis de execução correspondentes para o conector MIMMA:
 
-| Nome | Tipo |
+| Name | Digite |
 | -------- | -------- |
 | Profile1 | Importação completa (somente estágio) |
 | Profile2 | Sincronização completa |
@@ -328,7 +328,7 @@ Para criar a regra de sincronização de entrada do usuário do AD:
     |Regra 3|EmployeeTipo|employeeType|
     |Regra 4|givenName|firstName|
     |Regra 5|sn|lastName|
-    |Regra 6|Manager|gerenciador|
+    |Regra 6|Manager|manager|
     |Regra 7|objectSID|ObjectSID|
     |Regra 8|"Contoso"|domain|
 

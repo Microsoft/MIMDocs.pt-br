@@ -4,17 +4,17 @@ description: Comece a usar os componentes do MIM 2016 instalando e configurando 
 keywords: ''
 author: billmath
 ms.author: billmath
-manager: mtillman
+manager: daveba
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.assetid: ''
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 3749b74fd867601ee05f8e45d273ad2de9144b5b
-ms.sourcegitcommit: a4f77aae75a317f5277d7d2a3187516cae1e3e19
+ms.openlocfilehash: f120709e517d82d4f94e72f4d0a44361f5552a1c
+ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68701417"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79042297"
 ---
 # <a name="microsoft-bhold-suite-concepts-guide"></a>Guia de conceitos do Microsoft BHOLD Suite
 
@@ -24,14 +24,14 @@ O Microsoft BHOLD Suite estende esses recursos do MIM, adicionando o controle de
 
 Este guia ajuda a entender como o BHOLD Suite funciona com o MIM e abrange os seguintes tópicos:
 
-- Controle de acesso baseado em função
+- Controle de acesso baseado em funções
 - Atestado
 - Análises
 - Relatórios
 - Conector de Gerenciamento de Acesso
 - Integração ao MIM
 
-## <a name="role-based-access-control"></a>Controle de acesso baseado em função
+## <a name="role-based-access-control"></a>Controle de acesso baseado em funções
 
 O método mais comum para controlar o acesso de usuário a dados e aplicativos é por meio do DAC (controle de acesso discricionário). Nas implementações mais comuns, cada objeto significativo tem um proprietário identificado. O proprietário tem a capacidade de conceder ou negar acesso ao objeto para outras pessoas com base na identidade individual ou na associação a um grupo. Na prática, o DAC normalmente resulta em uma grande quantidade de grupos de segurança, alguns que refletem a estrutura organizacional, outros que representam agrupamentos funcionais (como tipos de trabalho ou atribuições de projeto) e outros que consistem em coleções provisórias de usuários e dispositivos que são vinculados para fins mais temporários. Conforme as organizações crescem, a associação a esses grupos se torna cada vez mais difícil de gerenciar. Por exemplo, se um funcionário é transferido de um projeto para outro, os grupos usados para controlar o acesso aos ativos dos projetos precisam ser atualizados manualmente. Nesses casos, não é incomum a ocorrência de erros que podem prejudicar a segurança ou a produtividade do projeto.
 
@@ -311,7 +311,7 @@ As categorias cobertas pelos relatórios internos incluem as seguintes:
 - Atestado
 - Controles
 - Controle de acesso interno
-- Logging
+- Registrando em log
 - Modelo
 - Estatísticas
 - Fluxo de trabalho
