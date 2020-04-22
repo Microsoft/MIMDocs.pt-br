@@ -12,10 +12,10 @@ ms.assetid: 50345fda-56d7-4b6e-a861-f49ff90a8376
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: 32b346dd9cf99b617edfaca953389cba30d6681c
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043504"
 ---
 # <a name="configure-a-domain-for-group-managed-service-accounts-gmsa-scenario"></a>Configurar um domínio para o cenário de gMSA (Contas de Serviço Gerenciado de grupo)
@@ -28,7 +28,7 @@ ms.locfileid: "79043504"
 
 O MIM (Microsoft Identity Manager) trabalha com o domínio do AD (Active Directory). Você já deve ter o AD instalado e verificar se tem um controlador de domínio em seu ambiente para um domínio que possa administrar.  Este artigo descreve como configurar Contas de Serviço Gerenciado de Grupo naquele domínio para uso pelo MIM.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Overview
 
 As Contas de Serviço Gerenciado de Grupo eliminam a necessidade de alterar periodicamente as senhas das contas de serviço. Com o lançamento do MIM 2016 SP2, os seguintes componentes do MIM podem ter contas gMSA configuradas para serem usadas durante o processo de instalação:
 

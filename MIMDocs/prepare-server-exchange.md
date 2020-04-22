@@ -12,13 +12,13 @@ ms.assetid: 34a8c16e-3bed-4e16-939b-b9fe17dd834b
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 07b1bdfc3bf11817a113791ace556d8a32faedc0
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043572"
 ---
-# <a name="set-up-an-identity-management-server-exchange"></a>Configurar um servidor de gerenciamento de identidade: Exchange
+# <a name="set-up-an-identity-management-server-exchange"></a>Configure um servidor de gerenciamento de identidade: Exchange
 
 > [!div class="step-by-step"]
 > [« SharePoint](prepare-server-sharepoint.md)

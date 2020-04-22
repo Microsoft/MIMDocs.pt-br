@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 41aba931111d6ef46e60dfed173362e59c411dfe
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044269"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Opções de implantação de Autoatendimento de Redefinição de Senha
@@ -42,7 +42,7 @@ Este [artigo](working-with-mfaserver-for-mim.md) descreve como atualizar seu por
 
 A seção a seguir descreve como implantar o portal de Autoatendimento de Redefinição de Senha do MIM usando o MFA do Azure para a Autenticação Multifator.  Essas etapas são necessárias apenas para clientes que não estão usando o Autoatendimento de Redefinição de Senha do Azure AD para seus usuários.
 
-O Microsoft Azure Multi-Factor Authentication é um serviço de autenticação que exige que os usuários verifiquem suas tentativas de entrada com um aplicativo móvel, chamada telefônica ou mensagem de texto. Ele está disponível para uso com o Active Directory do Microsoft Azure e como um serviço para aplicativos corporativos de nuvem e local.
+A Autenticação Multifator do Microsoft Azure é um serviço de autenticação que exige que os usuários verifiquem suas tentativas de entrada com um aplicativo móvel, chamada telefônica ou mensagem de texto. Ele está disponível para uso com o Active Directory do Microsoft Azure e como um serviço para aplicativos corporativos de nuvem e local.
 
 O Azure MFA fornece um mecanismo de autenticação adicional que pode reforçar os processos de autenticação existentes, como aqueles realizados pelo MIM para assistência de logon de autoatendimento.
 
@@ -107,7 +107,7 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 9. No elemento `<username>` , insira qualquer nome de usuário.
 
-10. No elemento `<DefaultCountryCode>`, insira seu código de país padrão. No caso de os números de telefone serem registrados para usuários sem um código de país, este é o código de país que eles receberão. Caso um usuário tenha um código de país internacional, ele deve ser incluído no número de telefone registrado.
+10. No elemento `<DefaultCountryCode>` , insira seu código de país padrão. No caso de os números de telefone serem registrados para usuários sem um código de país, este é o código de país que eles receberão. Caso um usuário tenha um código de país internacional, ele deve ser incluído no número de telefone registrado.
 
 11. Salve o arquivo MfaSettings.xml com o mesmo nome no mesmo local.
 

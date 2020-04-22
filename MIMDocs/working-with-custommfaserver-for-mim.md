@@ -10,10 +10,10 @@ ms.date: 09/04/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: b157b2a8716d20ce3b472d5655d393e64f2baa6b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044354"
 ---
 # <a name="use-a-custom-multi-factor-authentication-provider-via-an-api-during-pam-role-activation-or-in-sspr"></a>Usar um provedor de Autenticação Multifator personalizado por meio de uma API durante a ativação de função do PAM ou no SSPR
@@ -37,7 +37,7 @@ Para usar uma API do provedor de Autenticação Multifator personalizado com o M
 
 ## <a name="approach-using-custom-multi-factor-authentication-code"></a>Abordagem usando código personalizado de autenticação multifator
 
-### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Etapa 1: verifique se o Serviço MIM está na versão 4.5.202.0 ou posterior
+### <a name="step-1-ensure-mim-service-is-at-version-452020-or-later"></a>Etapa 1: verifique se o serviço MIM está na versão 4.5.202.0 ou posterior
 
 Baixe e instale o hotfix [4.5.202.0](https://www.microsoft.com/download/details.aspx?id=57278) do MIM ou uma versão posterior.
 
@@ -45,9 +45,9 @@ Baixe e instale o hotfix [4.5.202.0](https://www.microsoft.com/download/details.
 
 A DLL deve incluir uma classe que implemente três métodos:
 
-- `InitiateCall`: o Serviço MIM invocará esse método. O serviço passa a ID de solicitação e de número de telefone como parâmetros.  O método precisa retornar um valor de `PhoneCallStatus` igual a `Pending`, `Success` ou `Failed`.
-- `GetCallStatus`: se uma chamada anterior para `initiateCall` tiver retornado `Pending`, o Serviço MIM invocará esse método. Esse método também retorna um valor de `PhoneCallStatus` igual a `Pending`, `Success` ou `Failed`.
-- `GetFailureMessage`: se uma invocação anterior de `InitiateCall` ou `GetCallStatus` tiver retornado `Failed`, o Serviço MIM invocará esse método. Esse método retorna uma mensagem de diagnóstico.
+- `InitiateCall`: o serviço MIM invocará esse método. O serviço passa a ID de solicitação e de número de telefone como parâmetros.  O método precisa retornar um valor de `PhoneCallStatus` igual a `Pending`, `Success` ou `Failed`.
+- `GetCallStatus`: se uma chamada anterior para `initiateCall` tiver retornado `Pending`, o serviço MIM invocará esse método. Esse método também retorna um valor de `PhoneCallStatus` igual a `Pending`, `Success` ou `Failed`.
+- `GetFailureMessage`: se uma invocação anterior de `InitiateCall` ou `GetCallStatus` tiver retornado `Failed`, o serviço MIM invocará esse método. Esse método retorna uma mensagem de diagnóstico.
 
 As implementações desses métodos devem ser thread-safe e, além disso, a implementação do `GetCallStatus` e do `GetFailureMessage` não deve presumir que eles serão chamados pelo mesmo thread que uma chamada anterior para `InitiateCall`.
 
@@ -137,7 +137,7 @@ namespace CustomPhoneGate
 ```
 ### <a name="step-3-backup-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Etapa 3: fazer backup do arquivo MfaSettings.xml, localizado na pasta "C:\Arquivos de Programas\Microsoft Forefront Identity Manager\2010\Service"
 
-### <a name="step-4-edit-the-mfasettingsxml-file"></a>Etapa 4: editar o arquivo MfaSettings.xml
+### <a name="step-4-edit-the-mfasettingsxml-file"></a>Etapa 4: edite o arquivo MfaSettings.xml
 
 Atualize ou desmarque as linhas a seguir:
 
@@ -146,7 +146,7 @@ Atualize ou desmarque as linhas a seguir:
 - Atualizar ou adicionar as linhas a seguir ao seguinte a MfaSettings.xml com o seu provedor de telefone personalizado <br>
 `<CustomPhoneProvider>C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\CustomPhoneGate.dll</CustomPhoneProvider>`
 
-### <a name="step-5-restart-mim-service"></a>Etapa 5: reiniciar o Serviço MIM
+### <a name="step-5-restart-mim-service"></a>Etapa 5: reiniciar o serviço MIM
 
 Depois que o serviço for reiniciado, use o SSPR e/ou o PAM para validar a funcionalidade com o provedor de identidade personalizado.
 

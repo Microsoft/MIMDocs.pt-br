@@ -12,13 +12,13 @@ ms.assetid: 5e532b67-64a6-4af6-a806-980a6c11a82d
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 81cf34959ccdea5ad9eb463f85a25d26bc1d8ede
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042416"
 ---
-# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalação do MIM 2016: Sincronizar o Serviço do MIM e do Active Directory
+# <a name="install-mim-2016-synchronize-active-directory-and-mim-service"></a>Instalação do MIM 2016: Sincronização do Active Directory e do Serviço do MIM
 
 > [!div class="step-by-step"]
 > [« Serviço e Portal do MIM](install-mim-service-portal.md)
@@ -47,7 +47,7 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
 
 3.  Na página **Criar Agente de Gerenciamento**, forneça as seguintes configurações e clique em **Avançar**.
 
-    -   Agente de gerenciamento para: agente de gerenciamento de serviço do FIM
+    -   Agente de gerenciamento para: Agente de gerenciamento de serviço do FIM
 
     -   Nome: MIMMA
 
@@ -116,8 +116,8 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
     | Domain | Exportar | domain |
     | Email | Exportar | mail |
     | EmployeeID | Exportar | employeeID |
-    | EmployeeTipo | Exportar | employeeType |
-    | FirstName | Exportar | firstName |
+    | EmployeeTipo | Exportar | employeeTipo |
+    | Primeiro nome | Exportar | firstName |
     | Sobrenome | Exportar | lastName |
     | ObjectSID | Exportar | objectSid |
 
@@ -148,13 +148,13 @@ Quando você configura um MIM MA, precisa especificar uma conta de usuário. Est
     | Digite | Exportar | type |
     | MembroshipAddWorkflow | Exportar | membershipAddWorkflow |
     | MembroshipLocked | Exportar | membershipLocked |
-    | AccountName | Importar | accountName |
-    | DisplayedOwner | Importar | displayedOwner |
-    | DisplayName | Importar | displayName |
-    | MailNickName | Importar | mailNickName |
-    | Membro | Importar | membro |
-    | Escopo | Importar | scope |
-    | Digite | Importar | type |
+    | AccountName | Importação | accountName |
+    | DisplayedOwner | Importação | displayedOwner |
+    | DisplayName | Importação | displayName |
+    | MailNickName | Importação | mailNickName |
+    | Membro | Importação | membro |
+    | Escopo | Importação | scope |
+    | Digite | Importação | type |
 
 10.  Na página **Configurar Desprovisionamento**, clique em **Avançar**
 
@@ -167,7 +167,7 @@ O agente de gerenciamento do Active Directory é um conector para serviços de d
 
 2. Na página **Criar Agente de Gerenciamento**, forneça as seguintes configurações e clique em **Avançar**:
 
-    - Agente de gerenciamento para: Active Directory Domain Services
+    - Agente de gerenciamento para: Serviços de Domínio do Active Directory
     - Nome: ADMA
 
 3. Na página **Conectar à Floresta do Active Directory**, forneça as seguintes configurações e clique em **Avançar**:
@@ -195,12 +195,12 @@ O agente de gerenciamento do Active Directory é um conector para serviços de d
 
 7. Na página **Selecionar atributos**, marque **Mostrar TUDO**, escolha os seguintes atributos e, em seguida, clique em **Avançar**:
 
-    -   company
+    -   empresa
     -   displayName
     -   employeeID
-    -   employeeType
+    -   employeeTipo
     -   givenName
-    -   groupTipo
+    -   groupType
     -   managedBy
     -   gerenciador
     -   membro
@@ -304,8 +304,8 @@ Para criar a regra de sincronização de entrada do usuário do AD:
 
 4. Na guia **Geral**, especifique as seguintes informações e, em seguida, clique em **Avançar**:
 
-    -   Nome de exibição: regra de sincronização de entrada de usuário do AD
-    -   Direção do Fluxo de Dados: Entrada
+    -   Nome de exibição: Regra de sincronização de entrada de usuário do AD
+    -   Direção do fluxo de dados: Entrada
 
 5. Na guia **Escopo**, forneça as seguintes informações e, em seguida, clique em **Avançar**:
 
@@ -321,14 +321,14 @@ Para criar a regra de sincronização de entrada do usuário do AD:
 
 7. Na página **Fluxo de Entrada do Atributo**, forneça as seguintes informações e, em seguida, clique em **Avançar**:
 
-    | Regra de fluxo | Origem | Destination |
+    | Regra de fluxo | Fonte | Destination |
     |-|-|-|
     |Regra 1|samAccountName|accountName|
     |Regra 2|displayName|displayName|
-    |Regra 3|EmployeeTipo|employeeType|
+    |Regra 3|EmployeeTipo|employeeTipo|
     |Regra 4|givenName|firstName|
     |Regra 5|sn|lastName|
-    |Regra 6|Manager|manager|
+    |Regra 6|Manager|gerenciador|
     |Regra 7|objectSID|ObjectSID|
     |Regra 8|"Contoso"|domain|
 

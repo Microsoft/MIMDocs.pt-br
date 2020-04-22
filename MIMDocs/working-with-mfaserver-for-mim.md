@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
 ms.openlocfilehash: 1dd87db01a5c1100c8206d82bedf96a8a5e702ad
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79044303"
 ---
 # <a name="use-azure-multi-factor-authentication-server-to-activate-pam-or-sspr"></a>Usar o Servidor de Autenticação Multifator do Azure para ativar SSPR ou PAM
@@ -69,7 +69,7 @@ Depois de baixar o servidor, [instale](https://docs.microsoft.com/azure/active-d
  
 ### <a name="step-2-backup-and-open-the-mfasettingsxml-located-in-the-cprogram-filesmicrosoft-forefront-identity-manager2010service"></a>Etapa 2: fazer backup e abrir o arquivo MfaSettings.xml, localizado na pasta "C:\Arquivos de Programas\Microsoft Forefront Identity Manager\2010\Service"
 
-### <a name="step-3-update-the-following-lines"></a>Etapa 3: Atualizar as linhas a seguir
+### <a name="step-3-update-the-following-lines"></a>Etapa 3: adicionar as linhas a seguir
 1. Remover/desmarcar as linhas de entradas de configuração a seguir <br>
 <LICENSE_KEY></LICENSE_KEY><br>
 <GROUP_KEY></GROUP_KEY><br>
@@ -87,7 +87,7 @@ Depois de baixar o servidor, [instale](https://docs.microsoft.com/azure/active-d
 > Para reverter a configuração, substitua MfaSettings.xml pelo arquivo de backup na etapa 2
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 -    [Guia de Introdução com o Servidor de Autenticação Multifator do Azure](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy)
 - [O que é a Autenticação Multifator do Azure?](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication)

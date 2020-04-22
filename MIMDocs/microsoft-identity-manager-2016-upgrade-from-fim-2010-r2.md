@@ -12,10 +12,10 @@ ms.assetid: 9471ccc1-bafe-46ee-b169-1464262380e1
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7df1a4ca7a33aa2a00ac0b2c3ef24056c9720b5b
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043232"
 ---
 # <a name="upgrade-from-forefront-identity-manager-2010-r2"></a>Atualização do Forefront Identity Manager 2010 R2
@@ -197,6 +197,6 @@ Este guia pressupõe que você tenha o seguinte já configurado:
 
 4. Observe que o **Forefront Identity Manager Service** reiniciou.
 
-Observação: se os complementos e extensões do FIM estão implantados no momento nos computadores dos usuários para SSPR, não configure a nova porta de telefone MFA para redefinição de senha até que todos os complementos e extensões do FIM tenham sido atualizados para o MIM 2016.  Como os complementos e extensões do FIM 2010 e FIM 2010 R2 não reconhecem as novas portas, eles fornecerão um erro e o usuário não poderá concluir a redefinição de senha.
+Observação: Se os complementos e extensões do FIM estão implantadas no momento nos computadores dos usuários para SSPR, não configure a nova porta de telefone MFA para redefinição de senha até que todos os complementos e extensões do FIM tenham sido atualizados para o MIM 2016.  Como os complementos e extensões do FIM 2010 e FIM 2010 R2 não reconhecem as novas portas, eles fornecerão um erro e o usuário não poderá concluir a redefinição de senha.
 
 Para obter orientação sobre atualização do Microsoft Identity Manager 2016 SP1, consulte o seguinte [pacote de atualização do Microsoft Identity Manager 2016 Service Pack 1](https://blogs.technet.microsoft.com/iamsupport/2016/11/08/microsoft-identity-manager-2016-service-pack-1-update-package/)

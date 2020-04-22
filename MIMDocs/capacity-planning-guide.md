@@ -12,10 +12,10 @@ ms.assetid: 3ac5b990-1678-4996-996d-cbd84b8426b4
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 15eb35d01ed5c5c6e125c45f238bb2f7a7c564d7
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042110"
 ---
 # <a name="capacity-planning-guide"></a>Guia de planejamento de capacidade
@@ -26,7 +26,7 @@ Antes de começar a usar o MIM, siga este guia em ambientes de teste para entend
 
 Se você ainda não estiver familiarizado com o MIM 2016 e seus componentes, obtenha mais detalhes sobre o [Microsoft Identity Manager 2016](microsoft-identity-manager-2016.md) antes de continuar.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Overview
 
 Há vários fatores que podem afetar a capacidade e desempenho total da sua implantação do Microsoft Identity Manager:
 
@@ -43,7 +43,7 @@ Os principais fatores que afetam a capacidade e desempenho de uma implantação 
 | Hardware | O hardware físico (físico ou virtual) para cada componente de MIM incluindo CPU, memória, adaptador de rede e configuração de disco rígido. |
 | Objetos de configuração de política do MIM | O número e tipo dos objetos de configuração de política do MIM, que inclui os conjuntos, as MPRs (regras de política de gerenciamento) e os fluxos de trabalho. |
 | Escala | Os usuários, grupos, grupos calculados e tipos de objetos personalizados a serem gerenciados pelo MIM 2016. Além disso, considere a complexidade de grupos dinâmicos e certifique-se de considerar o aninhamento de grupos. |
-| Carregamento | Frequência de uso. Operações como criação de novo grupo ou usuário, redefinições de senha ou visitas ao portal por minuto ou hora. Observe que a carga pode variar durante o curso de uma hora, dias, semanas ou anos. Dependendo do componente, é possível optar por carregamento de pico ou carregamento médio. |
+| Carregar | Frequência de uso. Operações como criação de novo grupo ou usuário, redefinições de senha ou visitas ao portal por minuto ou hora. Observe que a carga pode variar durante o curso de uma hora, dias, semanas ou anos. Dependendo do componente, é possível optar por carregamento de pico ou carregamento médio. |
 
 ## <a name="hosting-microsoft-identity-manager-components"></a>Componentes de hospedagem do Microsoft Identity Manager
 

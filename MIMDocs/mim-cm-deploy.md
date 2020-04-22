@@ -10,10 +10,10 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.openlocfilehash: 35fe08363b6964bf6d264ab1e60cd9751aa7b6aa
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043028"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implantando o MIM CM (Microsoft Identity Manager Certificate Manager) 2016
@@ -126,7 +126,7 @@ Grupos:
 | Membros do gerenciador do CM     | MIMCM-Managers    |
 | Membros assinantes do CM | MIMCM-Subscribers |
 
-PowerShell: Contas de agente:
+PowerShell: contas de agente:
 
 ```powershell
 import-module activedirectory
@@ -200,7 +200,7 @@ As contas de serviço que exigem certificados são:
 
 - MIMCMEnrollAgent: essa conta precisa de um certificado de agente de registro
 
-- MIMCMKRAgent: essa conta precisa de um certificado de **agente de recuperação de chave**
+- MIMCMKRAgent: essa conta precisa de um certificado do **Agente de recuperação de chave**
 
 Há modelos que já estão presentes no AD, mas precisamos criar as nossas próprias versões para trabalhar com o MIM CM. O motivo é que precisamos fazer modificações dos modelos de linha de base originais.
 
@@ -457,11 +457,11 @@ Antes de fazer logon no CORPCM, adicione MIMINSTALL ao grupo **Admins de domíni
 
    - Nome de usuário: **Atualizar**
 
-   - Contrasenha: **Sen\@ha1**
+   - Senha: **Pass\@word1**
 
-   - Confirmar senha: **Sen\@ha1**
+   - Confirmar senha: **Pass\@word1**
 
-   - Usar um usuário existente: **Enabled**
+   - Usar um usuário existente: **Habilitado**
 
      >[!NOTE]
      >Nós já criamos essas contas anteriormente. Repita os procedimentos da etapa 8 para as seis guias de conta de agente.
@@ -556,7 +556,7 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 16. Na página **Geral**, na caixa **Nome de logon**, digite **contoso\\CORPCA\$** . Selecione **Autenticação do Windows**. O banco de dados padrão é o **FIMCertificateManagement**.
 
-17. No painel esquerdo, selecione **Mapeamento de Usuário**. No painel direito, clique na caixa de seleção na coluna **Mapa** ao lado de **FIMCertificateManagement**. Na lista **Membro da função de banco de dados para: FIMCertificateManagement**, habilite a função **clmApp**.
+17. No painel esquerdo, selecione **Mapeamento de Usuário**. No painel direito, clique na caixa de seleção na coluna **Mapa** ao lado de **FIMCertificateManagement**. Na lista **Associação de função de banco de dados para: FIMCertificateManagement**, habilite a função **clmApp**.
 
 18. Clique em **OK**.
 
@@ -668,7 +668,7 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
     - Na caixa de diálogo **Certificado**, clique em **OK**.
 
         >[!Note]
-        >Se o botão **OK** não está habilitado, você incluiu acidentalmente um caractere oculto na cadeia de impressão digital quando copiou a impressão digital do certificado clmAgent. Repita todas as etapas da **Tarefa 4: Copiar a impressão digital do certificado MIMCMAgent para a área de transferência do Windows** neste exercício.
+        >Se o botão **OK** não está habilitado, você incluiu acidentalmente um caractere oculto na cadeia de impressão digital quando copiou a impressão digital do certificado clmAgent. Repita todas as etapas a partir da **Tarefa 4: Copiar a impressão digital do certificado MIMCMAgent para área de transferência do Windows** neste exercício.
 
 4. Na caixa de diálogo **Propriedades de Configuração**, verifique se a impressão digital é exibida na lista **Certificados de Autenticação Válidos** e, em seguida, clique em **OK**.
 
@@ -688,7 +688,7 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 A **última etapa da implantação** é verificar se os CONTOSO\\MIMCM-Managers podem implantar e criar modelos e configurar o sistema sem ser administradores de esquema e de domínio. O próximo script será fornecer à ACL as permissões para os modelos de certificado usando dsacls. Execute com a conta que tem permissão total para alterar as permissões de segurança de Leitura e Gravação para cada modelo de certificado existente na floresta.
 
-Primeiro passo: **Configurar permissões no ponto de conexão de serviço e no grupo de destino e delegar o gerenciamento de modelo de perfil**
+Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no grupo de destino e delegando o gerenciamento de modelo de perfil**
 
 1. Configure permissões no SCP (ponto de conexão de serviço).
 
@@ -835,7 +835,7 @@ Primeiro passo: **Configurar permissões no ponto de conexão de serviço e no g
 
 14. Deixe **Usuários e Computadores do Active Directory** aberto.
 
-Segundo passo: **Delegar permissões de gerenciamento de modelo de certificado \<script\>**
+Segundo passo: **Delegando permissões de gerenciamento de modelo de certificado \<script\>**
 
 - Delegando permissões no contêiner Modelos de Certificado.
 
@@ -911,7 +911,7 @@ $acl.AddAccessRule($ace)
 }
 ```
 
-**Scripts: Delegar permissões nos modelos de certificado existentes.**  
+**Scripts: delegando permissões nos modelos de certificado existentes.**  
 
 ![diagrama](media/mim-cm-deploy/image039.png)
 

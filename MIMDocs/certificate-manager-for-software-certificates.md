@@ -12,10 +12,10 @@ ms.assetid: fed5ada9-d80f-4825-aad7-4172ac5d71d3
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: b8a1b55ed836f46c184941ccf6ec25ef63ad4c30
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042093"
 ---
 # <a name="create-software-certificates-with-certificate-manager"></a>Criar certificados de software com o Gerenciador de certificados
@@ -93,4 +93,4 @@ Para registrar e renovar certificados de software, você não precisa ser um adm
 
 10. Se quiser emitir novamente os certificados arquivados, marque as caixas à esquerda de **Reemitir certificados arquivados** e clique em **OK**.
 
-11. Se você estiver usando o CM Do Cartão Inteligente Virtual, precisará desabilitar itens de coleta de dados porque eles não funcionam com a coleta de dados ativada. Desabilite a coleta de dados para cada política clicando na política no painel esquerdo e, em seguida, desmarcando a caixa ao lado de **Item de dados de exemplo** e, em seguida, em **Excluir itens de coleta de dados**. Em seguida, clique em **OK**.
+11. Se você estiver usando o CM Do Cartão Inteligente Virtual, precisará desabilitar itens de coleta de dados porque eles não funcionam com a coleta de dados ativada. Desabilite a coleta de dados para cada política clicando na política no painel esquerdo e, em seguida, desmarcando a caixa ao lado de **Item de dados de exemplo** e, em seguida, em **Excluir itens de coleta de dados**. Clique em **OK**.

@@ -13,10 +13,10 @@ ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043657"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Etapa 3 – Preparar um servidor PAM
@@ -35,7 +35,7 @@ Em uma terceira máquina virtual, instale o Windows Server 2012 R2, especificame
 
 2. Leia e aceite os termos de licença.
 
-3.  Já que o disco estará vazio, selecione **Personalizado: instalar somente o Windows** e use o **espaço em disco não inicializado**.
+3.  Uma vez que o disco estará vazio, selecione **Personalizar: instalar somente o Windows** e use o **espaço em disco não inicializado**.
 
 4.  Entre no novo computador como administrador.  Usando o Painel de Controle, dê a ele um endereço IP estático na rede virtual, configure essa interface de rede para enviar consultas DNS para o endereço IP de PRIVDC e defina o nome do computador como *PAMSRV*.  Isso exigirá reinicializar o servidor.
 
@@ -78,7 +78,7 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 9. No painel de detalhes, clique com o botão direito do mouse em **Negar logon localmente** e selecione **Propriedades**.  
 10. Clique em **Adicionar Usuário ou Grupo** e, em Nomes de usuário e grupo, digite *priv\mimmonitor; priv\MIMService; priv\mimcomponent* e clique em **OK**.  
-11. Clique em **OK** para fechar a janela de propriedades.  
+11. Clique em **OK** para fechar a janela Propriedades.  
 12. Feche a janela de Política de Segurança Local.  
 
 13. Abra o Painel de controle e mude para **Contas de Usuário**.

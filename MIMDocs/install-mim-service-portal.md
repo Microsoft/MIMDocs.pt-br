@@ -12,10 +12,10 @@ ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
 ms.openlocfilehash: e381bb418ce8215dafc369bf33782483a6e4de3e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79042433"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalação do MIM 2016: Serviço e Portal do MIM
@@ -124,7 +124,7 @@ Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
     1.  Usando o Internet Explorer, no **Portal do MIM**, clique em **Regras de da Política de Gerenciamento**.
 
-    2.  Procure a regra da política de gerenciamento, **Gerenciamento de usuário: os usuários podem ler atributos próprios**.
+    2.  Pesquise a regra de política de gerenciamento, **Gerenciamento de usuários: os usuários podem ler seus próprios atributos**.
 
     3.  Selecione essa regra de política de gerenciamento, desmarque **Política está desabilitada**.
 
@@ -147,7 +147,7 @@ Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
     6.  Verifique se há uma rede ativa listado como contoso.local como uma rede de domínio.
 
-    7.  Feche o **Painel de controle**.
+    7.  Feche **Painel de controle**.
 
 > [!NOTE]
 > Opcional: neste ponto, você pode instalar os complementos e extensões do MIM.
