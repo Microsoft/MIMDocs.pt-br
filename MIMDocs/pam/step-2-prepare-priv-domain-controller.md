@@ -12,10 +12,10 @@ ms.assetid: 0e9993a0-b8ae-40e2-8228-040256adb7e2
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 97b425fc4444b241ddce99e7d5e3abf564daf245
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79043691"
 ---
 # <a name="step-2---prepare-the-first-priv-domain-controller"></a>Etapa 2 – Preparar o primeiro controlador de domínio PRIV
@@ -38,7 +38,7 @@ Em outra máquina virtual nova sem software instalado, instale o Windows Server 
 
 2. Leia e aceite os termos de licença.
 
-3. Já que o disco estará vazio, selecione **Personalizado: instalar somente o Windows** e use o espaço em disco não inicializado.
+3. Já que o disco estará vazio, selecione **Personalizar: instalar somente o Windows** e use o espaço em disco não inicializado.
 
 4. Depois de instalar a versão do sistema operacional, entre nesse novo computador como o novo administrador. Use o Painel de Controle para definir o nome do computador como *PRIVDC*, dê a ele um endereço IP estático na rede virtual e configure o servidor DNS para ser o do controlador de domínio instalado na etapa anterior. Isso exigirá reinicializar o servidor.
 
@@ -237,7 +237,7 @@ Usando o PowerShell em PRIVDC, configure o encaminhamento de nome DNS para que o
    ```
 
 > [!NOTE]
-> As próximas etapas deste documento descrevem como instalar os componentes do servidor MIM 2016 em um único computador. Se você planeja adicionar outro servidor para obter alta disponibilidade, será necessária uma configuração adicional do Kerberos, conforme descrito no [FIM 2010: configuração da autenticação Kerberos](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
+> As próximas etapas deste documento descrevem como instalar os componentes do servidor MIM 2016 em um único computador. Se você planeja adicionar outro servidor para obter alta disponibilidade, será necessária uma configuração adicional do Kerberos, conforme descrito em [FIM 2010: configuração da autenticação Kerberos](https://social.technet.microsoft.com/wiki/contents/articles/3385.fim-2010-kerberos-authentication-setup.aspx).
 
 ### <a name="configure-delegation-to-give-mim-service-accounts-access"></a>Configurar a delegação para conceder acesso de contas do serviço MIM
 
@@ -269,7 +269,7 @@ Realize as seguintes etapas em PRIVDC como um administrador de domínio.
 15. Na lista de permissões, selecione **Alterar senha** e **Redefinir senha**. Clique em **Avançar** e em **Concluir**.  
 16. Feche Usuários e Computadores do Active Directory.
 
-17. Abra um prompt de comando.  
+17. Abra o prompt de comando.  
 18. Examine a lista de controle de acesso no objeto AdminSDHolder nos domínios PRIV. Por exemplo, se o domínio era “priv.contoso.local”, digite o comando
     ```cmd
     dsacls "cn=adminsdholder,cn=system,dc=priv,dc=contoso,dc=local"
