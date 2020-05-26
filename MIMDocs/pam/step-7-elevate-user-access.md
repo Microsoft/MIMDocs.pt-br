@@ -8,12 +8,12 @@ ms.date: 01/17/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: 05e05966bf90700885e67ba16f10ab0d7864cf10
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: bdb02eed8e22b373c6cfa5028153cad6aee9a536
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043606"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279956"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Etapa 7 – elevar o acesso do usuário
 
@@ -90,7 +90,7 @@ Ative com a solicitação de acesso privilegiado por meio do portal de exemplo d
     ```
 
 3. Quando for solicitado, digite a senha da conta PRIV.Julia. Uma nova janela do navegador da Web será exibida.
-4. Navegue até http://pamsrv.priv.contoso.local:8090 e verifique se uma página da Web do portal de exemplo está visível.
+4. Navegue até `http://pamsrv.priv.contoso.local:8090` e verifique se uma página da Web do portal de exemplo está visível.
 5. No Internet Explorer, selecione **Ferramentas** > **Opções da Internet** e clique na guia **Segurança**.
 6. Clique na **Zona de intranet local** > **Sites** > **Avançado** e adicione o site à zona.
 7. Feche os diálogos **Opções da Internet** .

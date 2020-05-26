@@ -9,12 +9,12 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 0d5f970168934f3fcc4c721aad0a439e2babcfe7
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 60af5cee7d05eb8b8c5fb279f4f182d901e91632
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79381498"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280109"
 ---
 <a name="azure-ad-business-to-business-b2b-collaboration-with-microsoft-identity-managermim-2016-sp1-with-azure-application-proxy"></a>Colaboração B2B (entre empresas) do Azure AD com Microsoft Identity Manager (MIM) 2016 SP1 com Proxy do Aplicativo Azure
 ============================================================================================================================
@@ -213,16 +213,16 @@ Configure as seguintes regras de fluxo de atributos de entrada.  Preencha os atr
 
 | **Somente o fluxo inicial** | **Usado como teste de existência** | **Fluxo (Valor de Origem ⇒ Atributo FIM)**                          |
 |-----------------------|---------------------------|-----------------------------------------------------------------------|
-|                       |                           | [displayName⇒displayName](javascript:void(0);)                        |
-|                       |                           | [Left(id,20)⇒accountName](javascript:void(0);)                        |
-|                       |                           | [id⇒uid](javascript:void(0);)                                         |
-|                       |                           | [userType⇒employeeType](javascript:void(0);)                          |
-|                       |                           | [givenName⇒givenName](javascript:void(0);)                            |
-|                       |                           | [surname⇒sn](javascript:void(0);)                                     |
-|                       |                           | [userPrincipalName⇒userPrincipalName](javascript:void(0);)            |
-|                       |                           | [id⇒cn](javascript:void(0);)                                          |
-|                       |                           | [mail⇒mail](javascript:void(0);)                                      |
-|                       |                           | [mobilePhone⇒mobilePhone](javascript:void(0);)                        |
+|                       |                           | `[displayName⇒displayName](javascript:void(0);)`                        |
+|                       |                           | `[Left(id,20)⇒accountName](javascript:void(0);)`                        |
+|                       |                           | `[id⇒uid](javascript:void(0);)`                                         |
+|                       |                           | `[userType⇒employeeType](javascript:void(0);)`                          |
+|                       |                           | `[givenName⇒givenName](javascript:void(0);)`                            |
+|                       |                           | `[surname⇒sn](javascript:void(0);)`                                     |
+|                       |                           | `[userPrincipalName⇒userPrincipalName](javascript:void(0);)`            |
+|                       |                           | `[id⇒cn](javascript:void(0);)`                                          |
+|                       |                           | `[mail⇒mail](javascript:void(0);)`                                      |
+|                       |                           | `[mobilePhone⇒mobilePhone](javascript:void(0);)`                        |
 
 ### <a name="synchronization-rule-create-guest-user-account-to-active-directory"></a>Regra de Sincronização: criar conta de usuário convidado para o Active Directory 
 

@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: e381bb418ce8215dafc369bf33782483a6e4de3e
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: a85a8eeaf999c193a3e2bbd3f2cdf75cef65e574
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042433"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279990"
 ---
 # <a name="install-mim-2016-mim-service-and-portal"></a>Instalação do MIM 2016: Serviço e Portal do MIM
 
@@ -115,7 +115,7 @@ Quando todas as definições de pré-instalação estiverem prontas, clique em *
 
 Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
-1. Inicie o Internet Explorer e conecte-se ao Portal do MIM em *http://mim.contoso.com/identitymanagement* . Observe que pode haver um pequeno atraso na primeira visita a essa página.
+1. Inicie o Internet Explorer e conecte-se ao Portal do MIM em `http://mim.contoso.com/identitymanagement`. Observe que pode haver um pequeno atraso na primeira visita a essa página.
     - Se for necessário, autentique-se como *contoso\miminstall* no Internet Explorer.
 
 2. No Internet Explorer, abra **Opções da Internet**altere para a guia **Segurança** e adicione o site à zona da **Intranet Local** se ainda não estiver lá.  Feche a caixa de diálogo **Opções da Internet** .
@@ -124,7 +124,7 @@ Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
     1.  Usando o Internet Explorer, no **Portal do MIM**, clique em **Regras de da Política de Gerenciamento**.
 
-    2.  Pesquise a regra de política de gerenciamento, **Gerenciamento de usuários: os usuários podem ler seus próprios atributos**.
+    2.  Procure a regra da política de gerenciamento, **Gerenciamento de usuário: os usuários podem ler atributos próprios**.
 
     3.  Selecione essa regra de política de gerenciamento, desmarque **Política está desabilitada**.
 
@@ -147,7 +147,7 @@ Após a conclusão da instalação, verifique se o Portal do MIM está ativo.
 
     6.  Verifique se há uma rede ativa listado como contoso.local como uma rede de domínio.
 
-    7.  Feche **Painel de controle**.
+    7.  Feche o **Painel de controle**.
 
 > [!NOTE]
 > Opcional: neste ponto, você pode instalar os complementos e extensões do MIM.
