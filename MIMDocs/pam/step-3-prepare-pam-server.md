@@ -12,12 +12,12 @@ ms.assetid: 68ec2145-6faa-485e-b79f-2b0c4ce9eff7
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 7a0a0437e767f793150d875bcaf31213a7fdf627
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 3098816d07603384a28db47c0bc60ac92a340e8f
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043657"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83279973"
 ---
 # <a name="step-3--prepare-a-pam-server"></a>Etapa 3 – Preparar um servidor PAM
 
@@ -35,7 +35,7 @@ Em uma terceira máquina virtual, instale o Windows Server 2012 R2, especificame
 
 2. Leia e aceite os termos de licença.
 
-3.  Uma vez que o disco estará vazio, selecione **Personalizar: instalar somente o Windows** e use o **espaço em disco não inicializado**.
+3.  Já que o disco estará vazio, selecione **Personalizado: instalar somente o Windows** e use o **espaço em disco não inicializado**.
 
 4.  Entre no novo computador como administrador.  Usando o Painel de Controle, dê a ele um endereço IP estático na rede virtual, configure essa interface de rede para enviar consultas DNS para o endereço IP de PRIVDC e defina o nome do computador como *PAMSRV*.  Isso exigirá reinicializar o servidor.
 
@@ -78,7 +78,7 @@ Configure a política de segurança do servidor para permitir que as contas cria
 
 9. No painel de detalhes, clique com o botão direito do mouse em **Negar logon localmente** e selecione **Propriedades**.  
 10. Clique em **Adicionar Usuário ou Grupo** e, em Nomes de usuário e grupo, digite *priv\mimmonitor; priv\MIMService; priv\mimcomponent* e clique em **OK**.  
-11. Clique em **OK** para fechar a janela Propriedades.  
+11. Clique em **OK** para fechar a janela de propriedades.  
 12. Feche a janela de Política de Segurança Local.  
 
 13. Abra o Painel de controle e mude para **Contas de Usuário**.
@@ -186,7 +186,7 @@ Em seguida, crie uma Coleção de Sites do SharePoint associado a esse aplicativ
 
     Verifique se a variável **CompatibilityLevel** está definida como *14*. Se ele retornar *15*, o conjunto de sites não foi criado para a versão da experiência 2010; exclua o conjunto de sites e recrie-o.
 
-2.  Execute os seguintes comandos do PowerShell no **Shell de Gerenciamento do SharePoint 2013**. Isso desabilitará o viewstate do servidor do SharePoint e a tarefa do SharePoint **Trabalho de Análise da Integridade (Por Hora, Temporizador do Microsoft SharePoint Foundation, Todos os Servidores)** .
+2.  Execute os seguintes comandos do PowerShell no **Shell de Gerenciamento do SharePoint 2013**. Isso desabilitará o ViewState do servidor do SharePoint e a tarefa do SharePoint **Trabalho de Análise da Integridade (Por Hora, Temporizador do Microsoft SharePoint Foundation, Todos os Servidores)** .
 
     ```PowerShell
     $contentService = [Microsoft.SharePoint.Administration.SPWebService]::ContentService;
@@ -204,7 +204,7 @@ Em seguida, crie uma Coleção de Sites do SharePoint associado a esse aplicativ
 ## <a name="set-the-website-as-the-local-intranet"></a>Definir o site como a intranet local
 
 1. Inicie o Internet Explorer e abra uma nova guia do navegador da Web
-2. Navegue até http://pamsrv.priv.contoso.local:82/ e entre como PRIV\MIMAdmin.  Um site do SharePoint vazio chamado “Portal do MIM” será mostrado.  
+2. Navegue até `http://pamsrv.priv.contoso.local:82/` e entre como PRIV\MIMAdmin.  Um site do SharePoint vazio chamado “Portal do MIM” será mostrado.  
 3. No Internet Explorer, abra **Opções da Internet**, mude para a guia **Segurança**, selecione **Intranet local** e adicione a URL `http://pamsrv.priv.contoso.local:82/`.
 
 Se a entrada falhar, os SPNs do Kerberos criados anteriormente na [Etapa 2](step-2-prepare-priv-domain-controller.md) talvez precisem ser atualizados.

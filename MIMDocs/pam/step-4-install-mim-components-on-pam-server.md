@@ -12,12 +12,12 @@ ms.assetid: ef605496-7ed7-40f4-9475-5e4db4857b4f
 ROBOTS: noindex,nofollow
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0456f463357aea69913804b8d15241737932ff4d
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 070e85177a28c3091834cafd2e61611aa9043ea8
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043674"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280007"
 ---
 # <a name="step-4--install-mim-components-on-pam-server-and-workstation"></a>Etapa 4 – Instalar componentes MIM no servidor PAM e estação de trabalho
 
@@ -59,7 +59,7 @@ Siga as diretrizes do instalador e conclua a instalação.
 
 7. Defina *PAMSRV* como o endereço do servidor do Serviço MIM.
 
-8. Defina *http://pamsrv.priv.contoso.local:82* como a URL do conjunto de sites do SharePoint.
+8. Defina `http://pamsrv.priv.contoso.local:82` como a URL do conjunto de sites do SharePoint.
 
 9. Deixe a URL do portal de registro em branco.
 
@@ -100,7 +100,7 @@ Após a conclusão da instalação, o servidor vai reinicializar, então verifiq
 
 1. Após a reinicialização de PAMSRV, entre como PRIV\Administrator.
 
-2. Inicie o Internet Explorer e conecte-se ao Portal do MIM em http://pamsrv.priv.contoso.local:82/identitymanagement. Pode haver um pequeno atraso na primeira vez que essa página for localizada.
+2. Inicie o Internet Explorer e conecte-se ao Portal do MIM em `http://pamsrv.priv.contoso.local:82/identitymanagement`. Pode haver um pequeno atraso na primeira vez que essa página for localizada.
 
 3. Se necessário, entre como PRIV\Administrator no Internet Explorer.
 
@@ -155,7 +155,7 @@ Nesta seção, você vai instalar e configurar o aplicativo Web de exemplo para 
    </httpProtocol>
    ```
 
-5. Configure aplicativo Web de exemplo. Usando um editor de texto como o Bloco de Notas, edite o arquivo **C:\Arquivos de Programas\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Defina o valor de **pamRespApiUrl** como *http://pamsrv.priv.contoso.local:8086/api/pamresources/* .
+5. Configure aplicativo Web de exemplo. Usando um editor de texto como o Bloco de Notas, edite o arquivo **C:\Arquivos de Programas\Microsoft Forefront Identity Manager\2010\Privileged Access Management Portal\js\utils.js**. Defina o valor de **pamRespApiUrl** como `http://pamsrv.priv.contoso.local:8086/api/pamresources/`.
 
 6. Reinicie o IIS com o seguinte comando para que as alterações tenham efeito.
 
@@ -163,7 +163,7 @@ Nesta seção, você vai instalar e configurar o aplicativo Web de exemplo para 
    iisreset
    ```
 
-7. (Opcional) Verifique se o usuário pode se autenticar na API REST. Abra um navegador da Web como o administrador em PAMSRV.  Navegue até a URL do site http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/, autentique se necessário e garanta que o download ocorra.
+7. (Opcional) Verifique se o usuário pode se autenticar na API REST. Abra um navegador da Web como o administrador em PAMSRV.  Navegue até a URL do site `http://pamsrv.priv.contoso.local:8086/api/pamresources/pamroles/`, autentique se necessário e garanta que o download ocorra.
 
 ## <a name="install-the-mim-pam-requestor-cmdlets"></a>Instalar os cmdlets do solicitante do PAM no MIM
 
@@ -179,7 +179,7 @@ Instale os cmdlets do solicitante do PAM no MIM na estação de trabalho configu
 
 5.  Na instalação personalizada, especifique o **Cliente do PAM** a ser instalado, mas não o **Suplemento do MIM para o Outlook** nem a **Senha e as Extensões de Autenticação do MIM**.
 
-6.  No endereço do Servidor PAM, especifique *pamsrv.priv.contoso.local* como o nome do host do servidor PRIV do MIM.
+6.  No endereço do Servidor PAM, especifique `pamsrv.priv.contoso.local` como o nome do host do servidor PRIV MIM.
 
 Depois que a instalação for concluída, reinicie o CORPWKSTN para concluir o registro do novo módulo do PowerShell.
 

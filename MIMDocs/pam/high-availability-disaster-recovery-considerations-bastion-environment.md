@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 03e521cd-cbf0-49f8-9797-dbc284c63018
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 67ce70e6bc0603a991731cf1e5fb95751f5016c6
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 2153fdb0559a78bcc82ca6901ee7cb0cabc01f23
+ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043963"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280092"
 ---
 # <a name="high-availability-and-disaster-recovery-considerations-for-the-bastion-environment"></a>Considerações sobre alta disponibilidade e recuperação de desastre do ambiente de bastiões
 
@@ -39,7 +39,7 @@ O escopo dessas considerações afeta o custo total da implantação e das opera
 | Estabelecimento de relação de confiança         | Baixo | Aguarde até que o ambiente de bastiões seja restaurado |
 | Mitigação de usuário e de grupo   | Baixo | Aguarde até que o ambiente de bastiões seja restaurado |
 | Administração do MIM          | Baixo | Aguarde até que o ambiente de bastiões seja restaurado |
-| Ativação de função privilegiada  | Médio | Contas dedicadas com backup de cartão inteligente para adicionar manualmente os usuários aos grupos administrativos |
+| Ativação de função privilegiada  | Média | Contas dedicadas com backup de cartão inteligente para adicionar manualmente os usuários aos grupos administrativos |
 | Gerenciamento de recursos         | Alta | Contas dedicadas com backup de cartão inteligente para adicionar manualmente os usuários aos grupos administrativos |
 | Monitoramento de usuários e grupos na floresta existente | Baixo | Aguarde até que o ambiente de bastiões seja restaurado |
 
@@ -53,7 +53,7 @@ O estabelecimento da relação de confiança exige que os controladores de domí
 
 ### <a name="user-and-group-migration"></a>Migração de usuário e de grupo
 
-Após o estabelecimento da relação de confiança, grupos de sombra podem ser criados no ambiente de bastiões, bem como contas de usuário para membros desses grupos e aprovadores. Isso permite que esses usuários ativem funções privilegiadas e obtenham novamente associações efetivas a um grupo.
+Após o estabelecimento da relação de confiança, grupos de sombra podem ser criados no ambiente de bastiões, bem como contas de usuário para membros desses grupos e aprovadores. Isso permite que esses usuários ativem funções privilegiadas e recuperem associações efetivas a um grupo.
 
 A migração de usuário e grupo exige que os controladores de domínio da floresta existente estejam online, bem como os componentes do MIM e do AD do ambiente de bastiões.   Se os controladores de domínio da floresta existente não estiverem acessíveis, nenhum usuário e grupo adicional poderá ser adicionado ao ambiente de bastiões, mas os usuários e grupos existentes não serão afetados. Se houver uma interrupção de qualquer um dos componentes durante a migração, o administrador poderá tentar novamente depois que a interrupção tiver sido resolvida.
 
@@ -77,7 +77,7 @@ O gerenciamento de recursos exige que um controlador de domínio do domínio de 
 
 ### <a name="monitoring-of-users-and-groups-in-the-existing-forest"></a>Monitoramento de usuários e grupos na floresta existente
 
-O MIM também inclui um serviço de monitoramento do PAM que verifica regularmente os usuários e grupos nos domínios existentes, bem como atualiza o banco de dados do MIM e o AD de forma condizente.  Esse serviço não precisa estar online para a ativação de função ou durante o gerenciamento de recursos.
+O MIM também inclui um serviço de monitoramento do PAM que verifica regularmente os usuários e grupos nos domínios existentes, bem como atualiza o banco de dados do MIM e o AD de maneira condizente.  Esse serviço não precisa estar online para a ativação de função ou durante o gerenciamento de recursos.
 
 O monitoramento exige que os controladores de domínio da floresta existente estejam online, bem como os componentes do MIM e do AD do ambiente de bastiões.  
 
@@ -182,7 +182,7 @@ O procedimento para adicionar um controlador de domínio adicional pode ser enco
 
 Após uma interrupção, verifique se, pelo menos, um controlador de domínio está disponível no ambiente de bastiões antes de reiniciar outros servidores.
 
-Em um domínio, o Active Directory distribui as funções FSMO (Flexible Single Master Operation) entre os controladores de domínio, conforme descrito em [How Operations Masters Work](https://technet.microsoft.com/library/cc780487.aspx) (Como funcionam os mestres de operações).  Se ocorrer uma falha em um controlador de domínio, poderá ser necessário transferir uma ou mais das [Funções do Controlador de Domínio](https://technet.microsoft.com/library/cc786438.aspx) atribuídas e esse controlador de domínio.
+Em um domínio, o Active Directory distribui as funções FSMO (Flexible Single Master Operation) entre os controladores de domínio, conforme descrito em [How Operations Masters Work](https://technet.microsoft.com/library/cc780487.aspx) (Como funcionam os mestres de operações).  Se ocorrer alguma falha em um controlador de domínio, talvez seja necessário transferir uma ou mais [Funções do Controlador de Domínio atribuídas a esse controlador de domínio].
 
 Depois de determinar que um controlador de domínio não será retornado para a produção, lembre-se de verificar se todas as funções foram atribuídas a esse controlador de domínio e reatribuí-las, conforme necessário. As instruções podem ser encontradas em [View the Current Operations Master Role Holders](https://technet.microsoft.com/library/cc816893.aspx) (Exibir os proprietários de função do mestre de operações atuais) e seus artigos relacionados.
 
@@ -214,7 +214,7 @@ O Serviço MIM é necessário para processar as solicitações de ativação.  P
 
 #### <a name="preparation"></a>Preparação
 É recomendável implantar o Serviço MIM em vários servidores ingressados no domínio PRIV.
-Para alta disponibilidade, veja os documentos do Windows Server referentes aos [Requisitos de hardware de clustering de failover e opções de armazenamento](https://technet.microsoft.com/library/jj612869.aspx) e [Creating a Windows Server 2012 Failover Cluster](https://blogs.msdn.com/b/clustering/archive/2012/05/01/10299698.aspx) (Criando um cluster de failover do Windows Server 2012).
+Para alta disponibilidade, veja os documentos do Windows Server referentes aos [Requisitos de hardware de clustering de failover e opções de armazenamento](https://technet.microsoft.com/library/jj612869.aspx) e [Creating a Windows Server 2012 Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/creating-a-windows-server-2012-failover-cluster/ba-p/371763) (Criando um cluster de failover do Windows Server 2012).
 
 Para a implantação de produção em vários servidores, é possível usar o NLB (Balanceamento de Carga de Rede) para distribuir a carga de processamento.  Você também deve ter um único alias (por exemplo, registros A ou CNAME) para que um nome comum seja exposto ao usuário.
 
