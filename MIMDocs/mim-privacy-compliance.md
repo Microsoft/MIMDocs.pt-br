@@ -1,6 +1,6 @@
 ---
 title: Manipulação de dados do Microsoft Identity Manager | Microsoft Docs
-description: Entenda a manipulação de dados do Microsoft Identity Manager para identificar e relatar dados dentro do ambiente, agir em determinado sistema com base em funções e requisitos operacionais.
+description: Entenda a manipulação de dados do Microsoft Identity Manager para identificar e relatar dados dentro do ambiente e agir em determinado sistema com base em funções e requisitos operacionais.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.suite: ems
-ms.openlocfilehash: e95cf26b62e582eaa3c07c40e551bc5930d3b1b0
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: b89f7561869e154ed5639835d1233e19e356ee76
+ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044099"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87176737"
 ---
 # <a name="microsoft-identity-manager-data-handling"></a>Manipulação de dados do Microsoft Identity Manager 
 
@@ -97,10 +97,10 @@ O PAM pode usar a mesma sintaxe acima ou você pode usar o [Módulo MIMPAM](http
 - [Exemplo de consulta do serviço MIM usando o PowerShell](https://gallery.technet.microsoft.com/Querying-The-FIMMIM-dcb82de3)
 
 ### <a name="bhold"></a>BHOLD
-Os dados do Bhold podem ser exportados usando o módulo de relatório do bhold para o seu formato preferido.
+Os dados do Bhold podem ser exportados para seu formato preferido usando o módulo de relatório do Bhold.
 
 ### <a name="certificate-management"></a>Gerenciamento de certificado
-Dados de gerenciamento de certificados relacionados a dados pessoais estão conectados ao diretório ativo. Um administrador pode exportar esses dados usando o Active Directory Powershell.
+Dados de gerenciamento de certificados relacionados a dados pessoais estão conectados ao diretório ativo. Um administrador pode exportar esses dados usando o Active Directory PowerShell.
 
 ## <a name="updating-personal-data"></a>Atualizando dados pessoais
 
@@ -110,7 +110,7 @@ Os dados pessoais sobre usuários ou objetos em soluções MIM geralmente são d
 
 Para executar operações de gerenciamento, os administradores devem fazer parte das operações de sincronização ou do administrador definido [aqui](https://docs.microsoft.com/previous-versions/mim/jj590183(v%3dws.10)).
 
-A atualização de dados é feita definindo regras da fonte de autoridade. O console de gerenciamento ajuda a identificar a fonte de autoridade para atualizá-la na origem. Outra opção é criar uma regra de sincronização ou extensão de regra para controlar a atualização de dados se a origem, como os dados de RH, ainda precisar permanecer. Estas são as opções com suporte disponíveis.
+A atualização de dados é feita definindo regras da fonte de autoridade. O console de gerenciamento ajuda a identificar a fonte de autoridade para atualizá-la na origem. Outra opção é criar uma regra de sincronização ou extensão de regra para controlar a atualização de dados se a origem, como os dados de RH, ainda precisar permanecer. Essas são as opções com suporte disponíveis.
 
 Para obter mais informações sobre diferentes maneiras de atualizar o atributo, confira abaixo. 
 
@@ -161,7 +161,7 @@ Outra opção é remover o objeto de usuário diretamente na interface do usuár
 ### <a name="certificate-management"></a>Gerenciamento de certificado
 Para remover um usuário do gerenciamento de certificado, exclua o usuário no diretório ativo.
 
-O gerenciamento de certificados só armazenará o perfil de serviços de certificado com o domínio sAMAccountName. Depois que o usuário é excluído do AD, o cache de usuário só está presente para os certificados para os quais eles se inscreveram. Não recomendamos excluir nada no banco de dados, pois isso pode causar danos gerais à operação do ambiente.
+O gerenciamento de certificados só armazenará o perfil de serviços de certificado com o domínio sAMAccountName. Depois que o usuário é excluído do AD, o cache de usuário só fica presente para os certificados para os quais ele se inscreveu. Não recomendamos excluir nada no banco de dados, pois isso pode causar danos gerais à operação do ambiente.
 
 ## <a name="opt-out-of-telemetry"></a>Recusa de telemetria
 Os builds FIM/MIM anteriores coletavam telemetria anônima sobre cada implantação e transmitiam esses dados por HTTPS para servidores da Microsoft. No passado, esses dados foram usados ​​pela Microsoft para ajudar a aprimorar versões futuras do FIM/MIM.

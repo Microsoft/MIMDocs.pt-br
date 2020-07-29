@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 4586b9998a9526a867ffe7ace9489fe56fff146c
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
+ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044201"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87176754"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Converter serviços específicos do Microsoft Identity Manager para usar Contas de serviço gerenciado de grupo
 
@@ -141,7 +141,7 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
     ![Janela Usuários e Computadores do Active Directory](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > Um problema conhecido no Windows Server 2012 R2 é que os serviços que usam uma conta gerenciada travam depois que o servidor é reiniciado porque o Serviço de Distribuição de Chave da Microsoft não é iniciado após a reinicialização do Windows. A solução alternativa para esse problema é executar o seguinte comando: 
+    > Um problema conhecido no Windows Server 2012 R2 é que os serviços que usam uma conta gerenciada param de responder depois que o servidor é reiniciado porque o Serviço de Distribuição de Chave da Microsoft não é iniciado após a reinicialização do Windows. A solução alternativa para esse problema é executar o seguinte comando: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >
