@@ -1,20 +1,20 @@
 ---
 title: O conector do Microsoft Identity Manager para o Microsoft Graph | Microsoft Docs
-author: fimguy
 description: O conector do Microsoft Identity Manager para o Microsoft Graph permite o gerenciamento de ciclo de vida de conta do AD de usuário externo. Nesse cenário, uma organização convidou convidados para seu diretório do Azure AD e deseja dar a eles acesso à Autenticação Integrada do Windows local ou aplicativos baseados em Kerberos
 keywords: ''
+author: billmath
 ms.author: billmath
 manager: daveba
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 462b649ca02519e5af5c3b1243506a74efa7052a
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: 63ebdbc229c7d2dabbbb5a06f7dbbd5f3d367796
+ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044252"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168347"
 ---
 # <a name="microsoft-identity-manager-connector-for-microsoft-graph"></a>Conector do Microsoft Identity Manager para o Microsoft Graph
 
@@ -22,7 +22,7 @@ ms.locfileid: "79044252"
 ## <a name="summary"></a>Resumo 
 
 
-O [conector do Microsoft Identity Manager para o Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495) habilita cenários de integração adicional para os clientes do Azure AD Premium.  Ele aparece em objetos adicionais de metaverso de sincronização do MIM obtidos da  [API do Microsoft Graph](https://developer.microsoft.com/en-us/graph/) v1 e beta.
+O [conector do Microsoft Identity Manager para o Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495) habilita cenários de integração adicional para os clientes do Azure AD Premium.  Ele aparece em objetos adicionais de metaverso de sincronização do MIM obtidos da  [API do Microsoft Graph](https://developer.microsoft.com/en-us/graph/) v1 e beta.
 
 ## <a name="scenarios-covered"></a>Cenários abordados
 
@@ -222,5 +222,5 @@ New-AzureADPolicy -Definition \@('{"TokenLifetimePolicy":{"Version":1, **"Access
 
 - [Explorador do Graph, ótimo para solução de problemas de chamada HTTP]( https://developer.microsoft.com/en-us/graph/graph-explorer)
 - [Controle de versão, suporte e políticas de alteração de falha para o Microsoft Graph](https://developer.microsoft.com/en-us/graph/docs/concepts/versioning_and_support)
-- [Baixe o conector do Microsoft Identity Manager para o Microsoft Graph](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Baixe o conector do Microsoft Identity Manager para o Microsoft Graph](https://go.microsoft.com/fwlink/?LinkId=717495)
 [Implantação de ponta a ponta B2B]( ~/microsoft-identity-manager-2016-graph-b2b-scenario.md)
