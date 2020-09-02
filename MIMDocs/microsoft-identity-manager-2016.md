@@ -8,19 +8,19 @@ manager: daveba
 ms.date: 10/18/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 01d5427c3672354ff6c2dc4259c1f2e43e380a8c
-ms.sourcegitcommit: c9f5f960fd39745bf5b57161a2fd0238c88d035a
+ms.openlocfilehash: 66cb97afa69decfde8df9f3c78f15c48abd7982b
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133542"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970372"
 ---
 # <a name="microsoft-identity-manager-2016-news-and-updates"></a>Atualizações e notícias do Microsoft Identity Manager 2016
 
 O MIM (Microsoft Identity Manager) 2016 foi desenvolvido com base nos recursos de gerenciamento de identidades e acessos do Forefront Identity Manager. Como seu antecessor, o MIM ajuda você a gerenciar usuários, credenciais, políticas e acessos na sua organização.  Além disso, o MIM 2016 adiciona uma experiência híbrida, recursos de gerenciamento com acesso privilegiado e suporte para novas plataformas.
 
 
-Com o MIM, uma organização pode simplificar o gerenciamento do ciclo de vida de identidades com fluxos de trabalho automatizados, regras de negócio e fácil integração com plataformas heterogêneas em todo o datacenter. O MIM possibilita que a organização tenha os usuários certos e os direitos de acesso para o Active Directory Domain Services para aplicativos locais. O Azure AD Connect pode então estar disponíveis no Azure AD para Office 365 e aplicativos hospedados na nuvem. Os cenários comuns de MIM incluem:
+Com o MIM, uma organização pode simplificar o gerenciamento do ciclo de vida de identidades com fluxos de trabalho automatizados, regras de negócio e fácil integração com plataformas heterogêneas em todo o datacenter. O MIM possibilita que a organização tenha os usuários certos e os direitos de acesso para o Active Directory para aplicativos locais, então o Azure AD Connect pode disponibilizar no Azure AD para Microsoft 365 e aplicativos hospedados na nuvem. Os cenários comuns de MIM incluem:
  - Identidade automática e provisionamento de grupo com base na política de negócios e no provisionamento controlado por fluxo de trabalho
  - Integração do conteúdo dos diretórios com sistemas de RH e outras fontes de autoridade
  - Sincronização de identidades entre diretórios, bancos de dados e aplicativos locais por meio de APIs e protocolos comuns, conectores fornecidos pela Microsoft e por parceiros

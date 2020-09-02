@@ -12,12 +12,12 @@ ms.assetid: 4978f60d-044d-4e84-8d93-65801fce1144
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: mim
-ms.openlocfilehash: 04e96f3c8eb71041dccb173f2a1dc7dbba46ef01
-ms.sourcegitcommit: cd503e8e9933d39d6fbf894c7d27bf9566301ac8
+ms.openlocfilehash: 4ef6c5aa5ba3814ab20dff445729da4acf96ecf7
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88168330"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970389"
 ---
 # <a name="supported-platforms-for-mim-2016"></a>Plataformas com suporte para o MIM 2016
 
@@ -46,7 +46,7 @@ Esta tabela descreve as plataformas com suporte, e a versão de cada componente 
 | **Portais de Registro e Redefinição de Senha do MIM** | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Navegador da Web | Todos os principais navegadores com suporte |
 | **Suplementos e extensões do MIM** | Windows | Windows 7<br/>Windows 8<br/>Windows 8.1<br/>Windows 10 |
-| | Integração com o Outlook (opcional) | Outlook 2010 (no Windows, exceto Clique para Executar)<br/>Outlook 2013 (no Windows, exceto Clique para Executar) <br/> Outlook 2016 (no Windows 10, exceto Clique para Executar) *<br/>Office 365 Outlook (no Windows 10, incluindo o Clique para Executar) ** |
+| | Integração com o Outlook (opcional) | Outlook 2010 (no Windows, exceto Clique para Executar)<br/>Outlook 2013 (no Windows, exceto Clique para Executar) <br/> Outlook 2016 (no Windows 10, exceto Clique para Executar) *<br/>Outlook para Microsoft 365 (no Windows 10, incluindo o Clique para Executar) ** |
 | | Cmdlets do solicitante do PowerShell no PAM (opcional) | Windows 8.1<br/>Windows 10 |
 | **Gerenciamento de certificados do MIM** (Integração de servidor e a AC (Autoridade de Certificação)) | Windows Server | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |
 | | Autoridade de certificação | Windows Server 2008 R2 SP1 (NR)<br/>Windows Server 2012<br/>Windows Server 2012 R2 <br/> Windows Server 2016 *<br/> Windows Server 2019 ** |

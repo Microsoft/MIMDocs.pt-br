@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: ''
 ms.reviewer: billmath
 ms.suite: ems
-ms.openlocfilehash: 62a6b936dc30b8593c8758a6158244d0f6dbbc4f
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
+ms.openlocfilehash: b7b0dd73e5a87f338dc8cd91e61ee6a19c84068a
+ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043011"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970355"
 ---
 # <a name="microsoft-identity-manager-2016-licensing-and-downloads"></a>Downloads e licenciamento do Microsoft Identity Manager 2016
 
@@ -30,7 +30,7 @@ O Microsoft Identity Manager 2016 é licenciado por usuário.  Os detalhes sobre
 
 O Microsoft Identity Manager 2016 é incluído com o Azure Active Directory Premium (P1 e P2), que faz parte do Enterprise Mobility + Security.
 
-O Azure AD Premium fica disponível por meio de um [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), do [Programa de Licença de Volume Aberto](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)e do programa [Provedores de Soluções na Nuvem](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409). Os assinantes do Azure e do Office 365 também podem comprar o Active Directory Premium P1 e P2 online.  Leia mais em [preços do Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+O Azure AD Premium fica disponível por meio de um [Microsoft Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx), do [Programa de Licença de Volume Aberto](https://www.microsoft.com/licensing/licensing-programs/open-license.aspx)e do programa [Provedores de Soluções na Nuvem](https://go.microsoft.com/fwlink/?LinkId=614968&clcid=0x409). Os assinantes do Azure e do Microsoft 365 também podem comprar o Azure Active Directory Premium P1 e P2 online.  Leia mais em [preços do Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="mim-cals"></a>CALs do MIM
 
@@ -103,7 +103,7 @@ Os downloads a seguir também podem ser relevantes:
 
 - [Agente de Relatório Híbrido de MIM](https://www.microsoft.com/download/details.aspx?id=55112)
 
-- [Conector LDAP genérico, conector de SQL genérico, conector do Graph, conector do Lotus Domino, conector do PowerShell, conector de serviços Web](http://go.microsoft.com/fwlink/?LinkId=717495)
+- [Conector LDAP genérico, conector de SQL genérico, conector do Graph, conector do Lotus Domino, conector do PowerShell, conector de serviços Web](https://go.microsoft.com/fwlink/?LinkId=717495)
 
 - [Conector do Repositório de Perfis de Usuários do SharePoint](https://www.microsoft.com/download/details.aspx?id=41164)
 
