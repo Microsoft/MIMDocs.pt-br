@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
 ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 07/24/2020
 ms.locfileid: "87176754"
@@ -80,9 +80,9 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
     
     c. No prompt, insira e verifique as informações de conta do serviço de Sincronização do Microsoft Identity Manager ou do FIM (Forefront Identity Manager):
 
-    -   **Nome da Conta**: o nome da conta do Serviço de Sincronização usada durante a instalação inicial.  
-    -   **Senha**: a senha da conta de Serviço de Sincronização.  
-    -   **Domínio**: o domínio do qual a conta do Serviço de Sincronização faz parte.
+    -   **Nome da Conta** : o nome da conta do Serviço de Sincronização usada durante a instalação inicial.  
+    -   **Senha** : a senha da conta de Serviço de Sincronização.  
+    -   **Domínio** : o domínio do qual a conta do Serviço de Sincronização faz parte.
 
     d. Selecione **Avançar**.
 
@@ -97,12 +97,12 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
 1. Depois de instalar o patch, interrompa o serviço de sincronização do FIM fazendo o seguinte:
 
    a. No Painel de Controle, selecione **Programas e Recursos** > **Microsoft Identity Manager**.  
-   b. Na página **Serviço de Sincronização**, selecione **Alterar** > **Avançar**.  
-   c. Na janela **Opções de Manutenção**, selecione **Configurar**.
+   b. Na página **Serviço de Sincronização** , selecione **Alterar** > **Avançar**.  
+   c. Na janela **Opções de Manutenção** , selecione **Configurar**.
 
    ![A janela Opções de Manutenção](media/dc98c011bec13a33b229a0e792b78404.png)
 
-   d. Na janela **Configurar o Serviço de Sincronização do Microsoft Identity Manager**, desmarque o valor padrão na caixa **Conta de serviço** e digite **MIMSyncGMSA$** . Certifique-se de incluir o símbolo de cifrão ($), como mostrado na imagem a seguir. Deixe a caixa **Senha** em branco.
+   d. Na janela **Configurar o Serviço de Sincronização do Microsoft Identity Manager** , desmarque o valor padrão na caixa **Conta de serviço** e digite **MIMSyncGMSA$** . Certifique-se de incluir o símbolo de cifrão ($), como mostrado na imagem a seguir. Deixe a caixa **Senha** em branco.
 
    ![A janela Configurar o Serviço de Sincronização do Microsoft Identity Manager](media/38df9369bf13e1c3066a49ed20e09041.png)
 
@@ -151,14 +151,14 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
 
 1.  Execute o MSI Elevado do Serviço do Microsoft Identity Manager e selecione **Alterar**.
 
-1.  Na janela **Configurar conexão do servidor de email**, marque a caixa de seleção **Usar usuário diferente para o Exchange (para contas gerenciadas)** . Você tem a opção de usar a conta atual do Exchange ou a caixa de correio da nuvem.
+1.  Na janela **Configurar conexão do servidor de email** , marque a caixa de seleção **Usar usuário diferente para o Exchange (para contas gerenciadas)** . Você tem a opção de usar a conta atual do Exchange ou a caixa de correio da nuvem.
 
     >[!NOTE]
-    >Se você selecionar a opção **Usar o Exchange Online**, para habilitar o Serviço do Microsoft Identity Manager para processar respostas de aprovação do complemento do Outlook do Microsoft Identity Manager, defina o valor da chave do Registro **HKLM\SYSTEM\CurrentControlSet\Services\FIMService** de *PollExchangeEnabled* como **1** após a instalação.
+    >Se você selecionar a opção **Usar o Exchange Online** , para habilitar o Serviço do Microsoft Identity Manager para processar respostas de aprovação do complemento do Outlook do Microsoft Identity Manager, defina o valor da chave do Registro **HKLM\SYSTEM\CurrentControlSet\Services\FIMService** de *PollExchangeEnabled* como **1** após a instalação.
     
     ![Janela "Configurar a conexão do servidor de email"](media/0cd8ce521ed7945c43bef6100f8eb222.png)
 
-1.  Na janela **Configurar a conta de serviço do MIM**, na caixa **Nome da Conta de Serviço**, digite o nome. Certifique-se de incluir o símbolo de cifrão ($). Insira também uma senha na caixa **Senha da Conta de Email do Serviço**. A caixa **Senha da Conta de Serviço** deve estar indisponível.
+1.  Na janela **Configurar a conta de serviço do MIM** , na caixa **Nome da Conta de Serviço** , digite o nome. Certifique-se de incluir o símbolo de cifrão ($). Insira também uma senha na caixa **Senha da Conta de Email do Serviço**. A caixa **Senha da Conta de Serviço** deve estar indisponível.
 
     ![Janela "Configurar a conta de serviço do MIM"](media/db0d543df6e1b0174a47135617c23fcb.png)
 
@@ -166,25 +166,25 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
 
     ![Janela Aviso de Segurança da Conta](media/d350bc13751b2d0a884620db072ed019.png)
 
-1.  Na janela **Configurar API REST do Privileged Access Management**, na caixa **Nome da Conta do Pool de Aplicativos**, digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha da Conta do Pool de Aplicativos** em branco.
+1.  Na janela **Configurar API REST do Privileged Access Management** , na caixa **Nome da Conta do Pool de Aplicativos** , digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha da Conta do Pool de Aplicativos** em branco.
 
     ![A janela Configurar API REST do Privileged Access Management](media/88db2f6f291fff8bcdd0da5d538aafc6.png)
 
-1.  Na janela **Configurar o Serviço de Componente do PAM**, na caixa **Nome da Conta de Serviço**, digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha da Conta de Serviço** em branco.
+1.  Na janela **Configurar o Serviço de Componente do PAM** , na caixa **Nome da Conta de Serviço** , digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha da Conta de Serviço** em branco.
 
     ![A janela Configurar o Serviço de Componente do PAM](media/93cfbcefb4d17635dd35c5ead690fd1e.png)
 
     ![A janela Aviso de Segurança da Conta](media/9d2b52f6faed10601e7e2166a339fb47.png)
 
-1.  Na janela **Configurar o Serviço de Monitoramento do Privileged Access Management**, na caixa **Nome da Conta de Serviço**, digite o nome da conta de serviço. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha da Conta de Serviço** em branco.
+1.  Na janela **Configurar o Serviço de Monitoramento do Privileged Access Management** , na caixa **Nome da Conta de Serviço** , digite o nome da conta de serviço. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha da Conta de Serviço** em branco.
 
     ![A janela Configurar o Serviço de Monitoramento do Privileged Access Management](media/d1e824248edf12a77fc9ffb011475164.png)
 
-1.  Na janela **Configurar o Portal de Registro de Senha do MIM**, na caixa **Nome da Conta**, digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha** em branco.
+1.  Na janela **Configurar o Portal de Registro de Senha do MIM** , na caixa **Nome da Conta** , digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha** em branco.
 
     ![A janela Configurar o Portal de Registro de Senha do MIM](media/601e935cdfda298b61ae753a2a152996.png)
 
-1.  Na janela **Configurar o Portal de Redefinição de Senha do MIM**, na caixa **Nome da Conta**, digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha** em branco.
+1.  Na janela **Configurar o Portal de Redefinição de Senha do MIM** , na caixa **Nome da Conta** , digite o nome da conta. Certifique-se de incluir o símbolo de cifrão ($). Deixe a caixa **Senha** em branco.
 
     ![A janela Configurar o Portal de Redefinição de Senha do MIM](media/10c8cfa8ff2b6d703d14bd0b7ddc6949.png)
 
