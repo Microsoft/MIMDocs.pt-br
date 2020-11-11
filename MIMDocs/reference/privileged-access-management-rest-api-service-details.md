@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 00a2f4d9c44747d50139655d368e42b11fbd388c
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92757493"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492422"
 ---
 # <a name="pam-rest-api-service-details"></a>Detalhes do serviço da API REST do PAM
 As seções a seguir discutem os detalhes da API REST do MIM PAM (Microsoft Identity Manager Privileged Access Management).
@@ -28,7 +28,7 @@ As solicitações HTTP enviadas para a API devem incluir os seguintes cabeçalho
 
 Cabeçalho | Descrição
 -------|------------
-Autorização | Necessário. O conteúdo depende do método de autenticação, que é configurável e pode ser baseado em WIA (autenticação integrada do Windows) ou no ADFS.
+Autorização | Obrigatórios. O conteúdo depende do método de autenticação, que é configurável e pode ser baseado em WIA (autenticação integrada do Windows) ou no ADFS.
 Tipo de conteúdo | Obrigatório se a solicitação tiver um corpo. Deve ser definido como `application/json`.
 Content-Length | Obrigatório se a solicitação tiver um corpo. 
 Cookie | O cookie de sessão. Pode ser necessário, dependendo do método de autenticação.
@@ -89,7 +89,7 @@ As solicitações da API REST do PAM podem incluir filtros para especificar as p
 
 Os filtros podem especificar qualquer uma das propriedades de solicitações do PAM, funções do PAM. ou solicitações PAM do pendentes. Por exemplo: *ExpirationTime* , *DisplayName* ou qualquer outra propriedade válida de uma Solicitação do PAM, Função do PAM ou Solicitação Pendente.
 
-A API dá suporte aos operadores a seguir nas expressões de filtro: *And* , *Equal* , *NotEqual* , *GreaterThan* , *LessThan* , *GreaterThenOrEqueal* e *LessThanOrEqual* . 
+A API dá suporte aos operadores a seguir nas expressões de filtro: *And* , *Equal* , *NotEqual* , *GreaterThan* , *LessThan* , *GreaterThenOrEqueal* e *LessThanOrEqual*. 
 
 As solicitações de exemplo a seguir incluem filtros:
 

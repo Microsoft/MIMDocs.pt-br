@@ -9,12 +9,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fb3cf6e5b00c1bd0c01d86aff474dc2ff28c2815
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 848bdbb793de97eb9512de93febd939bb45a52d3
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042246"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492286"
 ---
 # <a name="microsoft-bhold-suite-sp1-60-installation-guide"></a>Guia de instalação do Microsoft BHOLD Suite SP1 (6.0)
 
@@ -30,7 +30,7 @@ O Microsoft® BHOLD Suite SP1 (Service Pack 1) é uma coleção de aplicativos q
 
 
 > [!NOTE]
-> **Aplica-se a**: Microsoft Identity Manager 2016 SP1
+> **Aplica-se a** : Microsoft Identity Manager 2016 SP1 ou posterior
 
 ## <a name="what-this-document-covers"></a>O que este documento abrange
 
@@ -38,7 +38,7 @@ Este documento explica como planejar sua implantação do BHOLD para atender às
 
 ## <a name="pre-requisite-knowledge"></a>Conhecimento de pré-requisito
 
-Este documento pressupõe que você tenha um entendimento básico de como instalar o software em computadores servidores. Ele também pressupõe que você tenha um conhecimento básico de software de banco de dados Active Directory® Domain Services, Microsoft Identity Manager SP1 (FIM) e Microsoft SQL Server 2012. Uma descrição de como instalar e configurar tecnologias dependentes como o AD DS e o FIM está fora do escopo desta documentação. Para obter informações sobre as funções desempenhadas pelos módulos do Microsoft BHOLD, consulte [o guia de conceitos do Microsoft BHOLD Suite](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
+Este documento pressupõe que você tenha um entendimento básico de como instalar o software em computadores servidores. Ele também pressupõe que você tenha conhecimento básico de Active Directory® serviços de domínio, o Forefront ou o Microsoft Identity Manager (FIM) e o software de banco de dados Microsoft SQL Server 2012. Uma descrição de como instalar e configurar tecnologias dependentes como o AD DS e o FIM está fora do escopo desta documentação. Para obter informações sobre as funções desempenhadas pelos módulos do Microsoft BHOLD, consulte [o guia de conceitos do Microsoft BHOLD Suite](https://technet.microsoft.com/library/jj134102(v=ws.10).aspx).
 
 ## <a name="audience"></a>Público-alvo
 

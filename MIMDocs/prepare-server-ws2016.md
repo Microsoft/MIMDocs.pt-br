@@ -12,11 +12,11 @@ ms.assetid: 51507d0a-2aeb-4cfd-a642-7c71e666d6cd
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: cf8261c4e6f6529fd82760206b62b689a75d0acb
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79382290"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492405"
 ---
 # <a name="set-up-an-identity-management-server-windows-server-2016-or-2019"></a>Configurar um servidor de gerenciamento de identidade: Windows Server 2016 ou 2019
 
@@ -59,7 +59,7 @@ Comece com um computador com Windows Server 2016, com no mínimo de 8 a 12 GB de
 
     Após não mais que minuto, será concluído com a mensagem "A atualização da política do computador foi concluída com sucesso".
 
-6. Adicione as funções **Servidor Web (IIS)** e **Servidor de Aplicativos**, os recursos **.NET Framework** 3.5, 4.0 e 4.5 e o módulo **Active Directory** para o Windows PowerShell.
+6. Adicione as funções **Servidor Web (IIS)** e **Servidor de Aplicativos** , os recursos **.NET Framework** 3.5, 4.0 e 4.5 e o módulo **Active Directory** para o Windows PowerShell.
 
     ![Imagem de recursos do PowerShell](media/MIM-DeployWS2.png)
 

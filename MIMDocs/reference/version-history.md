@@ -9,12 +9,12 @@ ms.date: 10/18/2019
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: fa4e5ade14c1a3df94b868d149472c1b42d1c59c
-ms.sourcegitcommit: d6178a67014d66d37056c13d10328ae03e3cd781
+ms.openlocfilehash: 530229a3e5217955e974021ba42870f415e66033
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "92757501"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492507"
 ---
 # <a name="identity-manager-version-release-history"></a>Histórico de lançamento de versão do Identity Manager
 
@@ -26,6 +26,14 @@ A equipe do Microsoft Identity Manager lança atualizações regularmente. Este 
 >O histórico de versão para componentes do Microsoft BHOLD Suite pode ser encontrado em [módulos BHOLD módulo versão histórico](version-bhold-history.md).
 >
 >O histórico de versão para os conectores LDAP genérico, SQL genérico, serviços Web, PowerShell, Graph e Lotus Domino pode ser encontrado no [histórico de lançamento de versão do conector](microsoft-identity-manager-2016-connector-version-history.md).  
+
+## <a name="mim-version-463550"></a>4.6.355.0 versão do MIM
+- Status: 6 de novembro de 2020
+- [Download do hotfix](https://www.microsoft.com/download/details.aspx?id=102301)
+- [Artigo 4585922 da base de conhecimento](https://support.microsoft.com/help/4585922)
+
+Este hotfix contém atualizações para os componentes do Gerenciador de sincronização do MIM, do serviço do MIM e do portal do MIM e também contém atualizações cumulativas para os componentes do MIM dos hotfixes anteriores para o MIM 2016 SP2.
+
 
 ## <a name="mim-version-462630"></a>4.6.263.0 versão do MIM
 - Status: 7 de agosto de 2020
@@ -241,7 +249,7 @@ Os problemas a seguir foram corrigidos na versão 4.4.1749.0 do MIM.
 - O atributo msidmPhoneGatePhoneNumber sem um código de país não usa o valor DefaultCountryCode em MFASettings.xml.
 - As associações definidas podem ser atualizadas dinamicamente sem a necessidade de contar com o FIM_TemporalEventsJob.
 - As regras de sincronização não dão suporte à criação de regras de fluxo de atributo para atributos cujos nomes incluem o hash ou símbolo de libra (#).
-  
+  
 #### <a name="privilege-access-management"></a>Gerenciamento de acesso de privilégio 
 
 - New-PAMDomainConfiguration cmdlet do PowerShell define um valor incorreto para a configuração de confiança do domínio resultando em erro (esse parâmetro de solicitação desconhecido não pode ser processado).
@@ -249,9 +257,9 @@ Os problemas a seguir foram corrigidos na versão 4.4.1749.0 do MIM.
 #### <a name="microsoft-identity-portal"></a>Portal de identidade da Microsoft
 
 - Uma exceção é exibida na tela principal do Portal de Gerenciamento de identidade e um botão fechar também é exibido.
-- Botões exibidos incorretamente na janela Excluir item.Esse problema ocorreu no Internet Explorer, no Firefox e no Chrome. 
-- O botão de pesquisa sobrepõe o botão do seletor de recursos em uma janela de atividade de aprovação no fluxo de trabalho de autorização. Esse problema ocorreu no Internet Explorer, no Firefox e no Chrome. 
-- No pop-up Propriedades do grupo, a área do botão sobrepõe os controles de navegação ListView no controle excluir Membros.Esse problema ocorreu no Internet Explorer, no Firefox e no Chrome.
+- Botões exibidos incorretamente na janela Excluir item.  Esse problema ocorreu no Internet Explorer, no Firefox e no Chrome. 
+- O botão de pesquisa sobrepõe o botão do seletor de recursos em uma janela de atividade de aprovação no fluxo de trabalho de autorização. Esse problema ocorreu no Internet Explorer, no Firefox e no Chrome. 
+- No pop-up Propriedades do grupo, a área do botão sobrepõe os controles de navegação ListView no controle excluir Membros.  Esse problema ocorreu no Internet Explorer, no Firefox e no Chrome.
 - Vários elementos da interface do usuário não são exibidos corretamente. Os seguintes elementos são fixos:
 
     - Setas para cima e para baixo em algumas folhas de propriedades.
@@ -263,21 +271,21 @@ Os problemas a seguir foram corrigidos na versão 4.4.1749.0 do MIM.
 - Em uma tela de gerenciamento de objetos (como grupos de distribuição), se vários objetos forem selecionados usando a caixa de seleção e se os objetos tiverem nomes de exibição longos. Os tamanhos de caixa de diálogo agora são verticalmente para que o controle não ultrapasse o final da tela do navegador.
 - Em uma tela de gerenciamento de objetos ou de lista (como grupos de distribuição), o controle itens selecionados pode mover a tela para que fique diretamente sob o último objeto listado nas listas de tabelas.
 - O construtor de filtro (como pesquisa avançada) no navegador Safari não funciona.
-- caixas de diálogo do portal que exibem valores de atributo, as palavras mais curtas são distribuídas em toda a célula com muito espaço em branco entre, em vez de serem alinhadas à esquerda. 
+- caixas de diálogo do portal que exibem valores de atributo, as palavras mais curtas são distribuídas em toda a célula com muito espaço em branco entre, em vez de serem alinhadas à esquerda. 
 - Em algumas versões do navegador, os itens selecionados não são atualizados quando a seleção do item é alterada.
-- As guias de caixa de diálogo e copiar para área de transferência realçam quando navegadas pelo usando a tecla Tab.  
-- No Internet Explorer 10, quando você exibe uma exibição de grade de objetos (como grupos de distribuição), a parte "localizar os grupos de distribuição desejados usando a pesquisa acima" sobrepõe as sobreposições de faixa da faixa de opções do botão em vez de exibi-la no meio da caixa de diálogo.  
+- As guias de caixa de diálogo e copiar para área de transferência realçam quando navegadas pelo usando a tecla Tab.  
+- No Internet Explorer 10, quando você exibe uma exibição de grade de objetos (como grupos de distribuição), a parte "localizar os grupos de distribuição desejados usando a pesquisa acima" sobrepõe as sobreposições de faixa da faixa de opções do botão em vez de exibi-la no meio da caixa de diálogo.  
 - Depois de instalar uma atualização no portal do MIM, a exibição do portal no Internet Explorer falhará.
-- Quando você usa a pesquisa avançada no navegador Firefox, pressionar o campo Inserir chave em um valor de atributo retorna um erro.  
+- Quando você usa a pesquisa avançada no navegador Firefox, pressionar o campo Inserir chave em um valor de atributo retorna um erro.  
 
 #### <a name="certificate-management"></a>Gerenciamento de certificado
 
 - Um originador de solicitação (Gerenciador de certificados) não pode abandonar uma solicitação que está duplicada ou esquecida por um usuário que tem permissão de execução.
 - Quando você tenta renovar o cartão inteligente virtual do TPM do aplicativo moderno, uma exceção proibida é retornada.
-- Durante algumas atividades de cartão inteligente, as conexões existentes com o banco de dados CertificateManagement são deixadas abertas inesperadamente.  
+- Durante algumas atividades de cartão inteligente, as conexões existentes com o banco de dados CertificateManagement são deixadas abertas inesperadamente.  
 - Se uma instalação de uma atualização para o gerenciamento de certificados do MIM (CM) for tentada antes da execução do assistente de configuração do MIM CM, a atualização falhará com uma exceção que parece não estar relacionada ao problema.
-- O assistente de configuração de MIM CM tem informações de versão de produto incorretas exibidas e o logotipo não é exibido corretamente.  
-- Os dados exportados para um relatório de gerenciamento de certificados do MIM diferem dos dados do relatório.Os dados da coluna nem sempre correspondem aos títulos das colunas.
+- O assistente de configuração de MIM CM tem informações de versão de produto incorretas exibidas e o logotipo não é exibido corretamente.  
+- Os dados exportados para um relatório de gerenciamento de certificados do MIM diferem dos dados do relatório.  Os dados da coluna nem sempre correspondem aos títulos das colunas.
 
 ## <a name="version-4416420"></a>4.4.1642.0 da versão
 

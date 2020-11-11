@@ -9,12 +9,12 @@ ms.date: 09/19/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 35fe08363b6964bf6d264ab1e60cd9751aa7b6aa
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 1885f01d1010565cef9ce50028ae1c86e8769003
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043028"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492524"
 ---
 # <a name="deploying-microsoft-identity-manager-certificate-manager-2016-mim-cm"></a>Implantando o MIM CM (Microsoft Identity Manager Certificate Manager) 2016
 
@@ -208,34 +208,34 @@ As três contas acima terão direitos elevados na organização e deverão ser t
 
 #### <a name="create-the-mim-cm-signing-certificate-template"></a>Criar o modelo de certificado de autenticação do MIM CM
 
-1. Em **Ferramentas Administrativas**, abra **Autoridade de Certificação**.
+1. Em **Ferramentas Administrativas** , abra **Autoridade de Certificação**.
 
-2. No console **Autoridade de Certificação**, na árvore de console, expanda **Contoso-CorpCA** e clique em **Modelos de Certificado**.
+2. No console **Autoridade de Certificação** , na árvore de console, expanda **Contoso-CorpCA** e clique em **Modelos de Certificado**.
 
 3. Clique com o botão direito do mouse em **Modelos de Certificado** e clique em **Gerenciar**.
 
-4. No **Console de Modelos de Certificado**, no painel **Detalhes**, selecione **Usuário**, clique com botão direito do mouse e, em seguida, clique em **Duplicar Modelo**.
+4. No **Console de Modelos de Certificado** , no painel **Detalhes** , selecione **Usuário** , clique com botão direito do mouse e, em seguida, clique em **Duplicar Modelo**.
 
-5. Na caixa de diálogo **Duplicar Modelo**, selecione **Windows Server 2003 Enterprise** e, em seguida, clique em **OK**.
+5. Na caixa de diálogo **Duplicar Modelo** , selecione **Windows Server 2003 Enterprise** e, em seguida, clique em **OK**.
 
     ![Mostrar alterações resultantes](media/mim-cm-deploy/image014.png)
 
     >[!NOTE]
     >O MIM CM não funciona com certificados baseados nos modelos de certificado da versão 3. Você precisa criar um modelo de certificado do Windows Server® 2003 Enterprise (versão 2). Confira [Detalhes da V3](https://blogs.msdn.microsoft.com/ms-identity-support/2016/07/14/faq-for-fim-2010-to-support-sha2-kspcng-and-v3-certificate-templates-for-issuing-user-and-agent-certificates-and-mim-2016-upgrade) para obter mais informações.
 
-6. Na caixa de diálogo **Propriedades do Novo Modelo**, na guia **Geral**, na caixa **Nome de Exibição do Modelo**, digite **Assinatura do MIM CM**. Altere o **Período de Validade** para **2 anos** e, em seguida, desmarque a caixa de seleção **Publicar certificado no Active Directory**.
+6. Na caixa de diálogo **Propriedades do Novo Modelo** , na guia **Geral** , na caixa **Nome de Exibição do Modelo** , digite **Assinatura do MIM CM**. Altere o **Período de Validade** para **2 anos** e, em seguida, desmarque a caixa de seleção **Publicar certificado no Active Directory**.
 
-7. Na guia **Tratamento de Solicitação**, verifique se a caixa de seleção **Permitir que a chave privada seja exportada** está selecionada e, em seguida, clique na **guia Criptografia**.
+7. Na guia **Tratamento de Solicitação** , verifique se a caixa de seleção **Permitir que a chave privada seja exportada** está selecionada e, em seguida, clique na **guia Criptografia**.
 
-8. Na caixa de diálogo **Seleção de Criptografia**, desabilite **Microsoft Enhanced Cryptographic Provider v1.0**, habilite **Microsoft Enhanced Cryptographic Provider RSA e AES** e, em seguida, clique em **OK**.
+8. Na caixa de diálogo **Seleção de Criptografia** , desabilite **Microsoft Enhanced Cryptographic Provider v1.0** , habilite **Microsoft Enhanced Cryptographic Provider RSA e AES** e, em seguida, clique em **OK**.
 
-9. Na guia **Nome da Entidade**, desmarque as caixas de seleção **Incluir nome de email no nome da entidade** e **Nome de email**.
+9. Na guia **Nome da Entidade** , desmarque as caixas de seleção **Incluir nome de email no nome da entidade** e **Nome de email**.
 
-10. Na guia **Extensões**, na lista **Extensões incluídas neste modelo** lista, verifique se **Políticas de Aplicativo** está selecionado e, em seguida, clique em **Editar**.
+10. Na guia **Extensões** , na lista **Extensões incluídas neste modelo** lista, verifique se **Políticas de Aplicativo** está selecionado e, em seguida, clique em **Editar**.
 
-11. Na caixa de diálogo **Editar extensão de Políticas de Aplicativo**, selecione as políticas de aplicativo **Encrypting File System** e **Proteger Email**. Clique em **Remover** e em **OK**.
+11. Na caixa de diálogo **Editar extensão de Políticas de Aplicativo** , selecione as políticas de aplicativo **Encrypting File System** e **Proteger Email**. Clique em **Remover** e em **OK**.
 
-12. Na guia **Segurança**, execute as seguintes etapas:
+12. Na guia **Segurança** , execute as seguintes etapas:
 
     - Remova o **Administrador**.
 
@@ -249,23 +249,23 @@ As três contas acima terão direitos elevados na organização e deverão ser t
 
     - Atribua as permissões de **Leitura** e **Inscrição** ao **MIMCMAgent**.
 
-13. Na caixa de diálogo **Propriedades do Novo Modelo**, clique em **OK**.
+13. Na caixa de diálogo **Propriedades do Novo Modelo** , clique em **OK**.
 
 14. Deixe o **Console de Modelos de Certificado** aberto.
 
 #### <a name="create-the-mim-cm-enrollment-agent-certificate-template"></a>Criar o modelo de certificado do agente de registro do MIM CM
 
-1. No **Console de Modelos de Certificado**, no painel **Detalhes**, selecione **Agente de Registro**, clique com botão direito do mouse e, em seguida, clique em **Duplicar Modelo**.
+1. No **Console de Modelos de Certificado** , no painel **Detalhes** , selecione **Agente de Registro** , clique com botão direito do mouse e, em seguida, clique em **Duplicar Modelo**.
 
-2. Na caixa de diálogo **Duplicar Modelo**, selecione **Windows Server 2003 Enterprise** e, em seguida, clique em **OK**.
+2. Na caixa de diálogo **Duplicar Modelo** , selecione **Windows Server 2003 Enterprise** e, em seguida, clique em **OK**.
 
-3. Na caixa de diálogo **Propriedades do Novo Modelo**, na guia **Geral**, na caixa **Nome de exibição do modelo**, digite **Agente de Registro do MIM CM**. Verifique se o **Período de Validade** é **2 anos**.
+3. Na caixa de diálogo **Propriedades do Novo Modelo** , na guia **Geral** , na caixa **Nome de exibição do modelo** , digite **Agente de Registro do MIM CM**. Verifique se o **Período de Validade** é **2 anos**.
 
-4. Na guia **Tratamento de Solicitação**, habilite **Permitir que a chave privada seja exportada** e, em seguida, clique na **Guia CSPs ou Criptografia.**
+4. Na guia **Tratamento de Solicitação** , habilite **Permitir que a chave privada seja exportada** e, em seguida, clique na **Guia CSPs ou Criptografia.**
 
-5. Na caixa de diálogo **Seleção de CSP**, desabilite **Microsoft Base Cryptographic Provider v1.0**, desabilite **Microsoft Enhanced Cryptographic Provider v1.0** habilite **Microsoft Enhanced Cryptographic Provider RSA e AES** e, em seguida, clique em **OK**.
+5. Na caixa de diálogo **Seleção de CSP** , desabilite **Microsoft Base Cryptographic Provider v1.0** , desabilite **Microsoft Enhanced Cryptographic Provider v1.0** habilite **Microsoft Enhanced Cryptographic Provider RSA e AES** e, em seguida, clique em **OK**.
 
-6. Na guia **Segurança**, execute as o seguinte:
+6. Na guia **Segurança** , execute as o seguinte:
 
     - Remova o **Administrador**.
 
@@ -277,23 +277,23 @@ As três contas acima terão direitos elevados na organização e deverão ser t
 
     - Atribua as permissões de **Leitura** e **Inscrição** ao **MIMCMEnrollAgent**.
 
-7. Na caixa de diálogo **Propriedades do Novo Modelo**, clique em **OK**.
+7. Na caixa de diálogo **Propriedades do Novo Modelo** , clique em **OK**.
 
 8. Deixe o **Console de Modelos de Certificado** aberto.
 
 #### <a name="create-the-mim-cm-key-recovery-agent-certificate-template"></a>Criar o modelo de certificado do agente de recuperação de chave do MIM CM
 
-1. No console **Modelos de Certificado**, no painel **Detalhes**, selecione **Agente de Recuperação de Chave**, clique com botão direito do mouse e, em seguida, clique em **Duplicar Modelo**.
+1. No console **Modelos de Certificado** , no painel **Detalhes** , selecione **Agente de Recuperação de Chave** , clique com botão direito do mouse e, em seguida, clique em **Duplicar Modelo**.
 
-2. Na caixa de diálogo **Duplicar Modelo**, selecione **Windows Server 2003 Enterprise** e, em seguida, clique em **OK**.
+2. Na caixa de diálogo **Duplicar Modelo** , selecione **Windows Server 2003 Enterprise** e, em seguida, clique em **OK**.
 
-3. Na caixa de diálogo **Propriedades do Novo Modelo**, na guia **Geral**, na caixa **Nome de exibição do modelo**, digite **Agente de Recuperação de Chave do MIM CM**. Verifique se o **Período de Validade** é **2 anos** na **Guia Criptografia.**
+3. Na caixa de diálogo **Propriedades do Novo Modelo** , na guia **Geral** , na caixa **Nome de exibição do modelo** , digite **Agente de Recuperação de Chave do MIM CM**. Verifique se o **Período de Validade** é **2 anos** na **Guia Criptografia.**
 
-4. Na caixa de diálogo **Seleção de Provedores**, desabilite **Microsoft Enhanced Cryptographic Provider v1.0**, habilite **Microsoft Enhanced Cryptographic Provider RSA e AES** e, em seguida, clique em **OK**.
+4. Na caixa de diálogo **Seleção de Provedores** , desabilite **Microsoft Enhanced Cryptographic Provider v1.0** , habilite **Microsoft Enhanced Cryptographic Provider RSA e AES** e, em seguida, clique em **OK**.
 
-5. Na guia **Requisitos de Emissão**, verifique se a opção **Aprovação do gerenciador de certificados de autoridade de certificação** está **desabilitada**.
+5. Na guia **Requisitos de Emissão** , verifique se a opção **Aprovação do gerenciador de certificados de autoridade de certificação** está **desabilitada**.
 
-6. Na guia **Segurança**, execute as o seguinte:
+6. Na guia **Segurança** , execute as o seguinte:
 
     - Remova o **Administrador**.
 
@@ -305,7 +305,7 @@ As três contas acima terão direitos elevados na organização e deverão ser t
 
     - Atribua as permissões **Leitura** e **Inscrição** ao **KRAgent**.
 
-7. Na caixa de diálogo **Propriedades do Novo Modelo**, clique em **OK**.
+7. Na caixa de diálogo **Propriedades do Novo Modelo** , clique em **OK**.
 
 8. Feche o **Console de Modelos de Certificado**.
 
@@ -313,9 +313,9 @@ As três contas acima terão direitos elevados na organização e deverão ser t
 
 1. Restaure o console **Autoridade de Certificação**.
 
-2. No console **Autoridade de Certificação**, na árvore de console, clique com o botão direito do mouse em **Modelos de Certificado**, aponte para **Novo** e clique em **Modelo de Certificado a Ser Emitido**.
+2. No console **Autoridade de Certificação** , na árvore de console, clique com o botão direito do mouse em **Modelos de Certificado** , aponte para **Novo** e clique em **Modelo de Certificado a Ser Emitido**.
 
-3. Na caixa de diálogo **Habilitar Modelos de Certificado**, selecione **Agente de Registro do MIM CM**, **Agente de Recuperação de Chave do MIM CM** e **Assinatura do MIM CM**. Clique em **OK**.
+3. Na caixa de diálogo **Habilitar Modelos de Certificado** , selecione **Agente de Registro do MIM CM** , **Agente de Recuperação de Chave do MIM CM** e **Assinatura do MIM CM**. Clique em **OK**.
 
 4. Na árvore de console, clique em **Modelos de Certificado**.
 
@@ -411,11 +411,11 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 
 2. Verifique se você efetuou logon como Contoso\\MIMINSTALL.
 
-3. Monte o ISO do Microsoft Identity Manager SP1.
+3. Monte o Microsoft Identity Manager 2016 SP1 ou posterior service pack ISO.
 
 4. **Abra** o diretório **Certificate Management\\x64**.
 
-5. Na janela **x64**, clique com botão direito do mouse em **Instalação** e, em seguida, clique em **Executar como administrador**.
+5. Na janela **x64** , clique com botão direito do mouse em **Instalação** e, em seguida, clique em **Executar como administrador**.
 
 6. Na página Bem-vindo ao Assistente de Configuração do Microsoft Identity Manager Certificate Management, clique em **Avançar.**
 
@@ -427,7 +427,7 @@ Set-WebConfigurationProperty -Filter System.webServer/security/authentication/Wi
 
 10. Na página Instalar o Microsoft Identity Manager Certificate Management, **clique em instalar**.
 
-11. Na página **O Assistente de Instalação do Microsoft Identity Manager Certificate Management foi concluído**, **clique em Concluir**.
+11. Na página **O Assistente de Instalação do Microsoft Identity Manager Certificate Management foi concluído** , **clique em Concluir**.
 
 ![Assistente do MIM CM concluído](media/mim-cm-deploy/image026.png)
 
@@ -437,21 +437,21 @@ Antes de fazer logon no CORPCM, adicione MIMINSTALL ao grupo **Admins de domíni
 
 ![Mensagem de erro](media/mim-cm-deploy/image028.png)
 
-1. No menu **Iniciar**, clique em **Assistente de Configuração do Certificate Management**. E execute como **Administrador**
+1. No menu **Iniciar** , clique em **Assistente de Configuração do Certificate Management**. E execute como **Administrador**
 
-2. Na página **Bem-vindo ao Assistente de Configuração**, clique em **Avançar**.
+2. Na página **Bem-vindo ao Assistente de Configuração** , clique em **Avançar**.
 
-3. Na página **Configuração de AC**, verifique se a AC selecionada é **Contoso-CORPCA-CA**, verifique se o servidor selecionado é **CORPCA.CONTOSO.COM** e, em seguida, clique em **Avançar**.
+3. Na página **Configuração de AC** , verifique se a AC selecionada é **Contoso-CORPCA-CA** , verifique se o servidor selecionado é **CORPCA.CONTOSO.COM** e, em seguida, clique em **Avançar**.
 
-4. Na página **Configurar o Banco de Dados do Microsoft® SQL Server®**, no **Nome do SQL Server**, digite **CORPSQL1**, habilite a caixa de seleção **Usar minhas credenciais para criar o banco de dados** e, em seguida, clique em **Avançar**.
+4. Na página **Configurar o Banco de Dados do Microsoft® SQL Server®** , no **Nome do SQL Server** , digite **CORPSQL1** , habilite a caixa de seleção **Usar minhas credenciais para criar o banco de dados** e, em seguida, clique em **Avançar**.
 
-5. Na página **Configurações de Banco de Dados**, aceite o nome do banco de dados padrão **FIMCertificateManagement**, verifique se a **Autenticação integrada do SQL** está selecionada e, em seguida, clique em **Avançar**.
+5. Na página **Configurações de Banco de Dados** , aceite o nome do banco de dados padrão **FIMCertificateManagement** , verifique se a **Autenticação integrada do SQL** está selecionada e, em seguida, clique em **Avançar**.
 
-6. Na página **Configurado o Active Directory**, aceite o nome padrão fornecido para o ponto de conexão de serviço e, em seguida, clique em **Avançar**.
+6. Na página **Configurado o Active Directory** , aceite o nome padrão fornecido para o ponto de conexão de serviço e, em seguida, clique em **Avançar**.
 
 7. na página **Método de autenticação** confirme se a **Autenticação integrada do Windows** está selecionada e clique em **Avançar**.
 
-8. Na página **Agentes – FIM CM**, desmarque a caixa de seleção **Usar as configurações padrão do FIM CM** e, em seguida, clique em **Contas Personalizadas**.
+8. Na página **Agentes – FIM CM** , desmarque a caixa de seleção **Usar as configurações padrão do FIM CM** e, em seguida, clique em **Contas Personalizadas**.
 
 9. Na caixa de diálogo **Agentes – FIM CM** com várias guias, em cada guia, digite as seguintes informações:
 
@@ -470,9 +470,9 @@ Antes de fazer logon no CORPCM, adicione MIMINSTALL ao grupo **Admins de domíni
 
 10. Quando todas as informações de conta de agente forem concluídas, clique em **OK**.
 
-11. Na página **Agentes – MIM CM**, clique em **Avançar**.
+11. Na página **Agentes – MIM CM** , clique em **Avançar**.
 
-12. Na página **Configurar certificados de servidor**, habilite os seguintes modelos de certificado:
+12. Na página **Configurar certificados de servidor** , habilite os seguintes modelos de certificado:
 
     - Modelo de certificado a ser usado para o certificado do Agente de Recuperação de Chave do agente de recuperação: **MIMCMKeyRecoveryAgent**.
 
@@ -480,13 +480,13 @@ Antes de fazer logon no CORPCM, adicione MIMINSTALL ao grupo **Admins de domíni
 
     - Modelo de certificado a ser usado para o certificado do agente de registro: **FIMCMEnrollmentAgent**.
 
-13. Na página **Configurar certificados de servidor**, clique em **Avançar**.
+13. Na página **Configurar certificados de servidor** , clique em **Avançar**.
 
-14. Na página **Instalar Servidor de Email, Impressão de Documentos**, preencha a caixa **Especificar o nome do servidor SMTP que deseja usar para as notificações do registro de email** e clique em **Avançar.**
+14. Na página **Instalar Servidor de Email, Impressão de Documentos** , preencha a caixa **Especificar o nome do servidor SMTP que deseja usar para as notificações do registro de email** e clique em **Avançar.**
 
-15. Na página **Pronto para configurar**, clique em **Configurar**.
+15. Na página **Pronto para configurar** , clique em **Configurar**.
 
-16. Na caixa de diálogo de aviso **Assistente de Configuração – Microsoft Forefront Identity Manager 2010 R2**, clique em **OK** para confirmar que o SSL não está habilitado no diretório virtual do IIS.
+16. Na caixa de diálogo de aviso **Assistente de Configuração – Microsoft Forefront Identity Manager 2010 R2** , clique em **OK** para confirmar que o SSL não está habilitado no diretório virtual do IIS.
 
     ![media/image17.png](media/mim-cm-deploy/image032.png)
 
@@ -507,15 +507,15 @@ Antes de fazer logon no CORPCM, adicione MIMINSTALL ao grupo **Admins de domíni
 
 ### <a name="verify-the-cng-key-isolation-service"></a>Verificar o serviço de isolamento de chave CNG
 
-1. Em **Ferramentas Administrativas**, abra **Serviços**.
+1. Em **Ferramentas Administrativas** , abra **Serviços**.
 
-2. No painel **Detalhes**, clique duas vezes em **Isolamento de Chave CNG**.
+2. No painel **Detalhes** , clique duas vezes em **Isolamento de Chave CNG**.
 
-3. Na guia **Geral**, altere o **Tipo de Inicialização** para **Automático**.
+3. Na guia **Geral** , altere o **Tipo de Inicialização** para **Automático**.
 
-4. Na guia **Geral**, inicie o serviço se ele não estiver no estado iniciado.
+4. Na guia **Geral** , inicie o serviço se ele não estiver no estado iniciado.
 
-5. Na guia **Geral**, clique em **OK**.
+5. Na guia **Geral** , clique em **OK**.
 
 ### <a name="installing-and-configuring-the-ca-modules-"></a>Instalando e configurando os módulos de AC:
 
@@ -523,40 +523,40 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 1. Configurar o FIM CM para inspecionar apenas permissões de usuário para operações de gerenciamento
 
-2. Na janela **C:\\Arquivos de Programas\\Microsoft Forefront Identity Manager\\2010\\Certificate Management\\web**, faça uma cópia de **web.config** e nomeie a cópia como **web.1.config**.
+2. Na janela **C:\\Arquivos de Programas\\Microsoft Forefront Identity Manager\\2010\\Certificate Management\\web** , faça uma cópia de **web.config** e nomeie a cópia como **web.1.config**.
 
-3. Na janela **Web**, clique com botão direito do mouse em **Web.config** e, em seguida, clique em **Abrir**.
+3. Na janela **Web** , clique com botão direito do mouse em **Web.config** e, em seguida, clique em **Abrir**.
 
     >[!Note]
     >O arquivo Web.config é aberto no bloco de notas
 
 4. Quando o arquivo abrir, pressione CTRL + F.
 
-5. Na caixa de diálogo **Localizar e Substituir**, na caixa **Localizar**, digite **UseUser** e, em seguida, clique em **Localizar Próxima** três vezes.
+5. Na caixa de diálogo **Localizar e Substituir** , na caixa **Localizar** , digite **UseUser** e, em seguida, clique em **Localizar Próxima** três vezes.
 
 6. Feche a caixa de diálogo **Localizar e Substituir**.
 
-7. Você deverá estar na linha **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser,UseGroups” /\>** . Altere a linha para o seguinte: **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser” /\>** .
+7. Você deve estar na linha **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser,UseGroups” /\>** . Altere a linha para leitura **\<add key=”Clm.RequestSecurity.Flags” value=”UseUser” /\>** .
 
 8. Feche o arquivo, salvando todas as alterações.
 
-9. Criar uma conta para o computador da AC no SQL Server \<sem script\>
+9. Criar uma conta para o computador de autoridade de certificação no SQL Server \<no script\>
 
 10. Verifique se você está conectado ao servidor **CORPSQL01**.
 
 11. Verifique se você efetuou logon como um **DBA**
 
-12. No menu **Iniciar**, inicie o **SQL Server Management Studio**.
+12. No menu **Iniciar** , inicie o **SQL Server Management Studio**.
 
-13. Na caixa de diálogo **Conectar ao servidor**, na caixa **Nome do servidor**, digite **CORPSQL01** e clique em **Conectar**.
+13. Na caixa de diálogo **Conectar ao servidor** , na caixa **Nome do servidor** , digite **CORPSQL01** e clique em **Conectar**.
 
 14. Na árvore de console, expanda **Segurança** e, em seguida, clique em **Logons**.
 
-15. Clique com o botão direito do mouse em **Logons**e clique em **Novo Logon**.
+15. Clique com o botão direito do mouse em **Logons** e clique em **Novo Logon**.
 
-16. Na página **Geral**, na caixa **Nome de logon**, digite **contoso\\CORPCA\$** . Selecione **Autenticação do Windows**. O banco de dados padrão é o **FIMCertificateManagement**.
+16. Na página **Geral** , na caixa **Nome de logon** , digite **contoso\\CORPCA\$** . Selecione **Autenticação do Windows**. O banco de dados padrão é o **FIMCertificateManagement**.
 
-17. No painel esquerdo, selecione **Mapeamento de Usuário**. No painel direito, clique na caixa de seleção na coluna **Mapa** ao lado de **FIMCertificateManagement**. Na lista **Associação de função de banco de dados para: FIMCertificateManagement**, habilite a função **clmApp**.
+17. No painel esquerdo, selecione **Mapeamento de Usuário**. No painel direito, clique na caixa de seleção na coluna **Mapa** ao lado de **FIMCertificateManagement**. Na lista **Associação de função de banco de dados para: FIMCertificateManagement** , habilite a função **clmApp**.
 
 18. Clique em **OK**.
 
@@ -566,39 +566,39 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 1. Verifique se você está conectado ao servidor **CORPCA**.
 
-2. Na janela **X64**, clique com botão direito do mouse em **Setup.exe** e, em seguida, clique em **Executar como administrador**.
+2. Na janela **X64** , clique com botão direito do mouse em **Setup.exe** e, em seguida, clique em **Executar como administrador**.
 
-3. Na página **Bem-vindo ao Assistente de Configuração do Microsoft Identity Manager Certificate Management**, clique em **Avançar**.
+3. Na página **Bem-vindo ao Assistente de Configuração do Microsoft Identity Manager Certificate Management** , clique em **Avançar**.
 
-4. Na página **Termos de Licença**, leia o contrato. Marque a caixa de seleção **Aceito os termos do Contrato de Licença** e clique em **Avançar**.
+4. Na página **Termos de Licença** , leia o contrato. Marque a caixa de seleção **Aceito os termos do Contrato de Licença** e clique em **Avançar**.
 
-5. Na página **Instalação Personalizada**, selecione **Portal do MIM CM** e, em seguida, clique em **Esse recurso não estará disponível**.
+5. Na página **Instalação Personalizada** , selecione **Portal do MIM CM** e, em seguida, clique em **Esse recurso não estará disponível**.
 
-6. Na página **Instalação Personalizada**, selecione **Serviço de Atualização do MIM CM** e, em seguida, clique em **Esse recurso não estará disponível**.
+6. Na página **Instalação Personalizada** , selecione **Serviço de Atualização do MIM CM** e, em seguida, clique em **Esse recurso não estará disponível**.
 
     >[!Note]
     >Isso deixará os arquivos de AC do MIM CM como o único recurso habilitado para a instalação.
 
-7. Na página **Instalação Personalizada**, clique em **Avançar**.
+7. Na página **Instalação Personalizada** , clique em **Avançar**.
 
-8. Na página **Instalar o Microsoft Identity Manager Certificate Management**, clique em **Instalar**.
+8. Na página **Instalar o Microsoft Identity Manager Certificate Management** , clique em **Instalar**.
 
-9. Na página **O Assistente de Instalação do Microsoft Identity Manager Certificate Management foi concluído**, clique em **Concluir**.
+9. Na página **O Assistente de Instalação do Microsoft Identity Manager Certificate Management foi concluído** , clique em **Concluir**.
 
 10. Feche todas as janelas abertas.
 
 ### <a name="configure-the-mim-cm-exit-module"></a>Configurar o módulo de saída do MIM CM
 
-1. Em **Ferramentas Administrativas**, abra **Autoridade de Certificação**.
+1. Em **Ferramentas Administrativas** , abra **Autoridade de Certificação**.
 
 2. Na árvore de console, clique com botão direito do mouse em **contoso-CORPCA-CA** e, em seguida, em **Propriedades**.
 
-3. Na guia **Módulo de Saída**, selecione **Módulo de Saída do FIM CM** e, em seguida, clique em **Propriedades**.
+3. Na guia **Módulo de Saída** , selecione **Módulo de Saída do FIM CM** e, em seguida, clique em **Propriedades**.
 
-4. Na caixa **Especificar a cadeia de conexão de banco de dados do CM**, digite **Connect Timeout=15;Persist Security Info=True; Integrated Security=sspi;Initial Catalog=FIMCertificateManagement;Data Source=CORPSQL01**. Deixe a caixa de seleção **Criptografar a Cadeia de Conexão** habilitada e, em seguida, clique em **OK**.
-5. Na caixa de mensagem **Microsoft FIM Certificate Management**, clique em **OK**.
+4. Na caixa **Especificar a cadeia de conexão de banco de dados do CM** , digite **Connect Timeout=15;Persist Security Info=True; Integrated Security=sspi;Initial Catalog=FIMCertificateManagement;Data Source=CORPSQL01**. Deixe a caixa de seleção **Criptografar a Cadeia de Conexão** habilitada e, em seguida, clique em **OK**.
+5. Na caixa de mensagem **Microsoft FIM Certificate Management** , clique em **OK**.
 
-6. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA**, clique em **OK**.
+6. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA** , clique em **OK**.
 
 7. Clique com o botão direito do mouse em **contoso-CORPCA-CA** *,* aponte para **Todas as Tarefas** e clique em **Interromper Serviço**. Aguarde até que os Serviços de Certificados do Active Directory sejam interrompidos.
 
@@ -606,7 +606,7 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 9. Minimize o console **Autoridade de Certificação**.
 
-10. Em **Ferramentas Administrativas**, abra **Visualizador de Eventos**.
+10. Em **Ferramentas Administrativas** , abra **Visualizador de Eventos**.
 
 11. Na árvore de console, expanda **Logs de Aplicativos e de Serviços** e, em seguida, clique em **FIM Certificate Management**.
 
@@ -623,7 +623,7 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 2. Na árvore de console, expanda **contoso-CORPCA-CA** e, em seguida, clique em **Certificados Emitidos**.
 
-3. No painel **Detalhes**, clique duas vezes no certificado com **CONTOSO\\MIMCMAgent** na coluna **Nome do Solicitante** e com **Assinatura do FIM CM** na coluna **Modelo de Certificado**.
+3. No painel **Detalhes** , clique duas vezes no certificado com **CONTOSO\\MIMCMAgent** na coluna **Nome do Solicitante** e com **Assinatura do FIM CM** na coluna **Modelo de Certificado**.
 
 4. Na guia **Detalhes** , selecione o campo **Impressão Digital** .
 
@@ -632,20 +632,20 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
     >[!NOTE]
     >**Não** inclua o espaço à esquerda na lista de caracteres de impressão digital.
 
-6. Na caixa de diálogo **Certificado**, clique em **OK**.
+6. Na caixa de diálogo **Certificado** , clique em **OK**.
 
-7. No menu **Iniciar**, na caixa **Pesquisar programas e arquivos**, digite **Bloco de notas** e pressione Enter.
+7. No menu **Iniciar** , na caixa **Pesquisar programas e arquivos** , digite **Bloco de notas** e pressione Enter.
 
-8. No **Bloco de notas**, no menu **Editar**, clique em **Colar**.
+8. No **Bloco de notas** , no menu **Editar** , clique em **Colar**.
 
-9. No menu **Editar**, clique em **Substituir**.
+9. No menu **Editar** , clique em **Substituir**.
 
-10. Na caixa **Localizar**, digite um caractere de espaço e, em seguida, clique em **Substituir Tudo**.
+10. Na caixa **Localizar** , digite um caractere de espaço e, em seguida, clique em **Substituir Tudo**.
 
     >[!Note]
     >Isso remove todos os espaços entre os caracteres na impressão digital.
 
-11. Na caixa de diálogo **Substituir**, clique em **Cancelar**.
+11. Na caixa de diálogo **Substituir** , clique em **Cancelar**.
 
 12. Selecione o *thumbprintstring* convertido e, em seguida, pressione CTRL + C.
 
@@ -657,24 +657,24 @@ Nesta etapa, vamos instalar e configurar os módulos de AC do FIM CM na autorida
 
 2. Clique com botão direito do mouse em **contoso-CORPCA-CA** e, em seguida, clique em **Propriedades**.
 
-3. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA** na guia **Módulo de Política**, clique em **Propriedades**.
+3. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA** na guia **Módulo de Política** , clique em **Propriedades**.
 
-    - Na guia **Geral**, verifique se **Passar solicitações que não sejam do FIM CM para o módulo de política padrão para processamento** está selecionado.
+    - Na guia **Geral** , verifique se **Passar solicitações que não sejam do FIM CM para o módulo de política padrão para processamento** está selecionado.
 
-    - Na guia **Certificados de Assinatura**, clique em **Adicionar**.
+    - Na guia **Certificados de Assinatura** , clique em **Adicionar**.
 
     - Na caixa de diálogo Certificado, clique com botão direito do mouse na caixa **Especifique o hash do certificado codificado em hexa** e, em seguida, clique em **Colar**.
 
-    - Na caixa de diálogo **Certificado**, clique em **OK**.
+    - Na caixa de diálogo **Certificado** , clique em **OK**.
 
         >[!Note]
         >Se o botão **OK** não está habilitado, você incluiu acidentalmente um caractere oculto na cadeia de impressão digital quando copiou a impressão digital do certificado clmAgent. Repita todas as etapas a partir da **Tarefa 4: Copiar a impressão digital do certificado MIMCMAgent para área de transferência do Windows** neste exercício.
 
-4. Na caixa de diálogo **Propriedades de Configuração**, verifique se a impressão digital é exibida na lista **Certificados de Autenticação Válidos** e, em seguida, clique em **OK**.
+4. Na caixa de diálogo **Propriedades de Configuração** , verifique se a impressão digital é exibida na lista **Certificados de Autenticação Válidos** e, em seguida, clique em **OK**.
 
-5. Na caixa de mensagem **FIM Certificate Management**, clique em **OK**.
+5. Na caixa de mensagem **FIM Certificate Management** , clique em **OK**.
 
-6. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA**, clique em **OK**.
+6. Na caixa de diálogo **Propriedades de contoso-CORPCA-CA** , clique em **OK**.
 
 7. Clique com o botão direito do mouse em **contoso-CORPCA-CA** *,* aponte para **Todas as Tarefas** e clique em **Interromper Serviço**.
 
@@ -694,28 +694,28 @@ Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no
 
 2. Configure o gerenciamento de modelo de perfil delegado.
 
-3. Configure permissões no SCP (ponto de conexão de serviço). **\<sem script\>**
+3. Configure permissões no SCP (ponto de conexão de serviço). **\<no script\>**
 
 4.   Verifique se você está conectado ao servidor virtual **CORPDC**.
 
 5. Faça logon como **contoso\\corpadmin**
 
-6. Em **Ferramentas Administrativas**, abra **Usuários e Computadores do Active Directory**.
+6. Em **Ferramentas Administrativas** , abra **Usuários e Computadores do Active Directory**.
 
-7. Em **Usuários e Computadores do Active Directory**, no menu **Exibição**, verifique se **Recursos Avançados** está habilitado.
+7. Em **Usuários e Computadores do Active Directory** , no menu **Exibição** , verifique se **Recursos Avançados** está habilitado.
 
-8. Na árvore de console, expanda **Contoso.com** \| **Sistema** \| **Microsoft** \| **Gerenciador de Ciclo de Vida de Certificado** e clique em **CORPCM**.
+8. Na árvore de console, expanda **contoso.com** \| **sistema** \| **Microsoft** \| **Certificate Lifecycle Manager** e clique em **CORPCM**.
 
 9. Clique com botão direito do mouse em **CORPCM** e, em seguida, clique em **Propriedades**.
 
-10. Na caixa de diálogo **Propriedades de CORPCM** na guia **Segurança**, adicione os seguintes grupos com as permissões correspondentes:
+10. Na caixa de diálogo **Propriedades de CORPCM** na guia **Segurança** , adicione os seguintes grupos com as permissões correspondentes:
 
     | Grupo          | Permissões      |
     |----------------|------------------|
     | mimcm-Managers | Ler </br> Auditoria do FIM CM</br> Agente de Registro do FIM CM</br> Solicitar Inscrição do FIM CM</br> Solicitar Recuperação do FIM CM</br> Solicitar Renovação do FIM CM</br> Solicitar Revogação do FIM CM </br> Solicitar Desbloqueio de Cartão Inteligente do FIM CM |
     | mimcm-HelpDesk | Ler</br> Agente de Registro do FIM CM</br> Solicitar Revogação do FIM CM</br> Solicitar Desbloqueio de Cartão Inteligente do FIM CM |
 
-11. Na caixa de diálogo **Propriedades de CORPDC**, clique em **OK**.
+11. Na caixa de diálogo **Propriedades de CORPDC** , clique em **OK**.
 
 12. Deixe **Usuários e Computadores do Active Directory** aberto.
 
@@ -725,13 +725,13 @@ Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no
 
 2. Na árvore de console, clique com botão direito do mouse em **Contoso.com** e, em seguida, clique em **Propriedades**.
 
-3. Na guia **Segurança**, clique em **Avançado**.
+3. Na guia **Segurança** , clique em **Avançado**.
 
-4. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso**, clique em **Adicionar**.
+4. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso** , clique em **Adicionar**.
 
-5. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo**, na caixa **Inserir o nome do objeto a ser selecionado**, digite **mimcm-Managers** e, em seguida, clique em **OK**.
+5. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo** , na caixa **Inserir o nome do objeto a ser selecionado** , digite **mimcm-Managers** e, em seguida, clique em **OK**.
 
-6. Na caixa de diálogo **Entrada de Permissão para Contoso**, na lista **Aplica-se a**, selecione **Objetos de Usuário Descendentes** e, em seguida, habilite a caixa de seleção **Permitir** para as seguintes **Permissões**:
+6. Na caixa de diálogo **entrada de permissão para contoso** , na lista **aplicar a** , selecione **objetos de usuário descendentes** e, em seguida, habilite a caixa de seleção **permitir** para as seguintes **permissões** :
 
     - **Ler todas as propriedades**
 
@@ -751,13 +751,13 @@ Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no
 
     - **Solicitar Desbloqueio de Cartão Inteligente do FIM CM**
 
-7. Na caixa de diálogo **Entrada de Permissão para Contoso**, clique em **OK**.
+7. Na caixa de diálogo **Entrada de Permissão para Contoso** , clique em **OK**.
 
-8. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso**, clique em **Adicionar**.
+8. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso** , clique em **Adicionar**.
 
-9. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo**, na caixa **Inserir o nome do objeto a ser selecionado**, digite **mimcm-HelpDesk** e, em seguida, clique em **OK**.
+9. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo** , na caixa **Inserir o nome do objeto a ser selecionado** , digite **mimcm-HelpDesk** e, em seguida, clique em **OK**.
 
-10. Na caixa de diálogo **Entrada de Permissão para Contoso**, na lista **Aplica-se a**, selecione **Objetos de Usuário Descendentes** e, em seguida, marque a caixa de seleção **Permitir** para as seguintes **Permissões**:
+10. Na caixa de diálogo **Entrada de Permissão para Contoso** , na lista **Aplica-se a** , selecione **Objetos de Usuário Descendentes** e, em seguida, marque a caixa de seleção **Permitir** para as seguintes **Permissões** :
 
     - **Ler todas as propriedades**
 
@@ -769,27 +769,27 @@ Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no
 
     - **Solicitar Desbloqueio de Cartão Inteligente do FIM CM**
 
-11. Na caixa de diálogo **Entrada de Permissão para Contoso**, clique em **OK**.
+11. Na caixa de diálogo **Entrada de Permissão para Contoso** , clique em **OK**.
 
-12. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso**, clique em **OK**.
+12. Na caixa de diálogo **configurações de segurança avançadas para contoso** , clique em **OK**.
 
-13. Na caixa de diálogo **Propriedades de contoso.com**, clique em **OK**.
+13. Na caixa de diálogo **Propriedades de contoso.com** , clique em **OK**.
 
 14. Deixe **Usuários e Computadores do Active Directory** aberto.
 
-**Configurar permissões nos objetos de usuário descendentes \<sem script\>**
+**Configurar permissões nos objetos de usuário descendentes \<no script\>**
 
 1. Verifique se você ainda está no console **Usuários e Computadores do Active Directory**.
 
 2. Na árvore de console, clique com botão direito do mouse em **Contoso.com** e, em seguida, clique em **Propriedades**.
 
-3. Na guia **Segurança**, clique em **Avançado**.
+3. Na guia **Segurança** , clique em **Avançado**.
 
-4. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso**, clique em **Adicionar**.
+4. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso** , clique em **Adicionar**.
 
-5. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo**, na caixa **Inserir o nome do objeto a ser selecionado**, digite **mimcm-Managers** e, em seguida, clique em **OK**.
+5. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo** , na caixa **Inserir o nome do objeto a ser selecionado** , digite **mimcm-Managers** e, em seguida, clique em **OK**.
 
-6. Na caixa de diálogo **Entrada de Permissão para CONTOSO**, na lista **Aplica-se a**, selecione **Objetos de Usuário Descendentes** e, em seguida, habilite a caixa de seleção **Permitir** para as seguintes **Permissões**:
+6. Na caixa de diálogo **Entrada de Permissão para CONTOSO** , na lista **Aplica-se a** , selecione **Objetos de Usuário Descendentes** e, em seguida, habilite a caixa de seleção **Permitir** para as seguintes **Permissões** :
 
     - **Ler todas as propriedades**
 
@@ -809,13 +809,13 @@ Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no
 
     - **Solicitar Desbloqueio de Cartão Inteligente do FIM CM**
 
-7. Na caixa de diálogo **Entrada de Permissão para CONTOSO**, clique em **OK**.
+7. Na caixa de diálogo **entrada de permissão para contoso** , clique em **OK**.
 
-8. Na caixa de diálogo **Configurações de Segurança Avançadas para CONTOSO**, clique em **Adicionar**.
+8. Na caixa de diálogo **configurações de segurança avançadas para contoso** , clique em **Adicionar**.
 
-9. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo**, na caixa **Inserir o nome do objeto a ser selecionado**, digite **mimcm-HelpDesk** e, em seguida, clique em **OK**.
+9. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo** , na caixa **Inserir o nome do objeto a ser selecionado** , digite **mimcm-HelpDesk** e, em seguida, clique em **OK**.
 
-10. Na caixa de diálogo **Entrada de Permissão para CONTOSO**, na lista **Aplica-se a**, selecione **Objetos de Usuário Descendentes** e, em seguida, marque a caixa de seleção **Permitir** para as seguintes **Permissões**:
+10. Na caixa de diálogo **entrada de permissão para contoso** , na lista **aplicar a** , selecione **objetos de usuário descendentes** e marque a caixa de seleção **permitir** para as seguintes **permissões** :
 
     - **Ler todas as propriedades**
 
@@ -827,15 +827,15 @@ Primeiro passo: **Configurando permissões no ponto de conexão de serviço e no
 
     - **Solicitar Desbloqueio de Cartão Inteligente do FIM CM**
 
-11. Na caixa de diálogo **Entrada de Permissão para contoso**, clique em **OK**.
+11. Na caixa de diálogo **entrada de permissão para contoso** , clique em **OK**.
 
-12. Na caixa de diálogo **Configurações de Segurança Avançadas para Contoso**, clique em **OK**.
+12. Na caixa de diálogo **configurações de segurança avançadas para contoso** , clique em **OK**.
 
-13. Na caixa de diálogo **Propriedades de contoso.com**, clique em **OK**.
+13. Na caixa de diálogo **Propriedades de contoso.com** , clique em **OK**.
 
 14. Deixe **Usuários e Computadores do Active Directory** aberto.
 
-Segundo passo: **Delegando permissões de gerenciamento de modelo de certificado \<script\>**
+Segunda etapa: **delegando permissões \<script\> de gerenciamento de modelo de certificado**
 
 - Delegando permissões no contêiner Modelos de Certificado.
 
@@ -847,41 +847,41 @@ Defina permissões no contêiner de modelos de certificado:
 
 1. Restaure o console **Sites e Serviços do Active Directory**.
 
-2. Na árvore de console, expanda **Serviços**, expanda **Serviços de Chave Pública** e, em seguida, clique em **Modelos de Certificado**.
+2. Na árvore de console, expanda **Serviços** , expanda **Serviços de Chave Pública** e, em seguida, clique em **Modelos de Certificado**.
 
 3. Na árvore de console, clique com botão direito do mouse em **Modelos de Certificado** e, em seguida, clique em **Delegar Controle**.
 
-4. No Assistente **Delegação de Controle**, clique em **Avançar**.
+4. No Assistente **Delegação de Controle** , clique em **Avançar**.
 
-5. Na página **Usuários ou Grupos**, clique em **Adicionar**.
+5. Na página **usuários ou grupos** , clique em **Adicionar**.
 
-6. Na caixa de diálogo **Selecionar Usuários, Computadores ou Grupos**, na caixa **Inserir os nomes de objeto a serem selecionados**, digite **mimcm-Managers** e clique em **OK**.
+6. Na caixa de diálogo **Selecionar Usuários, Computadores ou Grupos** , na caixa **Inserir os nomes de objeto a serem selecionados** , digite **mimcm-Managers** e clique em **OK**.
 
-7. Na página **Usuários ou Grupos**, clique em **Avançar**.
+7. Na página **Usuários ou Grupos** , clique em **Avançar**.
 
-8. Na página **Tarefas a Serem Delegadas**, clique em **Criar uma tarefa personalizada a ser delegada** e, em seguida, clique em **Avançar**.
+8. Na página **Tarefas a Serem Delegadas** , clique em **Criar uma tarefa personalizada a ser delegada** e, em seguida, clique em **Avançar**.
 
-9.  Na página **Tipo de Objeto do Active Directory**, verifique se a opção **Esta pasta, os objetos existentes nesta pasta e a criação de novos objetos nesta pasta** está selecionada e, em seguida, clique em **Avançar**.
+9.  Na página **Tipo de Objeto do Active Directory** , verifique se a opção **Esta pasta, os objetos existentes nesta pasta e a criação de novos objetos nesta pasta** está selecionada e, em seguida, clique em **Avançar**.
 
-10. Na página **Permissões**, na lista **Permissões**, marque a caixa de seleção **Controle Total** e, em seguida, clique em **Avançar**.
+10. Na página **Permissões** , na lista **Permissões** , marque a caixa de seleção **Controle Total** e, em seguida, clique em **Avançar**.
 
-11. Na página **Concluindo o Assistente para Delegação de Controle**, clique em **Concluir**.
+11. Na página **Concluindo o Assistente para Delegação de Controle** , clique em **Concluir**.
 
 Defina permissões no contêiner de OID:
 
 1. Na árvore de console, clique com botão direito do mouse em **OID** e, em seguida, clique em **Propriedades**.
 
-2. Na caixa de diálogo **Propriedades de OID**, na guia **Segurança**, clique em **Avançado**.
+2. Na caixa de diálogo **Propriedades de OID** , na guia **Segurança** , clique em **Avançado**.
 
-3. Na caixa de diálogo **Configurações de Segurança Avançadas para OID**, clique em **Adicionar**.
+3. Na caixa de diálogo **Configurações de Segurança Avançadas para OID** , clique em **Adicionar**.
 
-4. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo**, na caixa **Inserir o nome do objeto a ser selecionado**, digite **mimcm-Managers** e, em seguida, clique em **OK**.
+4. Na caixa de diálogo **Selecionar Usuário, Computador, Conta de Serviço ou Grupo** , na caixa **Inserir o nome do objeto a ser selecionado** , digite **mimcm-Managers** e, em seguida, clique em **OK**.
 
-5. Na caixa de diálogo **Entrada de Permissões para OID**, verifique se as permissões se aplicam a **Este objeto e todos os objetos descendentes**, clique em **Controle Total** e, em seguida, clique em **OK**.
+5. Na caixa de diálogo **Entrada de Permissões para OID** , verifique se as permissões se aplicam a **Este objeto e todos os objetos descendentes** , clique em **Controle Total** e, em seguida, clique em **OK**.
 
-6. Na caixa de diálogo **Configurações de Segurança Avançadas para OID**, clique em **OK**.
+6. Na caixa de diálogo **Configurações de Segurança Avançadas para OID** , clique em **OK**.
 
-7. Na caixa de diálogo **Propriedades de OID**, clique em **OK**.
+7. Na caixa de diálogo **Propriedades de OID** , clique em **OK**.
 
 8. Feche **Sites e Serviços do Active Directory**.
 

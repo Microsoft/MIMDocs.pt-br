@@ -16,11 +16,11 @@ ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
 ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92757497"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492490"
 ---
 # <a name="generic-ldap-connector-technical-reference"></a>Referência técnica do Conector LDAP genérico
 Este artigo descreve o Conector LDAP genérico. O artigo se aplica aos seguintes produtos:
@@ -47,7 +47,7 @@ Partindo de um ponto de vista detalhado, os seguintes recursos têm suporte na v
 | --- | --- |
 | Fonte de dados conectada |O Conector recebe suporte com todos os servidores LDAP v3 (compatíveis com RFC 4510). Ele foi testado com as seguintes opções:  <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Catálogo Global do Microsoft Active Directory (AD GC)</li><li>Directory Server 389</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (antiga Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>Para a maioria dos cenários, você deve usar o conector de Active Directory interno, como alguns recursos podem não funcionar</li></ul>**Não há suporte para diretórios ou recursos notáveis conhecidos:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Serviço de notificação de alteração de senha (PCNS)</li><li>Provisionamento do Exchange</li><li>Exclusão de dispositivos ativos de sincronização</li><li>Suporte para nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Cenários |<li>Gerenciamento de ciclo de vida do objeto</li><li>Gerenciamento de grupos</li><li>Gerenciamento de senha</li> |
-| Operações |As seguintes operações têm suporte em todos os diretórios LDAP:  <li>Importação completa</li><li>Exportação</li>As seguintes operações só têm suporte em diretórios especificados: <li>Importação delta</li><li>Definir senha, alterar senha</li> |
+| Operations |As seguintes operações têm suporte em todos os diretórios LDAP:  <li>Importação completa</li><li>Exportação</li>As seguintes operações só têm suporte em diretórios especificados: <li>Importação delta</li><li>Definir senha, alterar senha</li> |
 | Esquema |<li>O esquema é detectado no esquema LDAP (RFC3673 e RFC4512/4.2)</li><li>Oferece suporte a classes estruturais, classes auxiliares e à classe de objeto extensibleObject (RFC4512/4.3)</li> |
 
 ### <a name="delta-import-and-password-management-support"></a>Suporte de gerenciamento de importação delta e de senha
@@ -116,7 +116,7 @@ Para LDAPS, você deve usar SSL 3.0 ou TLS. Não há suporte para SSL 2.0 e não
 Os seguintes controles/recursos de LDAP devem estar disponíveis no servidor LDAP para que o conector funcione corretamente: filtros   
 `1.3.6.1.4.1.4203.1.5.3` Verdadeiro/Falso
 
-Frequentemente, o filtro Verdadeiro/Falso não é indicado como compatível com diretórios LDAP e pode aparecer na **Página Global** em **Recursos Obrigatórios Não Encontrados** . Ele é usado para criar filtros **OU** em consultas LDAP, por exemplo, ao importar vários tipos de objeto. Se você puder importar mais de um tipo de objeto, seu servidor LDAP dará suporte a esse recurso.
+Frequentemente, o filtro Verdadeiro/Falso não é indicado como compatível com diretórios LDAP e pode aparecer na **Página Global** em **Recursos Obrigatórios Não Encontrados**. Ele é usado para criar filtros **OU** em consultas LDAP, por exemplo, ao importar vários tipos de objeto. Se você puder importar mais de um tipo de objeto, seu servidor LDAP dará suporte a esse recurso.
 
 Se você usar um diretório no qual um identificador exclusivo é a âncora, o seguinte também deverá estar disponível (Para obter mais informações, confira a seção [Configurar Âncoras](#configure-anchors)):  
 `1.3.6.1.4.1.4203.1.5.1` todos os atributos operacionais
@@ -152,7 +152,7 @@ Não há suporte para os seguintes recursos LDAP:
 * Referências de LDAP entre servidores (RFC 4511/4.1.10)
 
 ## <a name="create-a-new-connector"></a>Criar um novo conector
-Para criar um conector LDAP genérico, em **Serviço de Sincronização** selecione **Agente de Gerenciamento** e **Criar** . Escolha o Conector **LDAP Genérico (Microsoft)** .
+Para criar um conector LDAP genérico, em **Serviço de Sincronização** selecione **Agente de Gerenciamento** e **Criar**. Escolha o Conector **LDAP Genérico (Microsoft)** .
 
 ![CreateConnector](./media/microsoft-identity-manager-2016-connector-genericldap/createconnector.png)
 
@@ -193,7 +193,7 @@ As caixas de seleção dos **controles com suporte** controlam o comportamento d
 * Se todas as três opções (pagedResultsControl, VLVControl e SortControl) estiverem desmarcadas, o Conector importa todos os objetos em uma única operação, que poderá falhar se o diretório for grande.
 * ShowDeletedControl é usado somente quando o método de Importação delta é USNChanged.
 
-O DN de log de alterações é o contexto de nomenclatura usado pelo log de alterações delta, por exemplo, **cn=changelog** . Esse valor deve ser especificado para que seja possível fazer a importação de delta.
+O DN de log de alterações é o contexto de nomenclatura usado pelo log de alterações delta, por exemplo, **cn=changelog**. Esse valor deve ser especificado para que seja possível fazer a importação de delta.
 
 Veja a seguir uma lista de DNs de log de alteração padrão:
 

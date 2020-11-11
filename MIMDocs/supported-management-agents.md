@@ -12,26 +12,26 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 01/23/2019
+ms.date: 11/2/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 157fd8d2a6b4296899f90c661e12ba6e19743d0f
-ms.sourcegitcommit: 22fa4dac943a0c6b0815b711bd1996f77a390e7c
+ms.openlocfilehash: b691fb5dd324a4202ab3f0f02344c5b43102c63a
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174537"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492473"
 ---
 # <a name="connect-to-your-directories"></a>Conectar aos seus diretórios
 
-Os conectores vinculam fontes de dados conectadas específicas ao MIM (Microsoft Identity Manager) SP1. Um conector move dados de uma fonte de dados conectada para o MIM. Quando os dados no MIM são modificados, o conector também pode exportar os dados para a fonte de dados conectada para mantê-los sincronizados com o MIM. Geralmente, há pelo menos um conector para cada diretório conectado.
+Conectores vinculam fontes de dados conectadas específicas ao MIM (Microsoft Identity Manager). Um conector move dados de uma fonte de dados conectada para o MIM. Quando os dados no MIM são modificados, o conector também pode exportar os dados para a fonte de dados conectada para mantê-los sincronizados com o MIM. Geralmente, há pelo menos um conector para cada diretório conectado.
 
 No Forefront Identity Manager, conectores eram conhecidos como agentes de gerenciamento. Esse termo ainda é usado em alguns artigos ou em algumas partes do produto, mas saiba que os dois termos referem-se o mesmo conceito.
 
 Este artigo aborda os conectores que estão incluídos e têm suporte no MIM, mas o conector para Conectividade Extensível 2.0 possibilita conectar-se com ainda mais fontes de dados. Alguns parceiros criaram seus próprios conectores dessa forma e uma lista completa está disponível na wiki do [FIM 2010: agentes de gerenciamento de parceiros](https://social.technet.microsoft.com/wiki/contents/articles/1589.fim-2010-management-agents-from-partners.aspx).
 
-## <a name="supported-connectors-in-mim-2016-sp1"></a>Conectores com suporte no MIM 2016 SP1
+## <a name="supported-connectors-in-mim-2016-sp2"></a>Conectores com suporte no MIM 2016 SP2
 
 | Nome do conector | Versões com suporte da fonte de dados conectada e links técnicos |
 | ---- | ----------------------------------------------- |
@@ -47,9 +47,9 @@ Este artigo aborda os conectores que estão incluídos e têm suporte no MIM, ma
 | Microsoft SQL Server | SQL Server 2012-2017 <br/> Usar o conector SQL genérico para versões posteriores ou SQL Azure|
 | Servidores de diretório Oracle (anteriormente Sun e Netscape) | Sun Directory Server 6. x, 7. x e Oracle 11<br/> Usar o conector LDAP genérico para versões posteriores |
 | [Conector do Windows PowerShell](https://msdn.microsoft.com/library/dn640417.aspx) | Windows PowerShell 2.0 ou superior |
-| [Conector do Microsoft Azure Active Directory](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (não recomendado para novas implantações) |
-| [Conector LDAP genérico](https://msdn.microsoft.com/library/dn510997.aspx) | [Servidor do LDAP v3 (compatível com RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector) |
-| [Conector SQL genérico](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Há suporte para o conector com todos os drivers ODBC de 64 bits](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) |
+| [Conector do Microsoft Azure Active Directory](https://msdn.microsoft.com/library/dn511001.aspx) | Microsoft Azure Active Directory (não recomendado para novas implantações, use Azure AD Connect sincronização, Azure AD Connect o provisionamento de nuvem ou o conector do Graph em vez disso) |
+| [Conector LDAP genérico](https://msdn.microsoft.com/library/dn510997.aspx) | [Servidor LDAP v3 (compatível com RFC 4510)](reference/microsoft-identity-manager-2016-connector-genericldap.md#overview-of-the-generic-ldap-connector), incluindo o servidor de diretório 389, servidor de diretório Apache, IBM Tivoli DS, Isode Directory, NetIQ eDirectory, Novell eDirectory, Open DJ, Open DS, Open LDAP, Oracle Directory Server Enterprise Edition, RadiantOne virtual Directory Server, Sun One Directory Server |
+| [Conector SQL genérico](reference/microsoft-identity-manager-2016-connector-genericsql.md) | [Há suporte para o conector com todos os drivers ODBC de 64 bits](reference/microsoft-identity-manager-2016-connector-genericsql.md#overview-of-the-generic-sql-connector) , incluindo Microsoft SQL Server & SQL Azure, IBM DB2 10. x, IBM DB2 9. x, oracle 10 & 11g, oracle 12c & 18C, MySQL 5. x|
 | [Conector para Lotus Domino](https://msdn.microsoft.com/library/hh859750.aspx) | Lotus Notes versão v 8.5. x, v 9.0. x |
 | [Conector de Serviços do SharePoint UPA](https://msdn.microsoft.com/library/dn511003.aspx) | SharePoint Server 2013-2019 com o aplicativo de serviço de perfil de usuário (UPA) |
 | [Conector de Serviços Web](https://www.microsoft.com/en-us/download/details.aspx?id=51495) | [SAP ECC 5.0 ou 6.0; Oracle PeopleSoft 9.1; Oracle eBusiness 12.1 e outras APIs REST e SOAP](https://docs.microsoft.com/microsoft-identity-manager/reference/microsoft-identity-manager-2016-ma-ws) |

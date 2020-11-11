@@ -7,12 +7,12 @@ manager: daveba
 ms.date: 03/10/2020
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 5985ded45a53a804728572404fb0db43e988ac1d
-ms.sourcegitcommit: f87be3d09cee6a8880b3a6babf32e0d064fde36b
+ms.openlocfilehash: 50e5da9c7e3ed7df8edb8dbc315708df5ac5250a
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87176754"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492530"
 ---
 # <a name="convert-microsoft-identity-manager-specific-services-to-use-group-managed-service-accounts"></a>Converter serviços específicos do Microsoft Identity Manager para usar Contas de serviço gerenciado de grupo
 
@@ -74,7 +74,7 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
 
 1. No Synchronization Service Manager, faça o backup da chave de criptografia. Ela será solicitada com a instalação do modo de alteração. Faça o seguinte:
 
-    a. No servidor em que o Synchronization Service Manager está instalado, procure a ferramenta de Gerenciamento da Chave do Serviço de Sincronização. O item **Exportar conjunto de chaves**  já está selecionado por padrão.
+    a. No servidor em que o Synchronization Service Manager está instalado, procure a ferramenta de Gerenciamento da Chave do Serviço de Sincronização. O **conjunto de chaves de exportação** já está selecionado por padrão.
 
     b. Selecione **Avançar**. 
     
@@ -86,9 +86,9 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
 
     d. Selecione **Avançar**.
 
-    Se você inserir as informações da conta com êxito, verá uma opção para alterar o destino ou o local do arquivo de exportação da chave de criptografia de backup. Por padrão, o local do arquivo de exportação é  *C:\Windows\system32\miiskeys-1.bin*.
+    Se você inserir as informações da conta com êxito, verá uma opção para alterar o destino ou o local do arquivo de exportação da chave de criptografia de backup. Por padrão, o local do arquivo de exportação é *C:\Windows\system32\miiskeys-1.bin*.
 
-1. Instale o Microsoft Identity Manager SP1, que pode ser encontrado no Centro de Serviços de Licenciamento por Volume ou no site de downloads do MSDN. Depois de concluir a instalação, salve o conjunto de chaves *miiskeys.bin*.
+1. Instale o Microsoft Identity Manager 2016 SP1 ou o hotfix posterior, que pode ser encontrado no centro de serviços de licenciamento por volume ou no site de downloads do MSDN. Depois de concluir a instalação, salve o conjunto de chaves *miiskeys.bin*.
 
    ![A janela do progresso da instalação do Serviço de Sincronização do Microsoft Identity Manager](media/ef5f16085ec1b2b1637fa3d577a95dbf.png)
 
@@ -141,7 +141,7 @@ Este artigo é um guia para configurar os serviços de Microsoft Identity Manage
     ![Janela Usuários e Computadores do Active Directory](media/0201f0281325c80eb70f91cbf0ac4d5b.jpg)
 
     > [!NOTE]  
-    > Um problema conhecido no Windows Server 2012 R2 é que os serviços que usam uma conta gerenciada param de responder depois que o servidor é reiniciado porque o Serviço de Distribuição de Chave da Microsoft não é iniciado após a reinicialização do Windows. A solução alternativa para esse problema é executar o seguinte comando: 
+    > Um problema conhecido no Windows Server 2012 R2 é que os serviços que usam uma conta gerenciada param de responder depois que o servidor é reiniciado porque o Serviço de Distribuição de Chave da Microsoft não é iniciado após a reinicialização do Windows. A solução alternativa para esse problema é executar o seguinte comando: 
     >
     > `sc triggerinfo kdssvc start/networkon`
     >

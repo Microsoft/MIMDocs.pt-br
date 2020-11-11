@@ -7,14 +7,14 @@ manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
-ms.openlocfilehash: 69ebe774ddea0176fb26ef74b8f4352e4bb5d039
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 6cf0914b196673bb2e99d6d679fad46833c58b00
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042161"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492252"
 ---
-# <a name="mim-sp1-4414360--service-dynamic-logging"></a>Registro de log dinâmico do serviço do SP1 MIM (4.4.1436.0)
+# <a name="mim-2016-sp1-4414360--service-dynamic-logging"></a>Log dinâmico do serviço do MIM 2016 SP1 (4.4.1436.0)
 
 Em 4.4.1436.0 Apresentamos uma nova capacidade de registro de log. Isso permite aos engenheiros de suporte e de administrador ativarem o registro de log sem a necessidade de reiniciar o serviço de gerenciamento.
 

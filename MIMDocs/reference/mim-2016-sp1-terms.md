@@ -11,16 +11,16 @@ ms.prod: microsoft-identity-manager
 ms.assetid: b0b39631-66df-4c5f-80c9-a1774346f816
 ms.reviewer: fimguy
 ms.suite: ems
-ms.openlocfilehash: afe167cdcd6ca548ef34e802f5606bee6ba5b31e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 6e6af5be6c091be74c7162ef9c960c89a3302ba2
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757478"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492558"
 ---
 # <a name="microsoft-identity-manager-2016-sp1-terminology"></a>Terminologia do Microsoft Identity Manager 2016 SP1
 
-Este documento é uma lista abrangente de termos que são referenciados no Microsoft Identity Manager 2016 SP1.
+Este documento é uma lista abrangente de termos que são referenciados no Microsoft Identity Manager 2016 SP1 e posterior.
 
 ## <a name="a"></a>Um
 
@@ -189,11 +189,11 @@ Este documento é uma lista abrangente de termos que são referenciados no Micro
 
 **portão de bloqueio** : uma atividade de fluxo de trabalho na fase de autenticação do processamento de solicitações para bloquear um usuário que falhou ao se autenticar. Consulte também a entrada para "bloquear" e para "portão de QA".
 
-**limite de bloqueio** : Este é um controle inteiro que especifica o número de vezes que um usuário pode falhar ao concluir o fluxo de trabalho de autenticação antes que eles sejam bloqueados durante a duração do bloqueio.A configuração padrão para isso é 3. O limite inferior é 0 e o limite superior é de 99.
+**limite de bloqueio** : Este é um controle inteiro que especifica o número de vezes que um usuário pode falhar ao concluir o fluxo de trabalho de autenticação antes que eles sejam bloqueados durante a duração do bloqueio. A configuração padrão para isso é 3. O limite inferior é 0 e o limite superior é de 99.
 
-**duração do bloqueio** : Este é um controle inteiro que especifica a duração em minutos em que o usuário é bloqueado para depois de atingir o limite de bloqueio.A configuração padrão é 15 minutos.O limite inferior para essa configuração é 1 e o limite superior é 9999.O limite superior permite que o administrador defina o limite superior para mais de um dia.
+**duração do bloqueio** : Este é um controle inteiro que especifica a duração em minutos em que o usuário é bloqueado para depois de atingir o limite de bloqueio.  A configuração padrão é 15 minutos.  O limite inferior para essa configuração é 1 e o limite superior é 9999. O limite superior permite que o administrador defina o limite superior para mais de um dia.
 
-**contagem de limites de bloqueio antes do bloqueio permanente** : esse é um controle de inteiro que permite ao administrador configurar um valor numérico para o número de vezes que um usuário pode atingir o limite de bloqueio antes de ser bloqueado permanentemente.  O bloqueio permanente implica que o usuário deve ser desbloqueado pelo administrador do sistema. Por padrão, isso é definido como 3.O intervalo para essa configuração está entre 1 e 99.
+**contagem de limites de bloqueio antes do bloqueio permanente** : esse é um controle de inteiro que permite ao administrador configurar um valor numérico para o número de vezes que um usuário pode atingir o limite de bloqueio antes de ser bloqueado permanentemente.  O bloqueio permanente implica que o usuário deve ser desbloqueado pelo administrador do sistema. Por padrão, isso é definido como 3. O intervalo para essa configuração está entre 1 e 99.
 <br/>
 
 ## <a name="m"></a>M
@@ -499,7 +499,7 @@ Este documento é uma lista abrangente de termos que são referenciados no Micro
 
 **grupo desbloqueado** : um grupo no qual a associação do grupo pode ser alterada por usuários que não sejam o proprietário do grupo.
 
-**grupo universal** : um grupo com escopo universal é um grupo de Active Directory que pode conter membros de uma floresta específica. Um grupo universal pode receber permissões em qualquer domínio ou floresta. As listas de distribuição normalmente têm escopo universal.Um grupo de segurança com escopo universal pode proteger recursos dentro da mesma floresta.
+**grupo universal** : um grupo com escopo universal é um grupo de Active Directory que pode conter membros de uma floresta específica. Um grupo universal pode receber permissões em qualquer domínio ou floresta. As listas de distribuição normalmente têm escopo universal.  Um grupo de segurança com escopo universal pode proteger recursos dentro da mesma floresta.
 
 **solicitação de atualização** : uma solicitação para alterar os atributos de um recurso.
 

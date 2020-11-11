@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 2585e9c5-ce34-46c7-bdcf-8c08773901dc
 ms.reviewer: markwahl-msft
 ms.suite: ems
-ms.openlocfilehash: 8e4371c8d3caac06f7200d8439b30b7aa978a336
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: ae291712f33b0a28d3d0f3f5a451c9ac9b8a76b2
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042450"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492303"
 ---
 # <a name="install-mim-2016-mim-synchronization-service"></a>Instalação do MIM 2016: Serviço de Sincronização do MIM
 
@@ -39,7 +39,7 @@ Para instalar os componentes do Microsoft Identity Manager 2016, primeiramente c
 
 2. Descompacte o pacote de instalação do MIM ou monte o DVD de imagem do MIM.  Caso não tenha este DVD, confira [Downloads e licenciamento do Microsoft Identity Manager](microsoft-identity-manager-licensing.md).
 
-## <a name="install-mim-2016-sp1-synchronization-service"></a>Instalar o Serviço de Sincronização do MIM 2016 SP1
+## <a name="install-mim-2016-sp1-or-later-synchronization-service"></a>Instalar o MIM 2016 SP1 ou o serviço de sincronização posterior
 
 1. Na pasta de instalação descompactada do MIM, navegue até a pasta **Serviço de Sincronização** .
 
@@ -63,7 +63,7 @@ Para instalar os componentes do Microsoft Identity Manager 2016, primeiramente c
 
    ![Imagem de conexão de banco de dados](media/install-mim-sync/MIM_Install3.png)
 
-    3. *MIM 2016 SP2 e posterior*: Configurar o nome do Banco de dados do serviço de sincronização do MIM
+    3. *MIM 2016 SP2 e posterior* : Configurar o nome do Banco de dados do serviço de sincronização do MIM
 
 7. Configure a conta de serviço de sincronização de acordo com a conta criada anteriormente:
 

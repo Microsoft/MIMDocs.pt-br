@@ -13,11 +13,11 @@ audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
 ms.openlocfilehash: 9a2dd84e121217772a8831653b2e4790436c32ec
-ms.sourcegitcommit: c214bb0b1373b65b1c9c215379fd820ab0c13f0f
+ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "92757495"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94492439"
 ---
 # <a name="certificate-management-rest-api-service-details"></a>Detalhes do serviço da API REST do gerenciamento de certificados
 As seções a seguir descrevem os detalhes da API REST do gerenciamento de certificado (MIM) de Microsoft Identity Manager.
@@ -44,7 +44,7 @@ As solicitações HTTP enviadas para a API devem incluir os seguintes cabeçalho
 
 Cabeçalho | Descrição
 -------|------------
-Autorização | Necessário. O conteúdo depende do método de autenticação. O método é configurável e pode ser baseado na autenticação integrada do Windows (WIA) ou Serviços de Federação do Active Directory (AD FS) (ADFS).
+Autorização | Obrigatórios. O conteúdo depende do método de autenticação. O método é configurável e pode ser baseado na autenticação integrada do Windows (WIA) ou Serviços de Federação do Active Directory (AD FS) (ADFS).
 Tipo de conteúdo | Obrigatório se a solicitação tiver um corpo. Deve ser `application/json`.
 Content-Length | Obrigatório se a solicitação tiver um corpo. 
 Cookie | O cookie de sessão. Pode ser necessário, dependendo do método de autenticação.
