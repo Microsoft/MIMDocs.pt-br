@@ -15,12 +15,12 @@ ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
 ms.topic: reference
-ms.openlocfilehash: 424381cca56223e80403bad9f858c33362bb819d
-ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
+ms.openlocfilehash: 59a853c03cd24d89ffa2e89550de51d372c6391d
+ms.sourcegitcommit: 7d7fdb47352282c2d98bf09274707a18fd1a22dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94532130"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96321974"
 ---
 # <a name="identity-manager-version-release-history"></a>Histórico de lançamento de versão do Identity Manager
 
@@ -33,12 +33,18 @@ A equipe do Microsoft Identity Manager lança atualizações regularmente. Este 
 >
 >O histórico de versão para os conectores LDAP genérico, SQL genérico, serviços Web, PowerShell, Graph e Lotus Domino pode ser encontrado no [histórico de lançamento de versão do conector](microsoft-identity-manager-2016-connector-version-history.md).  
 
-## <a name="mim-version-463550"></a>4.6.355.0 versão do MIM
-- Status: 6 de novembro de 2020
+## <a name="mim-version-463590"></a>4.6.359.0 versão do MIM
+- Status: 29 de novembro de 2020
 - [Download do hotfix](https://www.microsoft.com/download/details.aspx?id=102301)
 - [Artigo 4585922 da base de conhecimento](https://support.microsoft.com/help/4585922)
 
 Este hotfix contém atualizações para os componentes do Gerenciador de sincronização do MIM, do serviço do MIM e do portal do MIM e também contém atualizações cumulativas para os componentes do MIM dos hotfixes anteriores para o MIM 2016 SP2.
+Substitui o Build 4.6.355.0 para resolver problemas de desempenho do serviço MIM.
+
+## <a name="mim-version-463550"></a>4.6.355.0 versão do MIM
+- Status: 6 de novembro de 2020
+
+Substituído por 4.6.359.0
 
 
 ## <a name="mim-version-462630"></a>4.6.263.0 versão do MIM
@@ -337,7 +343,7 @@ Os problemas a seguir foram corrigidos na versão 4.4.1642.0 do MIM.
 
 - Portais de senha de autoatendimento do MIM.
 
-#### <a name="reporting"></a>Relatórios
+#### <a name="reporting"></a>Relatório
 
 - Import-FIMReportingSchemaDefinition cmdlet para relatórios falha com erro.
 
