@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 3b99bd6d8f10c993d65e026bab23deeb65c547e9
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: d6cd6c88992dc3c7dc80cd93d21907319ece0136
+ms.sourcegitcommit: 2bbb6815b7dfae877eec966c1dc40ea8da847d62
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043946"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96522142"
 ---
 # <a name="planning-a-bastion-environment"></a>Planejando um ambiente de bastiões
 
