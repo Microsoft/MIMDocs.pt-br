@@ -13,16 +13,16 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 11/11/2020
+ms.date: 12/31/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ba69b18f3712384da79095d625eb9008a07b741e
-ms.sourcegitcommit: dae61d97c9db5402d35e2757a1ce844d16236032
+ms.openlocfilehash: 84eae9e65a2ea65c210e026ccafa58d95c434539
+ms.sourcegitcommit: 36752980300a51a0b30442ea23b9934eb8b5c752
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94532113"
+ms.lasthandoff: 12/31/2020
+ms.locfileid: "97835305"
 ---
 # <a name="connector-version-release-history"></a>Histórico de lançamento de versão do conector
 
@@ -44,6 +44,11 @@ Links relacionados:
 * [Conector do PowerShell](microsoft-identity-manager-2016-connector-powershell.md)
 * [Conector do Lotus Domino](microsoft-identity-manager-2016-connector-domino.md)
 * Documentação de referência [do conector do repositório de perfis de usuário do SharePoint](https://go.microsoft.com/fwlink/?LinkID=331344)
+
+## <a name="1113470-december-2020"></a>1.1.1347.0 (dezembro de 2020)
+### <a name="fixed-issues"></a>Problemas corrigidos
+- Conector do Graph
+  - Correção de um problema com o conector enviando incorretamente convites B2B ao criar um grupo habilitado para email ou um contato
 
 ## <a name="1113460-november-2020"></a>1.1.1346.0 (novembro de 2020)
 ### <a name="fixed-issues"></a>Problemas corrigidos
@@ -91,7 +96,7 @@ Links relacionados:
 - Conector do Lotus Notes
    - Grupos de notas secundárias os catálogos de endereços não são mais excluídos pelo processo *AdminP* . A operação de exclusão direta é usada agora
 - Conector LDAP Genérico
-   - Correção de um bug com atributos de operações de diretório LDAP, por exemplo, *pwdUpdateTime* , não visível no esquema
+   - Correção de um bug com atributos de operações de diretório LDAP, por exemplo, *pwdUpdateTime*, não visível no esquema
 ### <a name="enhancements"></a>Aprimoramentos
 - Conector do Graph   
    - Os UPNs de usuários convidados externos não são mais renderizados ' no estado em que se encontram '. em vez disso, eles são mostrados no espaço do conector para se parecer com emails
@@ -101,9 +106,9 @@ Links relacionados:
    - Conceder permissões para convidar convidados para seu aplicativo do Azure AD associado ao conector do Graph
    - Concluir a seção de configuração do conector para convidar usuários externos: definir URL de redirecionamento de convite (obrigatório) e escolher se deseja enviar emails de convite
    - Defina atributos obrigatórios em sua regra de sincronização de saída:
-     - "Convidado" => *UserType* (somente fluxo inicial)
-     - Endereço de email externo => *userPrincipalName*
-     - Customion ("CN =" + csObjectID + ", OBJECT = User") => *DN* (somente fluxo inicial)
+     - "Convidado" =>*UserType* (somente fluxo inicial)
+     - Endereço de email externo =>*userPrincipalName*
+     - Customion ("CN =" + csObjectID + ", OBJECT = User") =>*DN* (somente fluxo inicial)
      - csObjectID = *ID* de>(somente fluxo inicial)
 
 ## <a name="1111300-february-2020"></a>1.1.1130.0 (fevereiro de 2020)
