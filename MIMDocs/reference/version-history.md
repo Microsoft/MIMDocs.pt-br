@@ -10,17 +10,17 @@ ms.devlang: na
 ms.prod: microsoft-identity-manager
 ms.tgt_pltfrm: na
 ms.workload: identity
-ms.date: 11/11/2020
+ms.date: 11/29/2020
 ms.author: esergeev
 ms.reviewer: mwahl
 ms.suite: ems
 ms.topic: reference
-ms.openlocfilehash: 59a853c03cd24d89ffa2e89550de51d372c6391d
-ms.sourcegitcommit: 7d7fdb47352282c2d98bf09274707a18fd1a22dc
+ms.openlocfilehash: 67b74ccf993cd4238740d4325d926b24f654cc1c
+ms.sourcegitcommit: 8f81767ec92e1b80658aaebb9463aa4d62396d43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96321974"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927669"
 ---
 # <a name="identity-manager-version-release-history"></a>Histórico de lançamento de versão do Identity Manager
 
@@ -343,7 +343,7 @@ Os problemas a seguir foram corrigidos na versão 4.4.1642.0 do MIM.
 
 - Portais de senha de autoatendimento do MIM.
 
-#### <a name="reporting"></a>Relatório
+#### <a name="reporting"></a>Relatórios
 
 - Import-FIMReportingSchemaDefinition cmdlet para relatórios falha com erro.
 

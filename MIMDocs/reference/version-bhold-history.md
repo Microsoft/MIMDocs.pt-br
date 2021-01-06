@@ -5,25 +5,29 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/14/2017
+ms.date: 10/1/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 1ff755aef697b92206745426e7820526db0666d3
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 4e3c247370c6c78e7814d894e9f0a6166d2e397a
+ms.sourcegitcommit: 8f81767ec92e1b80658aaebb9463aa4d62396d43
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757489"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927601"
 ---
 # <a name="bhold-modules-version-release-history"></a>Histórico de lançamento de versão dos módulos BHOLD
 
 A equipe de Microsoft Identity Manager lança regularmente as atualizações listadas no histórico de [versão](version-history.md) . Este artigo ajuda você a acompanhar as versões que foram lançadas para BHOLD, um subcomponente da Microsoft Identity Manager. Em seguida, você pode decidir se precisa atualizar para a versão mais recente ou não.
 
+## <a name="version-60620"></a>6.0.62.0 da versão
+
+- Status: outubro de 2018
+- [Download](https://www.microsoft.com/download/details.aspx?id=55950)
+
 ## <a name="version-60360"></a>6.0.36.0 da versão
 
 - Status: 7 de setembro de 2017
-- [Download](https://www.microsoft.com/en-us/download/details.aspx?id=55950)
 
 ### <a name="enhancements"></a>Aprimoramentos 
 O BHOLD versão 6.0.36.0 inclui os seguintes aprimoramentos:
@@ -43,7 +47,7 @@ Os problemas a seguir foram corrigidos no BHOLD versão 6.0.36.0.
 
 #### <a name="access-management-connector"></a>Conector de Gerenciamento de Acesso
 
-- N/D
+- n/a
 
 #### <a name="bhold-integration-module"></a>Módulo de integração do BHOLD
 
@@ -56,11 +60,11 @@ Os problemas a seguir foram corrigidos no BHOLD versão 6.0.36.0.
 
 #### <a name="bhold-analytics"></a>BHOLD Analytics
 
-- N/D
+- n/a
 
 #### <a name="bhold-attestation"></a>Atestado de BHOLD
 
-- N/D
+- n/a
 
 #### <a name="bhold-reporting"></a>Relatórios do BHOLD
 
