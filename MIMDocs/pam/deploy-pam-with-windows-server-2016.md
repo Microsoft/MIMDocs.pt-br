@@ -9,28 +9,25 @@ ms.date: 08/18/2017
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 521b96c3ef9cae5a5f9151ddf125cfb534ae0332
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: c02904d7acb5c56e8b1e7f7a267b8d54c0a58d7a
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044014"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010550"
 ---
 # <a name="deploy-mim-pam-with-windows-server-2016"></a>Implantar o PAM do MIM com o Windows Server 2016
 
 
-Esse cenário permite que o MIM 2016 SP1 aproveite os recursos do Windows Server 2016 como o controlador de domínio para a floresta "PRIV".  Quando esse cenário está configurado, o tíquete do Kerberos do usuário terá uma limitação de tempo para o tempo restante da ativação de sua função. 
-
-> [!Note]
-> Visualizações técnicas do Windows Server 2016 anteriores à Visualização Técnica 5 não podem ser usadas com esta versão do MIM.
+Este cenário habilita o MIM 2016 SP2 para o cenário do PAM usando os recursos do Windows Server 2016 ou posterior como o controlador de domínio para a floresta "PRIV".   Quando esse cenário está configurado, o tíquete do Kerberos do usuário terá uma limitação de tempo para o tempo restante da ativação de sua função.
 
 ## <a name="preparation"></a>Preparação
 
 No mínimo duas VMs são necessárias para o ambiente de laboratório:
 
--   A VM hospeda o controlador de domínio PRIV que executa o Windows Server 2016
+-   A VM hospeda o controlador de domínio PRIV, executando o Windows Server 2016 ou posterior
 
--   A VM hospeda o serviço de MIM, executando o Windows Server 2016 (recomendado) ou o Windows Server 2012 R2
+-   A VM hospeda o serviço do MIM, executando o Windows Server 2016 ou posterior (recomendado) ou o Windows Server 2012 R2
 
 > [!NOTE]
 > Se você ainda não tiver um domínio "CORP" no seu ambiente de laboratório, um controlador de domínio adicional para esse domínio será necessário. O controlador de domínio "CORP" pode executar o Windows Server 2016 ou o Windows Server 2012 R2.
@@ -125,7 +122,7 @@ Execute a instalação, conforme descrito no [Guia de Introdução](privileged-i
 
 - Siga as instruções em [Etapa 5 – Estabelecer confiança](step-5-establish-trust-between-priv-corp-forests.md) com estes ajustes:
 
-  - Ao estabelecer relação de confiança unidirecional, basta executar os dois primeiros comandos do PowerShell (get-credential e New-PAMTrust), **não execute o comando New-PAMDomainConfiguration**.
+  - Ao estabelecer uma relação de confiança unidirecional, somente execute os dois primeiros comandos do PowerShell (Get-Credential e New-PAMTrust), não **Execute o comando New-PAMDomainConfiguration**.
 
   - Depois de estabelecer a relação de confiança, faça logon no PRIVDC como administrador \\do PRIV, inicie o PowerShell e digite os seguintes comandos:
     ```

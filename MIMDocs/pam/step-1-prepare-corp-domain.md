@@ -1,6 +1,6 @@
 ---
 title: Etapa 1 para implantar o PAM – Domínio CORP | Microsoft Docs
-description: Prepare o domínio CORP com identidades novas ou existentes para serem gerenciadas pelo Privileged Identity Manager
+description: Preparar o domínio CORP com identidades novas ou existentes a serem gerenciadas pelo Microsoft Identity Manager
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,12 +11,12 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: c21228dad923d80ab63c255c1184b7de04a0ff3d
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 4c9c5736d0215d0423eb989dc5a194a0a00c3c50
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043725"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010414"
 ---
 # <a name="step-1---prepare-the-host-and-the-corp-domain"></a>Etapa 1 – Preparar o host e o domínio CORP
 
@@ -33,9 +33,9 @@ Esta seção descreve como configurar um controlador de domínio para um domíni
 
 ### <a name="install-windows-server"></a>Instalar o Windows Server
 
-Instale o Windows Server 2012 R2 ou Windows Server 2016 Technical Preview 4 ou posterior em uma máquina virtual para criar um computador chamado *CORPDC*.
+Instale o Windows Server 2012 R2 ou posterior em uma máquina virtual para criar um computador chamado *CORPDC*.
 
-1. Escolha **Windows Server 2012 R2 Standard (Servidor com GUI) x64** ou **Windows Server 2016 Technical Preview (Servidor com a Experiência Desktop)** .
+1. Escolha **Windows server 2012 R2 Standard (servidor com GUI) x64** ou **Windows Server 2016 (servidor com experiência desktop)**.
 
 2. Leia e aceite os termos de licença.
 

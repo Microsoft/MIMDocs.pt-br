@@ -1,6 +1,6 @@
 ---
-title: Etapa 1 Configurando o domínio Priv
-description: Prepare o domínio CORP com identidades novas ou existentes para serem gerenciadas pelo Privileged Identity Manager usando scripts
+title: Etapa 1 Configurando o domínio PRIV
+description: Preparar o domínio PRIV com identidades novas ou existentes a serem gerenciadas pelo Microsoft Identity Manager usando scripts
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,35 +11,36 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 4e24ac1b3f3f3d46aa5f67175dc4c4b8778bdb21
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: a4d7c8ed4f5d7a9d6b4653caf03de69f1d18e509
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043844"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010618"
 ---
-# <a name="step-1-configuring-the-priv-domain"></a>Etapa 1 Configurando o domínio Priv
+# <a name="step-1-configuring-the-priv-domain"></a>Etapa 1 Configurando o domínio PRIV
 
 > [!div class="step-by-step"]
 > [Etapa 2 »](sp1-step2-configuring-corp-domain.md)
 
 1. Faça logon no PRIVDC como administrador
-   * Se este for um ambiente somente PRIV, faça logon no CORPDC
+   * Se essa implantação do PAM for um ambiente PRIV-Only, faça logon no CORPDC
 2. Execute o PowerShell como administrador
 3. cd $env:SYSTEMDRIVE\PAM
 4. .\PAMDeployment.ps1
 5. Selecione a Opção 1 do Menu (Configuração de Floresta PRIV)
 
 
-As Contas de Serviço necessárias ao gerenciamento de SQL/SharePoint & MIM são criadas automaticamente se ainda não estiverem presentes no domínio. Você precisará inserir as senhas para a criação dessas contas de serviço durante a execução do script.
-Se o domínio PRIV for do Windows Server 2016, com o Nível Funcional definido como Windows Server 2016 Technical Preview 5, o script solicitará a habilitação da opção 'Recurso Privileged Access Management' do Active Directory exigida pelo PAM. Escolha ‘Sim’ para continuar.
-Para níveis funcionais abaixo do Windows Server 2016, ignore o aviso que outras configurações não serão executadas. Você precisará executar novamente a PAMDeployment.ps1 e a Configuração da Floresta de PAM, depois que o administrador elevar o nível funcional para o Windows Server 2016.
+As contas de serviço necessárias para gerenciar o SQL, o SharePoint e o MIM são criadas automaticamente, caso ainda não estejam presentes no domínio. Você precisará inserir as senhas para a criação dessas contas de serviço durante a execução do script.
+
+Se o domínio PRIV for o Windows Server 2016, com o nível funcional definido como Windows Server 2016, o script solicitará a habilitação do Active Directory opcional ' Privileged Access Management recurso ' exigido pelo PAM. Escolha ‘Sim’ para continuar. Para níveis funcionais abaixo do Windows Server 2016, ignore o aviso que outras configurações não serão executadas. Você precisará executar novamente a configuração da floresta PAMDeployment.ps1 e do PAM, uma vez que o administrador gere o nível funcional para o Windows Server 2016.
 
 >[!NOTE]
->As etapas a seguir não são necessárias para configurações PRIVOnly
+>As etapas a seguir não são necessárias para as configurações do PRIVOnly
 
-Copie o SIDs.txt que é gerado no $env:SYSTEMDRIVE\PAM para a pasta semelhante no CORPDC. Isso é exigido pelo CORPDC para configurar as permissões para usuários PRIV para ler as propriedades de usuário CORP.
-Quando o script for concluído, ele solicitará a reinicialização do computador para que as alterações entrem em vigor.
+7. Copie o SIDs.txt que é gerado no $env:SYSTEMDRIVE\PAM para a pasta semelhante no CORPDC.
+   * Você precisará dessa lista de SIDs no CORPDC, para configurar permissões em uma etapa subsequente para que os usuários PRIV possam ler as propriedades de usuário CORP.
+8. Quando o script for concluído, ele solicitará a reinicialização do computador para que as alterações entrem em vigor.
 
 > [!div class="step-by-step"]
 > [Etapa 2 »](sp1-step2-configuring-corp-domain.md)

@@ -5,24 +5,27 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 09/13/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: bfc7cb64-60c7-4e35-b36a-bbe73b99444b
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: d6cd6c88992dc3c7dc80cd93d21907319ece0136
-ms.sourcegitcommit: 2bbb6815b7dfae877eec966c1dc40ea8da847d62
+ms.openlocfilehash: aeaf82e6875739cb6ff8ee7b7d96ced55e07adab
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96522142"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010737"
 ---
 # <a name="planning-a-bastion-environment"></a>Planejando um ambiente de bastiões
 
-A adição de um ambiente de bastiões com uma floresta administrativa dedicada a um Active Directory permite que as organizações gerenciem facilmente contas administrativas, estações de trabalho e grupos em um ambiente que tem controles de segurança mais fortes que seu ambiente de produção existente.
+A adição de um ambiente de bastiões com uma floresta administrativa dedicada a um Active Directory permite que as organizações gerenciem contas administrativas, estações de trabalho e grupos em um ambiente com controles de segurança mais fortes do que o ambiente de produção existente.
 
-Essa arquitetura permite uma série de controles que não são possíveis nem facilmente configurados em uma arquitetura de floresta única. Isso inclui o provisionamento de contas como usuários padrão não privilegiados na floresta administrativa que são altamente privilegiados no ambiente de produção, possibilitando uma maior imposição técnica de governança. Essa arquitetura também permite o uso do recurso de autenticação seletiva de uma relação de confiança como um meio de restringir logons (e a exposição de credenciais) apenas para hosts autorizados. Em situações em que se deseje um nível maior de segurança para a floresta de produção sem incorrer em custos e complexidade de uma recompilação completa, uma floresta administrativa pode fornecer um ambiente que aumente o nível de garantia do ambiente de produção.
+> [!NOTE]
+> A abordagem do PAM com um ambiente de bastiões fornecido pelo MIM destina-se a ser usada em uma arquitetura personalizada para ambientes isolados em que o acesso à Internet não está disponível, onde essa configuração é exigida pela regulamentação ou em ambientes isolados de alto impacto como laboratórios de pesquisa offline e tecnologia de controle de supervisão e de aquisição de dados. Se seu Active Directory fizer parte de um ambiente conectado à Internet, consulte [protegendo o acesso privilegiado](/security/compass/overview) para obter mais informações sobre onde começar.
+
+Essa arquitetura habilita controles que não são possíveis ou facilmente configurados em uma única arquitetura de floresta. Isso inclui o provisionamento de contas como usuários padrão não privilegiados na floresta administrativa que são altamente privilegiados no ambiente de produção, possibilitando uma maior imposição técnica de governança. Essa arquitetura também permite o uso do recurso de autenticação seletiva de uma relação de confiança como um meio de restringir logons (e a exposição de credenciais) apenas para hosts autorizados. Em situações em que se deseje um nível maior de segurança para a floresta de produção sem incorrer em custos e complexidade de uma recompilação completa, uma floresta administrativa pode fornecer um ambiente que aumente o nível de garantia do ambiente de produção.
 
 Além da floresta administrativa dedicada, pode-se usar técnicas adicionais. Isso inclui restringir o local em que as credenciais administrativas são expostas, limitar privilégios de função de usuários nessa floresta e garantir que as tarefas administrativas não sejam realizadas em hosts usados para atividades de usuário padrão (por exemplo, email e navegação na Web).
 
@@ -40,9 +43,9 @@ De acordo com o [Modelo de camada](tier-model-for-partitioning-administrative-pr
 
 ### <a name="restricted-trust"></a>Relação de confiança restrita
 
-A floresta *CORP* de produção deve confiar na floresta *PRIV* administrativa, mas não o oposto. Isso pode ser uma relação de confiança de domínio ou uma relação de confiança de floresta. O domínio da floresta de administrador não precisa confiar nos domínios e florestas gerenciadas para gerenciar o Active Directory, embora outros aplicativos possam exigir uma relação de confiança bidirecional, validação de segurança e testes.
+A floresta *CORP* de produção deve confiar na floresta *PRIV* administrativa, mas não o oposto. Essa relação de confiança pode ser uma relação de confiança de domínio ou uma floresta. O domínio da floresta de administrador não precisa confiar nos domínios e florestas gerenciadas para gerenciar o Active Directory, embora outros aplicativos possam exigir uma relação de confiança bidirecional, validação de segurança e testes.
 
-A autenticação seletiva deve ser usada para garantir que as contas na floresta de administrador usam apenas os hosts de produção apropriados. Para manter os controladores de domínio e direitos de delegação no Active Directory, isso geralmente exige a concessão do direito “Autorizado a fazer logon” de controladores de domínio a contas de administrador da Camada 0 designadas na floresta de administrador. Veja [Configuring Selective Authentication Settings](https://technet.microsoft.com/library/cc816580.aspx)para obter mais informações.
+A autenticação seletiva deve ser usada para garantir que as contas na floresta de administrador usam apenas os hosts de produção apropriados. Para manter os controladores de domínio e direitos de delegação no Active Directory, isso geralmente exige a concessão do direito “Autorizado a fazer logon” de controladores de domínio a contas de administrador da Camada 0 designadas na floresta de administrador. Consulte [definindo configurações de autenticação seletiva](https://technet.microsoft.com/library/cc816580.aspx) para obter mais informações.
 
 ## <a name="maintain-logical-separation"></a>Mantendo uma separação lógica
 
@@ -66,7 +69,7 @@ Como a administração de aplicativos será transferida para o ambiente de basti
 
 - Implante Serviços de Domínio do Active Directory em vários computadores no ambiente de bastiões. Pelo menos dois são necessários para garantir a autenticação contínua, mesmo que um servidor seja reiniciado temporariamente para a manutenção agendada. Podem ser necessários computadores adicionais para uma carga maior ou para gerenciar recursos e administradores localizados em várias regiões geográficas.
 
-- Prepare contas de vigilância na floresta existente e na floresta de administrador dedicada, para fins de emergência.
+- Prepare contas de vidro na floresta existente e na floresta de administrador dedicada para fins de emergência.
 
 - Implante o SQL Server e o Serviço do MIM em vários computadores no ambiente de bastiões.
 
@@ -86,7 +89,7 @@ Ao criar o ambiente de bastiões, antes de instalar o Microsoft Identity Manager
 
 - **Contas de vigilância** só devem poder fazer logon nos controladores de domínio do ambiente de bastiões.
 
-- Os **administradores “Cartão Vermelho”** provisionam outras contas e realizam a manutenção não agendada. Nenhum acesso a sistemas ou florestas existentes fora do ambiente de bastiões é fornecido a essas contas. As credenciais, por exemplo, um cartão inteligente, devem ser fisicamente protegidas, e o uso dessas contas deve ser registrado.
+- Os **administradores “Cartão Vermelho”** provisionam outras contas e realizam a manutenção não agendada. Nenhum acesso a sistemas ou florestas existentes fora do ambiente de bastiões é fornecido a essas contas. As credenciais, por exemplo, um cartão inteligente, devem estar fisicamente protegidas e o uso dessas contas deve ser registrado em log.
 
 - As **contas de serviço** necessárias no Microsoft Identity Manager, no SQL Server e em outros softwares.
 
@@ -162,27 +165,27 @@ Depois de estabelecer a relação de confiança, configure cada domínio para ha
 
 Há sete requisitos para habilitar o gerenciamento de um domínio existente.
 
-### <a name="1-a-security-group-on-the-local-domain"></a>1. Um grupo de segurança no domínio local
+### <a name="1-a-security-group-on-the-local-domain"></a>1. um grupo de segurança no domínio local
 
-Deve haver um grupo no domínio existente cujo nome é o nome NetBIOS do domínio seguido de três cifrões, por exemplo, *CONTOSO$$$* . O escopo do grupo deve ser *domínio local* e o tipo de grupo deve ser *Segurança*. Isso será necessário para a criação dos grupos na floresta administrativa dedicada com o mesmo Identificador de segurança dos grupos neste domínio. Crie esse grupo com o seguinte comando do PowerShell, executado por um administrador do domínio existente e em uma estação de trabalho ingressada no domínio existente:
+Deve haver um grupo no domínio existente cujo nome é o nome NetBIOS do domínio seguido de três cifrões, por exemplo, *CONTOSO$$$*. O escopo do grupo deve ser *domínio local* e o tipo de grupo deve ser *Segurança*. Isso será necessário para a criação dos grupos na floresta administrativa dedicada com o mesmo Identificador de segurança dos grupos neste domínio. Crie esse grupo com o seguinte comando do PowerShell, executado por um administrador do domínio existente e execute em uma estação de trabalho ingressada no domínio existente:
 
 ```PowerShell
 New-ADGroup -name 'CONTOSO$$$' -GroupCategory Security -GroupScope DomainLocal -SamAccountName 'CONTOSO$$$'
 ```
 
-### <a name="2-success-and-failure-auditing"></a>2. Auditoria de êxito e falha
+### <a name="2-success-and-failure-auditing"></a>2. auditoria de êxito e falha
 
 As configurações de política de grupo no controlador de domínio para a auditoria devem incluir a auditoria de êxito e de falha do gerenciamento de contas de auditoria e do acesso do serviço de diretório da auditoria. Isso pode ser feito com o console de Gerenciamento de Política de Grupo, executado por um administrador do domínio existente e em uma estação de trabalho ingressada no domínio existente:
 
-3. Vá para **Iniciar** > **Ferramentas Administrativas** > **Gerenciamento de Política de Grupo**.
+3. Acesse **Iniciar**  >  **Ferramentas administrativas**  >  **política de grupo Gerenciamento**.
 
-4. Navegue até **Floresta: contoso.local** > **Domínios** > **contoso.local** > **Controladores de Domínio** > **Política de Controladores de Domínio Padrão**. Será exibida uma mensagem informativa.
+4. Navegue até **floresta: contoso. local**  >  **domínios**  >  **contoso. local**  >  **controladores** de domínio  >  **política de controladores de domínio padrão**. Será exibida uma mensagem informativa.
 
     ![Política de controladores de domínio padrão – captura de tela](media/pam-group-policy-management.jpg)
 
 5. Clique com o botão direito do mouse em **Política de Controladores de Domínio Padrão** e selecione **Editar**. Uma nova janela será exibida.
 
-6. Na janela do Editor de Gerenciamento de Política de Grupo, na árvore Política de Controladores de Domínio Padrão, navegue até **Configuração do Computador** > **Políticas** > **Configurações do Windows** > **Configurações de Segurança** > **Políticas Locais** > **Política de Auditoria**.
+6. Na janela Editor de gerenciamento de política de grupo, na árvore de política controladores de domínio padrão, navegue até **configuração do computador**  >  **políticas**  >  **configurações do Windows** configurações de  >  **segurança**  >  **políticas locais**  >  **política de auditoria**.
 
     ![Editor de gerenciamento de política de grupo – captura de tela](media/pam-group-policy-management-editor.jpg)
 
@@ -200,7 +203,7 @@ As configurações de política de grupo no controlador de domínio para a audit
 
 A mensagem “A atualização da Política de Computador foi concluída com sucesso." deve aparecer após alguns minutos.
 
-### <a name="3-allow-connections-to-the-local-security-authority"></a>3. Permitir conexões com a Autoridade de Segurança Local
+### <a name="3-allow-connections-to-the-local-security-authority"></a>3. permitir conexões com a autoridade de segurança local
 
 Os controladores de domínio devem permitir RPC em conexões TCP/IP para LSA (Autoridade de Segurança Local) no ambiente de bastiões. Em versões mais antigas do Windows Server, o suporte a TCP/IP no LSA deve ser habilitado no Registro:
 
@@ -208,7 +211,7 @@ Os controladores de domínio devem permitir RPC em conexões TCP/IP para LSA (Au
 New-ItemProperty -Path HKLM:SYSTEM\\CurrentControlSet\\Control\\Lsa -Name TcpipClientSupport -PropertyType DWORD -Value 1
 ```
 
-### <a name="4-create-the-pam-domain-configuration"></a>4. Criar a configuração de domínio do PAM
+### <a name="4-create-the-pam-domain-configuration"></a>4. criar a configuração de domínio do PAM
 
 O cmdlet `New-PAMDomainConfiguration` deve ser executado no computador do Serviço do MIM no domínio administrativo. Os parâmetros para esse comando são o nome de domínio do domínio existente e as credenciais de um administrador desse domínio.
 
@@ -216,7 +219,7 @@ O cmdlet `New-PAMDomainConfiguration` deve ser executado no computador do Servi�
  New-PAMDomainConfiguration -SourceDomain "contoso" -Credentials (get-credential)
 ```
 
-### <a name="5-give-read-permissions-to-accounts"></a>5. Conceder permissões de leitura de contas
+### <a name="5-give-read-permissions-to-accounts"></a>5. conceder permissões de leitura para contas
 
 As contas na floresta de bastiões usadas para estabelecer funções (administradores que usam os cmdlets `New-PAMUser` e `New-PAMGroup` ), bem como a conta usada pelo serviço do monitor do MIM, precisam ter permissões de leitura naquele domínio.
 
@@ -230,22 +233,22 @@ As etapas a seguir permitem o acesso de leitura para o usuário *PRIV\Administra
 
 4. Na guia Usuários e grupos selecionados, clique em **Adicionar**.
 
-5. No pop-up Selecionar Usuários, Computadores ou Grupos, clique em **Locais** e altere o local para *priv.contoso.local*. No nome do objeto, digite *Administradores de Domínio* e clique em **Verificar Nomes**. Quando um pop-up for exibido, para o nome de usuário, digite *priv\administrator* e a senha.
+5. No pop-up Selecionar Usuários, Computadores ou Grupos , clique em **Locais** e altere o local para *priv.contoso.local*. No nome do objeto, digite *Admins* . do domínio e clique em **verificar nomes**. Quando um pop-up aparecer para o nome de usuário, digite *priv\administrator* e a senha.
 
-6. Após Administradores de Domínio, digite *; MIMMonitor*. Depois que os nomes Administradores de Domínio e MIMMonitor forem sublinhados, clique em **OK** e em **Avançar**.
+6. Após Administradores de Domínio, digite *; MIMMonitor*. Depois que os nomes de Administradores de Domínio e MIMMonitor forem sublinhados, clique em **OK** e, em seguida, clique em **Avançar**.
 
 7. Na lista de tarefas comuns, selecione **Ler todas as informações do usuário**, clique em **Avançar** e em **Concluir**.
 
 18. Feche Usuários e Computadores do Active Directory.
 
-### <a name="6-a-break-glass-account"></a>6. Uma conta de vigilância
+### <a name="6-a-break-glass-account"></a>6. uma conta de vidro
 
 Se a meta do projeto de gerenciamento de acesso privilegiado é reduzir o número de contas com privilégios de Administrador de Domínio atribuídos permanentemente ao domínio, deve haver uma conta de *vigilância* no domínio, caso haja um problema posteriormente com a relação de confiança. Deve-se ter contas de acesso de emergência à floresta de produção em cada domínio e elas só devem ter a capacidade de fazer logon em controladores de domínio. Para organizações com vários sites, contas adicionais podem ser necessárias para redundância.
 
-### <a name="7-update-permissions-in-the-bastion-environment"></a>7. Permissões de atualização no ambiente de bastiões
+### <a name="7-update-permissions-in-the-bastion-environment"></a>7. permissões de atualização no ambiente de bastiões
 
 Examine as permissões para o objeto *AdminSDHolder* no contêiner Sistema desse domínio. O objeto *AdminSDHolder* tem uma ACL (lista de controle de acesso) exclusiva, que é usada para controlar as permissões de entidades de segurança que são membros de grupos do Active Directory com privilégios internos. Observe que, se forem feitas alterações às permissões padrão que afetariam usuários com privilégios administrativos no domínio, desde que essas permissões não se apliquem a usuários cujas contas estejam no ambiente de bastiões.
 
 ## <a name="select-users-and-groups-for-inclusion"></a>Selecionar usuários e grupos para inclusão
 
-A próxima etapa é definir as funções do PAM, associando os usuários e grupos aos quais eles devem ter acesso. Isso geralmente será um subconjunto dos usuários e grupos da camada identificada como sendo gerenciada no ambiente de bastiões. Encontre mais informações em [Defining roles for Privileged Access Management](defining-roles-for-pam.md) (Definindo funções para o Privileged Access Management).
+A próxima etapa é definir as funções do PAM, associando os usuários e grupos aos quais eles devem ter acesso. Esses usuários e grupos normalmente serão um subconjunto dos usuários e grupos da camada identificada como sendo gerenciado no ambiente de bastiões. Encontre mais informações em [Defining roles for Privileged Access Management](defining-roles-for-pam.md) (Definindo funções para o Privileged Access Management).

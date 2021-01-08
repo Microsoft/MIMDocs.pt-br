@@ -1,6 +1,6 @@
 ---
 title: Etapa 7 Configurar o histórico de SID/filtragem de SID
-description: Esta é a Etapa 7 da configuração do Privileged Identity Manager com scripts. Essa etapa aborda a configuração de filtragem e histórico do SID.
+description: Etapa 7 da configuração de Microsoft Identity Manager usando scripts. Essa etapa aborda a configuração de filtragem e histórico do SID.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,20 +11,20 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: cfb49dd3a15fd115021ab58605d5aeee4d73a5c7
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: c09649bbecfb4608391fef1cda3d8da87ded888b
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043708"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010635"
 ---
-# <a name="step-7-set-up-sid-historysid-filtering"></a>Etapa 7 Configurar o histórico de SID/filtragem de SID
+# <a name="step-7-setup-sid-historysid-filtering"></a>Etapa 7 Configurar o histórico de SID/filtragem de SID
 
 > [!div class="step-by-step"]
 > [«Etapa 6](sp1-step6-setup-pam-trust.md)
 > [Etapa 8»](sp1-step8-pam-deployment-verification.md)
 
-**Isso não é necessário para um ambiente somente PRIV** Faça logon no PAMServer com a conta MIMAdmin.
+**Os comandos a seguir não são necessários para um ambiente somente priv** Faça logon no PAMServer com a conta MIMAdmin.
 
 1. Faça logon no controlador de domínio CORP como administrador
 2. Execute o PowerShell como administrador

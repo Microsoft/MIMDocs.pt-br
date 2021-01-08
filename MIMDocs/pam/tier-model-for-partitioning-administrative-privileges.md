@@ -5,28 +5,31 @@ keywords: ''
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/30/2017
+ms.date: 01/05/2021
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: c6e3cd02-1e32-4194-a8ed-3a0b3d022a43
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 4fb5689400d170adc19f15cbbc2d45915cb39fe3
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 25bf28731f14331da386ae9f59b041c8c9ee33a1
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79043589"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010567"
 ---
 # <a name="tier-model-for-partitioning-administrative-privileges"></a>Modelo de camada para o particionamento de privilégios administrativos
 
-Este artigo descreve um modelo de segurança que se destina a proteger contra a elevação de privilégio, segregando atividades de privilégio elevado provenientes de regiões de alto risco. Esse modelo fornece uma boa experiência do usuário, ao mesmo tempo que segue as melhores práticas e os princípios de segurança.
+Este artigo descreve um modelo de segurança que se destina a proteger contra a elevação de privilégio, segregando atividades de privilégio elevado provenientes de regiões de alto risco.
+
+> [!IMPORTANT]
+> O modelo neste artigo destina-se somente a ambientes de Active Directory isoladas usando o PAM do MIM.  Para ambientes híbridos, consulte em vez disso as diretrizes no [modelo de acesso empresarial](/security/compass/privileged-access-access-model).
 
 ## <a name="elevation-of-privilege-in-active-directory-forests"></a>Elevação de privilégio em florestas do Active Directory
 
 As contas de usuário, de serviços ou de aplicativos que receberam privilégios administrativos permanentes em florestas do AD (Active Directory) do Windows Server apresentam uma quantidade significativa de risco à missão e aos negócios da organização. Em geral, essas contas são alvo de invasores, pois, se forem comprometidas, o invasor terá direito de se conectar a outros servidores ou aplicativos no domínio.
 
-O modelo de camada cria divisões entre os administradores com base nos recursos que eles gerenciam. Os administradores com controle das estações de trabalho do usuário são separados daqueles que controlam aplicativos ou que gerenciam identidades corporativas. Saiba mais sobre esse modelo em [Securing privileged access reference material](https://aka.ms/tiermodel) (Protegendo materiais de referência de acesso privilegiado).
+O modelo de camada cria divisões entre os administradores com base nos recursos que eles gerenciam. Os administradores com controle das estações de trabalho do usuário são separados daqueles que controlam aplicativos ou que gerenciam identidades corporativas.
 
 ## <a name="restricting-credential-exposure-with-logon-restrictions"></a>Restringindo a exposição de credencial com restrições de logon
 
@@ -60,4 +63,4 @@ Restrições de logon podem ser aplicadas com:
 ## <a name="next-steps"></a>Próximas etapas
 
 - O próximo artigo, [Planning a bastion environment](planning-bastion-environment.md) (Planejando um ambiente de bastiões), descreve como adicionar uma floresta administrativa dedicada para que o Microsoft Identity Manager estabeleça as contas administrativas.
-- As [Estações de Trabalho com Acesso Privilegiado](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations) fornecem um sistema operacional dedicado para tarefas confidenciais, que é protegido contra ataques da Internet e vetores de ameaça.
+- A [proteção de dispositivos](/security/compass/concept-azure-managed-workstation) fornece um sistema operacional dedicado para tarefas confidenciais protegidas contra ataques da Internet e vetores de ameaça.

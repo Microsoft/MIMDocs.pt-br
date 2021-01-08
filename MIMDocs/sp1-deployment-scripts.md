@@ -1,6 +1,6 @@
 ---
-title: Scripts de implantação do MIM2016 SP1 PAM
-description: Essa página faz parte da série de artigos sobre como configurar o Privileged Identity Manager usando scripts. Ela inclui uma lista das pressuposições sobre o ambiente.
+title: Scripts de implantação do PAM do MIM
+description: Esta página faz parte da série de artigos sobre como configurar Microsoft Identity Manager usando scripts. Ela inclui uma lista das pressuposições sobre o ambiente.
 keywords: ''
 author: billmath
 ms.author: billmath
@@ -11,16 +11,16 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 4b524ae7-6610-40a0-8127-de5a08988a8a
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: eeee6473f7471d4c961a4f4d3113d1af73ddaffe
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: e7eea2c72df3ca9893acc5f6989afa9c488f384e
+ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044405"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010448"
 ---
-# <a name="mim2016-sp1-pam-deployment-scripts"></a>Scripts de implantação do MIM2016 SP1 PAM
+# <a name="mim-pam-deployment-scripts"></a>Scripts de implantação do PAM do MIM
 
-Neste service pack, introduzimos um conjunto de scripts de implantação para facilitar a implantação do PAM. Esses scripts estão disponíveis no centro de download. Antes de tentar usar os scripts, é importante que você verifique se cumpre os requisitos abaixo:
+O MIM 2016 Service Pack 1 introduziu um conjunto de scripts de implantação para facilitar a implantação do PAM. Esses scripts estão disponíveis no centro de download. Antes de tentar usar os scripts, é importante verificar se você atende aos requisitos abaixo:
 
 1. O sistema operacional de todos os servidores deve ser no mínimo o Windows Server 2012 R2.
 2. O DNS deve estar configurado para habilitar a resolução de nomes entre seus controladores de domínio e servidores de componente.
