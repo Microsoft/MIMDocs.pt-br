@@ -11,14 +11,17 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 479db14c-1bfb-4d7c-a344-cd718a01f328
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ca306e7521bbdc2200663889becd91b1ae952d5a
-ms.sourcegitcommit: 89511939730501458295fc8499490b2b378ce637
+ms.openlocfilehash: fb38ee26d829acd5c54bf690f7a80f0659baaa85
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010652"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104064"
 ---
 # <a name="mim-pam-test-lab-environment-overview"></a>Visão geral do ambiente de laboratório de teste do PAM do MIM
+
+> [!NOTE]
+> A abordagem do PAM fornecida pelo MIM destina-se a ser usada em uma arquitetura personalizada para ambientes isolados em que o acesso à Internet não está disponível, em que essa configuração é exigida pela regulamentação ou em ambientes isolados de alto impacto, como laboratórios de pesquisa offline e tecnologia desconectada ou controle de supervisão e ambientes de aquisição de dados. Se seu Active Directory fizer parte de um ambiente conectado à Internet, consulte em vez de [proteger o acesso privilegiado](/security/compass/overview) para obter mais informações sobre onde começar.
 
 Para configurar um laboratório de teste do PAM do MIM, você pode instalar o software em máquinas virtuais.
 O Privileged Access Management trabalha com VMs (máquinas virtuais) com unidades separadas conectadas entre si em uma rede compartilhada. Essas máquinas virtuais podem ser hospedadas pelo Windows 8.1, Windows Server 2012 R2 ou outras plataformas de sistema operacional.

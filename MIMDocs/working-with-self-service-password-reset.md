@@ -9,12 +9,12 @@ ms.date: 05/11/2019
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 94a74f1c-2192-4748-9a25-62a526295338
-ms.openlocfilehash: 41aba931111d6ef46e60dfed173362e59c411dfe
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 16901978fd5b51a4a986b07e580d8162dd159575
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044269"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104116"
 ---
 # <a name="self-service-password-reset-deployment-options"></a>Opções de implantação de Autoatendimento de Redefinição de Senha
 
@@ -32,17 +32,13 @@ Para clientes que ainda não implantaram o Autoatendimento de Redefinição de S
 - O portal de Redefinição de Senha de Autoatendimento do MIM e a tela de logon do Windows agora permitem aos usuários desbloquear suas contas sem alterar suas senhas.
 - Um novo portão de autenticação, Portão de Telefone, foi adicionado ao MIM. Isso permite a autenticação do usuário via meio de chamada de telefone por meio do serviço MFA (Autenticação Multifator do Microsoft Azure).
 
-Builds de versão 2016 do MIM até a versão 4.5.26.0 dependiam de que o cliente baixasse o SDK de MFA do Azure (Software Development Kit de Autenticação Multifator do Azure).  Esse SDK foi preterido e o SDK do MFA do Azure terá suporte para os clientes atuais somente até a data de baixa, em 14 de novembro de 2018. Até essa data, os clientes devem contatar o atendimento ao cliente do Azure para receber seu pacote de credenciais do serviço MFA gerado, pois eles não poderão baixar o SDK do MFA do Azure. 
-
-#### <a name="new-update-current-azure-mfa-configuration-to-azure-multi-factor-authentication-server"></a>NOVO! Atualizar a configuração do MFA do Azure para o Servidor de Autenticação Multifator do Azure
-
-Este [artigo](working-with-mfaserver-for-mim.md) descreve como atualizar seu portal de Autoatendimento de Redefinição de Senha do MIM da implantação e a configuração do PAM, usando o Servidor de Autenticação Multifator do Azure para autenticação multifator.
+Builds de versão 2016 do MIM até a versão 4.5.26.0 dependiam de que o cliente baixasse o SDK de MFA do Azure (Software Development Kit de Autenticação Multifator do Azure).  Esse SDK foi preterido, e os clientes devem se mover para usar o MIM SSPR com o servidor Azure MFA ou a redefinição de senha de autoatendimento do Azure AD. Este [artigo](working-with-mfaserver-for-mim.md) descreve como atualizar seu portal de Autoatendimento de Redefinição de Senha do MIM da implantação e a configuração do PAM, usando o Servidor de Autenticação Multifator do Azure para autenticação multifator.
 
 ## <a name="deploying-mim-self-service-password-reset-portal-using-azure-mfa-for-multi-factor-authentication"></a>Implantação do portal de Autoatendimento de Redefinição de Senha usando o MFA do Azure para Autenticação Multifator
 
 A seção a seguir descreve como implantar o portal de Autoatendimento de Redefinição de Senha do MIM usando o MFA do Azure para a Autenticação Multifator.  Essas etapas são necessárias apenas para clientes que não estão usando o Autoatendimento de Redefinição de Senha do Azure AD para seus usuários.
 
-A Autenticação Multifator do Microsoft Azure é um serviço de autenticação que exige que os usuários verifiquem suas tentativas de entrada com um aplicativo móvel, chamada telefônica ou mensagem de texto. Ele está disponível para uso com o Active Directory do Microsoft Azure e como um serviço para aplicativos corporativos de nuvem e local.
+O Microsoft Azure Multi-Factor Authentication é um serviço de autenticação que exige que os usuários verifiquem suas tentativas de entrada com um aplicativo móvel, chamada telefônica ou mensagem de texto. Ele está disponível para uso com o Active Directory do Microsoft Azure e como um serviço para aplicativos corporativos de nuvem e local.
 
 O Azure MFA fornece um mecanismo de autenticação adicional que pode reforçar os processos de autenticação existentes, como aqueles realizados pelo MIM para assistência de logon de autoatendimento.
 
@@ -75,25 +71,20 @@ Esse cenário requer que você tenha CALs do MIM para seus usuários, bem como u
 ## <a name="prepare-mim-to-work-with-multi-factor-authentication"></a>Preparação do MIM para trabalhar com à autenticação multifator
 Configure a Sincronização do MIM para dar suporte para redefinição de senha e funcionalidade de desbloqueio de conta. Para obter mais informações, consulte [Instalação dos complementos e extensões FIM](https://technet.microsoft.com/library/ff512688%28v=ws.10%29.aspx), [Instalação do FIM SSPR](https://technet.microsoft.com/library/hh322891%28v=ws.10%29.aspx), [Portões de autenticação de SSPR](https://technet.microsoft.com/library/jj134288%28v=ws.10%29.aspx) e [Guia de laboratório de teste de SSPR](https://technet.microsoft.com/library/hh826057%28v=ws.10%29.aspx)
 
-Na próxima seção, você configurará o provedor do Azure MFA no Active Directory do Microsoft Azure. Como parte dessa ação, você gerará um arquivo que contém o material de autenticação que o MFA exige para poder entrar em contato com o Azure MFA.  Para continuar, você precisará de uma assinatura do Azure.
-
-### <a name="register-your-multi-factor-authentication-provider-in-azure"></a>Como registrar o provedor de autenticação multifator no Azure
-
-1.  Crie um [provedor do MFA](/azure/multi-factor-authentication/multi-factor-authentication-get-started-auth-provider).
-
-2. Abra um caso de suporte e solicite o SDK direto para o ASP.net 2.0 C#. O SDK só será fornecido aos usuários atuais do MIM com o MFA, pois o SDK direto foi descontinuado. Novos clientes devem adotar a próxima versão do MIM que será integrada ao servidor MFA.
-
-3. Copie o arquivo ZIP resultante para cada sistema em que o serviço do MIM está instalado.  Esteja ciente de que o arquivo ZIP contém o material para chave que é usado para autenticar o serviço Azure MFA.
 
 ### <a name="update-the-configuration-file"></a>Atualizar o arquivo de configuração
+
+> [!NOTE]
+> Esta seção foi baseada nas diretrizes anteriores usando o arquivo ZIP fornecido pelo SDK do Azure MFA. Em vez disso, use as diretrizes no artigo sobre como [use o Azure servidor de autenticação multifator](working-with-mfaserver-for-mim.md).
+
 
 1. Entre no computador em que Serviço do MIM está instalado, como o usuário que instalou o MIM.
 
 2. Crie uma nova pasta do diretório localizada abaixo do diretório em que o Serviço do MIM foi instalado, como **C:\Program Files\Microsoft Forefront Identity Manager\2010\Service\MfaCerts**.
 
-3. Usando o Windows Explorer, navegue até a pasta **\pf\certs** do arquivo ZIP baixado na seção anterior e copie o arquivo **cert_key.p12** no novo diretório.
+3. Usando o Windows Explorer, navegue até a pasta **\pf\certs** do arquivo zip baixado na seção anterior e copie o arquivo **cert_key. p12** para o novo diretório.
 
-4.  No arquivo zip do SDK, na pasta **\pf**, abra o arquivo **pf_auth.cs**.
+4.  No arquivo zip do SDK, na pasta **\pf**, abra o arquivo **pf_auth. cs**.
 
 5.  Localize estes três parâmetros: `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD`.
 
@@ -103,17 +94,17 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 7.  Copie os valores dos parâmetros `LICENSE_KEY, GROUP_KEY, CERT_PASSWORD` no arquivo pf_aut.cs para seus respectivos xml elementos no arquivo MfaSettings.xml.
 
-8.  No arquivo zip do SDK, sob \pf\certs, extraia o arquivo **cert_key.p12** e digite o caminho completo para ele no arquivo MfaSettings.xml no elemento xml `<CertFilePath>` .
+8.  No arquivo zip do SDK, sob \pf\certs, extraia o arquivo **cert_key.p12** e digite o caminho completo para ele no arquivo MfaSettings.xml no elemento xml `<CertFilePath>`.
 
-9. No elemento `<username>` , insira qualquer nome de usuário.
+9. No elemento `<username>`, insira qualquer nome de usuário.
 
-10. No elemento `<DefaultCountryCode>` , insira seu código de país padrão. No caso de os números de telefone serem registrados para usuários sem um código de país, este é o código de país que eles receberão. Caso um usuário tenha um código de país internacional, ele deve ser incluído no número de telefone registrado.
+10. No elemento `<DefaultCountryCode>`, insira seu código de país padrão. No caso de os números de telefone serem registrados para usuários sem um código de país, este é o código de país que eles receberão. Caso um usuário tenha um código de país internacional, ele deve ser incluído no número de telefone registrado.
 
 11. Salve o arquivo MfaSettings.xml com o mesmo nome no mesmo local.
 
 #### <a name="configure-the-phone-gate-or-the-one-time-password-sms-gate"></a>Configurar a porta de telefone ou o grupo de SMS de senha de uso único
 
-1.  Inicie o Internet Explorer e navegue até o Portal do MIM, autenticando como o administrador do MIM e, em seguida, clique em  **Fluxos de Trabalho** na barra de navegação à esquerda.
+1.  Inicie o Internet Explorer e navegue até o Portal do MIM, autenticando como o administrador do MIM e, em seguida, clique em **Fluxos de Trabalho** na barra de navegação à esquerda.
 
     ![Imagem de navegação do Portal do MIM](media/MIM-SSPR-workflow.jpg)
 
@@ -123,7 +114,7 @@ Na próxima seção, você configurará o provedor do Azure MFA no Active Direct
 
 3.  Clique na guia **Atividades** e, em seguida, role para baixo até **Adicionar atividade**.
 
-4.  Selecione **Porta do Telefone** ou **Portão de SMS de Senha de Uso Único**, clique em **Selecionar** e, em seguida, em **OK**.
+4.  Selecione **Porta do Telefone** ou **Porta de SMS de Senha de Uso Único**, clique em **Selecionar** e em **OK**.
 
 Observação: se você estiver usando o Servidor de MFA do Azure ou outro provedor que gere a senha de uso único, verifique se o campo de comprimento acima tem o mesmo comprimento gerado pelo provedor de MFA.  Para o Servidor de MFA do Azure, o comprimento precisa ser de 6.  O Servidor de MFA do Azure também gera mensagens de texto para que a mensagem SMS seja ignorada.
 
@@ -131,7 +122,7 @@ Agora, os usuários em sua organização podem se registrar para redefinição d
 
 #### <a name="register-users-for-password-reset"></a>Registrar usuários para redefinição de senha
 
-1.  Um usuário inicia um navegador da Web e navega até o Portal de Registro de Redefinição de Senha do MIM.  (Normalmente, este portal estará configurado com a autenticação do Windows).  No portal, eles fornecerão o nome de usuário e a senha novamente para confirmar sua identidade.
+1.  Um usuário inicia um navegador da Web e navega até o Portal de registro de redefinição de senha do MIM.  (Normalmente, este portal estará configurado com a autenticação do Windows).  No portal, eles fornecerão o nome de usuário e a senha novamente para confirmar sua identidade.
 
     Eles precisam entrar no Portal de Registro de Senha e autenticar-se usando o nome de usuário e a senha.
 
@@ -150,7 +141,7 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 
 #### <a name="windows-desktop-login-integrated-password-reset"></a>Redefinição de senha integrada do logon na área de trabalho do Windows
 
-1.  Se o usuário inserir a senha incorreta várias vezes, na tela de entrada, haverá a opção de clicar em **Problemas ao efetuar logon?** . .
+1.  Se o usuário inserir a senha incorreta várias vezes, na tela de entrada, haverá a opção de clicar em **Problemas ao efetuar logon?**. .
 
     ![Imagem de tela de entrada](media/MIM-SSPR-problemsloggingin.JPG)
 
@@ -167,7 +158,7 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
     Se você configurar outros portões também, o usuário será solicitado a fornecer mais informações nas telas subsequentes.
 
     > [!NOTE]
-    > Se o usuário ficar impaciente e clicar em **Avançar** antes de pressionar a tecla jogo-da-velha, a autenticação falhará.
+    > Se o usuário ficar impaciente e clicar em **Avançar** antes de pressionar a tecla sustenido #, a autenticação falhará.
 
 5.  Após a autenticação bem-sucedida, o usuário terá duas opções: desbloquear sua conta e manter senha atual ou definir uma nova senha.
 
@@ -175,7 +166,7 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 
 #### <a name="access-from-the-self-service-portal"></a>Acesso no portal de autoatendimento
 
-1.  Os usuários podem abrir um navegador da Web, navegar até o **Portal de Redefinição de Senha** , digitar o nome de usuário e clicar em **Avançar**.
+1.  Os usuários podem abrir um navegador da Web, navegar até o **Portal de Redefinição de Senha**, digitar o nome de usuário e clicar em **Avançar**.
 
     Se MFA tiver sido configurado, o usuário receberá uma chamada telefônica. No segundo plano, o que está acontecendo é que o Azure MFA então faz um telefonema para o número que o usuário forneceu ao se inscrever para o serviço.
 
@@ -184,7 +175,7 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 2.  Se você configurar outros portões também, o usuário será solicitado a fornecer mais informações nas telas subsequentes.
 
     > [!NOTE]
-    > Se o usuário ficar impaciente e clicar em **Avançar** antes de pressionar a tecla jogo-da-velha, a autenticação falhará.
+    > Se o usuário ficar impaciente e clicar em **Avançar** antes de pressionar a tecla sustenido #, a autenticação falhará.
 
 3.  O usuário precisará escolher se deseja redefinir sua senha ou desbloquear sua conta. Se ele optar por desbloquear a conta, a conta será desbloqueada.
 
@@ -192,7 +183,6 @@ Ao instalar os Suplementos e Extensões do MIM em um computador ingressado no do
 
 4.  Após a autenticação bem-sucedida, o usuário terá duas opções: manter sua senha atual ou definir uma nova senha.
 
-5.  ![Imagem de
-6.  conta do MIM desbloqueada com êxito](media/MIM-SSPR-account-unlock.JPG)
+5.  ![Imagem de desbloqueio da conta do MIM bem-sucedido](media/MIM-SSPR-account-unlock.JPG)
 
 6.  Se o usuário optar por redefinir a senha, será necessário digitar uma nova senha duas vezes e clicar em **Avançar** para alterá-la.

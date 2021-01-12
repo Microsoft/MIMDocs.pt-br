@@ -8,12 +8,12 @@ ms.date: 01/17/2018
 ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 5325fce2-ae35-45b0-9c1a-ad8b592fcd07
-ms.openlocfilehash: bdb02eed8e22b373c6cfa5028153cad6aee9a536
-ms.sourcegitcommit: 80507a128d2bc28ff3f1b96377c61fa97a4e7529
-ms.translationtype: HT
+ms.openlocfilehash: 0d7e9a1111e41008a989ff2bfd52c9d79debf104
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83279956"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104030"
 ---
 # <a name="step-7--elevate-a-users-access"></a>Etapa 7 – elevar o acesso do usuário
 
@@ -36,7 +36,7 @@ Sem privilégios elevados, Julia não pode acessar o recurso privilegiado na flo
 ## <a name="request-privileged-access-from-mim"></a>Solicite acesso privilegiado do MIM.
 
 > [!NOTE]
-> É recomendável que a estação de trabalho seja uma estação de trabalho com privilégios (PAW).  Para saber mais, confira [PAW](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/privileged-access-workstations).
+> É recomendável que a estação de trabalho seja uma estação de trabalho com privilégios (PAW).  Para obter mais informações, consulte [Securing Devices](/security/compass/privileged-access-devices).
 
 1. Em PRIVWKSTN, faça o logon como PRIV\priv.jen.
 2. Clique em **Iniciar**, **Executar** e digite **PowerShell.exe**.

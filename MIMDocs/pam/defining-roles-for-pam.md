@@ -11,16 +11,20 @@ ms.prod: microsoft-identity-manager
 ms.assetid: 1a368e8e-68e1-4f40-a279-916e605581bc
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: f05769a7d1db38ecde200e18e45c6ca29a75b756
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 11ac22be4425ef0b0a67f64c092d1e848ff7ad72
+ms.sourcegitcommit: 41d399b16dc64c43da3cc3b2d77529082fe1d23a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044031"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104081"
 ---
 # <a name="define-roles-for-privileged-access-management"></a>Definir funções do Privileged Access Management
 
 Com o Privileged Access Management, é possível atribuir usuários a funções privilegiadas que eles podem ativar conforme necessário para o acesso Just-In-Time. Essas funções são definidas manualmente e estabelecidas no ambiente de bastiões. Este artigo explica o processo de decidir quais funções serão gerenciadas por meio do PAM e como defini-las com restrições e permissões apropriadas.
+
+> [!IMPORTANT]
+> O modelo neste artigo destina-se somente a ambientes de Active Directory isoladas usando o PAM do MIM.  Para ambientes híbridos, consulte em vez disso as diretrizes no [modelo de acesso empresarial](/security/compass/privileged-access-access-model).
+
 
 Uma abordagem simples para a definição de funções para o gerenciamento de acesso privilegiado é compilar todas as informações em uma planilha. Liste as funções nas funções e use as colunas para identificar as permissões e os requisitos de governança.
 
@@ -42,7 +46,7 @@ Comece identificando todas as funções que você deseja gerenciar com o PAM. Na
 
 Para encontrar as funções apropriadas, considere cada aplicativo no escopo de gerenciamento:
 
-- O aplicativo está na [camada 0, 1 ou 2](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)?
+- O aplicativo está na camada 0, 1 ou 2?
 - Quais são os privilégios que afetam a confidencialidade, integridade ou disponibilidade do aplicativo?
 - O aplicativo tem dependências em outros componentes do sistema? Por exemplo, ele tem dependências em bancos de dados, rede, infraestrutura de segurança, virtualização ou plataforma de hospedagem?
 
@@ -96,8 +100,6 @@ Em alguns casos, um usuário pode ser atribuído permanentemente a uma função.
 
 - Uma conta de usuário na floresta administrativa, com um cartão inteligente ou um cartão inteligente virtual (por exemplo, uma conta com um cartão inteligente offline, necessária para tarefas de manutenção raras)
 
-Para as organizações preocupadas com a possibilidade de roubo ou uso indevido de credenciais, o guia [Using Azure MFA for activation](use-azure-mfa-for-activation.md) (Usando o Azure MFA para ativação) inclui instruções sobre como configurar o MIM para exigir uma verificação adicional fora de banda no momento da ativação de função.
-
 ## <a name="delegate-active-directory-permissions"></a>Delegar permissões do Active Directory
 
 O Windows Server cria automaticamente grupos padrão, como “Administradores de Domínio”, quando novos domínios são criados. Esses grupos simplificam a introdução e podem ser adequados para organizações menores. As organizações maiores, ou aquelas que exigem mais isolamento de privilégios administrativos, devem deixar em branco esses grupos e substituí-los por grupos que fornecem permissões refinadas.
@@ -110,7 +112,7 @@ Uma limitação do grupo Administradores de Domínio é que ele não pode ter me
 
 Em vez de grupos como administradores de domínio, crie novos grupos de segurança que fornecem apenas as permissões necessárias. Em seguida, você deverá usar o MIM para fornecer dinamicamente contas de administrador com essas associações do grupo.
 
-### <a name="service-management-permissions"></a>Permissões de gerenciamento de serviços
+### <a name="service-management-permissions"></a>Permissões de gerenciamento de serviço
 
 A tabela a seguir fornece exemplos de permissões que seriam relevantes para incluir funções para gerenciar o AD.
 
@@ -144,7 +146,7 @@ A tabela a seguir fornece exemplos de permissões que seriam relevantes para inc
 
 ## <a name="example-role-definitions"></a>Exemplo de definições de função
 
-A escolha das definições de função dependem da camada de servidores que está sendo gerenciada. Ela também depende da escolha dos aplicativos gerenciados. Os aplicativos como o Exchange ou os produtos corporativos de terceiros, como SAP, em geral trarão suas próprias definições de função para a administração delegada.
+A escolha das definições de função depende da camada de servidores que estão sendo gerenciados. Ela também depende da escolha dos aplicativos gerenciados. Os aplicativos como o Exchange ou os produtos corporativos de terceiros, como SAP, em geral trarão suas próprias definições de função para a administração delegada.
 
 As seções a seguir fornecem exemplos para cenários corporativos típicos.
 
@@ -170,7 +172,7 @@ Funções adequadas para gerenciar as contas e os recursos da floresta de produ�
 - Administradores de armazenamento
 - Administradores de antimalware para servidores da Camada 0
 - Administradores do SCCM da Camada 0
-- Administradores do SCOM da Camada 0
+- System Center Operations Manager administradores para a camada 0 Operations Manager
 - Administradores de backup para a Camada 0
 - Usuários dos controladores de gerenciamento BMC e fora de banda (para gerenciamento KVM ou noturno) conectados aos hosts da Camada 0
 
@@ -183,7 +185,7 @@ As funções de gerenciamento e backup de servidores na Camada 1 podem incluir:
 - Conta do verificador de segurança
 - Administradores de antimalware para servidores da Camada 1
 - Administradores do SCCM da Camada 1
-- Administradores do SCOM da Camada 1
+- System Center Operations Manager administradores para a camada 1 Operations Manager
 - Administradores de backup para servidores da Camada 1
 - Usuários dos controladores de gerenciamento BMC e fora de banda (para gerenciamento KVM ou noturno) aos hosts da Camada 1
 
@@ -207,5 +209,5 @@ As funções de gerenciamento de computador e usuário não administrativo podem
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Material de referência de proteção de acesso privilegiado](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material)
-- [Usando o MFA do Azure para ativação](use-azure-mfa-for-activation.md)
+- [modelo de acesso empresarial](/security/compass/privileged-access-access-model)
+
