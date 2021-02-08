@@ -12,12 +12,12 @@ ms.assetid: dcacf36c-0670-44d7-9f40-388667235271
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ad660c562b457890ea75d33325ada8d0f63feb8f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 1bc42eb0fb1e54a3425586350ae5ad20495534c5
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757435"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835698"
 ---
 # <a name="get-request"></a>Solicitação GET
 Obtém uma ou mais solicitações de gerenciamento de certificado (MIM) de Microsoft Identity Manager especificado.
@@ -41,14 +41,14 @@ id| Opcional. O GUID de uma solicitação para recuperar.
 
 Propriedade| Descrição
 ---------|--------
-targetuser| Opcional. O usuário de destino da solicitação. Se nenhum destino for especificado, todas as solicitações, independentemente do usuário de destino, serão retornadas. <br/><br/>**Observação** : no momento, há suporte apenas para o valor "Current".
+targetuser| Opcional. O usuário de destino da solicitação. Se nenhum destino for especificado, todas as solicitações, independentemente do usuário de destino, serão retornadas. <br/><br/>**Observação**: no momento, há suporte apenas para o valor "Current".
 status| Opcional. Indica o status da solicitação a recuperar. Os tipos de status possíveis são "aprovado", "cancelado," "concluído," "negado," "em execução," "falha," "nenhum" e "pendente". <br/>Se nenhum status for especificado, todas as solicitações, independentemente do status, serão retornadas.
 
 ### <a name="request-headers"></a>Cabeçalhos de solicitação
-Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="request-body"></a>Corpo da solicitação
-nenhuma.
+Nenhum.
 
 ## <a name="response"></a>Resposta
 Esta seção descreve a resposta.
@@ -63,12 +63,12 @@ Código  |Descrição
 500 | Erro Interno
 
 ### <a name="response-headers"></a>Cabeçalhos de resposta
-Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="response-body"></a>Corpo da resposta
 Em caso de êxito, retorna um ou mais objetos [Request](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx) com as seguintes propriedades:
 
-Name | Descrição
+Nome | Descrição
 -----|------------
 Comentário | O comentário associado à solicitação de MIM CM.
 Concluído | A hora em que a solicitação do MIM CMM foi concluída.
@@ -174,8 +174,8 @@ HTTP/1.1 200 OK
 }
 ```     
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Método Microsoft. CLM. Provision. Femdoperations. FindRequest](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
-- [Enumeração Microsoft. CLM. Shared. RequestPermission](http://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
+- [Método Microsoft. CLM. Provision. Femdoperations. FindRequest](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.provision.findoperations.findrequests.aspx)
+- [Enumeração Microsoft. CLM. Shared. RequestPermission](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requestpermission.aspx)
 - [Classe Microsoft. CLM. Shared. requests. Request](https://msdn.microsoft.com/library/windows/desktop/microsoft.clm.shared.requests.request.aspx)

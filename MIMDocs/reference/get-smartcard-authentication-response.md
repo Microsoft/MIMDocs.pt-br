@@ -12,12 +12,12 @@ ms.assetid: e05ec898-06cd-4c17-a4f4-8f3545af0f14
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: ab320457c5d676cc381306e83f685fe288dc7ef9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 62811bd5d225f981ded6a6439584c2b7730251c1
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757217"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835584"
 ---
 # <a name="get-smart-card-authentication-response"></a>Obter resposta de autenticação de cartão inteligente
 Obtém a resposta a um desafio de autenticação do CSP (provedor de serviços de criptografia) base.
@@ -35,23 +35,23 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/auth
 
 Parâmetro | Descrição
 ---------|------------
-reqid | Necessário. O identificador de solicitação que é específico para o gerenciamento de certificado do MIM (Microsoft Identity Manager) (Gerenciador de certificados).
-scid | Necessário. O identificador do cartão inteligente específico para MIM CM. O scid é obtido do objeto [Microsoft. CLM. Shared. smarters. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+reqid | Obrigatório. O identificador de solicitação que é específico para o gerenciamento de certificado do MIM (Microsoft Identity Manager) (Gerenciador de certificados).
+scid | Obrigatório. O identificador do cartão inteligente específico para MIM CM. O scid é obtido do objeto [Microsoft. CLM. Shared. smarters. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Parâmetros de consulta
 
 Parâmetro | Descrição
 ---------|------------
 atr | Opcional. A cadeia de ATR (resposta para redefinição) do cartão inteligente.
-cardid | Necessário. A ID do cartão inteligente.
-desafio | Necessário. Uma cadeia de caracteres codificada em base 64 que representa o desafio emitido pelo cartão inteligente.
-diversificado | Necessário. Um sinalizador booliano que indica se a chave de administrador do cartão inteligente foi diversificada.
+cardid | Obrigatório. A ID do cartão inteligente.
+desafio | Obrigatório. Uma cadeia de caracteres codificada em base 64 que representa o desafio emitido pelo cartão inteligente.
+diversificado | Obrigatório. Um sinalizador booliano que indica se a chave de administrador do cartão inteligente foi diversificada.
 
 ### <a name="request-headers"></a>Cabeçalhos de solicitação
-Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="request-body"></a>Corpo da solicitação
-nenhuma.
+Nenhum.
 
 ## <a name="response"></a>Resposta
 Esta seção descreve a resposta.
@@ -66,7 +66,7 @@ Código  |Descrição
 500 | Erro Interno
 
 ### <a name="response-headers"></a>Cabeçalhos de resposta
-Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="response-body"></a>Corpo da resposta
 Em caso de sucesso, retorna um BLOB de byte que representa a resposta do desafio.
@@ -88,6 +88,6 @@ HTTP/1.1 200 OK
 "F0Zudm4wPLY="
 ```       
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Microsoft.Clm.Provision.Exeo método cuteOperations. Getbasecspresposta](https://msdn.microsoft.com/library/microsoft.clm.provision.executeoperations.getbasecspresponse.aspx)

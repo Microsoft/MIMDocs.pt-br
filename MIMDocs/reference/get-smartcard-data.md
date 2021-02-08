@@ -12,12 +12,12 @@ ms.assetid: 81f4b7cd-e4d9-4b11-b125-78cc9f183cf0
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 0666a17abe63b0efbccd59aa0b9e0bb5daf80fe5
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 605dfe1359b5706b27682a086f039f53a5ddaa05
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757432"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835681"
 ---
 # <a name="get-smart-card-profiles"></a>Obter perfis de cartão inteligente
 Obtém uma lista de perfis de cartão inteligente para um usuário. A lista inclui as possíveis operações que podem ser executadas pelo usuário atual. Então pode ser iniciada uma solicitação para qualquer uma das operações especificadas.
@@ -36,19 +36,19 @@ GET     |/CertificateManagement/api/v1.0/smartcards <br/> /CertificateManagement
 
 Propriedade| Descrição
 ---------|--------
-smartcarduuid | Opcional. O UUID do cartão inteligente, conforme indicado pelo gerenciamento de certificados (MIM) da Microsoft Identity Manager (eu). O valor corresponde ao campo "UUID" no objeto [Microsoft. CLM. Shared. Smarts. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+smartcarduuid | Opcional. O UUID do cartão inteligente, conforme indicado pelo gerenciamento de certificados (MIM) da Microsoft Identity Manager (eu). O valor corresponde ao campo "UUID" no objeto [Microsoft. CLM. Shared. Smarts. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Parâmetros de consulta
 
 Propriedade| Descrição
 ---------|--------
-cardid | Opcional. O UUID do cartão inteligente, como indicado por MIM CM. O valor corresponde ao campo "UUID" no objeto [Microsoft. CLM. Shared. Smarts. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+cardid | Opcional. O UUID do cartão inteligente, como indicado por MIM CM. O valor corresponde ao campo "UUID" no objeto [Microsoft. CLM. Shared. Smarts. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="request-headers"></a>Cabeçalhos de solicitação
-Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="request-body"></a>Corpo da solicitação
-nenhuma.
+Nenhum.
 
 ## <a name="response"></a>Resposta
 Esta seção descreve a resposta.
@@ -63,12 +63,12 @@ Código  |Descrição
 500 | Erro Interno
 
 ### <a name="response-headers"></a>Cabeçalhos de resposta
-Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="response-body"></a>Corpo da resposta
-Em caso de sucesso, retorna um objeto [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) serializado para JSON com as seguintes propriedades:
+Em caso de sucesso, retorna um objeto [Microsoft.Clm.Shared.Smartcards.Smartcard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) serializado para JSON com as seguintes propriedades:
 
-Name | Descrição
+Nome | Descrição
 -----|-----------
 AssignedUserUuid | O identificador do usuário a quem o cartão inteligente é atribuído.
 Atr | A cadeia de ATR (resposta à redefinição) do cartão inteligente para o cartão que atualmente está sendo inicializado.
@@ -143,6 +143,6 @@ HTTP/1.1 200 OK
 }
 ```     
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Classe Microsoft. CLM. Shared. Smarts. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)

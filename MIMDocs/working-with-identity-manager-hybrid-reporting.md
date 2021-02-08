@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.assetid: 68df2817-2040-407d-b6d2-f46b9a9a3dbb
 ms.suite: ems
-ms.openlocfilehash: fd0efd3e3d5c42f4b67d0abd42f6dab8254573e5
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 0b0a3adcf1651f6a431eec02488e0ab75347b3ca
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79044337"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835567"
 ---
 # <a name="work-with-hybrid-reporting-in-identity-manager"></a>Trabalhar com relatórios híbridos no Identity Manager
 
@@ -79,7 +79,7 @@ Depois que o Agente de Relatório é instalado, os dados de atividade do Identit
 
 3.  Instale o Agente de Relatório fazendo o seguinte:
 
-    a.  Baixe o [arquivo MIMHReportingAgentSetup.exe](http://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) no servidor do Serviço do Microsoft Identity.
+    a.  Baixe o [arquivo MIMHReportingAgentSetup.exe](https://download.microsoft.com/download/7/3/1/731D81E1-8C1D-4382-B8EB-E7E7367C0BF2/MIMHReportingAgentSetup.exe) no servidor do Serviço do Microsoft Identity.
 
     b.  Execute `MIMHReportingAgentSetup.exe`. 
 
