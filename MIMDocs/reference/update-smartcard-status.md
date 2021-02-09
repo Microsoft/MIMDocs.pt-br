@@ -12,12 +12,12 @@ ms.assetid: 598dace3-c6f2-447a-9301-c0b63ee38276
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: fe6d59377ef3218fde0df99365506ef9ec143a6f
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 2c49c86fd57d363bec0eb2fd6d1fbe9ee261ee7a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757490"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835897"
 ---
 # <a name="update-smart-card-status"></a>Atualizar o status do cartão inteligente
 Atualiza o status de um cartão inteligente.
@@ -35,11 +35,11 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}
 
 Parâmetro | Descrição
 ---------|------------
-reqid | Necessário. O identificador de solicitação que é específico para o gerenciamento de certificado do MIM (Microsoft Identity Manager) (Gerenciador de certificados).
-scid | Necessário. O identificador do cartão inteligente específico para MIM CM. O valor corresponde ao campo "UUID" no objeto [Microsoft. CLM. Shared. Smarts. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+reqid | Obrigatório. O identificador de solicitação que é específico para o gerenciamento de certificado do MIM (Microsoft Identity Manager) (Gerenciador de certificados).
+scid | Obrigatório. O identificador do cartão inteligente específico para MIM CM. O valor corresponde ao campo "UUID" no objeto [Microsoft. CLM. Shared. Smarts. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="request-headers"></a>Cabeçalhos de solicitação
-Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="request-body"></a>Corpo da solicitação
 O corpo da solicitação contém as seguintes propriedades:
@@ -61,12 +61,12 @@ Código  |Descrição
 500 | Erro Interno
 
 ### <a name="response-headers"></a>Cabeçalhos de resposta
-Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="response-body"></a>Corpo da resposta
-Em caso de sucesso, retorna um objeto [Microsoft.Clm.Shared.Smartcards.Smartcard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) serializado para JSON com as seguintes propriedades:
+Em caso de sucesso, retorna um objeto [Microsoft.Clm.Shared.Smartcards.Smartcard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) serializado para JSON com as seguintes propriedades:
 
-Name | Descrição
+Nome | Descrição
 -----|-----------
 AssignedUserUuid | O identificador do usuário a quem o cartão inteligente é atribuído.
 Atr | A cadeia de ATR (resposta à redefinição) do cartão inteligente para o cartão que atualmente está sendo inicializado.
@@ -113,6 +113,6 @@ HTTP/1.1 200 OK
 }
 ```       
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Classe Microsoft. CLM. Shared. Smarts. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx)

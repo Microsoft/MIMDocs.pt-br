@@ -14,12 +14,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 04/02/2018
 ms.author: billmath
-ms.openlocfilehash: a26d7f0fdc157f3f4dd8d3fedadaf7d63bac89c9
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 0dcba300f70756dbfa7a29011a37839247e6bf8a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757242"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835923"
 ---
 # <a name="windows-powershell-connector-technical-reference"></a>Referência técnica do Windows PowerShell Connector
 Este artigo descreve o conector do Windows PowerShell. O artigo se aplica aos seguintes produtos:
@@ -28,7 +28,7 @@ Este artigo descreve o conector do Windows PowerShell. O artigo se aplica aos se
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * É necessário usar o hotfix 4.1.3671.0 ou posterior [KB3092178](https://support.microsoft.com/kb/3092178).
 
-Para MIM2016 e FIM2010R2, o conector está disponível para download no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=717495).
+Para MIM2016 e FIM2010R2, o conector está disponível para download no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 ## <a name="overview-of-the-powershell-connector"></a>Visão geral do conector do PowerShell
 O conector do PowerShell o habilita a integrar o serviço de sincronização a sistemas externos que oferecem que APIs baseadas no Windows PowerShell. O conector fornece uma ponte entre os recursos da estrutura do ECMA2 (agente de gerenciamento de conectividade extensível 2) baseada em chamada e o Windows PowerShell. Para obter mais informações sobre a estrutura do ECMA, confira [Extensible Connectivity 2.2 Management Agent Reference](https://msdn.microsoft.com/library/windows/desktop/hh859557.aspx).
@@ -47,7 +47,7 @@ Para criar um conector Windows PowerShell no serviço de sincronização, você 
 
 O conector Windows PowerShell foi desenvolvido para armazenar cada um dos scripts dentro do banco de dados do Serviço de Sincronização. Embora seja possível executar scripts que são armazenados no sistema de arquivos, é mais fácil inserir o corpo de cada script diretamente na configuração do conector.
 
-Para criar um conector PowerShell, em **Serviço de Sincronização** , selecione **Agente de Gerenciamento** e **Criar** . Selecione o conector **PowerShell (Microsoft)** .
+Para criar um conector PowerShell, em **Serviço de Sincronização**, selecione **Agente de Gerenciamento** e **Criar**. Selecione o conector **PowerShell (Microsoft)** .
 
 ![Criar o conector](./media/microsoft-identity-manager-2016-connector-powershell/createconnector.png)
 
@@ -271,11 +271,11 @@ O script de senha recebe os seguintes parâmetros do conector:
 | --- | --- | --- |
 | ConfigParameters |[KeyedCollection][keyk][string, [ConfigParameter][cp]] |Tabela de parâmetros de configuração para o conector. |
 | Credencial |[PSCredential][pscred] |Contém as credenciais inseridas pelo administrador na guia Conectividade. |
-| Partition |[Partição][part] |Partição de diretório em que CSEntry está. |
+| Partição |[Partição][part] |Partição de diretório em que CSEntry está. |
 | CSEntry |[CSEntry][cse] |Entrada do espaço do conector para o objeto que recebeu uma alteração ou redefinição de senha. |
-| OperationType |String |Indica se a operação é uma redefinição ( **SetPassword** ) ou uma alteração ( **ChangePassword** ). |
-| PasswordOptions |[PasswordOptions][pwdopt] |Sinalizadores que especificam o comportamento de redefinição de senha pretendido. Esse parâmetro estará disponível somente se OperationType for **SetPassword** . |
-| OldPassword |String |Populado com a senha antiga do objeto para alterações de senha. Esse parâmetro estará disponível somente se OperationType for **ChangePassword** . |
+| OperationType |String |Indica se a operação é uma redefinição (**SetPassword**) ou uma alteração (**ChangePassword**). |
+| PasswordOptions |[PasswordOptions][pwdopt] |Sinalizadores que especificam o comportamento de redefinição de senha pretendido. Esse parâmetro estará disponível somente se OperationType for **SetPassword**. |
+| OldPassword |String |Populado com a senha antiga do objeto para alterações de senha. Esse parâmetro estará disponível somente se OperationType for **ChangePassword**. |
 | NewPassword |String |Populado com a nova senha do objeto que o script deve definir. |
 
 Não é comum que o script de senha retorne algum resultado para o pipeline do Windows PowerShell. Se ocorrer um erro no script de senha, o script deverá lançar uma das seguintes exceções para informar o Serviço de Sincronização sobre o problema:
@@ -312,7 +312,7 @@ Acesso de leitura para as seguintes pastas do sistema de arquivos:
 Substitua o nome do conector Windows PowerShell para o espaço reservado {ConnectorName}.
 
 ## <a name="troubleshooting"></a>Solução de problemas
-* Para saber mais sobre como habilitar o registro em log para solucionar problemas do conector, confira [How to Enable ETW Tracing for Connectors](http://go.microsoft.com/fwlink/?LinkId=335731).
+* Para saber mais sobre como habilitar o registro em log para solucionar problemas do conector, confira [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).
 
 <!--Reference style links - using these makes the source content way more readable than using inline links-->
 [cpp]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.configparameterpage.aspx
@@ -343,4 +343,4 @@ Substitua o nome do conector Windows PowerShell para o espaço reservado {Connec
 [pwdex1]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordpolicyviolationexception.aspx
 [pwdex2]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordillformedexception.aspx
 [pwdex3]: https://msdn.microsoft.com/library/windows/desktop/microsoft.metadirectoryservices.passwordextensionexception.aspx
-[samp]: http://go.microsoft.com/fwlink/?LinkId=394291
+[samp]: https://go.microsoft.com/fwlink/?LinkId=394291

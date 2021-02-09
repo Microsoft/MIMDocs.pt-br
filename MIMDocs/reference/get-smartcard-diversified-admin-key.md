@@ -12,12 +12,12 @@ ms.assetid: 68beeec1-8350-4e0e-946f-d94606e1e756
 audience: developer
 ms.reviewer: mwahl
 ms.suite: ems
-ms.openlocfilehash: 6668ac823607436c2472a076f7c5ea2d9c727b04
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 5e21cd92496fd31ec12044f3b69599bf96bef62a
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757216"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835602"
 ---
 # <a name="get-smart-card-diversified-admin-key"></a>Obter chave de administração diversificada de cartão inteligente
 Obtém a chave de administração diversificada para o cartão inteligente especificado.
@@ -38,21 +38,21 @@ GET     |/CertificateManagement/api/v1.0/requests/{reqid}/smartcards/{scid}/dive
 
 Parâmetro | Descrição
 ---------|------------
-reqid | Necessário. O identificador de solicitação que é específico para o gerenciamento de certificado do MIM (Microsoft Identity Manager) (Gerenciador de certificados).
-scid | Necessário. O identificador do cartão inteligente específico para MIM CM. O scid é obtido do objeto [Microsoft. CLM. Shared. smarters. SmartCard](http://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
+reqid | Obrigatório. O identificador de solicitação que é específico para o gerenciamento de certificado do MIM (Microsoft Identity Manager) (Gerenciador de certificados).
+scid | Obrigatório. O identificador do cartão inteligente específico para MIM CM. O scid é obtido do objeto [Microsoft. CLM. Shared. smarters. SmartCard](https://msdn.microsoft.com/library/microsoft.clm.shared.smartcards.smartcard.aspx) .
 
 ### <a name="query-parameters"></a>Parâmetros de consulta
 
 Parâmetro | Descrição
 ---------|------------
 atr | Opcional. A cadeia de ATR (resposta para redefinição) do cartão inteligente.
-cardid | Necessário. A ID do cartão.
+cardid | Obrigatório. A ID do cartão.
 
 ### <a name="request-headers"></a>Cabeçalhos de solicitação
-Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de solicitação comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="request-body"></a>Corpo da solicitação
-nenhuma.
+Nenhum.
 
 ## <a name="response"></a>Resposta
 Esta seção descreve a resposta.
@@ -68,7 +68,7 @@ Código  |Descrição
 
 
 ### <a name="response-headers"></a>Cabeçalhos de resposta
-Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm* .
+Para cabeçalhos de resposta comuns, consulte [cabeçalhos de solicitação e resposta http](certificate-management-rest-api-service-details.md#http-request-and-response-headers) nos *detalhes do serviço da API REST cm*.
 
 ### <a name="response-body"></a>Corpo da resposta
 Em caso de sucesso, retorna um BLOB que representa a chave de administração diversificada.
@@ -90,6 +90,6 @@ HTTP/1.1 200 OK
 "mBVA+HopB/gc+6FuKsQqx+OX01hK1WQI"
 ```       
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Método Microsoft. CLM. Provision. RequestOperations. createsmartcard (cadeia de caracteres, Cadeia de caracteres, solicitação)](https://msdn.microsoft.com/library/windows/desktop/bb456812.aspx)
