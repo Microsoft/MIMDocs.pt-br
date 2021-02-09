@@ -15,12 +15,12 @@ ms.topic: article
 ms.prod: microsoft-identity-manager
 ms.date: 06/26/2018
 ms.author: billmath
-ms.openlocfilehash: bb6460ebf4106aa8c9295be0db3ce9da426b0778
-ms.sourcegitcommit: 78c2d7e5ba4bec276d5a9bf8860bc126d9bd9c33
+ms.openlocfilehash: 5b19b4fd9d45797fcc6b02091386a27aec3c0abf
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94492490"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835716"
 ---
 # <a name="generic-ldap-connector-technical-reference"></a>Referência técnica do Conector LDAP genérico
 Este artigo descreve o Conector LDAP genérico. O artigo se aplica aos seguintes produtos:
@@ -29,7 +29,7 @@ Este artigo descreve o Conector LDAP genérico. O artigo se aplica aos seguintes
 * Forefront Identity Manager 2010 R2 (FIM2010R2)
   * É necessário usar o hotfix 4.1.3671.0 ou posterior [KB3092178](https://support.microsoft.com/kb/3092178).
 
-Para MIM2016 e FIM2010R2, o conector está disponível para download no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/?LinkId=717495).
+Para MIM2016 e FIM2010R2, o conector está disponível para download no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=717495).
 
 Ao fazer referência ao IETF RFCs, este documento usa o formato (RFC [Número de RFC]/[seção no documento RFC]), por exemplo, (RFC 4512/4.3).
 Você pode encontrar mais informações em [https://tools.ietf.org/](https://tools.ietf.org/) . No painel esquerdo, insira um número de RFC na caixa de diálogo de **busca de documento** e teste-o para verificar se ele é válido.
@@ -47,7 +47,7 @@ Partindo de um ponto de vista detalhado, os seguintes recursos têm suporte na v
 | --- | --- |
 | Fonte de dados conectada |O Conector recebe suporte com todos os servidores LDAP v3 (compatíveis com RFC 4510). Ele foi testado com as seguintes opções:  <li>Microsoft Active Directory Lightweight Directory Services (AD LDS)</li><li>Catálogo Global do Microsoft Active Directory (AD GC)</li><li>Directory Server 389</li><li>Apache Directory Server</li><li>IBM Tivoli DS</li><li>Isode Directory</li><li>NetIQ eDirectory</li><li>Novell eDirectory</li><li>Open DJ</li><li>Open DS</li><li>Open LDAP (openldap.org)</li><li>Oracle (antiga Sun) Directory Server Enterprise Edition</li><li>RadiantOne Virtual Directory Server (VDS)</li><li>Sun One Directory Server</li><li>Microsoft Active Directory Domain Services (AD DS)</li><ul><li>Para a maioria dos cenários, você deve usar o conector de Active Directory interno, como alguns recursos podem não funcionar</li></ul>**Não há suporte para diretórios ou recursos notáveis conhecidos:**<li>Microsoft Active Directory Domain Services (AD DS)<ul><li>Serviço de notificação de alteração de senha (PCNS)</li><li>Provisionamento do Exchange</li><li>Exclusão de dispositivos ativos de sincronização</li><li>Suporte para nTDescurityDescriptor</li></ul></li><li>Oracle Internet Directory (OID)</li> |
 | Cenários |<li>Gerenciamento de ciclo de vida do objeto</li><li>Gerenciamento de grupos</li><li>Gerenciamento de senha</li> |
-| Operations |As seguintes operações têm suporte em todos os diretórios LDAP:  <li>Importação completa</li><li>Exportação</li>As seguintes operações só têm suporte em diretórios especificados: <li>Importação delta</li><li>Definir senha, alterar senha</li> |
+| Operações |As seguintes operações têm suporte em todos os diretórios LDAP:  <li>Importação completa</li><li>Exportação</li>As seguintes operações só têm suporte em diretórios especificados: <li>Importação delta</li><li>Definir senha, alterar senha</li> |
 | Esquema |<li>O esquema é detectado no esquema LDAP (RFC3673 e RFC4512/4.2)</li><li>Oferece suporte a classes estruturais, classes auxiliares e à classe de objeto extensibleObject (RFC4512/4.3)</li> |
 
 ### <a name="delta-import-and-password-management-support"></a>Suporte de gerenciamento de importação delta e de senha
@@ -272,4 +272,4 @@ Para Novell eDirectory, a importação de delta não está detectando exclusões
 Para diretórios com um log de alterações de delta com base na data/hora, é altamente recomendável executar uma importação completa em horários periódicos. Esse processo permite que o mecanismo de sincronização localize diferenças entre o servidor LDAP e o que está atualmente no espaço do conector.
 
 ## <a name="troubleshooting"></a>Solução de problemas
-* Para saber mais sobre como habilitar o registro em log para solucionar problemas do conector, confira [How to Enable ETW Tracing for Connectors](http://go.microsoft.com/fwlink/?LinkId=335731).
+* Para saber mais sobre como habilitar o registro em log para solucionar problemas do conector, confira [How to Enable ETW Tracing for Connectors](https://go.microsoft.com/fwlink/?LinkId=335731).

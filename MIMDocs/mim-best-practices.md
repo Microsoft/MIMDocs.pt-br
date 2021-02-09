@@ -9,12 +9,12 @@ ms.date: 01/05/2018
 ms.topic: reference
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: 72b77034d5591d0bc2ab420f185acee719fe8324
-ms.sourcegitcommit: a96944ac96f19018c43976617686b7c3696267d7
-ms.translationtype: HT
+ms.openlocfilehash: 71ac80f10fd01e7c784ec1462a9383295e5f8ddb
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79042994"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835860"
 ---
 # <a name="microsoft-identity-manager-2016-best-practices"></a>Práticas recomendadas do Microsoft Identity Manager 2016 | Microsoft Docs
 
@@ -26,17 +26,17 @@ Este tópico descreve as práticas recomendadas para implantar e operar o Micros
 
 A configuração do servidor de linguagem SQL é essencial para que o sistema tenha um desempenho otimizado. Em implementações em grande escala, o desempenho otimizado do MIM depende da aplicação das práticas recomendadas em um servidor que executa o SQL. Para obter mais informações, consulte os seguintes tópicos sobre as práticas recomendadas do SQL:
 
--   [As 10 Melhores Práticas Recomendadas de Armazenamento](http://go.microsoft.com/fwlink/?LinkID=183663)
+-   [As 10 Melhores Práticas Recomendadas de Armazenamento](https://go.microsoft.com/fwlink/?LinkID=183663)
 
--   [Otimização do Desempenho de tempdb](http://go.microsoft.com/fwlink/?LinkID=188267)
+-   [Otimização do Desempenho de tempdb](https://go.microsoft.com/fwlink/?LinkID=188267)
 
--   [Artigo de Práticas Recomendadas do SQL Server](http://go.microsoft.com/fwlink/?LinkID=188268)
+-   [Artigo de Práticas Recomendadas do SQL Server](https://go.microsoft.com/fwlink/?LinkID=188268)
 
--   [Reorganizar e Recompilar Índices](http://go.microsoft.com/fwlink/?LinkID=188269)
+-   [Reorganizar e Recompilar Índices](https://go.microsoft.com/fwlink/?LinkID=188269)
 
 ### <a name="presize-data-and-log-files"></a>Arquivos de dados dimensionados previamente e de log
 
-Não confie no crescimento automático. Em vez disso, gerencie o crescimento desses arquivos manualmente. É possível utilizar o crescimento automático por razões de segurança, mas é necessário gerenciar de maneira proativa o crescimento dos arquivos de dados. Para tamanhos de amostra do banco de dados do MIM, consulte o [Guia de Planejamento de Capacidade do FIM](http://go.microsoft.com/fwlink/?LinkID=185246).
+Não confie no crescimento automático. Em vez disso, gerencie o crescimento desses arquivos manualmente. É possível utilizar o crescimento automático por razões de segurança, mas é necessário gerenciar de maneira proativa o crescimento dos arquivos de dados. Para tamanhos de amostra do banco de dados do MIM, consulte o [Guia de Planejamento de Capacidade do FIM](https://go.microsoft.com/fwlink/?LinkID=185246).
 
 ### <a name="to-presize-sql-data-and-log-files"></a>Dimensionar previamente os dados do SQL e os arquivos de log
 
@@ -64,7 +64,7 @@ Para obter um desempenho otimizado, recomenda-se a criação de um arquivo de da
 
 ### <a name="ensure-adequate-space-for-log-files"></a>Assegure-se de que há espaço suficiente para os arquivos de log
 
-É importante entender os requisitos de disco do modelo de recuperação. O modo de recuperação simples pode ser apropriado durante o carregamento inicial do sistema para limitar o uso de espaço em disco, mas os dados criados após o último backup ficará exposto à perda de dados. Ao utilizar o modo de recuperação completa, é necessário gerenciar o uso do disco por meio de backups, o que inclui backups frequentes do log de transações para evitar o uso excessivo do espaço em disco. Para obter mais informações, consulte [Visão geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370).
+É importante entender os requisitos de disco do modelo de recuperação. O modo de recuperação simples pode ser apropriado durante o carregamento inicial do sistema para limitar o uso de espaço em disco, mas os dados criados após o último backup ficará exposto à perda de dados. Ao utilizar o modo de recuperação completa, é necessário gerenciar o uso do disco por meio de backups, o que inclui backups frequentes do log de transações para evitar o uso excessivo do espaço em disco. Para obter mais informações, consulte [Visão geral do Modelo de Recuperação](https://go.microsoft.com/fwlink/?LinkID=185370).
 
 ### <a name="limit-sql-server-memory"></a>Limitar a memória do SQL Server
 
@@ -112,7 +112,7 @@ Em geral, você deve trabalhar com o administrador do banco de dados para criar 
 - Caso os backups de log incremental não sejam planejados, o banco de dados deverá ser configurado no modo de recuperação simples. 
 - Entenda os efeitos dos diferentes modelos de recuperação, antes de implementar uma estratégia de backup. Conheça os Requisitos de Espaço em Disco para esses modelos. O modo de recuperação completa exige backups de log frequentes para evitar o uso excessivo do espaço em disco. 
 
-Para obter mais informações, consulte [Visão Geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370) e [Guia de Backup e Restauração do FIM 2010](http://go.microsoft.com/fwlink/?LinkID=165864).
+Para obter mais informações, consulte [Visão Geral do Modelo de Recuperação](https://go.microsoft.com/fwlink/?LinkID=185370) e [Guia de Backup e Restauração do FIM 2010](https://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## <a name="create-a-backup-administrator-account-for-the-fim-service-after-installation"></a>Criar uma conta Administrador de Backup para o Serviço do FIM após a instalação
 
@@ -135,11 +135,11 @@ Estas são as práticas recomendadas para configurar o Microsoft Exchange Server
 
 3.  Selecione a caixa de seleção **Exigir que todos os remetentes sejam autenticados**.
 
-Para obter mais informações, consulte [Configurar Restrições de Entrega de Mensagens](http://go.microsoft.com/fwlink/?LinkID=183625).
+Para obter mais informações, consulte [Configurar Restrições de Entrega de Mensagens](https://go.microsoft.com/fwlink/?LinkID=183625).
 
--   Configure a conta de serviço para rejeitar mensagens com tamanhos maiores que 1 MB. Siga as práticas recomendadas para [Configurar Limites de Tamanho de Mensagem](http://go.microsoft.com/fwlink/?LinkID=183626) de uma Caixa de Correio ou uma Pasta Pública Habilitada para Email.
+-   Configure a conta de serviço para rejeitar mensagens com tamanhos maiores que 1 MB. Siga as práticas recomendadas para [Configurar Limites de Tamanho de Mensagem](https://go.microsoft.com/fwlink/?LinkID=183626) de uma Caixa de Correio ou uma Pasta Pública Habilitada para Email.
 
--   Configure a conta de serviço para ter uma cota de armazenamento de caixa de correio de 5 GB. Para obter resultados otimizados, siga as práticas recomendadas listadas na [Configurar as Cotas de Armazenamento de uma Caixa de Correio](http://go.microsoft.com/fwlink/?LinkID=156929).
+-   Configure a conta de serviço para ter uma cota de armazenamento de caixa de correio de 5 GB. Para obter resultados otimizados, siga as práticas recomendadas listadas na [Configurar as Cotas de Armazenamento de uma Caixa de Correio](https://go.microsoft.com/fwlink/?LinkID=156929).
 
 ## <a name="mim-portal"></a>Portal MIM
 
@@ -169,7 +169,7 @@ Para obter mais informações, consulte [Configurar Restrições de Entrega de M
 Esta seção descreve uma série de etapas para aumentar o desempenho do carregamento de dados inicial do sistema externo para o MIM. É importante entender que várias dessas etapas são realizadas apenas durante o preenchimento inicial do sistema. Elas devem ser redefinidas após a conclusão do carregamento. Essa operação é realizada uma única vez e não é uma sincronização contínua.
 
 > [!NOTE]
-> Para saber mais sobre a sincronização de usuários entre o MIM e o AD DS (Active Directory Domain Services), confira o artigo [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Como sincronizar usuários do Active Directory Domain Services para o FIM), na documentação do FIM.
+> Para saber mais sobre a sincronização de usuários entre o MIM e o AD DS (Active Directory Domain Services), confira o artigo [How do I Synchronize Users from Active Directory to FIM](https://go.microsoft.com/fwlink/?LinkID=188277) (Como sincronizar usuários do Active Directory Domain Services para o FIM), na documentação do FIM.
 > 
 > [!IMPORTANT]
 > Verifique se as práticas recomendadas abordadas na seção de configuração do SQL deste guia foram aplicadas. 
@@ -191,7 +191,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = MANUAL
 ```
 
 > [!IMPORTANT]
-> Não implementar esses procedimentos pode gerar um uso excessivo do espaço em disco, o que pode fazer com que ele acabe. É possível encontrar mais detalhes sobre este tópico em [Visão Geral do Modelo de Recuperação](http://go.microsoft.com/fwlink/?LinkID=185370). O [Guia de Backup e Restauração do FIM](http://go.microsoft.com/fwlink/?LinkID=165864) contém mais informações.
+> Não implementar esses procedimentos pode gerar um uso excessivo do espaço em disco, o que pode fazer com que ele acabe. É possível encontrar mais detalhes sobre este tópico em [Visão Geral do Modelo de Recuperação](https://go.microsoft.com/fwlink/?LinkID=185370). O [Guia de Backup e Restauração do FIM](https://go.microsoft.com/fwlink/?LinkID=165864) contém mais informações.
 
 ### <a name="step-2-apply-the-minimum-necessary-mim-configuration-during-the-load-process"></a>Etapa 2: aplicar a configuração de MIM mínima necessária durante o processo de carregamento
 
@@ -236,7 +236,7 @@ ALTER FULLTEXT INDEX ON [fim].[ObjectValueString] SET CHANGE_TRACKING = AUTO
 ALTER FULLTEXT INDEX ON [fim].[ObjectValueXml] SET CHANGE_TRACKING = AUTO
 ```
 
-Caso seja necessário mudar para o modo de recuperação simples, reconfigure o cronograma de backup de acordo com a política de backup da empresa. Mais detalhes sobre os cronogramas de backup do FIM estão disponíveis no [Guia de Backup e Restauração do FIM](http://go.microsoft.com/fwlink/?LinkID=165864).
+Caso seja necessário mudar para o modo de recuperação simples, reconfigure o cronograma de backup de acordo com a política de backup da empresa. Mais detalhes sobre os cronogramas de backup do FIM estão disponíveis no [Guia de Backup e Restauração do FIM](https://go.microsoft.com/fwlink/?LinkID=165864).
 
 ## <a name="configuration-migration"></a>Migração da Configuração
 
@@ -356,9 +356,9 @@ Para implementar o SSL:
 
 28. Clique em Operações e, em seguida, clique em Mapeamentos Alternativos de Acesso.
 
-29. Clique em http://servername.
+29. Clique em https://servername.
 
-30. Altere http://servername para https://servername e clique em OK.
+30. Altere https://servername para https://servername e clique em OK.
 
 31. Clique em Iniciar, clique em Executar, digite iisreset e clique em OK.
 
@@ -394,7 +394,8 @@ O MIM oferece dois tipos de MPRs, Solicitação e Definir Transição:
   - É aplicada quando um recurso entra ou sai de um conjunto associado.
   - É projetada para os membros do conjunto.
 
->[OBSERVAÇÃO] Para obter mais detalhes, consulte [Criar Regras de Política de Negócios](http://go.microsoft.com/fwlink/?LinkID=183691).
+> [!NOTE]
+> Para obter detalhes adicionais, consulte [projetando regras de política de negócios](https://go.microsoft.com/fwlink/?LinkID=183691).
 
 #### <a name="only-enable-mprs-as-necessary"></a>Habilite as MPRs conforme o necessário
 
@@ -514,7 +515,7 @@ Caso esta chave do Registro seja definida como true, o usuário muito provavelme
 
 É possível registrar em log as senhas com texto não criptografado ao ativar o rastreamento de Nível de Serviço de diagnóstico no Windows
 
-Communication Foundation (WCF). Essa opção não é ativada por padrão e é desaconselhável de ativá-la em ambientes de produção. Essas senhas são visíveis como elementos de texto não criptografado em uma mensagem criptografada do protocolo SOAP quando os usuários se registram para a redefinição de senha. Para obter mais informações, consulte [Configurando o Log de Mensagens](http://go.microsoft.com/fwlink/?LinkID=168572).
+Communication Foundation (WCF). Essa opção não é ativada por padrão e é desaconselhável de ativá-la em ambientes de produção. Essas senhas são visíveis como elementos de texto não criptografado em uma mensagem criptografada do protocolo SOAP quando os usuários se registram para a redefinição de senha. Para obter mais informações, consulte [Configurando o Log de Mensagens](https://go.microsoft.com/fwlink/?LinkID=168572).
 
 #### <a name="do-not-map-an-authorization-workflow-to-the-password-reset-process"></a>Não mapeie um fluxo de trabalho de autorização para o processo de redefinição de senha
 
@@ -532,7 +533,7 @@ Ao adicionar, remover ou alterar a ordem de atividades de autenticação em um f
 
 #### <a name="consider-adding-a-privacy-disclaimer-to-the-user-profile-page"></a>Considere adicionar uma declaração de privacidade à página de perfil do usuário
 
-No MIM, por padrão, algumas informações de perfil do usuário podem ser exibidas para outros usuários. Como cortesia para os usuários, os administradores devem considerar adicionar texto personalizado consistente com as políticas da empresa para a página de Perfil do Usuário. Para obter mais informações sobre como adicionar texto personalizado a uma página do Portal do MIM, consulte Introdução à [Configuração e Personalização do Portal do FIM](http://go.microsoft.com/fwlink/?LinkID=165848).
+No MIM, por padrão, algumas informações de perfil do usuário podem ser exibidas para outros usuários. Como cortesia para os usuários, os administradores devem considerar adicionar texto personalizado consistente com as políticas da empresa para a página de Perfil do Usuário. Para obter mais informações sobre como adicionar texto personalizado a uma página do Portal do MIM, consulte Introdução à [Configuração e Personalização do Portal do FIM](https://go.microsoft.com/fwlink/?LinkID=165848).
 
 ### <a name="schema"></a>Schema
 
@@ -633,6 +634,6 @@ O objetivo do MIM é processar solicitações que podem ser iniciadas por vário
 Para saber mais, confira o artigo [Understanding FIM Service Partitions](https://social.technet.microsoft.com/wiki/contents/articles/2363.understanding-fim-service-partitions.aspx) (Noções básicas sobre as Partições de Serviço do FIM).
 
 ## <a name="next-steps"></a>Próximas etapas
-- [Guia de backup e restauração do FIM](http://go.microsoft.com/fwlink/?LinkID=165864)
-- [How do I Synchronize Users from Active Directory to FIM](http://go.microsoft.com/fwlink/?LinkID=188277) (Como faço para sincronizar usuários do Active Directory para o FIM) 
-- [Visão geral do modelo de recuperação](http://go.microsoft.com/fwlink/?LinkID=185370).
+- [Guia de backup e restauração do FIM](https://go.microsoft.com/fwlink/?LinkID=165864)
+- [How do I Synchronize Users from Active Directory to FIM](https://go.microsoft.com/fwlink/?LinkID=188277) (Como faço para sincronizar usuários do Active Directory para o FIM) 
+- [Visão geral do modelo de recuperação](https://go.microsoft.com/fwlink/?LinkID=185370).

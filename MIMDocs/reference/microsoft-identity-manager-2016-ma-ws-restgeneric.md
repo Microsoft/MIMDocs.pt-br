@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: microsoft-identity-manager
 ms.assetid: ''
-ms.openlocfilehash: e0c00972983d964a489d7c76e06e271bdf91b79e
-ms.sourcegitcommit: 7e8c3b85dd3c3965de9cb407daf74521e4cc5515
+ms.openlocfilehash: 9b1a65d6604f434d3619ad7964caa8ce202092a0
+ms.sourcegitcommit: 78f3f18f0b7afb44fcf7444e446a4edffb1f8f12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "92757469"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835947"
 ---
 # <a name="web-service-connector-workflow-guide-for-a-rest-api-sample"></a>Guia de fluxo de trabalho do conector de serviço Web para exemplo de API REST
 
@@ -54,12 +54,12 @@ As etapas a seguir mostram como criar um novo projeto para sua fonte de dados na
 
    ![Ferramenta de configuração do serviço Web](media/microsoft-identity-manager-2016-ma-ws-restgeneric/web-service-configuration-tool.png)
 
-2. Selecione **arquivo**  >  **novo**  >  **projeto REST** .
+2. Selecione **arquivo**  >  **novo**  >  **projeto REST**.
 
    ![Criar um novo projeto REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/new-project.png)
    <!-- Image shows SOAP project selected, not REST project -->
 
-3. À esquerda, selecione **projeto REST** e, em seguida, selecione **Adicionar** .
+3. À esquerda, selecione **projeto REST** e, em seguida, selecione **Adicionar**.
 
    ![Selecione o projeto REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-project.png)
 
@@ -76,9 +76,9 @@ As etapas a seguir mostram como criar um novo projeto para sua fonte de dados na
     
    ![Valores de exemplo para o serviço REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/restsample.png)
 
-   Defina o **modo de segurança** como _nenhum_ . Defina o **endereço** para o servidor JSON de exemplo que está hospedado no Azure.
+   Defina o **modo de segurança** como _nenhum_. Defina o **endereço** para o servidor JSON de exemplo que está hospedado no Azure.
 
-5. Selecione **OK** . O projeto REST listado na ferramenta de configuração de serviços da Web.
+5. Selecione **OK**. O projeto REST listado na ferramenta de configuração de serviços da Web.
 
    ![Projeto REST na ferramenta de configuração de serviços Web](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-discovery.png)
 
@@ -86,13 +86,13 @@ As etapas a seguir mostram como criar um novo projeto para sua fonte de dados na
 
    1. Expanda o **projeto REST** e selecione o serviço _RESTSAMPLE_ .
 
-   2. Selecione **Adicionar** . Você será solicitado a adicionar dois valores:
+   2. Selecione **Adicionar**. Você será solicitado a adicionar dois valores:
    
       ![Inserir valores para o serviço REST](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-service-highlights.png)
       
-      1. Insira o **nome** . Esta etapa é rotulada como 3 na captura de tela.
-      2. Insira o **endereço** . Esta etapa é rotulada como 4 na captura de tela.
-      3. Selecione **OK** . Um recurso REST é adicionado à descrição para o serviço _RESTSAMPLE_ .
+      1. Insira o **nome**. Esta etapa é rotulada como 3 na captura de tela.
+      2. Insira o **endereço**. Esta etapa é rotulada como 4 na captura de tela.
+      3. Selecione **OK**. Um recurso REST é adicionado à descrição para o serviço _RESTSAMPLE_ .
 
 7. Na caixa **recursos** , selecione o recurso REST que você acabou de adicionar. Adicione o seguinte método:
 
@@ -105,7 +105,7 @@ As etapas a seguir mostram como criar um novo projeto para sua fonte de dados na
 
    ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/rest-samples.png)
 
-10. Clique em **Salvar** . Salve o projeto no `C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions` . 
+10. Clique em **Salvar**. Salve o projeto no `C:\Program Files\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions` . 
 
 >[!NOTE]
 >Depois que o projeto é salvo, o arquivo WsConfig é gerado. O arquivo de configuração contém vários arquivos que são definidos anteriormente na visão geral do serviço Web.
@@ -114,7 +114,7 @@ As etapas a seguir mostram como criar um novo projeto para sua fonte de dados na
 ## <a name="configure-object-types-in-the-web-service-configuration-tool"></a>Configurar tipos de objeto na ferramenta de configuração do serviço Web
 As etapas a seguir mostram como configurar tipos de objeto para sua fonte de dados na ferramenta de configuração do serviço Web.
 
-1. A próxima etapa é definir o esquema de espaço do conector. Isso é feito criando-se o tipo de objeto e definindo seus tipos de objeto. Clique em **tipos de objeto** no painel esquerdo e clique no botão **Adicionar** . Isso é aberto abaixo da tela. Adicione um novo tipo de objeto e forneça um nome. Clique no botão **OK** .
+1. A próxima etapa é definir o esquema de espaço do conector. Isso é feito criando-se o tipo de objeto e definindo seus tipos de objeto. Clique em **tipos de objeto** no painel esquerdo e clique no botão **Adicionar** . Isso é aberto abaixo da tela. Adicione um novo tipo de objeto e forneça um nome. Clique no botão **OK**.
 
    ![](media/microsoft-identity-manager-2016-ma-ws-restgeneric/object-types.png)
 
@@ -158,7 +158,7 @@ A próxima etapa é configurar os fluxos de trabalho para o tipo de objeto. Os a
 - Testar conexão: Configure um fluxo de trabalho para verificar se a conexão com o servidor de fonte de dados foi estabelecida com êxito.
 
 >[!NOTE]
->Você pode configurar esses fluxos de trabalho para seu projeto ou baixar o projeto padrão do [centro de download da Microsoft](http://www.microsoft.com/download/details.aspx?id=29944).
+>Você pode configurar esses fluxos de trabalho para seu projeto ou baixar o projeto padrão do [centro de download da Microsoft](https://www.microsoft.com/download/details.aspx?id=29944).
 
 
 ### <a name="workflow-designer"></a>Designer de Fluxo de Trabalho
@@ -168,33 +168,33 @@ O Designer de Fluxo de Trabalho abre a área de trabalho para configurar o fluxo
 
 O Designer de Fluxo de Trabalho é composto pelos seguintes elementos da interface do usuário:
 
-   - **Nós no painel esquerdo** : eles ajudam a selecionar qual deseja criar o fluxo de trabalho.
+   - **Nós no painel esquerdo**: eles ajudam a selecionar qual deseja criar o fluxo de trabalho.
 
-   - **Designer de fluxo de trabalho central** : aqui, você pode descartar as atividades para configurar os fluxos de trabalho. Para realizar várias operações do MIM (exportação, importação e gerenciamento de senhas), você pode usar as atividades de fluxo de trabalho padrão e personalizadas do .NET Workflow Framework 4. A ferramenta de configuração do serviço Web usa atividades de fluxo de trabalho padrão e personalizadas. Para obter mais informações sobre as atividades padrão, consulte [usando os designers de atividade](http://msdn.microsoft.com/library/ee829528.aspx).
+   - **Designer de fluxo de trabalho central**: aqui, você pode descartar as atividades para configurar os fluxos de trabalho. Para realizar várias operações do MIM (exportação, importação e gerenciamento de senhas), você pode usar as atividades de fluxo de trabalho padrão e personalizadas do .NET Workflow Framework 4. A ferramenta de configuração do serviço Web usa atividades de fluxo de trabalho padrão e personalizadas. Para obter mais informações sobre as atividades padrão, consulte [usando os designers de atividade](https://msdn.microsoft.com/library/ee829528.aspx).
 
       - No Designer de Fluxo de Trabalho central, um círculo vermelho com ponto de exclamação ao lado de qualquer atividade indica que a operação foi descartada e não está definida corretamente e completamente. Passe o mouse sobre o círculo vermelho para descobrir o erro exato. Depois que a atividade é definida corretamente, o círculo vermelho muda para a marca de informações amarela.
       
       - No Designer de Fluxo de Trabalho central, uma marca de informações de triângulo amarelo ao lado de qualquer atividade indica que a atividade está definida, mas há mais que você pode fazer para concluir a atividade. Passe o mouse sobre o triângulo amarelo para ver mais informações.
 
-   - **Caixa de ferramentas** : empacota todas as ferramentas, incluindo atividades personalizadas e do sistema, e instruções predefinidas para criar o fluxo de trabalho. Para saber mais, confira [Caixa de Ferramentas](http://msdn.microsoft.com/library/aa480213.aspx).
+   - **Caixa de ferramentas**: empacota todas as ferramentas, incluindo atividades personalizadas e do sistema, e instruções predefinidas para criar o fluxo de trabalho. Para saber mais, confira [Caixa de Ferramentas](https://msdn.microsoft.com/library/aa480213.aspx).
    
-   - **Seções da caixa de ferramentas** : a caixa de ferramentas tem as seguintes seções e categorias:
+   - **Seções da caixa de ferramentas**: a caixa de ferramentas tem as seguintes seções e categorias:
    
-      - **Descrição** : o cabeçalho da caixa de ferramentas. Uma guia acessa a caixa de ferramentas e as propriedades da atividade de fluxo de trabalho selecionada. 
+      - **Descrição**: o cabeçalho da caixa de ferramentas. Uma guia acessa a caixa de ferramentas e as propriedades da atividade de fluxo de trabalho selecionada. 
 
-      - **Importar fluxo de trabalho** : atividades personalizadas para configurar fluxos de trabalho de importação.
+      - **Importar fluxo de trabalho**: atividades personalizadas para configurar fluxos de trabalho de importação.
       
-      - **Exportar fluxo de trabalho** : atividades personalizadas para configurar fluxos de trabalho de exportação.
+      - **Exportar fluxo de trabalho**: atividades personalizadas para configurar fluxos de trabalho de exportação.
       
-      - **Comum** : atividades personalizadas para configurar qualquer fluxo de trabalho.
+      - **Comum**: atividades personalizadas para configurar qualquer fluxo de trabalho.
       
-      - **Depuração** : atividades de fluxo de trabalho do sistema para depuração definidas no fluxo de trabalho 4. Essas atividades permitem o acompanhamento de problemas de um fluxo de trabalho.
+      - **Depuração**: atividades de fluxo de trabalho do sistema para depuração definidas no fluxo de trabalho 4. Essas atividades permitem o acompanhamento de problemas de um fluxo de trabalho.
       
-      - **Instruções** : atividades de fluxo de trabalho do sistema definidas no fluxo de trabalho 4. Para obter mais informações, consulte [usando os designers de atividade](http://msdn.microsoft.com/library/ee829528.aspx).
+      - **Instruções**: atividades de fluxo de trabalho do sistema definidas no fluxo de trabalho 4. Para obter mais informações, consulte [usando os designers de atividade](https://msdn.microsoft.com/library/ee829528.aspx).
 
-   - **Propriedades** : a guia Propriedades exibe as propriedades de uma atividade de fluxo de trabalho específica que é descartada na área do designer e selecionada. A figura à esquerda mostra as propriedades da atividade **atribuir** . Para cada atividade, as propriedades são diferentes e são usadas ao configurar o fluxo de trabalho personalizado. Esta guia permite que você defina os atributos da ferramenta selecionada que foi descartada no designer de fluxo de trabalho central. Para obter mais informações, consulte [Propriedades](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Propriedades**: a guia Propriedades exibe as propriedades de uma atividade de fluxo de trabalho específica que é descartada na área do designer e selecionada. A figura à esquerda mostra as propriedades da atividade **atribuir** . Para cada atividade, as propriedades são diferentes e são usadas ao configurar o fluxo de trabalho personalizado. Esta guia permite que você defina os atributos da ferramenta selecionada que foi descartada no designer de fluxo de trabalho central. Para obter mais informações, consulte [Propriedades](https://msdn.microsoft.com/library/ee342461.aspx).
 
-   - **Barra de tarefas:** A barra de tarefas inclui três elementos: **variáveis** , **argumentos** e **importações** . Esses elementos são usados junto com as atividades de fluxo de trabalho. Para obter mais informações, consulte [a introdução do desenvolvedor ao Windows Workflow Foundation (WF) no .NET 4](http://msdn.microsoft.com/library/ee342461.aspx).
+   - **Barra de tarefas:** A barra de tarefas inclui três elementos: **variáveis**, **argumentos** e **importações**. Esses elementos são usados junto com as atividades de fluxo de trabalho. Para obter mais informações, consulte [a introdução do desenvolvedor ao Windows Workflow Foundation (WF) no .NET 4](https://msdn.microsoft.com/library/ee342461.aspx).
 
 
 
@@ -216,7 +216,7 @@ As etapas a seguir mostram como configurar fluxos de trabalho de importação co
    
     ![Atividade de sequência](media/microsoft-identity-manager-2016-ma-ws-restgeneric/imports.png)
 
-3. Para adicionar uma variável, localize **criar variável** . Digite _wsResponse_ para o **nome** , selecione a lista suspensa **tipo de variável** e, em seguida, selecione **procurar tipos** . Uma caixa de diálogo é exibida. Selecione **generated**  >  **GETALL**  >  **resposta** GetAll gerada. Mantenha o **escopo** e os valores **padrão** desmarcados. Como alternativa, defina esses valores usando a exibição **Propriedades** .
+3. Para adicionar uma variável, localize **criar variável**. Digite _wsResponse_ para o **nome**, selecione a lista suspensa **tipo de variável** e, em seguida, selecione **procurar tipos**. Uma caixa de diálogo é exibida. Selecione   >    >  **resposta** GetAll gerada. Mantenha o **escopo** e os valores **padrão** desmarcados. Como alternativa, defina esses valores usando a exibição **Propriedades** .
 
    ![Resposta padrão](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-list.png)
 
@@ -228,15 +228,15 @@ As etapas a seguir mostram como configurar fluxos de trabalho de importação co
 
    Para usar a operação de serviço Web, defina as seguintes propriedades:
    
-      - **Nome do serviço** : Insira um nome para o serviço Web.
-      - **Nome do ponto de extremidade** : especifique um nome de ponto de extremidade para o serviço selecionado.
-      - **Nome da operação** : Especifique a respectiva operação para o serviço.
-      - **Argumento** : selecione **argumentos** . Na próxima caixa de diálogo, atribua os valores de argumento, conforme mostrado na figura a seguir:
+      - **Nome do serviço**: Insira um nome para o serviço Web.
+      - **Nome do ponto de extremidade**: especifique um nome de ponto de extremidade para o serviço selecionado.
+      - **Nome da operação**: Especifique a respectiva operação para o serviço.
+      - **Argumento**: selecione **argumentos**. Na próxima caixa de diálogo, atribua os valores de argumento, conforme mostrado na figura a seguir:
       
          ![Atribuir argumentos](media/microsoft-identity-manager-2016-ma-ws-restgeneric/get-all.png)
 
          >[!IMPORTANT]
-         >Não altere o **nome** , a **direção** ou o **tipo** de um argumento usando esta caixa de diálogo. Se qualquer um desses valores for alterado, a atividade se tornará inválida. Defina apenas o **valor** para o argumento. Conforme mostrado nesta figura, o valor *wsResponse* é definido.
+         >Não altere o **nome**, a **direção** ou o **tipo** de um argumento usando esta caixa de diálogo. Se qualquer um desses valores for alterado, a atividade se tornará inválida. Defina apenas o **valor** para o argumento. Conforme mostrado nesta figura, o valor *wsResponse* é definido.
 
 6. Adicione uma atividade **foreach** logo abaixo de **WebServiceCallActivity.** Essa atividade é usada para iterar em todos os atributos (âncoras e não-âncoras) do tipo de objeto. Ao arrastar essa atividade para sua superfície de Designer de Fluxo de Trabalho, ela enumera automaticamente todos os nomes de atributo para o objeto. Defina os valores necessários de acordo com a tela a seguir:
 
@@ -246,7 +246,7 @@ As etapas a seguir mostram como configurar fluxos de trabalho de importação co
 
    ![Arquivo de configuração](media/microsoft-identity-manager-2016-ma-ws-restgeneric/config-files.png)
 
-8. Identifique o namespace público para a _employeeList_ :
+8. Identifique o namespace público para a _employeeList_:
 
     ![Código da lista de funcionários](media/microsoft-identity-manager-2016-ma-ws-restgeneric/employee-list-code.png)
 
